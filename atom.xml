@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-15T15:34:52.000Z</updated>
+  <updated>2016-06-15T15:31:56.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,40 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>思念同学</title>
-    <link href="http://www.denman.me/2016/03/06/%E6%80%9D%E5%BF%B5%E5%90%8C%E5%AD%A6/"/>
-    <id>http://www.denman.me/2016/03/06/思念同学/</id>
-    <published>2016-03-06T07:26:31.000Z</published>
-    <updated>2016-06-15T15:34:52.000Z</updated>
-    
-    <content type="html">&lt;p&gt;去年今日今时月，&lt;/p&gt;
-&lt;p&gt;同照你我苍白身。&lt;/p&gt;
-&lt;p&gt;今年今日今时月，&lt;/p&gt;
-&lt;p&gt;不见天涯万里人。&lt;/p&gt;
-&lt;p&gt;他年今日同相见 ，&lt;/p&gt;
-&lt;p&gt;月光长照酒杯中，&lt;/p&gt;
-&lt;p&gt;一喝黄河八百里，&lt;/p&gt;
-&lt;p&gt;二喝长江九曲湾。&lt;/p&gt;
-&lt;p&gt;但愿长醉不复醒，&lt;/p&gt;
-&lt;p&gt;梦中犹醉见杜康。&lt;/p&gt;
-&lt;p&gt;杜康问我有何事，&lt;/p&gt;
-&lt;p&gt;是否有酒共一杯。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      不知不觉毕业已经好长时间了，写下此篇文章，思念大学的同学
-    
-    </summary>
-    
-      <category term="life" scheme="http://www.denman.me/categories/life/"/>
-    
-    
-      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
   
   <entry>
     <title>查看静态库文件支持的指令集架构的方法</title>
@@ -92,6 +58,40 @@
     
     
       <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>思念同学</title>
+    <link href="http://www.denman.me/2015/03/06/%E6%80%9D%E5%BF%B5%E5%90%8C%E5%AD%A6/"/>
+    <id>http://www.denman.me/2015/03/06/思念同学/</id>
+    <published>2015-03-06T07:26:31.000Z</published>
+    <updated>2016-06-15T15:40:59.000Z</updated>
+    
+    <content type="html">&lt;p&gt;去年今日今时月，&lt;/p&gt;
+&lt;p&gt;同照你我苍白身。&lt;/p&gt;
+&lt;p&gt;今年今日今时月，&lt;/p&gt;
+&lt;p&gt;不见天涯万里人。&lt;/p&gt;
+&lt;p&gt;他年今日同相见 ，&lt;/p&gt;
+&lt;p&gt;月光长照酒杯中，&lt;/p&gt;
+&lt;p&gt;一喝黄河八百里，&lt;/p&gt;
+&lt;p&gt;二喝长江九曲湾。&lt;/p&gt;
+&lt;p&gt;但愿长醉不复醒，&lt;/p&gt;
+&lt;p&gt;梦中犹醉见杜康。&lt;/p&gt;
+&lt;p&gt;杜康问我有何事，&lt;/p&gt;
+&lt;p&gt;是否有酒共一杯。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      不知不觉毕业已经好长时间了，写下此篇文章，思念大学的同学
+    
+    </summary>
+    
+      <category term="life" scheme="http://www.denman.me/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
     
   </entry>
   
