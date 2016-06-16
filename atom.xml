@@ -43,9 +43,9 @@
     <link href="http://www.denman.me/2015/03/10/iOS%E7%9A%84release%E5%92%8Cdebug%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.denman.me/2015/03/10/iOS的release和debug有什么区别/</id>
     <published>2015-03-10T06:23:36.000Z</published>
-    <updated>2016-06-15T14:29:04.000Z</updated>
+    <updated>2016-06-16T13:21:51.000Z</updated>
     
-    <content type="html">&lt;p&gt;Release是发行版本,比Debug版本有一些优化，文件比Debug文件小 Debug是调试版本，Debug和Release调用两个不同的底层库。&lt;br&gt;一、”Debug是调试版本，包括的程序信息更多”&lt;br&gt;二、只有DEBUG版的程序才能设置断点、单步执行、使用TRACE/ASSERT等调试输出语句。&lt;br&gt;三、REALEASE不包含任何调试信息，所以体积小、运行速度快。&lt;br&gt;&lt;img src=&quot;http://thumbnail0.baidupcs.com/thumbnail/c9632a78d7270d956d1b3f8960eef76d?fid=1788335475-250528-581490655024274&amp;amp;time=1465999200&amp;amp;rt=sh&amp;amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-WpmW2cWjZVw0cMoZ51B9PrQhPyg%3D&amp;amp;expires=8h&amp;amp;chkv=0&amp;amp;chkbd=0&amp;amp;chkpc=&amp;amp;dp-logid=3871594921987934782&amp;amp;dp-callid=0&amp;amp;size=c710_u400&amp;amp;quality=100&quot; alt=&quot;下载失败&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Release是发行版本,比Debug版本有一些优化，文件比Debug文件小 Debug是调试版本，Debug和Release调用两个不同的底层库。&lt;br&gt;一、”Debug是调试版本，包括的程序信息更多”&lt;br&gt;二、只有DEBUG版的程序才能设置断点、单步执行、使用TRACE/ASSERT等调试输出语句。&lt;br&gt;三、REALEASE不包含任何调试信息，所以体积小、运行速度快。&lt;br&gt;&lt;img src=&quot;http://a1.qpic.cn/psb?/V11ceFHn1wB9zx/BcTdB.YruJ1tuGla99p6A6qhR2GWSAd8Jzm2yeb5v7U!/m/dAgBAAAAAAAAnull&amp;amp;bo=PAA8AAAAAAAFByQ!&amp;amp;rf=photolist&amp;amp;t=5&quot; alt=&quot;下载失败&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
