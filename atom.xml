@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-18T10:47:07.000Z</updated>
+  <updated>2016-06-18T11:08:40.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.denman.me/2016/06/18/iOS%E8%8E%B7%E5%8F%96%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F%EF%BC%8C%E5%AE%9E%E7%8E%B0%E7%BC%93%E7%9A%84%E6%B8%85%E7%90%86%E5%8A%9F%E8%83%BD/"/>
+    <id>http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/</id>
+    <published>2016-06-18T10:54:21.000Z</published>
+    <updated>2016-06-18T11:08:40.000Z</updated>
+    
+    <content type="html">&lt;hr&gt;
+&lt;p&gt;title: iOS获取缓存文件的大小，实现缓的清理功能&lt;br&gt;toc: true&lt;br&gt;date: 2016-06-18 18:54:21&lt;br&gt;tags:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- iOS
+- 缓存 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;categories: technology&lt;br&gt;description: 移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: iOS获取缓存文件的大小，实现缓的清理功能&lt;br&gt;toc: true&lt;br&gt;date: 2016-06-18 18:54:21&lt;br&gt;tags:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- iOS
+- 缓存 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;categorie
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Masonry框架分析-链式编程思想</title>
