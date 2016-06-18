@@ -3,27 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>denman&#39;s blog</title>
+  <title>iOS获取缓存文件的大小，实现缓的清理功能 | denman&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: iOS获取缓存文件的大小，实现缓的清理功能toc: truedate: 2016-06-18 18:54:21tags:
-- iOS
-- 缓存 
-categories: technologydescription: 移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。">
+  <meta name="description" content="移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="denman's blog">
+<meta property="og:title" content="iOS获取缓存文件的大小，实现缓的清理功能">
 <meta property="og:url" content="http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/index.html">
 <meta property="og:site_name" content="denman's blog">
-<meta property="og:description" content="title: iOS获取缓存文件的大小，实现缓的清理功能toc: truedate: 2016-06-18 18:54:21tags:
-- iOS
-- 缓存 
-categories: technologydescription: 移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。">
-<meta property="og:updated_time" content="2016-06-18T11:08:40.000Z">
+<meta property="og:description" content="移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。">
+<meta property="og:updated_time" content="2016-06-18T11:11:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="denman's blog">
-<meta name="twitter:description" content="title: iOS获取缓存文件的大小，实现缓的清理功能toc: truedate: 2016-06-18 18:54:21tags:
-- iOS
-- 缓存 
-categories: technologydescription: 移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。">
+<meta name="twitter:title" content="iOS获取缓存文件的大小，实现缓的清理功能">
+<meta name="twitter:description" content="移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -160,7 +151,7 @@ categories: technologydescription: 移动应用在处理网络资源时，一般
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a>
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a>
                     </div>
                 </section>
                 
@@ -257,15 +248,36 @@ categories: technologydescription: 移动应用在处理网络资源时，一般
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS获取缓存文件的大小，实现缓的清理功能
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/缓存/">缓存</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<p>title: iOS获取缓存文件的大小，实现缓的清理功能<br>toc: true<br>date: 2016-06-18 18:54:21<br>tags:</p>
-<pre><code>- iOS
-- 缓存 
-</code></pre><p>categories: technology<br>description: 移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。</p>
-
+        
       
     </div>
     
@@ -273,12 +285,12 @@ categories: technologydescription: 移动应用在处理网络资源时，一般
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/"></a></p>
+        <p><span>本文标题:</span><a href="/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/">iOS获取缓存文件的大小，实现缓的清理功能</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
         <p><span>发布时间:</span>2016年06月18日 - 18时54分</p>
-        <p><span>最后更新:</span>2016年06月18日 - 19时08分</p>
+        <p><span>最后更新:</span>2016年06月18日 - 19时11分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/" title="">http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/" title="iOS获取缓存文件的大小，实现缓的清理功能">http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -353,7 +365,7 @@ categories: technologydescription: 移动应用在处理网络资源时，一般
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/" data-title="" data-url="http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/"></div>
+    <div class="ds-thread" data-thread-key="2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/" data-title="iOS获取缓存文件的大小，实现缓的清理功能" data-url="http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
