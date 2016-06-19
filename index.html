@@ -153,7 +153,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a>
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a>
                     </div>
                 </section>
                 
@@ -768,67 +768,42 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/18/方法和函数的区别/">OC中方法和函数的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <!-----
-title: OC中方法和函数的区别
-toc: true
-date: 2016-06-18 00:21:46
-tags: 
-      - 方法
-      - 函数
-categories: technology
-description: 通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
------>
-<p><link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css"></p>
-<p><script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script></p>
-<p><script>hljs.initHighlightingOnLoad();</script></p>
-<p>#关于方法和函数<br>通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言</p>
-<p>##方法<br>通常我们口语中方法和函数基本上就是一回事，如下面的例子<br></p>
-<pre><code>- (int)sum:(int)a AndB:(int)b  
-{
-    return  a + b;  
-}
-</code></pre><p> 我们看到这就定义了一个方法或者函数，但是真的就是这样吗？<br> 其实严格说来上面定义了一个函数，而不是方法，而方法指的仅仅是函数的名字，也就是<code>sum:  AndB:</code></p>
-<p>###Objective-c中方法<br>Objective-c中的方法就是我门常用的<code>selector</code>,一个<code>selector</code>就是Objective-c的函数名字</p>
-<p>##函数<br>我们看一个在Objective-c函数的定义<br></p>
-<pre><code>struct objc_method 
-{
-    SEL method_name
-    char *method_types
-    IMP method_imp
-}
-</code></pre><p>一个函数包含了函数的名字<code>method_name</code>，函数的类型<code>method_types</code>以及<code>IMP</code>(函数的实现)，    Objective-c，通过函数的名字以及所传参数就能找到函数的实现，继而执行函数的实现.<br><br>其中method_types 是函数的签名，也就是函数类型，包含几个参数，每个参数的类型，以及返回值的类型，看这样一个类<br></p>
-<pre><code>@interface NSMethodSignature : NSObject {
-@private
-    void *_private;
-    void *_reserved[6];
-}
-
-+ (nullable NSMethodSignature *)signatureWithObjCTypes:(const char *)types;
-
-@property (readonly) NSUInteger numberOfArguments;
-- (const char *)getArgumentTypeAtIndex:(NSUInteger)idx NS_RETURNS_INNER_POINTER;
-
-@property (readonly) NSUInteger frameLength;
-
-- (BOOL)isOneway;
-
-@property (readonly) const char *methodReturnType NS_RETURNS_INNER_POINTER;
-@property (readonly) NSUInteger methodReturnLength;
-
-@end
-</code></pre><p> 这个类就是函数签名类，包含参数的数量，每个参数的累类型，函数返回值类型</p>
-
+              通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数/">函数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/方法/">方法</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/18/方法和函数的区别/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

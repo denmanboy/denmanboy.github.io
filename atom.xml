@@ -193,23 +193,13 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>OC中方法和函数的区别</title>
     <link href="http://www.denman.me/2016/06/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.denman.me/2016/06/18/方法和函数的区别/</id>
     <published>2016-06-17T16:21:46.000Z</published>
-    <updated>2016-06-19T10:56:30.000Z</updated>
+    <updated>2016-06-19T10:59:19.000Z</updated>
     
-    <content type="html">&lt;!-----
-title: OC中方法和函数的区别
-toc: true
-date: 2016-06-18 00:21:46
-tags: 
-      - 方法
-      - 函数
-categories: technology
-description: 通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
------&gt;
-&lt;p&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://yandex.st/highlightjs/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;#关于方法和函数&lt;br&gt;通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言&lt;/p&gt;
@@ -252,18 +242,16 @@ description: 通常我们来讲对实现某一具体功能的代码端我们称�
     
     <summary type="html">
     
-      &lt;!-----
-title: OC中方法和函数的区别
-toc: true
-date: 2016-06-18 00:21:46
-tags: 
-      - 方法
-      - 函数
-categories: technology
-description: 通常我们来讲对实现某一具
+      通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
     
     </summary>
     
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="方法" scheme="http://www.denman.me/tags/%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="函数" scheme="http://www.denman.me/tags/%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
