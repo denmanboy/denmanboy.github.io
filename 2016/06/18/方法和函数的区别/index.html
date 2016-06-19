@@ -3,18 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>方法和函数的区别 | denman&#39;s blog</title>
+  <title>denman&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="my blog">
+  <meta name="description" content="hljs.initHighlightingOnLoad();
+#关于方法和函数通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+##方法通常我们口语中方法和函数基本上就是一回事，如下面的例子
+- (int)sum:(int)a AndB:(int)b  
+{
+    return  a + b;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="方法和函数的区别">
+<meta property="og:title" content="denman's blog">
 <meta property="og:url" content="http://www.denman.me/2016/06/18/方法和函数的区别/index.html">
 <meta property="og:site_name" content="denman's blog">
-<meta property="og:description" content="my blog">
-<meta property="og:updated_time" content="2016-06-17T16:21:46.000Z">
+<meta property="og:description" content="hljs.initHighlightingOnLoad();
+#关于方法和函数通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+##方法通常我们口语中方法和函数基本上就是一回事，如下面的例子
+- (int)sum:(int)a AndB:(int)b  
+{
+    return  a + b;">
+<meta property="og:updated_time" content="2016-06-19T10:56:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="方法和函数的区别">
-<meta name="twitter:description" content="my blog">
+<meta name="twitter:title" content="denman's blog">
+<meta name="twitter:description" content="hljs.initHighlightingOnLoad();
+#关于方法和函数通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+##方法通常我们口语中方法和函数基本上就是一回事，如下面的例子
+- (int)sum:(int)a AndB:(int)b  
+{
+    return  a + b;">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -151,7 +166,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a>
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a>
                     </div>
                 </section>
                 
@@ -248,28 +263,59 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      方法和函数的区别
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <!-----
+title: OC中方法和函数的区别
+toc: true
+date: 2016-06-18 00:21:46
+tags: 
+      - 方法
+      - 函数
+categories: technology
+description: 通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+----->
+<p><link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css"></p>
+<p><script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script></p>
+<p><script>hljs.initHighlightingOnLoad();</script></p>
+<p>#关于方法和函数<br>通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言</p>
+<p>##方法<br>通常我们口语中方法和函数基本上就是一回事，如下面的例子<br></p>
+<pre><code>- (int)sum:(int)a AndB:(int)b  
+{
+    return  a + b;  
+}
+</code></pre><p> 我们看到这就定义了一个方法或者函数，但是真的就是这样吗？<br> 其实严格说来上面定义了一个函数，而不是方法，而方法指的仅仅是函数的名字，也就是<code>sum:  AndB:</code></p>
+<p>###Objective-c中方法<br>Objective-c中的方法就是我门常用的<code>selector</code>,一个<code>selector</code>就是Objective-c的函数名字</p>
+<p>##函数<br>我们看一个在Objective-c函数的定义<br></p>
+<pre><code>struct objc_method 
+{
+    SEL method_name
+    char *method_types
+    IMP method_imp
+}
+</code></pre><p>一个函数包含了函数的名字<code>method_name</code>，函数的类型<code>method_types</code>以及<code>IMP</code>(函数的实现)，    Objective-c，通过函数的名字以及所传参数就能找到函数的实现，继而执行函数的实现.<br><br>其中method_types 是函数的签名，也就是函数类型，包含几个参数，每个参数的类型，以及返回值的类型，看这样一个类<br></p>
+<pre><code>@interface NSMethodSignature : NSObject {
+@private
+    void *_private;
+    void *_reserved[6];
+}
+
++ (nullable NSMethodSignature *)signatureWithObjCTypes:(const char *)types;
+
+@property (readonly) NSUInteger numberOfArguments;
+- (const char *)getArgumentTypeAtIndex:(NSUInteger)idx NS_RETURNS_INNER_POINTER;
+
+@property (readonly) NSUInteger frameLength;
+
+- (BOOL)isOneway;
+
+@property (readonly) const char *methodReturnType NS_RETURNS_INNER_POINTER;
+@property (readonly) NSUInteger methodReturnLength;
+
+@end
+</code></pre><p> 这个类就是函数签名类，包含参数的数量，每个参数的累类型，函数返回值类型</p>
+
       
     </div>
     
@@ -277,12 +323,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/18/方法和函数的区别/">方法和函数的区别</a></p>
+        <p><span>本文标题:</span><a href="/2016/06/18/方法和函数的区别/"></a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
         <p><span>发布时间:</span>2016年06月18日 - 00时21分</p>
-        <p><span>最后更新:</span>2016年06月18日 - 00时21分</p>
+        <p><span>最后更新:</span>2016年06月19日 - 18时56分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/18/方法和函数的区别/" title="方法和函数的区别">http://www.denman.me/2016/06/18/方法和函数的区别/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/18/方法和函数的区别/" title="">http://www.denman.me/2016/06/18/方法和函数的区别/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2016/06/18/方法和函数的区别/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -366,7 +412,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/06/18/方法和函数的区别/" data-title="方法和函数的区别" data-url="http://www.denman.me/2016/06/18/方法和函数的区别/"></div>
+    <div class="ds-thread" data-thread-key="2016/06/18/方法和函数的区别/" data-title="" data-url="http://www.denman.me/2016/06/18/方法和函数的区别/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -400,7 +446,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/">iOS获取缓存文件的大小，实现缓的清理功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/Masonry框架分析-链式编程思想/">Masonry框架分析-链式编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/KVC中对对象的属性赋值的顺序/">KVC中对对象的属性赋值的顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/Xcode常用的插件/">Xcode常用的插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于block的那些事/">关于block的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于category不能添加实例变量/">关于category不能添加实例变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/方法和函数的区别/">方法和函数的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于runLoop那些事/">关于runLoop那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于runtime那些事/">关于runtime那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/13/查看静态库文件支持的指令集架构的方法/">查看静态库文件支持的指令集架构的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/10/iOS的release和debug有什么区别/">iOS的release和debug有什么区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/思念同学/">思念同学</a></li><li class="post-list-item"><a class="post-list-link" href="/2010/12/06/kongque/">孔雀东南飞-大学新篇</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/tableView优化的那些事/">tableView优化的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/利用runtime容错/">利用runtime容错</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/19/为什么说Object-c是一门动态语言/">为什么说Object-c是一门动态语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/">iOS获取缓存文件的大小，实现缓的清理功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/Masonry框架分析-链式编程思想/">Masonry框架分析-链式编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/KVC中对对象的属性赋值的顺序/">KVC中对对象的属性赋值的顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/Xcode常用的插件/">Xcode常用的插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于block的那些事/">关于block的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于category不能添加实例变量/">关于category不能添加实例变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/方法和函数的区别/">方法和函数的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于runLoop那些事/">关于runLoop那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/18/关于runtime那些事/">关于runtime那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/13/查看静态库文件支持的指令集架构的方法/">查看静态库文件支持的指令集架构的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/10/iOS的release和debug有什么区别/">iOS的release和debug有什么区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/思念同学/">思念同学</a></li><li class="post-list-item"><a class="post-list-link" href="/2010/12/06/kongque/">孔雀东南飞-大学新篇</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

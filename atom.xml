@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-18T11:11:23.000Z</updated>
+  <updated>2016-06-19T10:33:08.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tableView优化的那些事</title>
+    <link href="http://www.denman.me/2016/06/19/tableView%E4%BC%98%E5%8C%96%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://www.denman.me/2016/06/19/tableView优化的那些事/</id>
+    <published>2016-06-19T10:33:08.000Z</published>
+    <updated>2016-06-19T10:33:08.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用runtime容错</title>
+    <link href="http://www.denman.me/2016/06/19/%E5%88%A9%E7%94%A8runtime%E5%AE%B9%E9%94%99/"/>
+    <id>http://www.denman.me/2016/06/19/利用runtime容错/</id>
+    <published>2016-06-19T10:32:41.000Z</published>
+    <updated>2016-06-19T10:32:41.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>为什么说Object-c是一门动态语言</title>
+    <link href="http://www.denman.me/2016/06/19/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4Object-c%E6%98%AF%E4%B8%80%E9%97%A8%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
+    <id>http://www.denman.me/2016/06/19/为什么说Object-c是一门动态语言/</id>
+    <published>2016-06-19T09:42:41.000Z</published>
+    <updated>2016-06-19T09:42:41.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>iOS获取缓存文件的大小，实现缓的清理功能</title>
@@ -113,7 +161,7 @@
     <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Eblock%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     <id>http://www.denman.me/2016/06/18/关于block的那些事/</id>
     <published>2016-06-17T16:26:47.000Z</published>
-    <updated>2016-06-17T16:26:47.000Z</updated>
+    <updated>2016-06-19T09:35:10.000Z</updated>
     
     <content type="html"></content>
     
@@ -121,6 +169,10 @@
     
     </summary>
     
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="block" scheme="http://www.denman.me/tags/block/"/>
     
   </entry>
   
@@ -141,15 +193,74 @@
   </entry>
   
   <entry>
-    <title>方法和函数的区别</title>
+    <title></title>
     <link href="http://www.denman.me/2016/06/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.denman.me/2016/06/18/方法和函数的区别/</id>
     <published>2016-06-17T16:21:46.000Z</published>
-    <updated>2016-06-17T16:21:46.000Z</updated>
+    <updated>2016-06-19T10:56:30.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;!-----
+title: OC中方法和函数的区别
+toc: true
+date: 2016-06-18 00:21:46
+tags: 
+      - 方法
+      - 函数
+categories: technology
+description: 通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+-----&gt;
+&lt;p&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://yandex.st/highlightjs/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;#关于方法和函数&lt;br&gt;通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言&lt;/p&gt;
+&lt;p&gt;##方法&lt;br&gt;通常我们口语中方法和函数基本上就是一回事，如下面的例子&lt;br&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- (int)sum:(int)a AndB:(int)b  
+{
+    return  a + b;  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 我们看到这就定义了一个方法或者函数，但是真的就是这样吗？&lt;br&gt; 其实严格说来上面定义了一个函数，而不是方法，而方法指的仅仅是函数的名字，也就是&lt;code&gt;sum:  AndB:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;###Objective-c中方法&lt;br&gt;Objective-c中的方法就是我门常用的&lt;code&gt;selector&lt;/code&gt;,一个&lt;code&gt;selector&lt;/code&gt;就是Objective-c的函数名字&lt;/p&gt;
+&lt;p&gt;##函数&lt;br&gt;我们看一个在Objective-c函数的定义&lt;br&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;struct objc_method 
+{
+    SEL method_name
+    char *method_types
+    IMP method_imp
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一个函数包含了函数的名字&lt;code&gt;method_name&lt;/code&gt;，函数的类型&lt;code&gt;method_types&lt;/code&gt;以及&lt;code&gt;IMP&lt;/code&gt;(函数的实现)，    Objective-c，通过函数的名字以及所传参数就能找到函数的实现，继而执行函数的实现.&lt;br&gt;&lt;br&gt;其中method_types 是函数的签名，也就是函数类型，包含几个参数，每个参数的类型，以及返回值的类型，看这样一个类&lt;br&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@interface NSMethodSignature : NSObject {
+@private
+    void *_private;
+    void *_reserved[6];
+}
+
++ (nullable NSMethodSignature *)signatureWithObjCTypes:(const char *)types;
+
+@property (readonly) NSUInteger numberOfArguments;
+- (const char *)getArgumentTypeAtIndex:(NSUInteger)idx NS_RETURNS_INNER_POINTER;
+
+@property (readonly) NSUInteger frameLength;
+
+- (BOOL)isOneway;
+
+@property (readonly) const char *methodReturnType NS_RETURNS_INNER_POINTER;
+@property (readonly) NSUInteger methodReturnLength;
+
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 这个类就是函数签名类，包含参数的数量，每个参数的累类型，函数返回值类型&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;!-----
+title: OC中方法和函数的区别
+toc: true
+date: 2016-06-18 00:21:46
+tags: 
+      - 方法
+      - 函数
+categories: technology
+description: 通常我们来讲对实现某一具
     
     </summary>
     
