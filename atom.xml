@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-19T10:33:08.000Z</updated>
+  <updated>2016-06-19T11:24:51.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOSSDK中delegate和block使用的场景</title>
+    <link href="http://www.denman.me/2016/06/19/iOSSDK%E4%B8%ADdelegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
+    <id>http://www.denman.me/2016/06/19/iOSSDK中delegate和block使用的场景/</id>
+    <published>2016-06-19T11:24:51.000Z</published>
+    <updated>2016-06-19T11:24:51.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>tableView优化的那些事</title>
