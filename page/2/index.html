@@ -270,8 +270,19 @@
 <p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
 <p><script>hljs.initHighlightingOnLoad();</script></p>
 <h1 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。<br><br>不过有时子类并不方便。比方说，你想为<code>NSString</code>类添加一个新的行为，但是<code>NSString</code>实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。<br><br>利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的<code>Category</code></p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p><pre><br><code><br>struct objc_category {<br>    //category名称<br>    char <em>category_name<br>    //添加category的类名称<br>    char </em>class_name<br>    //实例方法列表<br>    struct objc_method_list <em>instance_methods<br>    //类方法列表<br>    struct objc_method_list </em>class_methods<br>    //协议列表<br>    struct objc_protocol_list *protocols<br>}<br></code><br></pre></p>
-<h2 id="Category的优势"><a href="#Category的优势" class="headerlink" title="Category的优势"></a>Category的优势</h2><ol>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>struct objc_category {
+    //category名称
+    char *category_name                                      
+    //添加category的类名称
+    char *class_name        
+    //实例方法列表                                
+    struct objc_method_list *instance_methods                
+    //类方法列表
+    struct objc_method_list *class_methods                   
+    //协议列表
+    struct objc_protocol_list *protocols                     
+}                                                            
+</code></pre><h2 id="Category的优势"><a href="#Category的优势" class="headerlink" title="Category的优势"></a>Category的优势</h2><ol>
 <li>利用Category分散实现代码</li>
 <li>通过Category创建前向应用</li>
 </ol>
