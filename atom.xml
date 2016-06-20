@@ -36,24 +36,6 @@
   </entry>
   
   <entry>
-    <title>Objective-C GCC Code Block Evaluation C Extension</title>
-    <link href="http://www.denman.me/2016/06/20/Objective-C%20GCC%20Code%20Block%20Evaluation%20C%20Extension%20%E8%AF%AD%E6%B3%95/"/>
-    <id>http://www.denman.me/2016/06/20/Objective-C GCC Code Block Evaluation C Extension 语法/</id>
-    <published>2016-06-20T06:03:40.000Z</published>
-    <updated>2016-06-20T07:42:59.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
-    
-  </entry>
-  
-  <entry>
     <title>delegate和block使用的场景</title>
     <link href="http://www.denman.me/2016/06/19/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
     <id>http://www.denman.me/2016/06/19/delegate和block使用的场景/</id>
@@ -452,6 +434,33 @@
     
     
       <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Objective-C GCC Code Block Evaluation C Extension</title>
+    <link href="http://www.denman.me/2014/02/20/Objective-C%20GCC%20Code%20Block%20Evaluation%20C%20Extension%20%E8%AF%AD%E6%B3%95/"/>
+    <id>http://www.denman.me/2014/02/20/Objective-C GCC Code Block Evaluation C Extension 语法/</id>
+    <published>2014-02-20T06:03:40.000Z</published>
+    <updated>2016-06-20T10:53:38.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;先看这样一些代码&lt;/p&gt;
+&lt;p&gt;&lt;pre&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;    self.nameLabel = ({&lt;br&gt;        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];&lt;br&gt;        label.backgroundColor = [UIColor yellowColor];&lt;br&gt;        label.text = @”name”;&lt;br&gt;        label.font = [UIFont systemFontOfSize:15];&lt;br&gt;        label.textColor = [UIColor yellowColor];&lt;br&gt;        label;&lt;br&gt;    });&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;h1 id=&quot;解读&quot;&gt;&lt;a href=&quot;#解读&quot; class=&quot;headerlink&quot; title=&quot;解读&quot;&gt;&lt;/a&gt;解读&lt;/h1&gt;&lt;p&gt;这个是GCC编译器的提供的一个语法&lt;br&gt;可以看到把一个控件的所有属性全部写在({…})中，这样两个好处一个是结构会更加清晰，封装性非常好，第二个可以使用非常简洁的命名来命名局部变量，写起来会很优雅。它能够在局部初始UI以及处理逻辑,在团队协作中方便同事快速读懂你的UI布局。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;a href=&quot;http://nshipster.com/new-years-2014/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GCC Code Block Evaluation C Extension&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sub
+    
+    </summary>
+    
+    
+      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
     
   </entry>
   
