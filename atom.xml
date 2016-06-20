@@ -238,16 +238,44 @@
     <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
     <id>http://www.denman.me/2016/06/18/关于category不能添加实例变量/</id>
     <published>2016-06-17T16:25:04.000Z</published>
-    <updated>2016-06-19T15:17:54.000Z</updated>
+    <updated>2016-06-20T13:09:19.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Category&quot;&gt;&lt;a href=&quot;#Category&quot; class=&quot;headerlink&quot; title=&quot;Category&quot;&gt;&lt;/a&gt;Category&lt;/h1&gt;&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。&lt;br&gt;&lt;br&gt;不过有时子类并不方便。比方说，你想为&lt;code&gt;NSString&lt;/code&gt;类添加一个新的行为，但是&lt;code&gt;NSString&lt;/code&gt;实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。&lt;br&gt;&lt;br&gt;利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的&lt;code&gt;Category&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;&lt;pre&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;struct objc_category {&lt;br&gt;    //category名称&lt;br&gt;    char &lt;em&gt;category_name&lt;br&gt;    //添加category的类名称&lt;br&gt;    char &lt;/em&gt;class_name&lt;br&gt;    //实例方法列表&lt;br&gt;    struct objc_method_list &lt;em&gt;instance_methods&lt;br&gt;    //类方法列表&lt;br&gt;    struct objc_method_list &lt;/em&gt;class_methods&lt;br&gt;    //协议列表&lt;br&gt;    struct objc_protocol_list *protocols&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Category的优势&quot;&gt;&lt;a href=&quot;#Category的优势&quot; class=&quot;headerlink&quot; title=&quot;Category的优势&quot;&gt;&lt;/a&gt;Category的优势&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;利用Category分散实现代码&lt;/li&gt;
+&lt;li&gt;通过Category创建前向应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;Extension&quot;&gt;&lt;a href=&quot;#Extension&quot; class=&quot;headerlink&quot; title=&quot;Extension&quot;&gt;&lt;/a&gt;Extension&lt;/h1&gt;&lt;h2 id=&quot;定义-1&quot;&gt;&lt;a href=&quot;#定义-1&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;Extension就是匿名Category，但是又有着很大的不同。&lt;/p&gt;
+&lt;h1 id=&quot;对比&quot;&gt;&lt;a href=&quot;#对比&quot; class=&quot;headerlink&quot; title=&quot;对比&quot;&gt;&lt;/a&gt;对比&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Category可以写在单独一个文件内，也可以写在与之关联的类里面&lt;/li&gt;
+&lt;li&gt;Extension必须写在实现文件里  &lt;/li&gt;
+&lt;li&gt;Category声明的方法可以不实现.&lt;/li&gt;
+&lt;li&gt;Extension里声明的方法必须实现&lt;/li&gt;
+&lt;li&gt;Category不能添加实例变量&lt;/li&gt;
+&lt;li&gt;Extension可以添加实例变量&lt;/li&gt;
+&lt;li&gt;Category是运行时才会执行&lt;/li&gt;
+&lt;li&gt;Extension是编译时就会和关联的类一起编译&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;a href=&quot;#为什么Category不能添加实例变量而Extension可以&quot; class=&quot;headerlink&quot; title=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;/a&gt;为什么Category不能添加实例变量而Extension可以&lt;/h2&gt;&lt;p&gt;其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。&lt;br&gt;第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。&lt;br&gt;&lt;br&gt;为什么Category没有空间容纳实例变量呢？&lt;br&gt;&lt;br&gt;从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表&lt;br&gt;&lt;br&gt;而Extension为什么就可以呢？&lt;br&gt;&lt;br&gt;通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。&lt;/p&gt;
+&lt;h2 id=&quot;通过runtime向类关联对象&quot;&gt;&lt;a href=&quot;#通过runtime向类关联对象&quot; class=&quot;headerlink&quot; title=&quot;通过runtime向类关联对象&quot;&gt;&lt;/a&gt;通过runtime向类关联对象&lt;/h2&gt;&lt;p&gt;虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  &lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bo
     
     </summary>
     
       <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
     
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
       <category term="category" scheme="http://www.denman.me/tags/category/"/>
     
