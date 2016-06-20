@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-19T15:21:24.000Z</updated>
+  <updated>2016-06-20T07:43:17.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于git的使用</title>
+    <link href="http://www.denman.me/2016/06/20/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.denman.me/2016/06/20/关于git的使用/</id>
+    <published>2016-06-20T07:06:48.000Z</published>
+    <updated>2016-06-20T07:43:17.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Objective-C GCC Code Block Evaluation C Extension</title>
+    <link href="http://www.denman.me/2016/06/20/Objective-C%20GCC%20Code%20Block%20Evaluation%20C%20Extension%20%E8%AF%AD%E6%B3%95/"/>
+    <id>http://www.denman.me/2016/06/20/Objective-C GCC Code Block Evaluation C Extension 语法/</id>
+    <published>2016-06-20T06:03:40.000Z</published>
+    <updated>2016-06-20T07:42:59.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
+    
+  </entry>
   
   <entry>
     <title>delegate和block使用的场景</title>
@@ -237,10 +275,10 @@
     <link href="http://www.denman.me/2016/06/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.denman.me/2016/06/18/方法和函数的区别/</id>
     <published>2016-06-17T16:21:46.000Z</published>
-    <updated>2016-06-20T04:09:30.000Z</updated>
+    <updated>2016-06-20T07:41:00.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://yandex.st/highlightjs/8.0/styles/solarized_dark.min.css&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://yandex.st/highlightjs/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
 &lt;h1 id=&quot;关于方法和函数&quot;&gt;&lt;a href=&quot;#关于方法和函数&quot; class=&quot;headerlink&quot; title=&quot;关于方法和函数&quot;&gt;&lt;/a&gt;关于方法和函数&lt;/h1&gt;&lt;p&gt;通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言&lt;/p&gt;
 &lt;h2 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h2&gt;&lt;p&gt;通常我们口语中方法和函数基本上就是一回事，如下面的例子&lt;br&gt;&lt;/p&gt;
