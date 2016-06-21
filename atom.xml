@@ -184,7 +184,7 @@
     <link href="http://www.denman.me/2016/06/18/KVC%E4%B8%AD%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E7%9A%84%E9%A1%BA%E5%BA%8F/"/>
     <id>http://www.denman.me/2016/06/18/KVC中对对象的属性赋值的顺序/</id>
     <published>2016-06-18T10:41:31.000Z</published>
-    <updated>2016-06-21T06:51:12.000Z</updated>
+    <updated>2016-06-21T07:10:51.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -198,7 +198,7 @@
 2.找叫name的属性
 3.找叫name的成员变量
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;都找不到的时候 会报错！&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =250&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -257,7 +257,7 @@
     <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
     <id>http://www.denman.me/2016/06/18/关于category不能添加实例变量/</id>
     <published>2016-06-17T16:25:04.000Z</published>
-    <updated>2016-06-21T06:49:45.000Z</updated>
+    <updated>2016-06-21T07:10:19.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -292,7 +292,7 @@
 &lt;/ol&gt;
 &lt;h2 id=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;a href=&quot;#为什么Category不能添加实例变量而Extension可以&quot; class=&quot;headerlink&quot; title=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;/a&gt;为什么Category不能添加实例变量而Extension可以&lt;/h2&gt;&lt;p&gt;其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。&lt;br&gt;第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。&lt;br&gt;&lt;br&gt;为什么Category没有空间容纳实例变量呢？&lt;br&gt;&lt;br&gt;从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表&lt;br&gt;&lt;br&gt;而Extension为什么就可以呢？&lt;br&gt;&lt;br&gt;通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。&lt;/p&gt;
 &lt;h2 id=&quot;通过runtime向类关联对象&quot;&gt;&lt;a href=&quot;#通过runtime向类关联对象&quot; class=&quot;headerlink&quot; title=&quot;通过runtime向类关联对象&quot;&gt;&lt;/a&gt;通过runtime向类关联对象&lt;/h2&gt;&lt;p&gt;虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  &lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -315,7 +315,7 @@
     <link href="http://www.denman.me/2016/06/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.denman.me/2016/06/18/方法和函数的区别/</id>
     <published>2016-06-17T16:21:46.000Z</published>
-    <updated>2016-06-20T11:23:43.000Z</updated>
+    <updated>2016-06-21T07:11:03.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -353,7 +353,7 @@
 @end
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 这个类就是函数签名类，包含参数的数量，每个参数的类型，函数返回值类型&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png = 150&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -464,7 +464,7 @@
     <link href="http://www.denman.me/2015/03/06/%E6%80%9D%E5%BF%B5%E5%90%8C%E5%AD%A6/"/>
     <id>http://www.denman.me/2015/03/06/思念同学/</id>
     <published>2015-03-06T07:26:31.000Z</published>
-    <updated>2016-06-20T08:06:09.000Z</updated>
+    <updated>2016-06-21T07:11:13.000Z</updated>
     
     <content type="html">&lt;p&gt;去年今日今时月，&lt;/p&gt;
 &lt;p&gt;同照你我苍白身。&lt;/p&gt;
@@ -478,7 +478,7 @@
 &lt;p&gt;梦中犹醉见杜康。&lt;/p&gt;
 &lt;p&gt;杜康问我有何事，&lt;/p&gt;
 &lt;p&gt;是否有酒共一杯。&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =250&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -499,10 +499,10 @@
     <link href="http://www.denman.me/2014/09/20/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
     <id>http://www.denman.me/2014/09/20/思念家乡/</id>
     <published>2014-09-20T13:21:47.000Z</published>
-    <updated>2016-06-21T07:02:59.000Z</updated>
+    <updated>2016-06-21T07:10:05.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时27年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 多少蹉跎&lt;br&gt; 几多风雨几多晴&lt;br&gt; 都长满在这里&lt;br&gt;母亲一天一天把我养大&lt;br&gt;父亲一年一年教我做人&lt;br&gt;骨子里埋下了吃苦耐劳的根&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://f.cl.ly/items/3P162D3v081x1P1Q0W0v/weichat_alipay_pay_small.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">

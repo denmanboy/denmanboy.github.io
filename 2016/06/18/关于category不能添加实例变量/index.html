@@ -11,12 +11,12 @@
 <meta property="og:url" content="http://www.denman.me/2016/06/18/关于category不能添加实例变量/index.html">
 <meta property="og:site_name" content="denman's blog">
 <meta property="og:description" content="category 不能添加实例变量的原因">
-<meta property="og:image" content="http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150">
-<meta property="og:updated_time" content="2016-06-21T06:49:45.000Z">
+<meta property="og:image" content="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg">
+<meta property="og:updated_time" content="2016-06-21T07:10:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于category不能添加实例变量">
 <meta name="twitter:description" content="category 不能添加实例变量的原因">
-<meta name="twitter:image" content="http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150">
+<meta name="twitter:image" content="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -312,7 +312,7 @@
 </ol>
 <h2 id="为什么Category不能添加实例变量而Extension可以"><a href="#为什么Category不能添加实例变量而Extension可以" class="headerlink" title="为什么Category不能添加实例变量而Extension可以"></a>为什么Category不能添加实例变量而Extension可以</h2><p>其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。<br>第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。<br><br>为什么Category没有空间容纳实例变量呢？<br><br>从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表<br><br>而Extension为什么就可以呢？<br><br>通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。</p>
 <h2 id="通过runtime向类关联对象"><a href="#通过runtime向类关联对象" class="headerlink" title="通过runtime向类关联对象"></a>通过runtime向类关联对象</h2><p>虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  </p>
-<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150" alt="image"></div></p>
+<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
 
       
     </div>
@@ -324,7 +324,7 @@
         <p><span>本文标题:</span><a href="/2016/06/18/关于category不能添加实例变量/">关于category不能添加实例变量</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
         <p><span>发布时间:</span>2016年06月18日 - 00时25分</p>
-        <p><span>最后更新:</span>2016年06月21日 - 14时49分</p>
+        <p><span>最后更新:</span>2016年06月21日 - 15时10分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/18/关于category不能添加实例变量/" title="关于category不能添加实例变量">http://www.denman.me/2016/06/18/关于category不能添加实例变量/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2016/06/18/关于category不能添加实例变量/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
