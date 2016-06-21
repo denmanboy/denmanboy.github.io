@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-20T13:42:40.000Z</updated>
+  <updated>2016-06-20T13:21:17.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,30 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>思念家乡</title>
-    <link href="http://www.denman.me/2016/06/20/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
-    <id>http://www.denman.me/2016/06/20/思念家乡/</id>
-    <published>2016-06-20T13:21:47.000Z</published>
-    <updated>2016-06-20T13:42:40.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时27年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 都长满在这里&lt;br&gt;母亲一天一天把我养大&lt;br&gt;父亲一年一年教我做人&lt;br&gt;骨子里埋下了吃苦耐劳的根&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时27年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 都长满在这里&lt;br&gt;母亲
-    
-    </summary>
-    
-      <category term="life" scheme="http://www.denman.me/categories/life/"/>
-    
-    
-      <category term="思念家乡" scheme="http://www.denman.me/tags/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
-    
-  </entry>
   
   <entry>
     <title>NavigationBar自定义BackItem</title>
@@ -208,7 +184,7 @@
     <link href="http://www.denman.me/2016/06/18/KVC%E4%B8%AD%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E7%9A%84%E9%A1%BA%E5%BA%8F/"/>
     <id>http://www.denman.me/2016/06/18/KVC中对对象的属性赋值的顺序/</id>
     <published>2016-06-18T10:41:31.000Z</published>
-    <updated>2016-06-20T08:02:23.000Z</updated>
+    <updated>2016-06-21T06:51:12.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -227,8 +203,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bo
+      KVC编程中对对象属性赋值的顺序
     
     </summary>
     
@@ -282,7 +257,7 @@
     <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
     <id>http://www.denman.me/2016/06/18/关于category不能添加实例变量/</id>
     <published>2016-06-17T16:25:04.000Z</published>
-    <updated>2016-06-20T13:18:06.000Z</updated>
+    <updated>2016-06-21T06:49:45.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -322,8 +297,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bo
+      category 不能添加实例变量的原因
     
     </summary>
     
@@ -442,7 +416,7 @@
     <link href="http://www.denman.me/2015/03/13/%E6%9F%A5%E7%9C%8B%E9%9D%99%E6%80%81%E5%BA%93%E6%96%87%E4%BB%B6%E6%94%AF%E6%8C%81%E7%9A%84%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%9E%84%E7%9A%84%E6%96%B9%E6%B3%95/"/>
     <id>http://www.denman.me/2015/03/13/查看静态库文件支持的指令集架构的方法/</id>
     <published>2015-03-13T03:45:30.000Z</published>
-    <updated>2016-06-18T10:28:53.000Z</updated>
+    <updated>2016-06-21T06:51:43.000Z</updated>
     
     <content type="html">&lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop developer$ cd SpeexRecord&lt;br&gt;localhost:SpeexRecord developer$ lipo -info libogg.a&lt;br&gt;Architectures in the fat file: libogg.a are: i386 armv6 armv7&lt;br&gt;结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位&lt;/p&gt;
 </content>
@@ -521,11 +495,35 @@
   </entry>
   
   <entry>
+    <title>思念家乡</title>
+    <link href="http://www.denman.me/2014/09/20/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
+    <id>http://www.denman.me/2014/09/20/思念家乡/</id>
+    <published>2014-09-20T13:21:47.000Z</published>
+    <updated>2016-06-21T06:50:03.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时27年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 多少蹉跎&lt;br&gt; 几多风雨几多晴&lt;br&gt; 都长满在这里&lt;br&gt;母亲一天一天把我养大&lt;br&gt;父亲一年一年教我做人&lt;br&gt;骨子里埋下了吃苦耐劳的根&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      离开家乡已经多日，偶发感慨
+    
+    </summary>
+    
+      <category term="life" scheme="http://www.denman.me/categories/life/"/>
+    
+    
+      <category term="思念家乡" scheme="http://www.denman.me/tags/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Objective-C GCC Code Block Evaluation C Extension</title>
     <link href="http://www.denman.me/2014/02/20/Objective-C%20GCC%20Code%20Block%20Evaluation%20C%20Extension%20%E8%AF%AD%E6%B3%95/"/>
     <id>http://www.denman.me/2014/02/20/Objective-C GCC Code Block Evaluation C Extension 语法/</id>
     <published>2014-02-20T06:03:40.000Z</published>
-    <updated>2016-06-20T10:53:38.000Z</updated>
+    <updated>2016-06-21T06:52:21.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -538,7 +536,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sub
+      GCC编译器的提供的一个语法
     
     </summary>
     

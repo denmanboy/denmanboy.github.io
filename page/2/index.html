@@ -239,59 +239,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Xcode常用的插件" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/18/Xcode常用的插件/" class="article-date">
-      <time datetime="2016-06-17T16:28:18.000Z" itemprop="datePublished">2016-06-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/18/Xcode常用的插件/">Xcode常用的插件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-关于block的那些事" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -380,41 +327,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
-<p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
-<p><script>hljs.initHighlightingOnLoad();</script></p>
-<h1 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。<br><br>不过有时子类并不方便。比方说，你想为<code>NSString</code>类添加一个新的行为，但是<code>NSString</code>实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。<br><br>利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的<code>Category</code></p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>struct objc_category {
-    //category名称
-    char *category_name                                      
-    //添加category的类名称
-    char *class_name        
-    //实例方法列表                                
-    struct objc_method_list *instance_methods                
-    //类方法列表
-    struct objc_method_list *class_methods                   
-    //协议列表
-    struct objc_protocol_list *protocols                     
-}                                                            
-</code></pre><h2 id="Category的优势"><a href="#Category的优势" class="headerlink" title="Category的优势"></a>Category的优势</h2><ol>
-<li>利用Category分散实现代码</li>
-<li>通过Category创建前向应用</li>
-</ol>
-<h1 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>Extension就是匿名Category，但是又有着很大的不同。</p>
-<h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1><ol>
-<li>Category可以写在单独一个文件内，也可以写在与之关联的类里面</li>
-<li>Extension必须写在实现文件里  </li>
-<li>Category声明的方法可以不实现.</li>
-<li>Extension里声明的方法必须实现</li>
-<li>Category不能添加实例变量</li>
-<li>Extension可以添加实例变量</li>
-<li>Category是运行时才会执行</li>
-<li>Extension是编译时就会和关联的类一起编译</li>
-</ol>
-<h2 id="为什么Category不能添加实例变量而Extension可以"><a href="#为什么Category不能添加实例变量而Extension可以" class="headerlink" title="为什么Category不能添加实例变量而Extension可以"></a>为什么Category不能添加实例变量而Extension可以</h2><p>其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。<br>第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。<br><br>为什么Category没有空间容纳实例变量呢？<br><br>从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表<br><br>而Extension为什么就可以呢？<br><br>通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。</p>
-<h2 id="通过runtime向类关联对象"><a href="#通过runtime向类关联对象" class="headerlink" title="通过runtime向类关联对象"></a>通过runtime向类关联对象</h2><p>虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  </p>
-<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/2D2T3a080N0R/weichat_alipay_pay.png =150" alt="image"></div></p>
-
+              category 不能添加实例变量的原因
+          
       
     </div>
     
@@ -431,6 +345,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/category/">category</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/18/关于category不能添加实例变量/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -826,6 +744,72 @@
 
 
   
+    <article id="post-思念家乡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/20/思念家乡/" class="article-date">
+      <time datetime="2014-09-20T13:21:47.000Z" itemprop="datePublished">2014-09-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/20/思念家乡/">思念家乡</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              离开家乡已经多日，偶发感慨
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/life/">life</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/思念家乡/">思念家乡</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/09/20/思念家乡/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="objective-c-Objective-C GCC Code Block Evaluation C Extension 语法" class="article article-type-objective-c" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -853,14 +837,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
-<p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
-<p><script>hljs.initHighlightingOnLoad();</script><br>先看这样一些代码</p>
-<p><pre><br><code><br>    self.nameLabel = ({<br>        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];<br>        label.backgroundColor = [UIColor yellowColor];<br>        label.text = @”name”;<br>        label.font = [UIFont systemFontOfSize:15];<br>        label.textColor = [UIColor yellowColor];<br>        label;<br>    });<br></code><br></pre></p>
-<h1 id="解读"><a href="#解读" class="headerlink" title="解读"></a>解读</h1><p>这个是GCC编译器的提供的一个语法<br>可以看到把一个控件的所有属性全部写在({…})中，这样两个好处一个是结构会更加清晰，封装性非常好，第二个可以使用非常简洁的命名来命名局部变量，写起来会很优雅。它能够在局部初始UI以及处理逻辑,在团队协作中方便同事快速读懂你的UI布局。</p>
-<hr>
-<p>参考：<a href="http://nshipster.com/new-years-2014/" target="_blank" rel="external">GCC Code Block Evaluation C Extension</a></p>
-
+              GCC编译器的提供的一个语法
+          
       
     </div>
     
@@ -873,6 +851,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object-c/">Object-c</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2014/02/20/Objective-C GCC Code Block Evaluation C Extension 语法/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
