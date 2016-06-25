@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://www.denman.me/2016/06/19/delegate和block使用的场景/index.html">
 <meta property="og:site_name" content="denman's blog">
 <meta property="og:description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
-<meta property="og:updated_time" content="2016-06-25T13:46:02.000Z">
+<meta property="og:updated_time" content="2016-06-25T13:49:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="delegate和block使用的场景">
 <meta name="twitter:description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
@@ -279,46 +279,47 @@
 
 <p>比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。<br>我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。</p>
 <h2 id="delegate举例"><a href="#delegate举例" class="headerlink" title="delegate举例"></a>delegate举例</h2><p>我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   </p>
-<h3 id="UITableViewDelegate"><a href="#UITableViewDelegate" class="headerlink" title="UITableViewDelegate"></a>UITableViewDelegate</h3><pre><code>@protocol UITableViewDelegate&lt;NSObject, UIScrollViewDelegate&gt;
-@optional
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-
- @end  
-</code></pre><h3 id="UITableViewDataSource"><a href="#UITableViewDataSource" class="headerlink" title="UITableViewDataSource"></a>UITableViewDataSource</h3><pre><code>@protocol UITableViewDataSource&lt;NSObject&gt;
-@required
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell&apos;s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@optional
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;              // Default is 1 if not implemented
-
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different
-- (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
-
-// Editing
-
-// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-
-// Moving/reordering
-
-// Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@end
-</code></pre><h2 id="delegate分析"><a href="#delegate分析" class="headerlink" title="delegate分析"></a>delegate分析</h2><ul>
+<h3 id="UITableViewDelegate"><a href="#UITableViewDelegate" class="headerlink" title="UITableViewDelegate"></a>UITableViewDelegate</h3><p> <pre><code><br>@protocol UITableViewDelegate<nsobject, uiscrollviewdelegate=""><br>@optional</nsobject,></code></pre></p>
+<ul>
+<li>(void)tableView:(UITableView <em>)tableView willDisplayCell:(UITableViewCell </em>)cell forRowAtIndexPath:(NSIndexPath *)indexPath;</li>
+<li><p>(void)tableView:(UITableView <em>)tableView willDisplayHeaderView:(UIView </em>)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);</p>
+<ul>
+<li>(void)tableView:(UITableView <em>)tableView willDisplayFooterView:(UIView </em>)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);</li>
+<li>(void)tableView:(UITableView <em>)tableView didEndDisplayingCell:(UITableViewCell </em>)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);</li>
+<li>(void)tableView:(UITableView <em>)tableView didEndDisplayingHeaderView:(UIView </em>)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);</li>
+<li><p>(void)tableView:(UITableView <em>)tableView didEndDisplayingFooterView:(UIView </em>)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);<br>@end<br></p>
+<h3 id="UITableViewDataSource"><a href="#UITableViewDataSource" class="headerlink" title="UITableViewDataSource"></a>UITableViewDataSource</h3><p>@protocol UITableViewDataSource<nsobject><br>@required</nsobject></p>
+<ul>
+<li>(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;</li>
+</ul>
+<p>// Row display. Implementers should <em>always</em> try to reuse cells by setting each cell’s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:<br>// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)</p>
+<ul>
+<li>(UITableViewCell <em>)tableView:(UITableView </em>)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;</li>
+</ul>
+<p>@optional</p>
+<ul>
+<li><p>(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;              // Default is 1 if not implemented</p>
+</li>
+<li><p>(nullable NSString <em>)tableView:(UITableView </em>)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different</p>
+</li>
+<li>(nullable NSString <em>)tableView:(UITableView </em>)tableView titleForFooterInSection:(NSInteger)section;</li>
+</ul>
+<p>// Editing</p>
+<p>// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.</p>
+<ul>
+<li>(BOOL)tableView:(UITableView <em>)tableView canEditRowAtIndexPath:(NSIndexPath </em>)indexPath;</li>
+</ul>
+<p>// Moving/reordering</p>
+<p>// Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:</p>
+<ul>
+<li>(BOOL)tableView:(UITableView <em>)tableView canMoveRowAtIndexPath:(NSIndexPath </em>)indexPath;</li>
+</ul>
+<p>@end</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="delegate分析"><a href="#delegate分析" class="headerlink" title="delegate分析"></a>delegate分析</h2><ul>
 <li>大多数delegate protocols 都拥有几个消息源。<br>从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。</li>
 </ul>
 
@@ -332,7 +333,7 @@
         <p><span>本文标题:</span><a href="/2016/06/19/delegate和block使用的场景/">delegate和block使用的场景</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
         <p><span>发布时间:</span>2016年06月19日 - 19时24分</p>
-        <p><span>最后更新:</span>2016年06月25日 - 21时46分</p>
+        <p><span>最后更新:</span>2016年06月25日 - 21时49分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/19/delegate和block使用的场景/" title="delegate和block使用的场景">http://www.denman.me/2016/06/19/delegate和block使用的场景/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2016/06/19/delegate和block使用的场景/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

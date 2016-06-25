@@ -60,7 +60,7 @@
     <link href="http://www.denman.me/2016/06/19/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
     <id>http://www.denman.me/2016/06/19/delegate和block使用的场景/</id>
     <published>2016-06-19T11:24:51.000Z</published>
-    <updated>2016-06-25T13:46:02.000Z</updated>
+    <updated>2016-06-25T13:49:35.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  
@@ -68,46 +68,47 @@
 
 &lt;p&gt;比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。&lt;br&gt;我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。&lt;/p&gt;
 &lt;h2 id=&quot;delegate举例&quot;&gt;&lt;a href=&quot;#delegate举例&quot; class=&quot;headerlink&quot; title=&quot;delegate举例&quot;&gt;&lt;/a&gt;delegate举例&lt;/h2&gt;&lt;p&gt;我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   &lt;/p&gt;
-&lt;h3 id=&quot;UITableViewDelegate&quot;&gt;&lt;a href=&quot;#UITableViewDelegate&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDelegate&quot;&gt;&lt;/a&gt;UITableViewDelegate&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDelegate&amp;lt;NSObject, UIScrollViewDelegate&amp;gt;
-@optional
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-
- @end  
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;UITableViewDataSource&quot;&gt;&lt;a href=&quot;#UITableViewDataSource&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDataSource&quot;&gt;&lt;/a&gt;UITableViewDataSource&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDataSource&amp;lt;NSObject&amp;gt;
-@required
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell&amp;apos;s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@optional
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;              // Default is 1 if not implemented
-
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different
-- (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
-
-// Editing
-
-// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-
-// Moving/reordering
-
-// Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@end
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;delegate分析&quot;&gt;&lt;a href=&quot;#delegate分析&quot; class=&quot;headerlink&quot; title=&quot;delegate分析&quot;&gt;&lt;/a&gt;delegate分析&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&quot;UITableViewDelegate&quot;&gt;&lt;a href=&quot;#UITableViewDelegate&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDelegate&quot;&gt;&lt;/a&gt;UITableViewDelegate&lt;/h3&gt;&lt;p&gt; &lt;pre&gt;&lt;code&gt;&lt;br&gt;@protocol UITableViewDelegate&lt;nsobject, uiscrollviewdelegate=&quot;&quot;&gt;&lt;br&gt;@optional&lt;/nsobject,&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(void)tableView:(UITableView &lt;em&gt;)tableView willDisplayCell:(UITableViewCell &lt;/em&gt;)cell forRowAtIndexPath:(NSIndexPath *)indexPath;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(void)tableView:(UITableView &lt;em&gt;)tableView willDisplayHeaderView:(UIView &lt;/em&gt;)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(void)tableView:(UITableView &lt;em&gt;)tableView willDisplayFooterView:(UIView &lt;/em&gt;)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);&lt;/li&gt;
+&lt;li&gt;(void)tableView:(UITableView &lt;em&gt;)tableView didEndDisplayingCell:(UITableViewCell &lt;/em&gt;)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);&lt;/li&gt;
+&lt;li&gt;(void)tableView:(UITableView &lt;em&gt;)tableView didEndDisplayingHeaderView:(UIView &lt;/em&gt;)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(void)tableView:(UITableView &lt;em&gt;)tableView didEndDisplayingFooterView:(UIView &lt;/em&gt;)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);&lt;br&gt;@end&lt;br&gt;&lt;/p&gt;
+&lt;h3 id=&quot;UITableViewDataSource&quot;&gt;&lt;a href=&quot;#UITableViewDataSource&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDataSource&quot;&gt;&lt;/a&gt;UITableViewDataSource&lt;/h3&gt;&lt;p&gt;@protocol UITableViewDataSource&lt;nsobject&gt;&lt;br&gt;@required&lt;/nsobject&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// Row display. Implementers should &lt;em&gt;always&lt;/em&gt; try to reuse cells by setting each cell’s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:&lt;br&gt;// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(UITableViewCell &lt;em&gt;)tableView:(UITableView &lt;/em&gt;)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;@optional&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;              // Default is 1 if not implemented&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(nullable NSString &lt;em&gt;)tableView:(UITableView &lt;/em&gt;)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;(nullable NSString &lt;em&gt;)tableView:(UITableView &lt;/em&gt;)tableView titleForFooterInSection:(NSInteger)section;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// Editing&lt;/p&gt;
+&lt;p&gt;// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(BOOL)tableView:(UITableView &lt;em&gt;)tableView canEditRowAtIndexPath:(NSIndexPath &lt;/em&gt;)indexPath;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;// Moving/reordering&lt;/p&gt;
+&lt;p&gt;// Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(BOOL)tableView:(UITableView &lt;em&gt;)tableView canMoveRowAtIndexPath:(NSIndexPath &lt;/em&gt;)indexPath;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;@end&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;delegate分析&quot;&gt;&lt;a href=&quot;#delegate分析&quot; class=&quot;headerlink&quot; title=&quot;delegate分析&quot;&gt;&lt;/a&gt;delegate分析&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;大多数delegate protocols 都拥有几个消息源。&lt;br&gt;从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
