@@ -60,17 +60,17 @@
     <link href="http://www.denman.me/2016/06/19/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
     <id>http://www.denman.me/2016/06/19/delegate和block使用的场景/</id>
     <published>2016-06-19T11:24:51.000Z</published>
-    <updated>2016-06-25T10:46:59.000Z</updated>
+    <updated>2016-06-25T13:46:02.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  
 &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
 
 &lt;p&gt;比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。&lt;br&gt;我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。&lt;/p&gt;
-&lt;h2 id=&quot;delegate举例&quot;&gt;&lt;a href=&quot;#delegate举例&quot; class=&quot;headerlink&quot; title=&quot;delegate举例&quot;&gt;&lt;/a&gt;delegate举例&lt;/h2&gt;&lt;p&gt;我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的&lt;br&gt;  UITableViewDelegate&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@protocol UITableViewDelegate&amp;lt;NSObject, UIScrollViewDelegate&amp;gt;
-
+&lt;h2 id=&quot;delegate举例&quot;&gt;&lt;a href=&quot;#delegate举例&quot; class=&quot;headerlink&quot; title=&quot;delegate举例&quot;&gt;&lt;/a&gt;delegate举例&lt;/h2&gt;&lt;p&gt;我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   &lt;/p&gt;
+&lt;h3 id=&quot;UITableViewDelegate&quot;&gt;&lt;a href=&quot;#UITableViewDelegate&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDelegate&quot;&gt;&lt;/a&gt;UITableViewDelegate&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDelegate&amp;lt;NSObject, UIScrollViewDelegate&amp;gt;
 @optional
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
@@ -79,8 +79,7 @@
 - (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 
  @end  
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;UITableViewDataSource&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@protocol UITableViewDataSource&amp;lt;NSObject&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;UITableViewDataSource&quot;&gt;&lt;a href=&quot;#UITableViewDataSource&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDataSource&quot;&gt;&lt;/a&gt;UITableViewDataSource&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDataSource&amp;lt;NSObject&amp;gt;
 @required
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
