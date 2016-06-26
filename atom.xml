@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-20T13:21:17.000Z</updated>
+  <updated>2016-06-26T00:53:32.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -16,15 +16,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>NavigationBar自定义BackItem</title>
-    <link href="http://www.denman.me/2016/06/20/NavigationBar%E8%87%AA%E5%AE%9A%E4%B9%89BackItem/"/>
-    <id>http://www.denman.me/2016/06/20/NavigationBar自定义BackItem/</id>
-    <published>2016-06-20T13:20:43.000Z</published>
-    <updated>2016-06-20T13:21:17.000Z</updated>
+    <title>关于category不能添加实例变量</title>
+    <link href="http://www.denman.me/2016/06/23/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
+    <id>http://www.denman.me/2016/06/23/关于category不能添加实例变量/</id>
+    <published>2016-06-22T16:25:04.000Z</published>
+    <updated>2016-06-26T00:53:32.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Category&quot;&gt;&lt;a href=&quot;#Category&quot; class=&quot;headerlink&quot; title=&quot;Category&quot;&gt;&lt;/a&gt;Category&lt;/h1&gt;&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。&lt;br&gt;&lt;br&gt;不过有时子类并不方便。比方说，你想为&lt;code&gt;NSString&lt;/code&gt;类添加一个新的行为，但是&lt;code&gt;NSString&lt;/code&gt;实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。&lt;br&gt;&lt;br&gt;利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的&lt;code&gt;Category&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;struct objc_category {
+    //category名称
+    char *category_name                                      
+    //添加category的类名称
+    char *class_name        
+    //实例方法列表                                
+    struct objc_method_list *instance_methods                
+    //类方法列表
+    struct objc_method_list *class_methods                   
+    //协议列表
+    struct objc_protocol_list *protocols                     
+}                                                            
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Category的优势&quot;&gt;&lt;a href=&quot;#Category的优势&quot; class=&quot;headerlink&quot; title=&quot;Category的优势&quot;&gt;&lt;/a&gt;Category的优势&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;利用Category分散实现代码&lt;/li&gt;
+&lt;li&gt;通过Category创建前向应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;Extension&quot;&gt;&lt;a href=&quot;#Extension&quot; class=&quot;headerlink&quot; title=&quot;Extension&quot;&gt;&lt;/a&gt;Extension&lt;/h1&gt;&lt;h2 id=&quot;定义-1&quot;&gt;&lt;a href=&quot;#定义-1&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;Extension就是匿名Category，但是又有着很大的不同。&lt;/p&gt;
+&lt;h1 id=&quot;对比&quot;&gt;&lt;a href=&quot;#对比&quot; class=&quot;headerlink&quot; title=&quot;对比&quot;&gt;&lt;/a&gt;对比&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Category可以写在单独一个文件内，也可以写在与之关联的类里面&lt;/li&gt;
+&lt;li&gt;Extension必须写在实现文件里  &lt;/li&gt;
+&lt;li&gt;Category声明的方法可以不实现.&lt;/li&gt;
+&lt;li&gt;Extension里声明的方法必须实现&lt;/li&gt;
+&lt;li&gt;Category不能添加实例变量&lt;/li&gt;
+&lt;li&gt;Extension可以添加实例变量&lt;/li&gt;
+&lt;li&gt;Category是运行时才会执行&lt;/li&gt;
+&lt;li&gt;Extension是编译时就会和关联的类一起编译&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;a href=&quot;#为什么Category不能添加实例变量而Extension可以&quot; class=&quot;headerlink&quot; title=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;/a&gt;为什么Category不能添加实例变量而Extension可以&lt;/h2&gt;&lt;p&gt;其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。&lt;br&gt;第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。&lt;br&gt;&lt;br&gt;为什么Category没有空间容纳实例变量呢？&lt;br&gt;&lt;br&gt;从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表&lt;br&gt;&lt;br&gt;而Extension为什么就可以呢？&lt;br&gt;&lt;br&gt;通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。&lt;/p&gt;
+&lt;h2 id=&quot;通过runtime向类关联对象&quot;&gt;&lt;a href=&quot;#通过runtime向类关联对象&quot; class=&quot;headerlink&quot; title=&quot;通过runtime向类关联对象&quot;&gt;&lt;/a&gt;通过runtime向类关联对象&lt;/h2&gt;&lt;p&gt;虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  &lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      category 不能添加实例变量的原因
     
     </summary>
     
@@ -33,34 +69,16 @@
     
       <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
-  </entry>
-  
-  <entry>
-    <title>关于git的使用</title>
-    <link href="http://www.denman.me/2016/06/20/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.denman.me/2016/06/20/关于git的使用/</id>
-    <published>2016-06-20T07:06:48.000Z</published>
-    <updated>2016-06-20T07:43:17.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+      <category term="category" scheme="http://www.denman.me/tags/category/"/>
     
   </entry>
   
   <entry>
     <title>delegate和block使用的场景</title>
-    <link href="http://www.denman.me/2016/06/19/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
-    <id>http://www.denman.me/2016/06/19/delegate和block使用的场景/</id>
-    <published>2016-06-19T11:24:51.000Z</published>
-    <updated>2016-06-25T13:49:35.000Z</updated>
+    <link href="http://www.denman.me/2016/06/22/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
+    <id>http://www.denman.me/2016/06/22/delegate和block使用的场景/</id>
+    <published>2016-06-22T11:24:51.000Z</published>
+    <updated>2016-06-26T00:52:04.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  
@@ -127,11 +145,11 @@
   </entry>
   
   <entry>
-    <title>tableView优化的那些事</title>
-    <link href="http://www.denman.me/2016/06/19/tableView%E4%BC%98%E5%8C%96%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
-    <id>http://www.denman.me/2016/06/19/tableView优化的那些事/</id>
-    <published>2016-06-19T10:33:08.000Z</published>
-    <updated>2016-06-19T15:17:36.000Z</updated>
+    <title>NavigationBar自定义BackItem</title>
+    <link href="http://www.denman.me/2016/04/20/NavigationBar%E8%87%AA%E5%AE%9A%E4%B9%89BackItem/"/>
+    <id>http://www.denman.me/2016/04/20/NavigationBar自定义BackItem/</id>
+    <published>2016-04-20T13:20:43.000Z</published>
+    <updated>2016-06-26T00:57:21.000Z</updated>
     
     <content type="html"></content>
     
@@ -142,18 +160,57 @@
       <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
     
     
-      <category term="tableView" scheme="http://www.denman.me/tags/tableView/"/>
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
-      <category term="优化" scheme="http://www.denman.me/tags/%E4%BC%98%E5%8C%96/"/>
+  </entry>
+  
+  <entry>
+    <title>2015过年回家</title>
+    <link href="http://www.denman.me/2016/02/06/2015%E8%BF%87%E5%B9%B4%E5%9B%9E%E5%AE%B6/"/>
+    <id>http://www.denman.me/2016/02/06/2015过年回家/</id>
+    <published>2016-02-06T10:13:40.000Z</published>
+    <updated>2016-06-21T10:57:50.000Z</updated>
+    
+    <content type="html">&lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;一事无成百不堪。&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;不见天山九千雪，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;只见岁月染白头。&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-siz
+    
+    </summary>
+    
+      <category term="life" scheme="http://www.denman.me/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
     
   </entry>
   
   <entry>
     <title>利用runtime容错</title>
-    <link href="http://www.denman.me/2016/06/19/%E5%88%A9%E7%94%A8runtime%E5%AE%B9%E9%94%99/"/>
-    <id>http://www.denman.me/2016/06/19/利用runtime容错/</id>
-    <published>2016-06-19T10:32:41.000Z</published>
-    <updated>2016-06-19T15:21:58.000Z</updated>
+    <link href="http://www.denman.me/2015/12/02/%E5%88%A9%E7%94%A8runtime%E5%AE%B9%E9%94%99/"/>
+    <id>http://www.denman.me/2015/12/02/利用runtime容错/</id>
+    <published>2015-12-02T10:32:41.000Z</published>
+    <updated>2016-06-26T00:54:57.000Z</updated>
     
     <content type="html"></content>
     
@@ -169,11 +226,11 @@
   </entry>
   
   <entry>
-    <title>为什么说Object-c是一门动态语言</title>
-    <link href="http://www.denman.me/2016/06/19/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4Object-c%E6%98%AF%E4%B8%80%E9%97%A8%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
-    <id>http://www.denman.me/2016/06/19/为什么说Object-c是一门动态语言/</id>
-    <published>2016-06-19T09:42:41.000Z</published>
-    <updated>2016-06-19T15:17:02.000Z</updated>
+    <title>关于runLoop那些事</title>
+    <link href="http://www.denman.me/2015/10/12/%E5%85%B3%E4%BA%8ErunLoop%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://www.denman.me/2015/10/12/关于runLoop那些事/</id>
+    <published>2015-10-11T16:21:09.000Z</published>
+    <updated>2016-06-26T00:54:24.000Z</updated>
     
     <content type="html"></content>
     
@@ -184,42 +241,16 @@
       <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
     
     
-      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
-    
-      <category term="动态语言" scheme="http://www.denman.me/tags/%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS获取缓存文件的大小，实现缓的清理功能</title>
-    <link href="http://www.denman.me/2016/06/18/iOS%E8%8E%B7%E5%8F%96%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F%EF%BC%8C%E5%AE%9E%E7%8E%B0%E7%BC%93%E7%9A%84%E6%B8%85%E7%90%86%E5%8A%9F%E8%83%BD/"/>
-    <id>http://www.denman.me/2016/06/18/iOS获取缓存文件的大小，实现缓的清理功能/</id>
-    <published>2016-06-18T10:54:21.000Z</published>
-    <updated>2016-06-18T11:11:23.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-      移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-      <category term="缓存" scheme="http://www.denman.me/tags/%E7%BC%93%E5%AD%98/"/>
+      <category term="runLoop" scheme="http://www.denman.me/tags/runLoop/"/>
     
   </entry>
   
   <entry>
     <title>Masonry框架分析-链式编程思想</title>
-    <link href="http://www.denman.me/2016/06/18/Masonry%E6%A1%86%E6%9E%B6%E5%88%86%E6%9E%90-%E9%93%BE%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/"/>
-    <id>http://www.denman.me/2016/06/18/Masonry框架分析-链式编程思想/</id>
-    <published>2016-06-18T10:47:07.000Z</published>
-    <updated>2016-06-18T10:47:07.000Z</updated>
+    <link href="http://www.denman.me/2015/09/18/Masonry%E6%A1%86%E6%9E%B6%E5%88%86%E6%9E%90-%E9%93%BE%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/"/>
+    <id>http://www.denman.me/2015/09/18/Masonry框架分析-链式编程思想/</id>
+    <published>2015-09-18T10:47:07.000Z</published>
+    <updated>2016-06-26T00:57:10.000Z</updated>
     
     <content type="html"></content>
     
@@ -227,146 +258,15 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>KVC中对对象的属性赋值的顺序</title>
-    <link href="http://www.denman.me/2016/06/18/KVC%E4%B8%AD%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E7%9A%84%E9%A1%BA%E5%BA%8F/"/>
-    <id>http://www.denman.me/2016/06/18/KVC中对对象的属性赋值的顺序/</id>
-    <published>2016-06-18T10:41:31.000Z</published>
-    <updated>2016-06-21T07:10:51.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;在KVC编程当中找对象的属性的顺序如下&lt;br&gt;例如 [object    setValue:@”邓小平” forKey:@”name” ];&lt;br&gt;那么KVC找属性的顺序如何呢&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.找_name的成员变量
-2.找叫name的属性
-3.找叫name的成员变量
-4.调用setValue:&amp;lt;#(id)#&amp;gt; forUndefinedKey:&amp;lt;#(NSString *)#&amp;gt;];//要重写
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;所以一个对象用到KVC对属相赋值的时候 一定要实现&lt;br&gt; setValue:&amp;lt;#(id)#&amp;gt; forUndefinedKey:&amp;lt;#(NSString *)#&amp;gt;];方法&lt;br&gt;不然当 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.找_name的成员变量
-2.找叫name的属性
-3.找叫name的成员变量
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;都找不到的时候 会报错！&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      KVC编程中对对象属性赋值的顺序
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-      <category term="KVC" scheme="http://www.denman.me/tags/KVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Xcode常用的插件</title>
-    <link href="http://www.denman.me/2016/06/18/Xcode%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/"/>
-    <id>http://www.denman.me/2016/06/18/Xcode常用的插件/</id>
-    <published>2016-06-17T16:28:18.000Z</published>
-    <updated>2016-06-17T16:28:18.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于block的那些事</title>
-    <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Eblock%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
-    <id>http://www.denman.me/2016/06/18/关于block的那些事/</id>
-    <published>2016-06-17T16:26:47.000Z</published>
-    <updated>2016-06-19T09:35:10.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="block" scheme="http://www.denman.me/tags/block/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于category不能添加实例变量</title>
-    <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
-    <id>http://www.denman.me/2016/06/18/关于category不能添加实例变量/</id>
-    <published>2016-06-17T16:25:04.000Z</published>
-    <updated>2016-06-21T07:10:19.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Category&quot;&gt;&lt;a href=&quot;#Category&quot; class=&quot;headerlink&quot; title=&quot;Category&quot;&gt;&lt;/a&gt;Category&lt;/h1&gt;&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。&lt;br&gt;&lt;br&gt;不过有时子类并不方便。比方说，你想为&lt;code&gt;NSString&lt;/code&gt;类添加一个新的行为，但是&lt;code&gt;NSString&lt;/code&gt;实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。&lt;br&gt;&lt;br&gt;利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的&lt;code&gt;Category&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;struct objc_category {
-    //category名称
-    char *category_name                                      
-    //添加category的类名称
-    char *class_name        
-    //实例方法列表                                
-    struct objc_method_list *instance_methods                
-    //类方法列表
-    struct objc_method_list *class_methods                   
-    //协议列表
-    struct objc_protocol_list *protocols                     
-}                                                            
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Category的优势&quot;&gt;&lt;a href=&quot;#Category的优势&quot; class=&quot;headerlink&quot; title=&quot;Category的优势&quot;&gt;&lt;/a&gt;Category的优势&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;利用Category分散实现代码&lt;/li&gt;
-&lt;li&gt;通过Category创建前向应用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;Extension&quot;&gt;&lt;a href=&quot;#Extension&quot; class=&quot;headerlink&quot; title=&quot;Extension&quot;&gt;&lt;/a&gt;Extension&lt;/h1&gt;&lt;h2 id=&quot;定义-1&quot;&gt;&lt;a href=&quot;#定义-1&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;Extension就是匿名Category，但是又有着很大的不同。&lt;/p&gt;
-&lt;h1 id=&quot;对比&quot;&gt;&lt;a href=&quot;#对比&quot; class=&quot;headerlink&quot; title=&quot;对比&quot;&gt;&lt;/a&gt;对比&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;Category可以写在单独一个文件内，也可以写在与之关联的类里面&lt;/li&gt;
-&lt;li&gt;Extension必须写在实现文件里  &lt;/li&gt;
-&lt;li&gt;Category声明的方法可以不实现.&lt;/li&gt;
-&lt;li&gt;Extension里声明的方法必须实现&lt;/li&gt;
-&lt;li&gt;Category不能添加实例变量&lt;/li&gt;
-&lt;li&gt;Extension可以添加实例变量&lt;/li&gt;
-&lt;li&gt;Category是运行时才会执行&lt;/li&gt;
-&lt;li&gt;Extension是编译时就会和关联的类一起编译&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;a href=&quot;#为什么Category不能添加实例变量而Extension可以&quot; class=&quot;headerlink&quot; title=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;/a&gt;为什么Category不能添加实例变量而Extension可以&lt;/h2&gt;&lt;p&gt;其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。&lt;br&gt;第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。&lt;br&gt;&lt;br&gt;为什么Category没有空间容纳实例变量呢？&lt;br&gt;&lt;br&gt;从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表&lt;br&gt;&lt;br&gt;而Extension为什么就可以呢？&lt;br&gt;&lt;br&gt;通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。&lt;/p&gt;
-&lt;h2 id=&quot;通过runtime向类关联对象&quot;&gt;&lt;a href=&quot;#通过runtime向类关联对象&quot; class=&quot;headerlink&quot; title=&quot;通过runtime向类关联对象&quot;&gt;&lt;/a&gt;通过runtime向类关联对象&lt;/h2&gt;&lt;p&gt;虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  &lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      category 不能添加实例变量的原因
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-      <category term="category" scheme="http://www.denman.me/tags/category/"/>
     
   </entry>
   
   <entry>
     <title>OC中方法和函数的区别</title>
-    <link href="http://www.denman.me/2016/06/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://www.denman.me/2016/06/18/方法和函数的区别/</id>
-    <published>2016-06-17T16:21:46.000Z</published>
-    <updated>2016-06-21T07:11:03.000Z</updated>
+    <link href="http://www.denman.me/2015/07/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://www.denman.me/2015/07/18/方法和函数的区别/</id>
+    <published>2015-07-17T16:21:46.000Z</published>
+    <updated>2016-06-26T00:52:31.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
@@ -423,11 +323,11 @@
   </entry>
   
   <entry>
-    <title>关于runLoop那些事</title>
-    <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8ErunLoop%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
-    <id>http://www.denman.me/2016/06/18/关于runLoop那些事/</id>
-    <published>2016-06-17T16:21:09.000Z</published>
-    <updated>2016-06-19T15:18:15.000Z</updated>
+    <title>tableView优化的那些事</title>
+    <link href="http://www.denman.me/2015/07/08/tableView%E4%BC%98%E5%8C%96%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://www.denman.me/2015/07/08/tableView优化的那些事/</id>
+    <published>2015-07-08T10:33:08.000Z</published>
+    <updated>2016-06-26T00:57:51.000Z</updated>
     
     <content type="html"></content>
     
@@ -438,16 +338,18 @@
       <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
     
     
-      <category term="runLoop" scheme="http://www.denman.me/tags/runLoop/"/>
+      <category term="tableView" scheme="http://www.denman.me/tags/tableView/"/>
+    
+      <category term="优化" scheme="http://www.denman.me/tags/%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
-    <title>关于runtime那些事</title>
-    <link href="http://www.denman.me/2016/06/18/%E5%85%B3%E4%BA%8Eruntime%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
-    <id>http://www.denman.me/2016/06/18/关于runtime那些事/</id>
-    <published>2016-06-17T16:20:34.000Z</published>
-    <updated>2016-06-19T15:23:17.000Z</updated>
+    <title>关于git的使用</title>
+    <link href="http://www.denman.me/2015/04/20/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.denman.me/2015/04/20/关于git的使用/</id>
+    <published>2015-04-20T07:06:48.000Z</published>
+    <updated>2016-06-26T00:53:57.000Z</updated>
     
     <content type="html"></content>
     
@@ -458,96 +360,23 @@
       <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
     
     
-      <category term="rumtime" scheme="http://www.denman.me/tags/rumtime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2015过年回家</title>
-    <link href="http://www.denman.me/2016/02/06/2015%E8%BF%87%E5%B9%B4%E5%9B%9E%E5%AE%B6/"/>
-    <id>http://www.denman.me/2016/02/06/2015过年回家/</id>
-    <published>2016-02-06T10:13:40.000Z</published>
-    <updated>2016-06-21T10:57:50.000Z</updated>
-    
-    <content type="html">&lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;一事无成百不堪。&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;不见天山九千雪，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;只见岁月染白头。&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-siz
-    
-    </summary>
-    
-      <category term="life" scheme="http://www.denman.me/categories/life/"/>
-    
-    
-      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>查看静态库文件支持的指令集架构的方法</title>
-    <link href="http://www.denman.me/2015/03/13/%E6%9F%A5%E7%9C%8B%E9%9D%99%E6%80%81%E5%BA%93%E6%96%87%E4%BB%B6%E6%94%AF%E6%8C%81%E7%9A%84%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%9E%84%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://www.denman.me/2015/03/13/查看静态库文件支持的指令集架构的方法/</id>
-    <published>2015-03-13T03:45:30.000Z</published>
-    <updated>2016-06-21T06:51:43.000Z</updated>
-    
-    <content type="html">&lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop developer$ cd SpeexRecord&lt;br&gt;localhost:SpeexRecord developer$ lipo -info libogg.a&lt;br&gt;Architectures in the fat file: libogg.a are: i386 armv6 armv7&lt;br&gt;结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop d
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
       <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
-      <category term="64位" scheme="http://www.denman.me/tags/64%E4%BD%8D/"/>
-    
   </entry>
   
   <entry>
-    <title>iOS的release和debug有什么区别</title>
-    <link href="http://www.denman.me/2015/03/10/iOS%E7%9A%84release%E5%92%8Cdebug%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/"/>
-    <id>http://www.denman.me/2015/03/10/iOS的release和debug有什么区别/</id>
-    <published>2015-03-10T06:23:36.000Z</published>
-    <updated>2016-06-18T10:30:32.000Z</updated>
+    <title>Xcode常用的插件</title>
+    <link href="http://www.denman.me/2015/04/12/Xcode%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/"/>
+    <id>http://www.denman.me/2015/04/12/Xcode常用的插件/</id>
+    <published>2015-04-11T16:28:18.000Z</published>
+    <updated>2016-06-26T00:58:34.000Z</updated>
     
-    <content type="html">&lt;p&gt;Release是发行版本,比Debug版本有一些优化，文件比Debug文件小 Debug是调试版本，Debug和Release调用两个不同的底层库。&lt;br&gt;一、”Debug是调试版本，包括的程序信息更多”&lt;br&gt;二、只有DEBUG版的程序才能设置断点、单步执行、使用TRACE/ASSERT等调试输出语句。&lt;br&gt;三、REALEASE不包含任何调试信息，所以体积小、运行速度快。&lt;/p&gt;
-</content>
+    <content type="html"></content>
     
     <summary type="html">
     
-      &lt;p&gt;Release是发行版本,比Debug版本有一些优化，文件比Debug文件小 Debug是调试版本，Debug和Release调用两个不同的底层库。&lt;br&gt;一、”Debug是调试版本，包括的程序信息更多”&lt;br&gt;二、只有DEBUG版的程序才能设置断点、单步执行、使用TRAC
-    
     </summary>
     
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
   </entry>
   
@@ -587,6 +416,71 @@
   </entry>
   
   <entry>
+    <title>关于runtime那些事</title>
+    <link href="http://www.denman.me/2014/12/23/%E5%85%B3%E4%BA%8Eruntime%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://www.denman.me/2014/12/23/关于runtime那些事/</id>
+    <published>2014-12-22T16:20:34.000Z</published>
+    <updated>2016-06-26T00:55:29.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="rumtime" scheme="http://www.denman.me/tags/rumtime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于block的那些事</title>
+    <link href="http://www.denman.me/2014/11/18/%E5%85%B3%E4%BA%8Eblock%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://www.denman.me/2014/11/18/关于block的那些事/</id>
+    <published>2014-11-17T16:26:47.000Z</published>
+    <updated>2016-06-26T00:52:51.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="block" scheme="http://www.denman.me/tags/block/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查看静态库文件支持的指令集架构的方法</title>
+    <link href="http://www.denman.me/2014/10/13/%E6%9F%A5%E7%9C%8B%E9%9D%99%E6%80%81%E5%BA%93%E6%96%87%E4%BB%B6%E6%94%AF%E6%8C%81%E7%9A%84%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%9E%84%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.denman.me/2014/10/13/查看静态库文件支持的指令集架构的方法/</id>
+    <published>2014-10-13T03:45:30.000Z</published>
+    <updated>2016-06-26T00:58:08.000Z</updated>
+    
+    <content type="html">&lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop developer$ cd SpeexRecord&lt;br&gt;localhost:SpeexRecord developer$ lipo -info libogg.a&lt;br&gt;Architectures in the fat file: libogg.a are: i386 armv6 armv7&lt;br&gt;结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop d
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+      <category term="64位" scheme="http://www.denman.me/tags/64%E4%BD%8D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>思念家乡</title>
     <link href="http://www.denman.me/2014/09/20/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
     <id>http://www.denman.me/2014/09/20/思念家乡/</id>
@@ -607,6 +501,116 @@
     
     
       <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么说Object-c是一门动态语言</title>
+    <link href="http://www.denman.me/2014/06/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4Object-c%E6%98%AF%E4%B8%80%E9%97%A8%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
+    <id>http://www.denman.me/2014/06/04/为什么说Object-c是一门动态语言/</id>
+    <published>2014-06-04T09:42:41.000Z</published>
+    <updated>2016-06-26T00:55:55.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
+    
+      <category term="动态语言" scheme="http://www.denman.me/tags/%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Objective-C GCC Code Block Evaluation C Extension</title>
+    <link href="http://www.denman.me/2014/05/20/Objective-C%20GCC%20Code%20Block%20Evaluation%20C%20Extension%20%E8%AF%AD%E6%B3%95/"/>
+    <id>http://www.denman.me/2014/05/20/Objective-C GCC Code Block Evaluation C Extension 语法/</id>
+    <published>2014-05-20T06:03:40.000Z</published>
+    <updated>2016-06-21T10:04:03.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;先看这样一些代码&lt;/p&gt;
+&lt;p&gt;&lt;pre&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;    self.nameLabel = ({&lt;br&gt;        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];&lt;br&gt;        label.backgroundColor = [UIColor yellowColor];&lt;br&gt;        label.text = @”name”;&lt;br&gt;        label.font = [UIFont systemFontOfSize:15];&lt;br&gt;        label.textColor = [UIColor yellowColor];&lt;br&gt;        label;&lt;br&gt;    });&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;h1 id=&quot;解读&quot;&gt;&lt;a href=&quot;#解读&quot; class=&quot;headerlink&quot; title=&quot;解读&quot;&gt;&lt;/a&gt;解读&lt;/h1&gt;&lt;p&gt;这个是GCC编译器的提供的一个语法&lt;br&gt;可以看到把一个控件的所有属性全部写在({…})中，这样两个好处一个是结构会更加清晰，封装性非常好，第二个可以使用非常简洁的命名来命名局部变量，写起来会很优雅。它能够在局部初始UI以及处理逻辑,在团队协作中方便同事快速读懂你的UI布局。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;a href=&quot;http://nshipster.com/new-years-2014/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GCC Code Block Evaluation C Extension&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      GCC编译器的提供的一个语法
+    
+    </summary>
+    
+    
+      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KVC中对对象的属性赋值的顺序</title>
+    <link href="http://www.denman.me/2014/04/18/KVC%E4%B8%AD%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E7%9A%84%E9%A1%BA%E5%BA%8F/"/>
+    <id>http://www.denman.me/2014/04/18/KVC中对对象的属性赋值的顺序/</id>
+    <published>2014-04-18T10:41:31.000Z</published>
+    <updated>2016-06-26T00:56:10.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;在KVC编程当中找对象的属性的顺序如下&lt;br&gt;例如 [object    setValue:@”邓小平” forKey:@”name” ];&lt;br&gt;那么KVC找属性的顺序如何呢&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.找_name的成员变量
+2.找叫name的属性
+3.找叫name的成员变量
+4.调用setValue:&amp;lt;#(id)#&amp;gt; forUndefinedKey:&amp;lt;#(NSString *)#&amp;gt;];//要重写
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;所以一个对象用到KVC对属相赋值的时候 一定要实现&lt;br&gt; setValue:&amp;lt;#(id)#&amp;gt; forUndefinedKey:&amp;lt;#(NSString *)#&amp;gt;];方法&lt;br&gt;不然当 &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.找_name的成员变量
+2.找叫name的属性
+3.找叫name的成员变量
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;都找不到的时候 会报错！&lt;/p&gt;
+&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      KVC编程中对对象属性赋值的顺序
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+      <category term="KVC" scheme="http://www.denman.me/tags/KVC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS获取缓存文件的大小，实现缓的清理功能</title>
+    <link href="http://www.denman.me/2013/09/04/iOS%E8%8E%B7%E5%8F%96%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F%EF%BC%8C%E5%AE%9E%E7%8E%B0%E7%BC%93%E7%9A%84%E6%B8%85%E7%90%86%E5%8A%9F%E8%83%BD/"/>
+    <id>http://www.denman.me/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/</id>
+    <published>2013-09-04T10:54:21.000Z</published>
+    <updated>2016-06-26T00:56:52.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+      移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+      <category term="缓存" scheme="http://www.denman.me/tags/%E7%BC%93%E5%AD%98/"/>
     
   </entry>
   
