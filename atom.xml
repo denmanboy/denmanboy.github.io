@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-26T00:53:32.000Z</updated>
+  <updated>2016-06-27T06:00:54.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -16,13 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于产品的认知(仅抒己见)</title>
+    <link href="http://www.denman.me/2016/06/27/%E5%85%B3%E4%BA%8E%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%A4%E7%9F%A5(%E4%BB%85%E6%8A%92%E5%B7%B1%E8%A7%81)/"/>
+    <id>http://www.denman.me/2016/06/27/关于产品的认知(仅抒己见)/</id>
+    <published>2016-06-27T05:54:37.000Z</published>
+    <updated>2016-06-27T06:00:54.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+      昨天和清华毕业的大拿，聊了一会天，学的好多东西，特别是对产品，更是有了更深的了解，关于如何设计出一款让用户的喜爱的产品，仅抒己见，不爱请绕道。
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="产品" scheme="http://www.denman.me/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于category不能添加实例变量</title>
     <link href="http://www.denman.me/2016/06/23/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
     <id>http://www.denman.me/2016/06/23/关于category不能添加实例变量/</id>
     <published>2016-06-22T16:25:04.000Z</published>
-    <updated>2016-06-26T00:53:32.000Z</updated>
+    <updated>2016-06-27T07:57:02.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
 &lt;h1 id=&quot;Category&quot;&gt;&lt;a href=&quot;#Category&quot; class=&quot;headerlink&quot; title=&quot;Category&quot;&gt;&lt;/a&gt;Category&lt;/h1&gt;&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。&lt;br&gt;&lt;br&gt;不过有时子类并不方便。比方说，你想为&lt;code&gt;NSString&lt;/code&gt;类添加一个新的行为，但是&lt;code&gt;NSString&lt;/code&gt;实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。&lt;br&gt;&lt;br&gt;利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的&lt;code&gt;Category&lt;/code&gt;&lt;/p&gt;
@@ -78,9 +115,24 @@
     <link href="http://www.denman.me/2016/06/22/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
     <id>http://www.denman.me/2016/06/22/delegate和block使用的场景/</id>
     <published>2016-06-22T11:24:51.000Z</published>
-    <updated>2016-06-26T00:52:04.000Z</updated>
+    <updated>2016-06-27T07:57:11.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  
 &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
 
@@ -169,9 +221,24 @@
     <link href="http://www.denman.me/2016/02/06/2015%E8%BF%87%E5%B9%B4%E5%9B%9E%E5%AE%B6/"/>
     <id>http://www.denman.me/2016/02/06/2015过年回家/</id>
     <published>2016-02-06T10:13:40.000Z</published>
-    <updated>2016-06-21T10:57:50.000Z</updated>
+    <updated>2016-06-27T07:57:27.000Z</updated>
     
-    <content type="html">&lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;一事无成百不堪。&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;不见天山九千雪，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;只见岁月染白头。&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/div&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;一事无成百不堪。&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;不见天山九千雪，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;只见岁月染白头。&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/div&gt;
 
 
 
@@ -194,7 +261,11 @@
     
     <summary type="html">
     
-      &lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-siz
+      &lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (c
     
     </summary>
     
@@ -266,9 +337,24 @@
     <link href="http://www.denman.me/2015/07/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://www.denman.me/2015/07/18/方法和函数的区别/</id>
     <published>2015-07-17T16:21:46.000Z</published>
-    <updated>2016-06-26T00:52:31.000Z</updated>
+    <updated>2016-06-27T07:56:51.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
 &lt;h1 id=&quot;关于方法和函数&quot;&gt;&lt;a href=&quot;#关于方法和函数&quot; class=&quot;headerlink&quot; title=&quot;关于方法和函数&quot;&gt;&lt;/a&gt;关于方法和函数&lt;/h1&gt;&lt;p&gt;通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言&lt;/p&gt;
@@ -460,14 +546,33 @@
     <link href="http://www.denman.me/2014/10/13/%E6%9F%A5%E7%9C%8B%E9%9D%99%E6%80%81%E5%BA%93%E6%96%87%E4%BB%B6%E6%94%AF%E6%8C%81%E7%9A%84%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%9E%84%E7%9A%84%E6%96%B9%E6%B3%95/"/>
     <id>http://www.denman.me/2014/10/13/查看静态库文件支持的指令集架构的方法/</id>
     <published>2014-10-13T03:45:30.000Z</published>
-    <updated>2016-06-26T00:58:08.000Z</updated>
+    <updated>2016-06-27T07:55:43.000Z</updated>
     
-    <content type="html">&lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop developer$ cd SpeexRecord&lt;br&gt;localhost:SpeexRecord developer$ lipo -info libogg.a&lt;br&gt;Architectures in the fat file: libogg.a are: i386 armv6 armv7&lt;br&gt;结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位&lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop developer$ cd SpeexRecord&lt;br&gt;localhost:SpeexRecord developer$ lipo -info libogg.a&lt;br&gt;Architectures in the fat file: libogg.a are: i386 armv6 armv7&lt;br&gt;结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop d
+      &lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (c
     
     </summary>
     
@@ -485,9 +590,24 @@
     <link href="http://www.denman.me/2014/09/20/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
     <id>http://www.denman.me/2014/09/20/思念家乡/</id>
     <published>2014-09-20T13:21:47.000Z</published>
-    <updated>2016-06-21T12:06:39.000Z</updated>
+    <updated>2016-06-27T07:57:45.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时25年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 多少蹉跎&lt;br&gt; 都长满在这里&lt;br&gt; 几多风雨几多晴&lt;br&gt;母亲一天一天把我养大&lt;br&gt;父亲一年一年教我做人&lt;br&gt;骨子里埋下了吃苦耐劳的根&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时25年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 多少蹉跎&lt;br&gt; 都长满在这里&lt;br&gt; 几多风雨几多晴&lt;br&gt;母亲一天一天把我养大&lt;br&gt;父亲一年一年教我做人&lt;br&gt;骨子里埋下了吃苦耐劳的根&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
 &lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
     
@@ -531,9 +651,24 @@
     <link href="http://www.denman.me/2014/05/20/Objective-C%20GCC%20Code%20Block%20Evaluation%20C%20Extension%20%E8%AF%AD%E6%B3%95/"/>
     <id>http://www.denman.me/2014/05/20/Objective-C GCC Code Block Evaluation C Extension 语法/</id>
     <published>2014-05-20T06:03:40.000Z</published>
-    <updated>2016-06-21T10:04:03.000Z</updated>
+    <updated>2016-06-27T07:58:03.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;h1 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h1&gt;&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;先看这样一些代码&lt;/p&gt;
 &lt;p&gt;&lt;pre&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;    self.nameLabel = ({&lt;br&gt;        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];&lt;br&gt;        label.backgroundColor = [UIColor yellowColor];&lt;br&gt;        label.text = @”name”;&lt;br&gt;        label.font = [UIFont systemFontOfSize:15];&lt;br&gt;        label.textColor = [UIColor yellowColor];&lt;br&gt;        label;&lt;br&gt;    });&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;/pre&gt;&lt;/p&gt;
@@ -558,9 +693,24 @@
     <link href="http://www.denman.me/2014/04/18/KVC%E4%B8%AD%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E7%9A%84%E9%A1%BA%E5%BA%8F/"/>
     <id>http://www.denman.me/2014/04/18/KVC中对对象的属性赋值的顺序/</id>
     <published>2014-04-18T10:41:31.000Z</published>
-    <updated>2016-06-26T00:56:10.000Z</updated>
+    <updated>2016-06-27T07:58:29.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;在KVC编程当中找对象的属性的顺序如下&lt;br&gt;例如 [object    setValue:@”邓小平” forKey:@”name” ];&lt;br&gt;那么KVC找属性的顺序如何呢&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1.找_name的成员变量
@@ -587,30 +737,6 @@
       <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
       <category term="KVC" scheme="http://www.denman.me/tags/KVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS获取缓存文件的大小，实现缓的清理功能</title>
-    <link href="http://www.denman.me/2013/09/04/iOS%E8%8E%B7%E5%8F%96%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F%EF%BC%8C%E5%AE%9E%E7%8E%B0%E7%BC%93%E7%9A%84%E6%B8%85%E7%90%86%E5%8A%9F%E8%83%BD/"/>
-    <id>http://www.denman.me/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/</id>
-    <published>2013-09-04T10:54:21.000Z</published>
-    <updated>2016-06-26T00:56:52.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-      移动应用在处理网络资源时，一般都会做离线缓存处理，其中以图片缓存最为典型，其中很流行的离线缓存框架为SDWebImage。
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-      <category term="缓存" scheme="http://www.denman.me/tags/%E7%BC%93%E5%AD%98/"/>
     
   </entry>
   
