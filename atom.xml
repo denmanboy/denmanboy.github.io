@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-27T06:00:54.000Z</updated>
+  <updated>2016-06-28T01:29:57.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -20,9 +20,24 @@
     <link href="http://www.denman.me/2016/06/27/%E5%85%B3%E4%BA%8E%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%A4%E7%9F%A5(%E4%BB%85%E6%8A%92%E5%B7%B1%E8%A7%81)/"/>
     <id>http://www.denman.me/2016/06/27/关于产品的认知(仅抒己见)/</id>
     <published>2016-06-27T05:54:37.000Z</published>
-    <updated>2016-06-27T06:00:54.000Z</updated>
+    <updated>2016-06-28T01:29:57.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;h2 id=&quot;贴近用户，切入用户最直接的需求&quot;&gt;&lt;a href=&quot;#贴近用户，切入用户最直接的需求&quot; class=&quot;headerlink&quot; title=&quot;贴近用户，切入用户最直接的需求&quot;&gt;&lt;/a&gt;贴近用户，切入用户最直接的需求&lt;/h2&gt;&lt;h2 id=&quot;简单直接-，减少用户学习成本&quot;&gt;&lt;a href=&quot;#简单直接-，减少用户学习成本&quot; class=&quot;headerlink&quot; title=&quot;简单直接 ，减少用户学习成本&quot;&gt;&lt;/a&gt;简单直接 ，减少用户学习成本&lt;/h2&gt;&lt;h2 id=&quot;局部细化，细节处打动用户&quot;&gt;&lt;a href=&quot;#局部细化，细节处打动用户&quot; class=&quot;headerlink&quot; title=&quot;局部细化，细节处打动用户&quot;&gt;&lt;/a&gt;局部细化，细节处打动用户&lt;/h2&gt;&lt;h2 id=&quot;统一风格，统一布局&quot;&gt;&lt;a href=&quot;#统一风格，统一布局&quot; class=&quot;headerlink&quot; title=&quot;统一风格，统一布局&quot;&gt;&lt;/a&gt;统一风格，统一布局&lt;/h2&gt;</content>
     
     <summary type="html">
     
