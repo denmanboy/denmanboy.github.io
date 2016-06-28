@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-28T01:29:57.000Z</updated>
+  <updated>2016-06-28T01:51:48.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>那山，那水，那人</title>
+    <link href="http://www.denman.me/2016/06/28/%E9%82%A3%E5%B1%B1%EF%BC%8C%E9%82%A3%E6%B0%B4%EF%BC%8C%E9%82%A3%E4%BA%BA/"/>
+    <id>http://www.denman.me/2016/06/28/那山，那水，那人/</id>
+    <published>2016-06-28T01:50:27.000Z</published>
+    <updated>2016-06-28T01:51:48.000Z</updated>
+    
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</content>
+    
+    <summary type="html">
+    
+      山还是那山，水还是那水，人不是那人
+    
+    </summary>
+    
+      <category term="life" scheme="http://www.denman.me/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>关于产品的认知(仅抒己见)</title>
@@ -130,7 +183,7 @@
     <link href="http://www.denman.me/2016/06/22/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
     <id>http://www.denman.me/2016/06/22/delegate和block使用的场景/</id>
     <published>2016-06-22T11:24:51.000Z</published>
-    <updated>2016-06-28T01:47:13.000Z</updated>
+    <updated>2016-06-28T01:48:59.000Z</updated>
     
     <content type="html">&lt;script&gt;
 (function(){
@@ -156,7 +209,7 @@
 &lt;h3 id=&quot;UITableViewDelegate&quot;&gt;&lt;a href=&quot;#UITableViewDelegate&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDelegate&quot;&gt;&lt;/a&gt;UITableViewDelegate&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDelegate&amp;lt;NSObject, UIScrollViewDelegate&amp;gt;
 @optional
  - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
- - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
@@ -698,58 +751,6 @@
     
     
       <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KVC中对对象的属性赋值的顺序</title>
-    <link href="http://www.denman.me/2014/04/18/KVC%E4%B8%AD%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E7%9A%84%E9%A1%BA%E5%BA%8F/"/>
-    <id>http://www.denman.me/2014/04/18/KVC中对对象的属性赋值的顺序/</id>
-    <published>2014-04-18T10:41:31.000Z</published>
-    <updated>2016-06-27T07:58:29.000Z</updated>
-    
-    <content type="html">&lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
-    }
-    else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
-    }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-&lt;/script&gt;
-
-&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;br&gt;在KVC编程当中找对象的属性的顺序如下&lt;br&gt;例如 [object    setValue:@”邓小平” forKey:@”name” ];&lt;br&gt;那么KVC找属性的顺序如何呢&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.找_name的成员变量
-2.找叫name的属性
-3.找叫name的成员变量
-4.调用setValue:&amp;lt;#(id)#&amp;gt; forUndefinedKey:&amp;lt;#(NSString *)#&amp;gt;];//要重写
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;所以一个对象用到KVC对属相赋值的时候 一定要实现&lt;br&gt; setValue:&amp;lt;#(id)#&amp;gt; forUndefinedKey:&amp;lt;#(NSString *)#&amp;gt;];方法&lt;br&gt;不然当 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.找_name的成员变量
-2.找叫name的属性
-3.找叫name的成员变量
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;都找不到的时候 会报错！&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      KVC编程中对对象属性赋值的顺序
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-      <category term="KVC" scheme="http://www.denman.me/tags/KVC/"/>
     
   </entry>
   
