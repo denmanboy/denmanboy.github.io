@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-07-10T09:37:06.000Z</updated>
+  <updated>2016-06-28T12:23:07.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,48 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>?:和Swift中??异曲同工</title>
-    <link href="http://www.denman.me/2016/07/10/%E5%92%8CSwift%E4%B8%AD-%E5%BC%82%E6%9B%B2%E5%90%8C%E5%B7%A5/"/>
-    <id>http://www.denman.me/2016/07/10/和Swift中-异曲同工/</id>
-    <published>2016-07-10T09:08:57.000Z</published>
-    <updated>2016-07-10T09:37:06.000Z</updated>
-    
-    <content type="html">&lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
-    }
-    else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
-    }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-&lt;/script&gt;
-
-
-&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;?:&quot;&gt;&lt;/a&gt;?:&lt;/h1&gt;&lt;p&gt;?: 是条件表达式式 ，是唯一的一个三元运算符，其实他是对下面表达式的简写&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int a = 2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int b = 3;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int c;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //条件表达式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //c = a &amp;gt; b ? a : b ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //if-eles 条件判断&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if (a &amp;gt; b) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        c = a;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;else&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        c = b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;一般我们常用?: 简写if-else判断，增进写代码的速度，其实?: 还有一个和Swift中?? 相似的作用，用作二元表达式，用来返回默认值，例如，有时做网络请求时，服务器返回为空，但是我们UI见面不能显示为空，就显示一个默认值。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```objective-c&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSString *UIString = serverString ?: @&amp;quot;defultString&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //等价于&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSString *UIString = serverString ? serverString : @&amp;quot;defultString&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      ?:(条件表达式) 条件表达式的另类用法，和Swift中的??(空合并运算符)
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="Swift" scheme="http://www.denman.me/tags/Swift/"/>
-    
-      <category term="[object Object]" scheme="http://www.denman.me/tags/object-Object/"/>
-    
-  </entry>
   
   <entry>
     <title>那山，那水，那人</title>
@@ -605,6 +563,65 @@
     
     
       <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>?:和Swift中??异曲同工</title>
+    <link href="http://www.denman.me/2015/01/12/%E5%92%8CSwift%E4%B8%AD-%E5%BC%82%E6%9B%B2%E5%90%8C%E5%B7%A5/"/>
+    <id>http://www.denman.me/2015/01/12/和Swift中-异曲同工/</id>
+    <published>2015-01-12T09:08:57.000Z</published>
+    <updated>2016-07-10T10:07:43.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;script&gt;&lt;br&gt;(function(){&lt;br&gt;    var bp = document.createElement(‘script’);&lt;br&gt;    var curProtocol = window.location.protocol.split(‘:’)[0];&lt;br&gt;    if (curProtocol === ‘https’) {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;https://zz.bdstatic.com/linksubmit/push.js&quot;&gt;https://zz.bdstatic.com/linksubmit/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    else {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;http://push.zhanzhang.baidu.com/push.js&quot;&gt;http://push.zhanzhang.baidu.com/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    var s = document.getElementsByTagName(“script”)[0];&lt;br&gt;    s.parentNode.insertBefore(bp, s);&lt;br&gt;})();&lt;br&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;??&quot;&gt;&lt;/a&gt;??&lt;/h2&gt;&lt;p&gt;可选类型数值如果为空是，不能参与运算的，所以在使用之前要对它进行判断非空操。空合并运算符用于对可选类型进行空判断，如果包含值就对可选常量/变量进行解包，如果为nil则返回式默认值。空合并运算符使用默认值替换nil值，处nil值的情况。保证了表达式一定有值，提高程序的健壮性。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a ?? b
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;它是对一下表达式的简单表达方式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a != nil ? a! : b
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当可选类型a 不为空时，对a进行强制解包，取出a的值。反之，当a为空时，返回默认的b值。其中b可以是字面量，常量，变量，或者表达式，都可以。&lt;/p&gt;
+&lt;p&gt;？？ 有两个条件&lt;/p&gt;
+&lt;p&gt;表达式a必须是可选类型&lt;/p&gt;
+&lt;p&gt;默认值b的数据类型必须和a的值数据类型一致&lt;/p&gt;
+&lt;h1 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot;?:&quot;&gt;&lt;/a&gt;?:&lt;/h1&gt;&lt;p&gt;?: 是条件表达式式 ，是唯一的一个三元运算符，其实他是对下面表达式的简写&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int a = 2;
+int b = 3;
+int c;
+//条件表达式
+//c = a &amp;gt; b ? a : b ;
+//if-eles 条件判断
+if (a &amp;gt; b) {
+    c = a;
+}else{
+    c = b;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一般我们常用?: 简写if-else判断，增进写代码的速度，其实?: 还有一个和Swift中?? 相似的作用，用作二元表达式，用来返回默认值，例如，有时做网络请求时，服务器返回为空，但是我们UI见面不能显示为空，就显示一个默认值。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;NSString *UIString = serverString ?: @&amp;quot;defultString&amp;quot;;
+//等价于
+NSString *UIString = serverString ? serverString : @&amp;quot;defultString&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;鉴于以上对?: 做过二元运算符的使用，在使用block时我们每次都要做判断是否为空，如下？&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//先判断是否为空，再调用block
+if (block) {
+    block();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可用二元表达式简写如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!block ?: block()
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      ?:(条件表达式) 条件表达式的另类用法，和Swift中的??(空合并运算符)
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="Swift" scheme="http://www.denman.me/tags/Swift/"/>
+    
+      <category term="[object Object]" scheme="http://www.denman.me/tags/object-Object/"/>
     
   </entry>
   
