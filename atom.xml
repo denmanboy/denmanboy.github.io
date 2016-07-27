@@ -508,6 +508,51 @@
   </entry>
   
   <entry>
+    <title>iOS判断是否第一次使用且更新后还是第一次</title>
+    <link href="http://www.denman.me/2015/08/10/iOS%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E4%B8%94%E6%9B%B4%E6%96%B0%E5%90%8E%E8%BF%98%E6%98%AF%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    <id>http://www.denman.me/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/</id>
+    <published>2015-08-10T11:24:55.000Z</published>
+    <updated>2016-07-27T11:37:32.000Z</updated>
+    
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;p&gt;对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。&lt;/p&gt;
+&lt;p&gt;下面有有两种方法&lt;/p&gt;
+&lt;p&gt;1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。&lt;br&gt;2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。&lt;br&gt;那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。&lt;/p&gt;
+&lt;p&gt;不废话了，上代码！&lt;br&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//当前版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *currentVersion = 		   [[[&lt;span class=&quot;built_in&quot;&gt;NSBundlemainBundle&lt;/span&gt;]infoDictionary]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//本地存储的版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *saveVersion  = [[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaultsstandardUserDefaults&lt;/span&gt;]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([currentVersionfloatValue] &amp;gt; [saveVersion floatValue]) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]setObject:currentVersion forKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]synchronize];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//&lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt;   &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (c
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TouchID简易开发教程</title>
     <link href="http://www.denman.me/2015/07/27/Touch%20ID%E7%AE%80%E6%98%93%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/"/>
     <id>http://www.denman.me/2015/07/27/Touch ID简易开发教程/</id>
@@ -858,26 +903,6 @@ if (block) {
       <category term="Swift" scheme="http://www.denman.me/tags/Swift/"/>
     
       <category term="[object Object]" scheme="http://www.denman.me/tags/object-Object/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于runtime那些事</title>
-    <link href="http://www.denman.me/2014/12/23/%E5%85%B3%E4%BA%8Eruntime%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
-    <id>http://www.denman.me/2014/12/23/关于runtime那些事/</id>
-    <published>2014-12-22T16:20:34.000Z</published>
-    <updated>2016-06-26T00:55:29.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="rumtime" scheme="http://www.denman.me/tags/rumtime/"/>
     
   </entry>
   

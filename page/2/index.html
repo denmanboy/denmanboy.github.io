@@ -235,6 +235,86 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-iOS判断是否第一次使用且更新后还是第一次" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/" class="article-date">
+      <time datetime="2015-08-10T11:24:55.000Z" itemprop="datePublished">2015-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/">iOS判断是否第一次使用且更新后还是第一次</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<p>对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。</p>
+<p>下面有有两种方法</p>
+<p>1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。<br>2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。<br>那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。</p>
+<p>不废话了，上代码！<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前版本</span></span><br><span class="line"><span class="built_in">NSString</span> *currentVersion = 		   [[[<span class="built_in">NSBundlemainBundle</span>]infoDictionary]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];			</span><br><span class="line"><span class="comment">//本地存储的版本</span></span><br><span class="line"><span class="built_in">NSString</span> *saveVersion  = [[<span class="built_in">NSUserDefaultsstandardUserDefaults</span>]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];   </span><br><span class="line"><span class="keyword">if</span> ([currentVersionfloatValue] &gt; [saveVersion floatValue]) </span><br><span class="line">&#123;</span><br><span class="line">			</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]setObject:currentVersion forKey:<span class="string">@"CFBundleShortVersionString"</span>];</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]synchronize];</span><br><span class="line"><span class="comment">//<span class="doctag">TODO:</span>   </span></span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="ios-Touch ID简易开发教程" class="article article-type-ios" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -789,67 +869,6 @@
         <p class="article-more-link">
           <a  href="/2015/01/12/和Swift中-异曲同工/#more">阅读全文 >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-关于runtime那些事" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/12/23/关于runtime那些事/" class="article-date">
-      <time datetime="2014-12-22T16:20:34.000Z" itemprop="datePublished">2014-12-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/23/关于runtime那些事/">关于runtime那些事</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/technology/">technology</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rumtime/">rumtime</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>

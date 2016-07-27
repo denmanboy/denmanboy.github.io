@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>delegate和block使用的场景 | denman&#39;s blog</title>
+  <title>iOS判断是否第一次使用且更新后还是第一次 | denman&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
+  <meta name="description" content="(function(){
+    var bp = document.createElement(&apos;script&apos;);
+    var curProtocol = window.location.protocol.split(&apos;:&apos;)[0];
+    if (curProtocol === &apos;https&apos;) {
+        bp.src = &apos;https://zz.bdstatic.com/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="delegate和block使用的场景">
-<meta property="og:url" content="http://www.denman.me/2016/06/22/delegate和block使用的场景/index.html">
+<meta property="og:title" content="iOS判断是否第一次使用且更新后还是第一次">
+<meta property="og:url" content="http://www.denman.me/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/index.html">
 <meta property="og:site_name" content="denman's blog">
-<meta property="og:description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
-<meta property="og:updated_time" content="2016-06-28T01:48:59.000Z">
+<meta property="og:description" content="(function(){
+    var bp = document.createElement(&apos;script&apos;);
+    var curProtocol = window.location.protocol.split(&apos;:&apos;)[0];
+    if (curProtocol === &apos;https&apos;) {
+        bp.src = &apos;https://zz.bdstatic.com/">
+<meta property="og:updated_time" content="2016-07-27T11:37:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="delegate和block使用的场景">
-<meta name="twitter:description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
+<meta name="twitter:title" content="iOS判断是否第一次使用且更新后还是第一次">
+<meta name="twitter:description" content="(function(){
+    var bp = document.createElement(&apos;script&apos;);
+    var curProtocol = window.location.protocol.split(&apos;:&apos;)[0];
+    if (curProtocol === &apos;https&apos;) {
+        bp.src = &apos;https://zz.bdstatic.com/">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -231,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-delegate和block使用的场景" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-iOS判断是否第一次使用且更新后还是第一次" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/22/delegate和block使用的场景/" class="article-date">
-      <time datetime="2016-06-22T11:24:51.000Z" itemprop="datePublished">2016-06-22</time>
+      <a href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/" class="article-date">
+      <time datetime="2015-08-10T11:24:55.000Z" itemprop="datePublished">2015-08-10</time>
 </a>
     </div>
   
@@ -248,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      delegate和block使用的场景
+      iOS判断是否第一次使用且更新后还是第一次
     </h1>
   
 
@@ -288,53 +300,10 @@
 })();
 </script>
 
-<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
-<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
-<script>hljs.initHighlightingOnLoad();</script>
-
-<p>比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。<br>我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。</p>
-<h2 id="delegate举例"><a href="#delegate举例" class="headerlink" title="delegate举例"></a>delegate举例</h2><p>我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   </p>
-<h3 id="UITableViewDelegate"><a href="#UITableViewDelegate" class="headerlink" title="UITableViewDelegate"></a>UITableViewDelegate</h3><pre><code>@protocol UITableViewDelegate&lt;NSObject, UIScrollViewDelegate&gt;
-@optional
- - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
- @end  
-</code></pre><h3 id="UITableViewDataSource"><a href="#UITableViewDataSource" class="headerlink" title="UITableViewDataSource"></a>UITableViewDataSource</h3><pre><code>@protocol UITableViewDataSource&lt;NSObject&gt;
-@required
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell&apos;s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@optional
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;              // Default is 1 if not implemented
-
-- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different
-- (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
-
-// Editing
-
-// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-
-// Moving/reordering
-
-// Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@end
-</code></pre><h2 id="delegate分析"><a href="#delegate分析" class="headerlink" title="delegate分析"></a>delegate分析</h2><ul>
-<li>大多数delegate protocols 都拥有几个消息源<br>从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。当然达到这样的需求，也可以为对应每一个事件注册相应的block，显然这种方式是不合理的</li>
-<li>大多数delegate 都有多个回调，用来捕获对象的行为过程<br>特别是系统提供的一些控件来，都有很多delegate回调方法，用来捕获对象的一些行为动作过程，像<code>UITextField</code>,<code>UISearchBar</code>,这些控件的一些行为，通过delegate方法告诉delegate控件的一些行为状态。<h1 id="Block举例"><a href="#Block举例" class="headerlink" title="Block举例"></a>Block举例</h1><h1 id="block分析"><a href="#block分析" class="headerlink" title="block分析"></a>block分析</h1><h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1></li>
-</ul>
+<p>对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。</p>
+<p>下面有有两种方法</p>
+<p>1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。<br>2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。<br>那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。</p>
+<p>不废话了，上代码！<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前版本</span></span><br><span class="line"><span class="built_in">NSString</span> *currentVersion = 		   [[[<span class="built_in">NSBundlemainBundle</span>]infoDictionary]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];			</span><br><span class="line"><span class="comment">//本地存储的版本</span></span><br><span class="line"><span class="built_in">NSString</span> *saveVersion  = [[<span class="built_in">NSUserDefaultsstandardUserDefaults</span>]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];   </span><br><span class="line"><span class="keyword">if</span> ([currentVersionfloatValue] &gt; [saveVersion floatValue]) </span><br><span class="line">&#123;</span><br><span class="line">			</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]setObject:currentVersion forKey:<span class="string">@"CFBundleShortVersionString"</span>];</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]synchronize];</span><br><span class="line"><span class="comment">//<span class="doctag">TODO:</span>   </span></span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -343,13 +312,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/22/delegate和block使用的场景/">delegate和block使用的场景</a></p>
+        <p><span>本文标题:</span><a href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/">iOS判断是否第一次使用且更新后还是第一次</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
-        <p><span>发布时间:</span>2016年06月22日 - 19时24分</p>
-        <p><span>最后更新:</span>2016年06月28日 - 09时48分</p>
+        <p><span>发布时间:</span>2015年08月10日 - 19时24分</p>
+        <p><span>最后更新:</span>2016年07月27日 - 19时37分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/22/delegate和block使用的场景/" title="delegate和block使用的场景">http://www.denman.me/2016/06/22/delegate和block使用的场景/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2016/06/22/delegate和block使用的场景/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/" title="iOS判断是否第一次使用且更新后还是第一次">http://www.denman.me/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -362,18 +331,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/06/23/关于category不能添加实例变量/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/09/18/Masonry框架分析-链式编程思想/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          关于category不能添加实例变量
+          Masonry框架分析-链式编程思想
         
       </div>
     </a>
   
   
-    <a href="/2016/04/20/NavigationBar自定义BackItem/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NavigationBar自定义BackItem</div>
+    <a href="/2015/07/27/Touch ID简易开发教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TouchID简易开发教程</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -384,7 +353,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#delegate举例"><span class="toc-number">1.</span> <span class="toc-text">delegate举例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UITableViewDelegate"><span class="toc-number">1.1.</span> <span class="toc-text">UITableViewDelegate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UITableViewDataSource"><span class="toc-number">1.2.</span> <span class="toc-text">UITableViewDataSource</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#delegate分析"><span class="toc-number">2.</span> <span class="toc-text">delegate分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Block举例"><span class="toc-number"></span> <span class="toc-text">Block举例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#block分析"><span class="toc-number"></span> <span class="toc-text">block分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#对比"><span class="toc-number"></span> <span class="toc-text">对比</span></a>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -432,7 +401,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/06/22/delegate和block使用的场景/" data-title="delegate和block使用的场景" data-url="http://www.denman.me/2016/06/22/delegate和block使用的场景/"></div>
+    <div class="ds-thread" data-thread-key="2015/08/10/iOS判断是否第一次使用且更新后还是第一次/" data-title="iOS判断是否第一次使用且更新后还是第一次" data-url="http://www.denman.me/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -455,13 +424,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/23/关于category不能添加实例变量/" title="上一篇: 关于category不能添加实例变量">
+            <a href="/2015/09/18/Masonry框架分析-链式编程思想/" title="上一篇: Masonry框架分析-链式编程思想">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/04/20/NavigationBar自定义BackItem/" title="下一篇: NavigationBar自定义BackItem">
+            <a href="/2015/07/27/Touch ID简易开发教程/" title="下一篇: TouchID简易开发教程">
                 <i class="fa fa-angle-right"></i>
             </a>
         
