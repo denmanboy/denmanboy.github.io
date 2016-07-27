@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS程序员开发进阶 | denman&#39;s blog</title>
+  <title>block和函数指针的区别 | denman&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS9新的特性，及iOS程序员开发进阶">
+  <meta name="description" content="简单介绍一些block和函数指针的区别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS程序员开发进阶">
-<meta property="og:url" content="http://www.denman.me/2015/10/21/iOS程序员开发进阶/index.html">
+<meta property="og:title" content="block和函数指针的区别">
+<meta property="og:url" content="http://www.denman.me/2015/03/11/关于block的那些事/index.html">
 <meta property="og:site_name" content="denman's blog">
-<meta property="og:description" content="iOS9新的特性，及iOS程序员开发进阶">
-<meta property="og:updated_time" content="2016-07-27T01:41:39.000Z">
+<meta property="og:description" content="简单介绍一些block和函数指针的区别">
+<meta property="og:updated_time" content="2016-07-27T02:04:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS程序员开发进阶">
-<meta name="twitter:description" content="iOS9新的特性，及iOS程序员开发进阶">
+<meta name="twitter:title" content="block和函数指针的区别">
+<meta name="twitter:description" content="简单介绍一些block和函数指针的区别">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -231,11 +231,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-iOS程序员开发进阶" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于block的那些事" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/10/21/iOS程序员开发进阶/" class="article-date">
-      <time datetime="2015-10-21T01:37:42.000Z" itemprop="datePublished">2015-10-21</time>
+      <a href="/2015/03/11/关于block的那些事/" class="article-date">
+      <time datetime="2015-03-10T16:26:47.000Z" itemprop="datePublished">2015-03-11</time>
 </a>
     </div>
   
@@ -248,7 +248,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      iOS程序员开发进阶
+      block和函数指针的区别
     </h1>
   
 
@@ -263,7 +263,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS9/">iOS9</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/block/">block</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数指针/">函数指针</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -273,98 +273,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<h2 id="iOS9开始的新特性"><a href="#iOS9开始的新特性" class="headerlink" title="iOS9开始的新特性"></a>iOS9开始的新特性</h2><ul>
-<li>nonnull__nonnull</li>
-<li>nullable__nonnullable</li>
-<li>null_resettable</li>
-<li>NS_ASSUME_NONNULL_BEGIN \ NS_ASSUME_NONNULL_END</li>
-<li>泛型__contravariant__covariant</li>
-<li>__kindof</li>
-<li>UIWindow</li>
-<li>Storyboard Reference</li>
-<li>UIStackView</li>
-<li>Search API</li>
-<li>3D touch</li>
-</ul>
-<h2 id="新技术的了解渠道"><a href="#新技术的了解渠道" class="headerlink" title="新技术的了解渠道"></a>新技术的了解渠道</h2><ul>
-<li>WWDC开发者大会视频</li>
-<li>官方文档<ul>
-<li>General -&gt; Guides -&gt; iOS x.x API Diffs</li>
-</ul>
-</li>
-</ul>
-<h2 id="程序员的学习"><a href="#程序员的学习" class="headerlink" title="程序员的学习"></a>程序员的学习</h2><h3 id="iOS技术的学习"><a href="#iOS技术的学习" class="headerlink" title="iOS技术的学习"></a>iOS技术的学习</h3><ul>
-<li>官当文档<ul>
-<li>Sample Code(示例代码)</li>
-<li>Guides(指南)</li>
-<li>Reference(API参考)</li>
-</ul>
-</li>
-<li>博客<ul>
-<li><a href="http://www.cocoachina.com/ios/list_69_1.html" target="_blank" rel="external">CocoaChina</a></li>
-<li><a href="http://ios.jobbole.com/" target="_blank" rel="external">伯乐在线</a></li>
-<li><a href="http://objccn.io/" target="_blank" rel="external">objc中国</a></li>
-<li><a href="https://github.com/tangqiaoboy/iOSBlogCN" target="_blank" rel="external">优秀博客汇总</a></li>
-</ul>
-</li>
-<li><p>微博</p>
-<ul>
-<li><a href="http://weibo.com/kaifazhetoutiao" target="_blank" rel="external">开发者头条</a> </li>
-<li><a href="http://weibo.com/cocoachina" target="_blank" rel="external">CocoaChina</a> </li>
-<li><a href="http://weibo.com/luohanchenyilong" target="_blank" rel="external">iOS程序犭袁</a> </li>
-<li><a href="http://weibo.com/tangqiaoboy" target="_blank" rel="external">唐巧_boy</a> </li>
-<li><a href="http://weibo.com/u/1364395395" target="_blank" rel="external">我就叫Sunny怎么了</a> </li>
-<li><a href="http://blog.ibireme.com" target="_blank" rel="external">ibireme</a></li>
-<li><a href="http://weibo.com/710312327" target="_blank" rel="external">KITTEN-YANG</a> </li>
-<li><a href="http://weibo.com/exceptions" target="_blank" rel="external">M了个J</a></li>
-</ul>
-</li>
-<li><p>微信公众号</p>
-<ul>
-<li>iOS开发(iosDevTips)</li>
-<li>iOS开发(iOSDevTip)</li>
-<li>iOS技术分享(iosinfo)</li>
-<li>猿圈(CodePush) </li>
-</ul>
-</li>
-<li>其他<ul>
-<li>多写技术博客(简书\个人博客站点)</li>
-<li>参加一些技术分享活动(北京\上海\广州\杭州)</li>
-<li>有自己的技术圈子</li>
-</ul>
-</li>
-</ul>
-<h3 id="非iOS技术的学习"><a href="#非iOS技术的学习" class="headerlink" title="非iOS技术的学习"></a>非iOS技术的学习</h3><ul>
-<li><code>数据结构与算法(比如加密算法等等)</code></li>
-<li><code>HTML5</code></li>
-<li><code>JavaScript</code></li>
-<li>Java(Android\JavaEE)</li>
-<li>C++</li>
-</ul>
-<h3 id="非技术的学习"><a href="#非技术的学习" class="headerlink" title="非技术的学习"></a>非技术的学习</h3><ul>
-<li>管理\心理学\幸福\创业\历史</li>
-<li>网易公开课<ul>
-<li>各种国际名牌大学的课堂视频</li>
-<li>名人讲座(TED)</li>
-</ul>
-</li>
-<li>名人讲座\名人访谈</li>
-</ul>
+        <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">///  main.m</span></span><br><span class="line"><span class="comment">//  C_函数指针_block</span></span><br><span class="line"><span class="comment">//  Created by dengyanzhou on 15/3/11.</span></span><br><span class="line"><span class="comment">//  Copyright (c) 2015年 mobby. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> *方法名称就是方法在内存的入口地址</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">int</span> add(<span class="keyword">int</span> add1,<span class="keyword">int</span> add2)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> add1 + add2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义一个指向有两个整型参数，返回值为整型的函数指针类型；</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> (*Sum1) (<span class="keyword">int</span> ,<span class="keyword">int</span>);</span><br><span class="line"><span class="comment">//定义一个叫做Sum2类型参数为两个整型的，返回值为整型的block</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> (^Sum2) (<span class="keyword">int</span> ,<span class="keyword">int</span>);</span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc,<span class="keyword">const</span> <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line">    <span class="keyword">@autoreleasepool</span> &#123;</span><br><span class="line">        <span class="comment">//定义一个Sum1类型的变量 sum1指向了有两个参数，返回值为整型的函数也就是说 sum1 就是一个函数指针</span></span><br><span class="line">        Sum1  sum1 =add;</span><br><span class="line">        <span class="comment">//调用sum1指向的函数并打印</span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"sum1 = %d"</span>,sum1(<span class="number">2</span> ,<span class="number">3</span>));</span><br><span class="line">        <span class="comment">// 用Sum2这种block类型定义一个Sum2类型的block变量 sum2 并赋值</span></span><br><span class="line">          Sum2 sum2 = ^(<span class="keyword">int</span> a ,<span class="keyword">int</span>  b)&#123;</span><br><span class="line">            <span class="keyword">return</span> a + b ;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">//调用sum2 blocl并打印</span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"sum2 = %d"</span>,sum2(<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">        <span class="comment">/*函数指针和block的相同和区别</span><br><span class="line">         //相同点</span><br><span class="line">         函数指针和block都是指向了内存一段代码段调用类似</span><br><span class="line">         //不同点</span><br><span class="line">         1.函数指针是一个指针变量这个变量存放的是函数名 也就是函数的首地址赋值时 直接把函数名字赋值给函数指针变量</span><br><span class="line">         这个指针变量一般存储在栈中</span><br><span class="line">         block是一个对象这个对象的生命周期非常复杂 一般存储在栈中，但这个对象copy后的一份存储在堆中,另外block接收是一个完整的代码快,而不是一个随意的变量或者常量</span><br><span class="line"></span><br><span class="line">         2.block 能都给引用block以外的变量而 函数指针不可以什么意思呢？</span><br><span class="line">         看这样一段代码</span><br><span class="line">         int c = 2;</span><br><span class="line">         Sum2 sum2 = ^(int a ,int  b)&#123;</span><br><span class="line">            return a + b + c;</span><br><span class="line">          &#125;;</span><br><span class="line">         c这个变量在宿sum2 这个block变量以外但是 sum2 block内部可以引用</span><br><span class="line">        */</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    return0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>// 运行结果<br>sum1 = 5<br>sum2 = 5</p>
 
       
     </div>
@@ -373,13 +283,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/10/21/iOS程序员开发进阶/">iOS程序员开发进阶</a></p>
+        <p><span>本文标题:</span><a href="/2015/03/11/关于block的那些事/">block和函数指针的区别</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
-        <p><span>发布时间:</span>2015年10月21日 - 09时37分</p>
-        <p><span>最后更新:</span>2016年07月27日 - 09时41分</p>
+        <p><span>发布时间:</span>2015年03月11日 - 00时26分</p>
+        <p><span>最后更新:</span>2016年07月27日 - 10时04分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/10/21/iOS程序员开发进阶/" title="iOS程序员开发进阶">http://www.denman.me/2015/10/21/iOS程序员开发进阶/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2015/10/21/iOS程序员开发进阶/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2015/03/11/关于block的那些事/" title="block和函数指针的区别">http://www.denman.me/2015/03/11/关于block的那些事/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2015/03/11/关于block的那些事/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -392,18 +302,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2015/12/02/利用runtime容错/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/04/12/Xcode常用的插件/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          利用runtime容错
+          Xcode常用的插件
         
       </div>
     </a>
   
   
-    <a href="/2015/10/12/关于runLoop那些事/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于runLoop那些事</div>
+    <a href="/2015/03/06/思念同学/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">思念同学</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -414,7 +324,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS9开始的新特性"><span class="toc-number">1.</span> <span class="toc-text">iOS9开始的新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新技术的了解渠道"><span class="toc-number">2.</span> <span class="toc-text">新技术的了解渠道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序员的学习"><span class="toc-number">3.</span> <span class="toc-text">程序员的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iOS技术的学习"><span class="toc-number">3.1.</span> <span class="toc-text">iOS技术的学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非iOS技术的学习"><span class="toc-number">3.2.</span> <span class="toc-text">非iOS技术的学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非技术的学习"><span class="toc-number">3.3.</span> <span class="toc-text">非技术的学习</span></a></li></ol></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -462,7 +372,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2015/10/21/iOS程序员开发进阶/" data-title="iOS程序员开发进阶" data-url="http://www.denman.me/2015/10/21/iOS程序员开发进阶/"></div>
+    <div class="ds-thread" data-thread-key="2015/03/11/关于block的那些事/" data-title="block和函数指针的区别" data-url="http://www.denman.me/2015/03/11/关于block的那些事/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -485,13 +395,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/12/02/利用runtime容错/" title="上一篇: 利用runtime容错">
+            <a href="/2015/04/12/Xcode常用的插件/" title="上一篇: Xcode常用的插件">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2015/10/12/关于runLoop那些事/" title="下一篇: 关于runLoop那些事">
+            <a href="/2015/03/06/思念同学/" title="下一篇: 思念同学">
                 <i class="fa fa-angle-right"></i>
             </a>
         
