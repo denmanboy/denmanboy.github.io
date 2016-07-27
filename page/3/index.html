@@ -151,7 +151,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/Object-c/" style="font-size: 15px;">Object-c</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/category/" style="font-size: 10px;">category</a> <a href="/tags/c语言/" style="font-size: 10px;">c语言</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/rumtime/" style="font-size: 10px;">rumtime</a> <a href="/tags/runLoop/" style="font-size: 10px;">runLoop</a> <a href="/tags/runtime/" style="font-size: 10px;">runtime</a> <a href="/tags/tableView/" style="font-size: 10px;">tableView</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/动态语言/" style="font-size: 10px;">动态语言</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a>
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/Object-c/" style="font-size: 13.33px;">Object-c</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/Touch-ID/" style="font-size: 10px;">Touch ID</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/category/" style="font-size: 10px;">category</a> <a href="/tags/c语言/" style="font-size: 10px;">c语言</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iOS9/" style="font-size: 10px;">iOS9</a> <a href="/tags/rumtime/" style="font-size: 10px;">rumtime</a> <a href="/tags/runLoop/" style="font-size: 10px;">runLoop</a> <a href="/tags/runtime/" style="font-size: 10px;">runtime</a> <a href="/tags/tableView/" style="font-size: 10px;">tableView</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/动态语言/" style="font-size: 10px;">动态语言</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/蓝牙/" style="font-size: 10px;">蓝牙</a> <a href="/tags/诗词/" style="font-size: 16.67px;">诗词</a>
                     </div>
                 </section>
                 
@@ -234,6 +234,210 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-查看静态库文件支持的指令集架构的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/13/查看静态库文件支持的指令集架构的方法/" class="article-date">
+      <time datetime="2014-10-13T03:45:30.000Z" itemprop="datePublished">2014-10-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/13/查看静态库文件支持的指令集架构的方法/">查看静态库文件支持的指令集架构的方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<p>例如 现在 查看libogg.a支持的指令集<br>以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下<br>localhost:~ developer$ cd desktop<br>localhost:desktop developer$ cd SpeexRecord<br>localhost:SpeexRecord developer$ lipo -info libogg.a<br>Architectures in the fat file: libogg.a are: i386 armv6 armv7<br>结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/64位/">64位</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-思念家乡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/20/思念家乡/" class="article-date">
+      <time datetime="2014-09-20T13:21:47.000Z" itemprop="datePublished">2014-09-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/20/思念家乡/">思念家乡</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              离开家乡已经多日，偶发感慨
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/life/">life</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/诗词/">诗词</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/09/20/思念家乡/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-为什么说Object-c是一门动态语言" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/06/04/为什么说Object-c是一门动态语言/" class="article-date">
+      <time datetime="2014-06-04T09:42:41.000Z" itemprop="datePublished">2014-06-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/06/04/为什么说Object-c是一门动态语言/">为什么说Object-c是一门动态语言</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object-c/">Object-c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态语言/">动态语言</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="objective-c-Objective-C GCC Code Block Evaluation C Extension 语法" class="article article-type-objective-c" itemscope itemprop="blogPost">
   
@@ -742,165 +946,9 @@
 
 
   
-    <article id="post-恰同学少年" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2011/03/18/恰同学少年/" class="article-date">
-      <time datetime="2011-03-18T10:55:25.000Z" itemprop="datePublished">2011-03-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2011/03/18/恰同学少年/">恰同学少年</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<p><div style="margin:0 auto;width:250px;font-size:20px;line-height:150%"><br>我坐在高高讲台中<br><br>恨不能<br><br>荡尽绵绵情愫<br><br>望同学<br><br>各个神武军勇，埋头苦思<br><br>笔在手，纸在案，有谁不懂<br><br>人世间，纵然风情万种<br><br>我依然对你情有独钟<br><br>多少年，风雨的历程<br><br>都匆匆葬送<br><br>我心中，你最忠<br><br>现如今，学习差<br><br>只好来世再去弄懂<br><br>下来讲台时，斜阳正浓<br><br></div></p>
-<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/life/">life</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/诗词/">诗词</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-kongque" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2010/12/06/kongque/" class="article-date">
-      <time datetime="2010-12-06T05:05:37.000Z" itemprop="datePublished">2010-12-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2010/12/06/kongque/">孔雀东南飞-大学新篇</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<p>孔雀东南飞，五里一徘徊。七岁进小学，十二升小初。十五上高中，十八来烟大。高中三年间，早起晚上床。上课认真听，灯灭再自学。上学十二载，努力无白费。一路过高考，终愿大学梦。<br><br>怀揣心中大学梦，九月三号到烟台。天公爷爷不作美，瓢泼大雨浇我心。人人都夸烟台好，烟台果然错不了。绿树红花遍全城，透人心脾使人明。环境优美临大海，人民和谐团结好。报到军训结束后，正式上课开始了。三年高中吃多苦，大学一定享享福。别人早睡我晚起，老师讲课我睡觉。同学常去图书馆，我在网吧玩通宵。理智全被玩心盖，一心扑在网游上。谁知一过三四月，期末考试就来到。突然梦醒心自明，一句名言冲上天。人生百年能几何，荒草斜阳土坯间。时间流水东逝去，珍惜时间无荒废。遥看家乡父母颜，瑟瑟秋风吹人老。父母为我后背驼，我却不解父母情。为人子女不孝顺，猪狗不如枉为人。痛改前非去恶习，一心只为圣贤书。期末考试第一名，谁敢笑我楚狂人。莫悲往事愤钩沉，但看吾生焕新颜。沧桑颓废忆浮生，吾生发奋应向前。大学四年不能废，百万知识充自身。吾欲奋起千钧棒，意欲澄清万里埃。提携玉龙为国死，何计生前身后名。<br><br>吾生理想开公司，须知前路多重难。只要吾生意志坚，敢叫日月换新天。为此努力整四年，找份工作挣大钱。攒足金钱二十万，下海经商创佳业。邀请同学一大群，创办公司闯天地。生意兴隆通四海，财源滚滚汇八方。公司壮大如日升，全国开启连锁店。通南至北吾公司，从东到西邓家店。一位名人曾有云：“吃水不忘挖井人”。若能功成名就时，投资家乡共富裕。<br><br>后记：辛苦遭逢起一经，<br>为此奋斗十六载。<br>他年若得凌云志，<br>敢笑嘉诚不丈夫。</p>
-<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/life/">life</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/诗词/">诗词</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 </div>

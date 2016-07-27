@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TouchID简易开发教程 | denman&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简单介绍一下TouchID开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TouchID简易开发教程">
+<meta property="og:url" content="http://www.denman.me/2015/07/27/Touch ID简易开发教程/index.html">
+<meta property="og:site_name" content="denman's blog">
+<meta property="og:description" content="简单介绍一下TouchID开发">
+<meta property="og:updated_time" content="2016-07-27T01:50:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TouchID简易开发教程">
+<meta name="twitter:description" content="简单介绍一下TouchID开发">
+  
+    <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.jpg">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">denman</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">热爱生活，专注技术</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/archives">全部内容</a></li>
+                        
+                            <li><a href="/categories/technology">技术干货</a></li>
+                        
+                            <li><a href="/categories/life">日常生活</a></li>
+                        
+                            <li><a href="/about">关于</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=jOj19tO9vLy9zP39ou-j4Q" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/denmanboy" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/dengyanzhou" title="weibo">weibo</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/Object-c/" style="font-size: 13.33px;">Object-c</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/Touch-ID/" style="font-size: 10px;">Touch ID</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/category/" style="font-size: 10px;">category</a> <a href="/tags/c语言/" style="font-size: 10px;">c语言</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iOS9/" style="font-size: 10px;">iOS9</a> <a href="/tags/rumtime/" style="font-size: 10px;">rumtime</a> <a href="/tags/runLoop/" style="font-size: 10px;">runLoop</a> <a href="/tags/runtime/" style="font-size: 10px;">runtime</a> <a href="/tags/tableView/" style="font-size: 10px;">tableView</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/动态语言/" style="font-size: 10px;">动态语言</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/蓝牙/" style="font-size: 10px;">蓝牙</a> <a href="/tags/诗词/" style="font-size: 16.67px;">诗词</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.devtang.com/">tangqiao</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.ibireme.com/">ibireme</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.sunnyxx.com/">sunnyxx</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">80后，90前，打过工，做过点生意，现在在新浪做软件开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">denman</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">denman</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">热爱生活，专注技术</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/archives">全部内容</a></li>
+                
+                    <li><a href="/categories/technology">技术干货</a></li>
+                
+                    <li><a href="/categories/life">日常生活</a></li>
+                
+                    <li><a href="/about">关于</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=jOj19tO9vLy9zP39ou-j4Q" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/denmanboy" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/dengyanzhou" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="ios-Touch ID简易开发教程" class="article article-type-ios" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/27/Touch ID简易开发教程/" class="article-date">
+      <time datetime="2015-07-27T01:46:51.000Z" itemprop="datePublished">2015-07-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TouchID简易开发教程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Touch-ID/">Touch ID</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Touch-ID-简易开发教程"><a href="#Touch-ID-简易开发教程" class="headerlink" title="Touch ID 简易开发教程"></a>Touch ID 简易开发教程</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h4 id="支持系统和机型"><a href="#支持系统和机型" class="headerlink" title="支持系统和机型"></a>支持系统和机型</h4><p>iOS系统的指纹识别功能最低支持的机型为<code>iPhone 5s</code>，最低支持系统为<code>iOS 8</code>，虽然安装<code>iOS 7系统的5s</code>机型可以使用系统提供的指纹解锁功能，但由于<code>API</code>并未开放，所以理论上第三方软件不可使用。</p>
+<h4 id="依赖框架"><a href="#依赖框架" class="headerlink" title="依赖框架"></a>依赖框架</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LocalAuthentication.framework</span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;LocalAuthentication/LocalAuthentication.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>做<code>iOS 8以下</code>版本适配时，务必进行<code>API验证</code>，避免调用相关API引起崩溃。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(iOS8)&#123;xxx&#125; <span class="comment">// 系统版本验证</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;authError])</span><br></pre></td></tr></table></figure>
+<h4 id="使用类"><a href="#使用类" class="headerlink" title="使用类"></a>使用类</h4><p><code>LAContext</code> 指纹验证操作对象</p>
+<h4 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h4><ul>
+<li>判断系统版本，iOS 8及以上版本执行-(void)authenticateUser方法，</li>
+<li>方法自动判断设备是否支持和开启Touch ID。</li>
+</ul>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">IBAction</span>)showTouchIDAlert:(<span class="keyword">id</span>)sender &#123;</span><br><span class="line">    <span class="comment">// 1.判断是否是iOS8之后</span></span><br><span class="line">    <span class="keyword">if</span> (!iOS8later) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"版本不对不能使用TouchID"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.调用touchID的相关方法</span></span><br><span class="line">    [<span class="keyword">self</span> authenticateUser];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 鉴定用户</span></span><br><span class="line">- (<span class="keyword">void</span>)authenticateUser</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 创建指纹验证对象</span></span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    <span class="built_in">NSError</span> *yfError = <span class="literal">nil</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证设备是否支持touchID</span></span><br><span class="line">    <span class="comment">// LAPolicyDeviceOwnerAuthenticationWithBiometrics 14年时候枚举只有这一个属性</span></span><br><span class="line">    <span class="comment">// LAPolicyDeviceOwnerAuthentication 后来加的枚举属性</span></span><br><span class="line">    <span class="keyword">if</span> ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;yfError]) &#123;</span><br><span class="line">        <span class="comment">// 支持touchID</span></span><br><span class="line">        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics</span><br><span class="line">                localizedReason:<span class="string">@"XMGlocalizedReason"</span></span><br><span class="line">                          reply:^(<span class="built_in">BOOL</span> success, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">                              <span class="keyword">if</span> (success) &#123;</span><br><span class="line">                                  <span class="comment">// touchID验证成功</span></span><br><span class="line"></span><br><span class="line">                                  <span class="comment">// 继续处理相关业务(注意线程)</span></span><br><span class="line">                              &#125;<span class="keyword">else</span></span><br><span class="line">                              &#123;</span><br><span class="line">                                  <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,error.localizedDescription);</span><br><span class="line">                                  <span class="keyword">switch</span> (error.code) &#123;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorSystemCancel:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the system"</span>);</span><br><span class="line">                                          <span class="comment">//切换到其他APP，系统取消验证Touch ID</span></span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorUserCancel:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the user"</span>);</span><br><span class="line">                                          <span class="comment">//用户取消验证Touch ID</span></span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorUserFallback:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"User selected to enter custom password"</span>);</span><br><span class="line">                                          [[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">                                              <span class="comment">//用户选择输入密码，切换主线程处理</span></span><br><span class="line">                                          &#125;];</span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">default</span>:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          [[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">                                              <span class="comment">//其他情况，切换主线程处理</span></span><br><span class="line">                                          &#125;];</span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                  &#125;</span><br><span class="line">                              &#125;</span><br><span class="line">                &#125;];</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span> (yfError.code) &#123;</span><br><span class="line">            <span class="keyword">case</span> LAErrorTouchIDNotEnrolled:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"LAErrorTouchIDNotEnrolled"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> LAErrorPasscodeNotSet:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"LAErrorPasscodeNotSet"</span>); <span class="comment">// 此处触发showPasscodeResetAlert方法</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"Touch ID is unaviliable"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, yfError.localizedDescription);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> typedef NS_ENUM(NSInteger, LAError)</span><br><span class="line"> &#123;</span><br><span class="line"> //授权失败</span><br><span class="line"> LAErrorAuthenticationFailed = kLAErrorAuthenticationFailed,</span><br><span class="line"></span><br><span class="line"> //用户取消Touch ID授权</span><br><span class="line"> LAErrorUserCancel           = kLAErrorUserCancel,</span><br><span class="line"></span><br><span class="line"> //用户选择输入密码</span><br><span class="line"> LAErrorUserFallback         = kLAErrorUserFallback,</span><br><span class="line"></span><br><span class="line"> //系统取消授权(例如其他APP切入)</span><br><span class="line"> LAErrorSystemCancel         = kLAErrorSystemCancel,</span><br><span class="line"></span><br><span class="line"> //系统未设置密码</span><br><span class="line"> LAErrorPasscodeNotSet       = kLAErrorPasscodeNotSet,</span><br><span class="line"></span><br><span class="line"> //设备Touch ID不可用，例如未打开</span><br><span class="line"> LAErrorTouchIDNotAvailable  = kLAErrorTouchIDNotAvailable,</span><br><span class="line"></span><br><span class="line"> //设备Touch ID不可用，用户未录入</span><br><span class="line"> LAErrorTouchIDNotEnrolled   = kLAErrorTouchIDNotEnrolled,</span><br><span class="line"> &#125; NS_ENUM_AVAILABLE(10_10, 8_0);</span><br><span class="line"></span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2015/07/27/Touch ID简易开发教程/">TouchID简易开发教程</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
+        <p><span>发布时间:</span>2015年07月27日 - 09时46分</p>
+        <p><span>最后更新:</span>2016年07月27日 - 09时50分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2015/07/27/Touch ID简易开发教程/" title="TouchID简易开发教程">http://www.denman.me/2015/07/27/Touch ID简易开发教程/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2015/07/27/Touch ID简易开发教程/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2015/09/18/Masonry框架分析-链式编程思想/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Masonry框架分析-链式编程思想
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/18/方法和函数的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OC中方法和函数的区别</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Touch-ID-简易开发教程"><span class="toc-number">1.</span> <span class="toc-text">Touch ID 简易开发教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础知识"><span class="toc-number">1.1.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#支持系统和机型"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">支持系统和机型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#依赖框架"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">依赖框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用类"><span class="toc-number">1.1.0.4.</span> <span class="toc-text">使用类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#操作流程"><span class="toc-number">1.1.0.5.</span> <span class="toc-text">操作流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例"><span class="toc-number">1.1.0.6.</span> <span class="toc-text">代码示例</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/07/27/Touch ID简易开发教程/" data-title="TouchID简易开发教程" data-url="http://www.denman.me/2015/07/27/Touch ID简易开发教程/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"denman"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2015/09/18/Masonry框架分析-链式编程思想/" title="上一篇: Masonry框架分析-链式编程思想">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2015/07/18/方法和函数的区别/" title="下一篇: OC中方法和函数的区别">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/28/那山，那水，那人/">那山，那水，那人</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/关于产品的认知(仅抒己见)/">关于产品的认知(仅抒己见)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/关于category不能添加实例变量/">关于category不能添加实例变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/22/delegate和block使用的场景/">delegate和block使用的场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/NavigationBar自定义BackItem/">NavigationBar自定义BackItem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/06/2015过年回家/">2015过年回家</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/02/利用runtime容错/">利用runtime容错</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/21/iOS程序员开发进阶/">iOS程序员开发进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/12/关于runLoop那些事/">关于runLoop那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/18/Masonry框架分析-链式编程思想/">Masonry框架分析-链式编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/27/Touch ID简易开发教程/">TouchID简易开发教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/18/方法和函数的区别/">OC中方法和函数的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/08/tableView优化的那些事/">tableView优化的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/20/关于git的使用/">关于git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/14/iOS中蓝牙开发常用的框架/">iOS中蓝牙开发常用的框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/12/Xcode常用的插件/">Xcode常用的插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/思念同学/">思念同学</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/12/和Swift中-异曲同工/">?:和Swift中??异曲同工</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/23/关于runtime那些事/">关于runtime那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/11/18/关于block的那些事/">关于block的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/10/13/查看静态库文件支持的指令集架构的方法/">查看静态库文件支持的指令集架构的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/20/思念家乡/">思念家乡</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/06/04/为什么说Object-c是一门动态语言/">为什么说Object-c是一门动态语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/05/20/Objective-C GCC Code Block Evaluation C Extension 语法/">Objective-C GCC Code Block Evaluation C Extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/18/KVC中对对象的属性赋值的顺序/">KVC中对对象的属性赋值的顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/">iOS获取缓存文件的大小，实现缓的清理功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/08/10/iOS的release和debug有什么区别/">iOS的release和debug有什么区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/04/21/致四川雅安人民/">致四川雅安人民</a></li><li class="post-list-item"><a class="post-list-link" href="/2012/03/24/雨天，破船，海边/">雨天，破船，海边</a></li><li class="post-list-item"><a class="post-list-link" href="/2011/04/10/c语言学习笔记/">c语言学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2011/03/18/恰同学少年/">恰同学少年</a></li><li class="post-list-item"><a class="post-list-link" href="/2010/12/06/kongque/">孔雀东南飞-大学新篇</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 denman
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by lunman -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >到访数量: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>

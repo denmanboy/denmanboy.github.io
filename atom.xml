@@ -356,6 +356,122 @@
   </entry>
   
   <entry>
+    <title>iOS程序员开发进阶</title>
+    <link href="http://www.denman.me/2015/10/21/iOS%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%80%E5%8F%91%E8%BF%9B%E9%98%B6/"/>
+    <id>http://www.denman.me/2015/10/21/iOS程序员开发进阶/</id>
+    <published>2015-10-21T01:37:42.000Z</published>
+    <updated>2016-07-27T01:41:39.000Z</updated>
+    
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;h2 id=&quot;iOS9开始的新特性&quot;&gt;&lt;a href=&quot;#iOS9开始的新特性&quot; class=&quot;headerlink&quot; title=&quot;iOS9开始的新特性&quot;&gt;&lt;/a&gt;iOS9开始的新特性&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;nonnull__nonnull&lt;/li&gt;
+&lt;li&gt;nullable__nonnullable&lt;/li&gt;
+&lt;li&gt;null_resettable&lt;/li&gt;
+&lt;li&gt;NS_ASSUME_NONNULL_BEGIN \ NS_ASSUME_NONNULL_END&lt;/li&gt;
+&lt;li&gt;泛型__contravariant__covariant&lt;/li&gt;
+&lt;li&gt;__kindof&lt;/li&gt;
+&lt;li&gt;UIWindow&lt;/li&gt;
+&lt;li&gt;Storyboard Reference&lt;/li&gt;
+&lt;li&gt;UIStackView&lt;/li&gt;
+&lt;li&gt;Search API&lt;/li&gt;
+&lt;li&gt;3D touch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;新技术的了解渠道&quot;&gt;&lt;a href=&quot;#新技术的了解渠道&quot; class=&quot;headerlink&quot; title=&quot;新技术的了解渠道&quot;&gt;&lt;/a&gt;新技术的了解渠道&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;WWDC开发者大会视频&lt;/li&gt;
+&lt;li&gt;官方文档&lt;ul&gt;
+&lt;li&gt;General -&amp;gt; Guides -&amp;gt; iOS x.x API Diffs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;程序员的学习&quot;&gt;&lt;a href=&quot;#程序员的学习&quot; class=&quot;headerlink&quot; title=&quot;程序员的学习&quot;&gt;&lt;/a&gt;程序员的学习&lt;/h2&gt;&lt;h3 id=&quot;iOS技术的学习&quot;&gt;&lt;a href=&quot;#iOS技术的学习&quot; class=&quot;headerlink&quot; title=&quot;iOS技术的学习&quot;&gt;&lt;/a&gt;iOS技术的学习&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官当文档&lt;ul&gt;
+&lt;li&gt;Sample Code(示例代码)&lt;/li&gt;
+&lt;li&gt;Guides(指南)&lt;/li&gt;
+&lt;li&gt;Reference(API参考)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;博客&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/list_69_1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CocoaChina&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ios.jobbole.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://objccn.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;objc中国&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tangqiaoboy/iOSBlogCN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;优秀博客汇总&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;微博&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/kaifazhetoutiao&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发者头条&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/cocoachina&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CocoaChina&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/luohanchenyilong&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS程序犭袁&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/tangqiaoboy&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;唐巧_boy&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/u/1364395395&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我就叫Sunny怎么了&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.ibireme.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ibireme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/710312327&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KITTEN-YANG&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://weibo.com/exceptions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;M了个J&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;微信公众号&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS开发(iosDevTips)&lt;/li&gt;
+&lt;li&gt;iOS开发(iOSDevTip)&lt;/li&gt;
+&lt;li&gt;iOS技术分享(iosinfo)&lt;/li&gt;
+&lt;li&gt;猿圈(CodePush) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;其他&lt;ul&gt;
+&lt;li&gt;多写技术博客(简书\个人博客站点)&lt;/li&gt;
+&lt;li&gt;参加一些技术分享活动(北京\上海\广州\杭州)&lt;/li&gt;
+&lt;li&gt;有自己的技术圈子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;非iOS技术的学习&quot;&gt;&lt;a href=&quot;#非iOS技术的学习&quot; class=&quot;headerlink&quot; title=&quot;非iOS技术的学习&quot;&gt;&lt;/a&gt;非iOS技术的学习&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;数据结构与算法(比如加密算法等等)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HTML5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JavaScript&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Java(Android\JavaEE)&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;非技术的学习&quot;&gt;&lt;a href=&quot;#非技术的学习&quot; class=&quot;headerlink&quot; title=&quot;非技术的学习&quot;&gt;&lt;/a&gt;非技术的学习&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;管理\心理学\幸福\创业\历史&lt;/li&gt;
+&lt;li&gt;网易公开课&lt;ul&gt;
+&lt;li&gt;各种国际名牌大学的课堂视频&lt;/li&gt;
+&lt;li&gt;名人讲座(TED)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;名人讲座\名人访谈&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      iOS9新的特性，及iOS程序员开发进阶
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+      <category term="iOS9" scheme="http://www.denman.me/tags/iOS9/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于runLoop那些事</title>
     <link href="http://www.denman.me/2015/10/12/%E5%85%B3%E4%BA%8ErunLoop%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     <id>http://www.denman.me/2015/10/12/关于runLoop那些事/</id>
@@ -388,6 +504,39 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>TouchID简易开发教程</title>
+    <link href="http://www.denman.me/2015/07/27/Touch%20ID%E7%AE%80%E6%98%93%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/"/>
+    <id>http://www.denman.me/2015/07/27/Touch ID简易开发教程/</id>
+    <published>2015-07-27T01:46:51.000Z</published>
+    <updated>2016-07-27T01:50:17.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Touch-ID-简易开发教程&quot;&gt;&lt;a href=&quot;#Touch-ID-简易开发教程&quot; class=&quot;headerlink&quot; title=&quot;Touch ID 简易开发教程&quot;&gt;&lt;/a&gt;Touch ID 简易开发教程&lt;/h1&gt;&lt;h2 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h2&gt;&lt;h4 id=&quot;支持系统和机型&quot;&gt;&lt;a href=&quot;#支持系统和机型&quot; class=&quot;headerlink&quot; title=&quot;支持系统和机型&quot;&gt;&lt;/a&gt;支持系统和机型&lt;/h4&gt;&lt;p&gt;iOS系统的指纹识别功能最低支持的机型为&lt;code&gt;iPhone 5s&lt;/code&gt;，最低支持系统为&lt;code&gt;iOS 8&lt;/code&gt;，虽然安装&lt;code&gt;iOS 7系统的5s&lt;/code&gt;机型可以使用系统提供的指纹解锁功能，但由于&lt;code&gt;API&lt;/code&gt;并未开放，所以理论上第三方软件不可使用。&lt;/p&gt;
+&lt;h4 id=&quot;依赖框架&quot;&gt;&lt;a href=&quot;#依赖框架&quot; class=&quot;headerlink&quot; title=&quot;依赖框架&quot;&gt;&lt;/a&gt;依赖框架&lt;/h4&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;LocalAuthentication.framework&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;LocalAuthentication/LocalAuthentication.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;注意事项&quot;&gt;&lt;a href=&quot;#注意事项&quot; class=&quot;headerlink&quot; title=&quot;注意事项&quot;&gt;&lt;/a&gt;注意事项&lt;/h4&gt;&lt;p&gt;做&lt;code&gt;iOS 8以下&lt;/code&gt;版本适配时，务必进行&lt;code&gt;API验证&lt;/code&gt;，避免调用相关API引起崩溃。&lt;/p&gt;
+&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(iOS8)&amp;#123;xxx&amp;#125; &lt;span class=&quot;comment&quot;&gt;// 系统版本验证&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;amp;authError])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;使用类&quot;&gt;&lt;a href=&quot;#使用类&quot; class=&quot;headerlink&quot; title=&quot;使用类&quot;&gt;&lt;/a&gt;使用类&lt;/h4&gt;&lt;p&gt;&lt;code&gt;LAContext&lt;/code&gt; 指纹验证操作对象&lt;/p&gt;
+&lt;h4 id=&quot;操作流程&quot;&gt;&lt;a href=&quot;#操作流程&quot; class=&quot;headerlink&quot; title=&quot;操作流程&quot;&gt;&lt;/a&gt;操作流程&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;判断系统版本，iOS 8及以上版本执行-(void)authenticateUser方法，&lt;/li&gt;
+&lt;li&gt;方法自动判断设备是否支持和开启Touch ID。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;代码示例&quot;&gt;&lt;a href=&quot;#代码示例&quot; class=&quot;headerlink&quot; title=&quot;代码示例&quot;&gt;&lt;/a&gt;代码示例&lt;/h4&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;103&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;104&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;105&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;106&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;107&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;108&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;109&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;110&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;111&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;IBAction&lt;/span&gt;)showTouchIDAlert:(&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt;)sender &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 1.判断是否是iOS8之后&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!iOS8later) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;版本不对不能使用TouchID&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 2.调用touchID的相关方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; authenticateUser];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 鉴定用户&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)authenticateUser&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 创建指纹验证对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LAContext *context = [[LAContext alloc] init];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;NSError&lt;/span&gt; *yfError = &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 验证设备是否支持touchID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// LAPolicyDeviceOwnerAuthenticationWithBiometrics 14年时候枚举只有这一个属性&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// LAPolicyDeviceOwnerAuthentication 后来加的枚举属性&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;amp;yfError]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 支持touchID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                localizedReason:&lt;span class=&quot;string&quot;&gt;@&quot;XMGlocalizedReason&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                          reply:^(&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt; success, &lt;span class=&quot;built_in&quot;&gt;NSError&lt;/span&gt; * _Nullable error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (success) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;comment&quot;&gt;// touchID验证成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;comment&quot;&gt;// 继续处理相关业务(注意线程)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%@&quot;&lt;/span&gt;,error.localizedDescription);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (error.code) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorSystemCancel:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;Authentication was cancelled by the system&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;comment&quot;&gt;//切换到其他APP，系统取消验证Touch ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorUserCancel:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;Authentication was cancelled by the user&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;comment&quot;&gt;//用户取消验证Touch ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorUserFallback:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;User selected to enter custom password&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          [[&lt;span class=&quot;built_in&quot;&gt;NSOperationQueue&lt;/span&gt; mainQueue] addOperationWithBlock:^&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                              &lt;span class=&quot;comment&quot;&gt;//用户选择输入密码，切换主线程处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          [[&lt;span class=&quot;built_in&quot;&gt;NSOperationQueue&lt;/span&gt; mainQueue] addOperationWithBlock:^&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                              &lt;span class=&quot;comment&quot;&gt;//其他情况，切换主线程处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (yfError.code) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorTouchIDNotEnrolled:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;LAErrorTouchIDNotEnrolled&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorPasscodeNotSet:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;LAErrorPasscodeNotSet&quot;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;// 此处触发showPasscodeResetAlert方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;Touch ID is unaviliable&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%@&quot;&lt;/span&gt;, yfError.localizedDescription);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; typedef NS_ENUM(NSInteger, LAError)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //授权失败&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorAuthenticationFailed = kLAErrorAuthenticationFailed,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //用户取消Touch ID授权&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorUserCancel           = kLAErrorUserCancel,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //用户选择输入密码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorUserFallback         = kLAErrorUserFallback,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //系统取消授权(例如其他APP切入)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorSystemCancel         = kLAErrorSystemCancel,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //系统未设置密码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorPasscodeNotSet       = kLAErrorPasscodeNotSet,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //设备Touch ID不可用，例如未打开&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorTouchIDNotAvailable  = kLAErrorTouchIDNotAvailable,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //设备Touch ID不可用，用户未录入&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorTouchIDNotEnrolled   = kLAErrorTouchIDNotEnrolled,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;#125; NS_ENUM_AVAILABLE(10_10, 8_0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      简单介绍一下TouchID开发
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+      <category term="Touch ID" scheme="http://www.denman.me/tags/Touch-ID/"/>
     
   </entry>
   
@@ -506,6 +655,73 @@
     
     
       <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS中蓝牙开发常用的框架</title>
+    <link href="http://www.denman.me/2015/04/14/iOS%E4%B8%AD%E8%93%9D%E7%89%99%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.denman.me/2015/04/14/iOS中蓝牙开发常用的框架/</id>
+    <published>2015-04-14T01:43:47.000Z</published>
+    <updated>2016-07-27T01:45:02.000Z</updated>
+    
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;h1 id=&quot;iOS中的蓝牙常用的框架&quot;&gt;&lt;a href=&quot;#iOS中的蓝牙常用的框架&quot; class=&quot;headerlink&quot; title=&quot;iOS中的蓝牙常用的框架&quot;&gt;&lt;/a&gt;iOS中的蓝牙常用的框架&lt;/h1&gt;&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;h4 id=&quot;iOS中提供了4个框架用于实现蓝牙连接&quot;&gt;&lt;a href=&quot;#iOS中提供了4个框架用于实现蓝牙连接&quot; class=&quot;headerlink&quot; title=&quot;iOS中提供了4个框架用于实现蓝牙连接&quot;&gt;&lt;/a&gt;iOS中提供了4个框架用于实现蓝牙连接&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1.GameKit.framework(用法简单)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;只能用于iOS设备之间的同个应用内连接&lt;/code&gt;,多用于游戏(eg.拳皇,棋牌类),从&lt;code&gt;iOS7开始过期&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2.MultipeerConnectivity.framework(代替1)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;只能用于iOS设备之间的连接,从iOS7开始引入&lt;/code&gt;,主要用于&lt;code&gt;非联网状态&lt;/code&gt;下,通过wifi或者蓝牙进行文件共享(仅限于沙盒的文件),多用于附近无网聊天&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;3.ExternalAccessory.framework(MFi)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;可用于第三方蓝牙设备交互&lt;/code&gt;,但是蓝牙设备必须经过&lt;code&gt;苹果MFi认证&lt;/code&gt;(国内很少)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;4.CoreBluetooth.framework（时下热门)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;可用于第三方蓝牙设备交互&lt;/code&gt;,必须要支持蓝牙4.0&lt;/li&gt;
+&lt;li&gt;硬件至少是4s,系统至少是iOS6&lt;/li&gt;
+&lt;li&gt;蓝牙4.0以低功耗著称,一般也叫BLE（Bluetooth Low Energy）&lt;/li&gt;
+&lt;li&gt;目前应用比较多的案例:运动手环,嵌入式设备,智能家居&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;设计到的系统-框架&quot;&gt;&lt;a href=&quot;#设计到的系统-框架&quot; class=&quot;headerlink&quot; title=&quot;设计到的系统/框架&quot;&gt;&lt;/a&gt;设计到的系统/框架&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;HealthKit/物联网HomeKit/wathOS1,2/iBeacon&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      iOS中的蓝牙常用的框架
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+      <category term="蓝牙" scheme="http://www.denman.me/tags/%E8%93%9D%E7%89%99/"/>
     
   </entry>
   
@@ -656,111 +872,6 @@ if (block) {
     
     
       <category term="block" scheme="http://www.denman.me/tags/block/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>查看静态库文件支持的指令集架构的方法</title>
-    <link href="http://www.denman.me/2014/10/13/%E6%9F%A5%E7%9C%8B%E9%9D%99%E6%80%81%E5%BA%93%E6%96%87%E4%BB%B6%E6%94%AF%E6%8C%81%E7%9A%84%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%9E%84%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://www.denman.me/2014/10/13/查看静态库文件支持的指令集架构的方法/</id>
-    <published>2014-10-13T03:45:30.000Z</published>
-    <updated>2016-06-27T07:55:43.000Z</updated>
-    
-    <content type="html">&lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
-    }
-    else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
-    }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-&lt;/script&gt;
-
-&lt;p&gt;例如 现在 查看libogg.a支持的指令集&lt;br&gt;以管理员的身份在终端下进入libogg.a库文件所在目录，执行lipo -info ibogg.a如下&lt;br&gt;localhost:~ developer$ cd desktop&lt;br&gt;localhost:desktop developer$ cd SpeexRecord&lt;br&gt;localhost:SpeexRecord developer$ lipo -info libogg.a&lt;br&gt;Architectures in the fat file: libogg.a are: i386 armv6 armv7&lt;br&gt;结果 liboog.a支持的指令集架构为 inter 32位 armv6 32位 armv7 32位&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (c
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-      <category term="64位" scheme="http://www.denman.me/tags/64%E4%BD%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思念家乡</title>
-    <link href="http://www.denman.me/2014/09/20/%E6%80%9D%E5%BF%B5%E5%AE%B6%E4%B9%A1/"/>
-    <id>http://www.denman.me/2014/09/20/思念家乡/</id>
-    <published>2014-09-20T13:21:47.000Z</published>
-    <updated>2016-06-27T07:57:45.000Z</updated>
-    
-    <content type="html">&lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
-    }
-    else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
-    }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-&lt;/script&gt;
-
-&lt;p&gt;&lt;font color=&quot;red&quot;&gt;&lt;br&gt; 那时25年前的清晨&lt;br&gt; 我出生在一个小山村&lt;br&gt; 那里鲜花长满山坡&lt;br&gt; 那里绿树如荫&lt;br&gt; 那里有我的父老乡亲&lt;br&gt; 多少岁月&lt;br&gt; 多少青春&lt;br&gt; 多少感慨&lt;br&gt; 多少故事&lt;br&gt; 多少蹉跎&lt;br&gt; 都长满在这里&lt;br&gt; 几多风雨几多晴&lt;br&gt;母亲一天一天把我养大&lt;br&gt;父亲一年一年教我做人&lt;br&gt;骨子里埋下了吃苦耐劳的根&lt;br&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      离开家乡已经多日，偶发感慨
-    
-    </summary>
-    
-      <category term="life" scheme="http://www.denman.me/categories/life/"/>
-    
-    
-      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么说Object-c是一门动态语言</title>
-    <link href="http://www.denman.me/2014/06/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4Object-c%E6%98%AF%E4%B8%80%E9%97%A8%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
-    <id>http://www.denman.me/2014/06/04/为什么说Object-c是一门动态语言/</id>
-    <published>2014-06-04T09:42:41.000Z</published>
-    <updated>2016-06-26T00:55:55.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="Object-c" scheme="http://www.denman.me/tags/Object-c/"/>
-    
-      <category term="动态语言" scheme="http://www.denman.me/tags/%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
