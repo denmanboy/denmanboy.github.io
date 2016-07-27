@@ -512,7 +512,7 @@
     <link href="http://www.denman.me/2015/08/10/iOS%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E4%B8%94%E6%9B%B4%E6%96%B0%E5%90%8E%E8%BF%98%E6%98%AF%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
     <id>http://www.denman.me/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/</id>
     <published>2015-08-10T11:24:55.000Z</published>
-    <updated>2016-07-27T11:37:32.000Z</updated>
+    <updated>2016-07-27T11:39:49.000Z</updated>
     
     <content type="html">&lt;script&gt;
 (function(){
@@ -532,16 +532,12 @@
 &lt;p&gt;对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。&lt;/p&gt;
 &lt;p&gt;下面有有两种方法&lt;/p&gt;
 &lt;p&gt;1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。&lt;br&gt;2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。&lt;br&gt;那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。&lt;/p&gt;
-&lt;p&gt;不废话了，上代码！&lt;br&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//当前版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *currentVersion = 		   [[[&lt;span class=&quot;built_in&quot;&gt;NSBundlemainBundle&lt;/span&gt;]infoDictionary]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//本地存储的版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *saveVersion  = [[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaultsstandardUserDefaults&lt;/span&gt;]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([currentVersionfloatValue] &amp;gt; [saveVersion floatValue]) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]setObject:currentVersion forKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]synchronize];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//&lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt;   &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不废话了，上代码！&lt;br&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//当前版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *currentVersion = [[[&lt;span class=&quot;built_in&quot;&gt;NSBundlemainBundle&lt;/span&gt;]infoDictionary]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//本地存储的版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *saveVersion  = [[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaultsstandardUserDefaults&lt;/span&gt;]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([currentVersionfloatValue] &amp;gt; [saveVersion floatValue]) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]setObject:currentVersion forKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]synchronize];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//&lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt;   &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (c
+      IOS开发判断是否第一次使用软件且下次app自动更新后再次打开还是第一次使用
     
     </summary>
     
@@ -813,6 +809,45 @@
   </entry>
   
   <entry>
+    <title>模仿微信更改头像，图片局部放大</title>
+    <link href="http://www.denman.me/2015/03/06/%E6%A8%A1%E4%BB%BF%E5%BE%AE%E4%BF%A1%E6%9B%B4%E6%94%B9%E5%A4%B4%E5%83%8F%EF%BC%8C%E5%9B%BE%E7%89%87%E5%B1%80%E9%83%A8%E6%94%BE%E5%A4%A7/"/>
+    <id>http://www.denman.me/2015/03/06/模仿微信更改头像，图片局部放大/</id>
+    <published>2015-03-06T11:41:08.000Z</published>
+    <updated>2016-07-27T11:56:54.000Z</updated>
+    
+    <content type="html">&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;
+
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&quot;ViewController.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ViewController&lt;/span&gt; ()&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImageView&lt;/span&gt; *showImageView;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImageView&lt;/span&gt; *imageView;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ViewController&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)viewDidLoad &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [superviewDidLoad];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.view.backgroundColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorgrayColor&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//女孩图片&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView = [[&lt;span class=&quot;built_in&quot;&gt;UIImageViewalloc&lt;/span&gt;]initWithFrame:&lt;span class=&quot;built_in&quot;&gt;CGRectMake&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;70&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;241&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//  imageView.layer.contents = (__bridge id)([UIImage imageNamed:@&quot;图片0.jpg&quot;].CGImage);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView.image = [&lt;span class=&quot;built_in&quot;&gt;UIImageimageNamed&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;@&quot;图片0.jpg&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView.alpha =&lt;span class=&quot;number&quot;&gt;0.4&lt;/span&gt;;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView.userInteractionEnabled =&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.viewaddSubview:imageView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//显示放大的局部图片&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImageView&lt;/span&gt; *screenShotView = [[&lt;span class=&quot;built_in&quot;&gt;UIImageViewalloc&lt;/span&gt;]initWithFrame:&lt;span class=&quot;built_in&quot;&gt;CGRectMake&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//screenShotView.backgroundColor = [UIColor yellowColor];&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.backgroundColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorclearColor&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.userInteractionEnabled =&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.layer.borderColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorredColor&lt;/span&gt;].CGColor;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.layer.borderWidth =&lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt;f;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [imageViewaddSubview:screenShotView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 手势拖动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIPanGestureRecognizer&lt;/span&gt; *panGesture = [[&lt;span class=&quot;built_in&quot;&gt;UIPanGestureRecognizeralloc&lt;/span&gt;]initWithTarget:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; action:&lt;span class=&quot;keyword&quot;&gt;@selector&lt;/span&gt;(panGestureRecognizer:)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [screenShotView addGestureRecognizer:panGesture];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     showImageView = [[&lt;span class=&quot;built_in&quot;&gt;UIImageViewalloc&lt;/span&gt;]initWithFrame:&lt;span class=&quot;built_in&quot;&gt;CGRectMake&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;440&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;190&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;190&lt;/span&gt;)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    showImageView.backgroundColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorredColor&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.viewaddSubview:showImageView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Do any additional setup after loading the view, typically from a nib.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//移动手势的回调方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)panGestureRecognizer:(&lt;span class=&quot;built_in&quot;&gt;UIPanGestureRecognizer&lt;/span&gt;*)panGesture&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGPoint&lt;/span&gt; point = [panGesturelocationInView:imageView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    panGesture.view.center =  point;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGRect&lt;/span&gt; rect = panGesture.view.frame;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt; *newImage = [selfInterceptionUIImageWithImage: imageView.image andRect:rect];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    showImageView.image = newImage;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// ((UIImageView*)panGesture.view).image = newImage;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//截取图片的某一部分&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt;*)InterceptionUIImageWithImage:(&lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt;*)image andRect:(&lt;span class=&quot;built_in&quot;&gt;CGRect&lt;/span&gt;)rect&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGImageRef&lt;/span&gt; imageRef = image.CGImage;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGImageRef&lt;/span&gt; imageRefRect =&lt;span class=&quot;built_in&quot;&gt;CGImageCreateWithImageInRect&lt;/span&gt;(imageRef, rect);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt; *imageRect = [[&lt;span class=&quot;built_in&quot;&gt;UIImagealloc&lt;/span&gt;] initWithCGImage:imageRefRect];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; imageRect;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)didReceiveMemoryWarning &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [superdidReceiveMemoryWarning];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Dispose of any resources that can be recreated.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot; title=&quot;效果&quot;&gt;&lt;/a&gt;效果&lt;/h2&gt;&lt;p&gt; &lt;img src=&quot;https://cl.ly/1I1A1M1B2J1r/20150306192304828.png&quot; width=&quot;320&quot; height=&quot;480&quot; alt=&quot;图片名称&quot; align=&quot;center&quot;&gt;&lt;br&gt;  &lt;img src=&quot;https://cl.ly/1I1A1M1B2J1r/20150306192304828.pngg&quot; width=&quot;320&quot; height=&quot;480&quot; alt=&quot;图片名称&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      模仿微信更改头像，图片局部放大
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>思念同学</title>
     <link href="http://www.denman.me/2015/03/06/%E6%80%9D%E5%BF%B5%E5%90%8C%E5%AD%A6/"/>
     <id>http://www.denman.me/2015/03/06/思念同学/</id>
@@ -844,65 +879,6 @@
     
     
       <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>?:和Swift中??异曲同工</title>
-    <link href="http://www.denman.me/2015/01/12/%E5%92%8CSwift%E4%B8%AD-%E5%BC%82%E6%9B%B2%E5%90%8C%E5%B7%A5/"/>
-    <id>http://www.denman.me/2015/01/12/和Swift中-异曲同工/</id>
-    <published>2015-01-12T09:08:57.000Z</published>
-    <updated>2016-07-10T10:41:17.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;script&gt;&lt;br&gt;(function(){&lt;br&gt;    var bp = document.createElement(‘script’);&lt;br&gt;    var curProtocol = window.location.protocol.split(‘:’)[0];&lt;br&gt;    if (curProtocol === ‘https’) {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;https://zz.bdstatic.com/linksubmit/push.js&quot;&gt;https://zz.bdstatic.com/linksubmit/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    else {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;http://push.zhanzhang.baidu.com/push.js&quot;&gt;http://push.zhanzhang.baidu.com/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    var s = document.getElementsByTagName(“script”)[0];&lt;br&gt;    s.parentNode.insertBefore(bp, s);&lt;br&gt;})();&lt;br&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;??&quot;&gt;&lt;/a&gt;??&lt;/h2&gt;&lt;p&gt;可选类型数值如果为空是，不能参与运算的，所以在使用之前要对它进行判断非空操。空合并运算符用于对可选类型进行空判断，如果包含值就对可选常量/变量进行解包，如果为nil则返回式默认值。空合并运算符使用默认值替换nil值，处nil值的情况。保证了表达式一定有值，提高程序的健壮性。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;a ?? b
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;它是对一下表达式的简单表达方式&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;a != nil ? a! : b
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当可选类型a 不为空时，对a进行强制解包，取出a的值。反之，当a为空时，返回默认的b值。其中b可以是字面量，常量，变量，或者表达式，都可以。&lt;/p&gt;
-&lt;p&gt;？？ 有两个条件&lt;/p&gt;
-&lt;p&gt;表达式a必须是可选类型&lt;/p&gt;
-&lt;p&gt;默认值b的数据类型必须和a的值数据类型一致&lt;/p&gt;
-&lt;h1 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot;?:&quot;&gt;&lt;/a&gt;?:&lt;/h1&gt;&lt;p&gt;?: 是条件表达式式 ，是唯一的一个三元运算符，其实他是对下面表达式的简写&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int a = 2;
-int b = 3;
-int c;
-//条件表达式
-//c = a &amp;gt; b ? a : b ;
-//if-eles 条件判断
-if (a &amp;gt; b) {
-    c = a;
-}else{
-    c = b;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一般我们常用?: 简写if-else判断，增进写代码的速度，其实?: 还有一个和Swift中?? 相似的作用，用作二元表达式，用来返回默认值，例如，有时做网络请求时，服务器返回为空，但是我们UI见面不能显示为空，就显示一个默认值。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;NSString *UIString = serverString ?: @&amp;quot;defultString&amp;quot;;
-//等价于
-NSString *UIString = serverString ? serverString : @&amp;quot;defultString&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;鉴于以上对?: 做过二元运算符的使用，在使用block时我们每次都要做判断是否为空，如下？&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//先判断是否为空，再调用block
-if (block) {
-    block();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可用二元表达式简写如下&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;!block ?: block()
-&lt;/code&gt;&lt;/pre&gt;</content>
-    
-    <summary type="html">
-    
-      ?:(条件表达式) 条件表达式的另类用法，和Swift中的??(空合并运算符)
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="Swift" scheme="http://www.denman.me/tags/Swift/"/>
-    
-      <category term="[object Object]" scheme="http://www.denman.me/tags/object-Object/"/>
     
   </entry>
   
