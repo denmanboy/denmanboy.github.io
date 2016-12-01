@@ -252,7 +252,7 @@ a {
 }
 #container .left-col {
   background: url("../img/bg.jpg") #515457;
-  width: 300px;
+  width: '' px;
   position: fixed;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in;
@@ -2127,74 +2127,72 @@ a {
   margin-right: 0;
 }
 #header .header-nav .social a.weibo {
-  background: url("/img/weibo.png") center no-repeat #f00;
-  border: 1px solid #f00;
-}
-#header .header-nav .social a.weibo:hover {
+  background: url("../img/weibo.png") center no-repeat #f00;
   border: 1px solid #f00;
 }
 #header .header-nav .social a.rss {
-  background: url("/img/rss.png") center no-repeat #ef7522;
-  border: 1px solid #ef7522;
-}
-#header .header-nav .social a.rss:hover {
+  background: url("../img/rss.png") center no-repeat #ef7522;
   border: 1px solid #ef7522;
 }
 #header .header-nav .social a.github {
-  background: url("/img/github.png") center no-repeat #000;
-  border: 1px solid #000;
-}
-#header .header-nav .social a.github:hover {
+  background: url("../img/github.png") center no-repeat #000;
   border: 1px solid #000;
 }
 #header .header-nav .social a.facebook {
-  background: url("/img/facebook.png") center no-repeat #3b5998;
-  border: 1px solid #3b5998;
-}
-#header .header-nav .social a.facebook:hover {
+  background: url("../img/facebook.png") center no-repeat #3b5998;
   border: 1px solid #3b5998;
 }
 #header .header-nav .social a.google {
-  background: url("/img/google.png") center no-repeat #f00;
-  border: 1px solid #f00;
-}
-#header .header-nav .social a.google:hover {
+  background: url("../img/google.png") center no-repeat #f00;
   border: 1px solid #f00;
 }
 #header .header-nav .social a.twitter {
-  background: url("/img/twitter.png") center no-repeat #55cff8;
-  border: 1px solid #55cff8;
-}
-#header .header-nav .social a.twitter:hover {
-  border: 1px solid #55cff8;
+  background: url("../img/twitter.png") center no-repeat #1ab2e8;
+  border: 1px solid #1ab2e8;
 }
 #header .header-nav .social a.linkedin {
-  background: url("/img/linkedin.png") center no-repeat #00639a;
+  background: url("../img/linkedin.png") center no-repeat #00639a;
   border: 1px solid #00639a;
 }
-#header .header-nav .social a.linkedin:hover {
-  border: 1px solid #006b98;
-}
 #header .header-nav .social a.zhihu {
-  background: url("/img/zhihu.png") center no-repeat #0663c1;
-  border: 1px solid #0663c1;
-}
-#header .header-nav .social a.zhihu:hover {
+  background: url("../img/zhihu.png") center no-repeat #0663c1;
   border: 1px solid #0663c1;
 }
 #header .header-nav .social a.douban {
-  background: url("/img/douban.png") center no-repeat #06c611;
-  border: 1px solid #06c611;
-}
-#header .header-nav .social a.douban:hover {
+  background: url("../img/douban.png") center no-repeat #06c611;
   border: 1px solid #06c611;
 }
 #header .header-nav .social a.mail {
-  background: url("/img/mail.png") center no-repeat #00abff;
+  background: url("../img/mail.png") center no-repeat #3b98ba;
+  border: 1px solid #3b98ba;
+}
+#header .header-nav .social a.QQ {
+  background: url("../img/qq.png") center no-repeat #00abff;
   border: 1px solid #00abff;
 }
-#header .header-nav .social a.mail:hover {
-  border: 1px solid #00abff;
+#header .header-nav .social a.wechat {
+  background: url("../img/wechat.png") center no-repeat #51c332;
+  border: 1px solid #51c332;
+}
+#header .header-nav .social a.pinterest {
+  background: url("../img/pinterest.png") center no-repeat #cd1f28;
+  border: 1px solid #cd1f28;
+}
+#header .header-nav .social a.pinboard {
+  background: url("../img/pinboard.png") center no-repeat #224cf4;
+  border: 1px solid #224cf4;
+}
+#header .header-nav .social a.stackoverflow {
+  background: url("../img/stackoverflow.png") center no-repeat #fe7a15;
+  border: 1px solid #fe7a15;
+}
+#header .header-nav .social a.Instagram {
+  background: url("../img/instagram.png") center no-repeat #125688;
+  border: 1px solid #125688;
+}
+#header .header-nav .social a.segmentfault {
+  background: url("../img/segmentfault.png") center no-repeat #009a61;
+  border: 1px solid #009a61;
 }
 #header .switch-part {
   width: 100%;
@@ -2639,8 +2637,11 @@ color
 .article-entry li code {
   padding: 1px 3px;
   margin: 0 3px;
-  background: #ddd;
-  border: 1px solid #ccc;
+  color: #999;
+  background: #002b36;
+  border: 1px dashed #ccc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   word-wrap: break-word;
   font-size: 14px;
@@ -2731,6 +2732,13 @@ color
 }
 .article-entry figure table tbody tr:hover {
   background: none;
+}
+.article-entry code {
+  color: #999;
+  background: #002b36;
+  padding: 1px 3px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 .article-meta {
   width: 150px;
@@ -3220,7 +3228,7 @@ color
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
-  color: #999;
+  color: #9e90ff;
 }
 .article-entry pre,
 .article-entry code {
@@ -3242,7 +3250,7 @@ color
   box-sizing: border-box;
 }
 .article-entry code {
-  background: #eee;
+  background: #002b36;
   padding: 0 0.3em;
   border: none;
 }
@@ -3258,7 +3266,7 @@ color
 .article-entry p code {
   margin: 0 3px;
   border: dashed 1px #000;
-  color: #fff;
+  color: #999;
   padding: 1px 8px;
   font-size: 90%;
   -webkit-border-radius: 5px;
@@ -3390,7 +3398,7 @@ color
   content: attr(data-lang) " code";
   display: block;
   background-color: #0083a0;
-  margin: 0 -16px 16px -16px;
+  margin: 0 -10px 16px -10px;
   padding: 8px 16px;
   color: #efefef;
   font-family: Lato, "Microsoft YaHei", sans-serif;
@@ -3403,6 +3411,7 @@ color
   -webkit-border-radius: 4px;
   border-radius: 4px;
   padding: 0 10px;
+  color: #fff;
 }
 .article-entry .highlight pre {
   border: none;
@@ -3429,7 +3438,7 @@ color
 }
 .article-entry .highlight figcaption {
   font-size: 0.85em;
-  color: highlight-comment;
+  color: #75715e;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -3453,7 +3462,7 @@ color
 }
 .article-entry .highlight .line {
   font-size: 15px;
-  height: 15px;
+  height: 1.5em;
 }
 .article-entry .gist {
   margin: 0 -20px;
@@ -3487,7 +3496,7 @@ color
 }
 .article-entry .gist .gist-file .gist-meta {
   background: #002b36;
-  color: highlight-comment;
+  color: #75715e;
   font: 0.85em "Lucida Grande", Verdana, "Helvetica Neue", Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
@@ -3510,7 +3519,7 @@ pre .tag {
 pre .title {
   color: #66d9ef;
 }
-pre .strings {
+pre .string {
   color: #2aa198;
 }
 pre .attribute {
@@ -3534,7 +3543,7 @@ pre .class .params {
 pre .params,
 pre .function,
 pre .css .value {
-  color: #fff;
+  color: #fd971f;
 }
 pre .css ~ * .tag,
 pre .at_rule,
