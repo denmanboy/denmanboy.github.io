@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://www.denman.me/2016/06/22/delegate和block使用的场景/index.html">
 <meta property="og:site_name" content="denman's blog">
 <meta property="og:description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
-<meta property="og:updated_time" content="2016-06-28T01:48:59.000Z">
+<meta property="og:updated_time" content="2016-12-20T07:11:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="delegate和block使用的场景">
 <meta name="twitter:description" content="开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”">
@@ -333,8 +333,13 @@
 
 @end
 </code></pre><h2 id="delegate分析"><a href="#delegate分析" class="headerlink" title="delegate分析"></a>delegate分析</h2><ul>
-<li>大多数delegate protocols 都拥有几个消息源<br>从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。当然达到这样的需求，也可以为对应每一个事件注册相应的block，显然这种方式是不合理的</li>
-<li>大多数delegate 都有多个回调，用来捕获对象的行为过程<br>特别是系统提供的一些控件来，都有很多delegate回调方法，用来捕获对象的一些行为动作过程，像<code>UITextField</code>,<code>UISearchBar</code>,这些控件的一些行为，通过delegate方法告诉delegate控件的一些行为状态。<h1 id="Block举例"><a href="#Block举例" class="headerlink" title="Block举例"></a>Block举例</h1><h1 id="block分析"><a href="#block分析" class="headerlink" title="block分析"></a>block分析</h1><h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1></li>
+<li>大多数delegate  都会好几个数据源<br>从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。当然达到这样的需求，也可以为对应每一个事件注册相应的block，显然这种方式是不合理的</li>
+<li>大多数delegate 都有多个回调，用来捕获对象的行为过程<br>特别是系统提供的一些控件来，都有很多delegate回调方法，用来捕获对象的一些行为动作过程，像<code>UITextField</code>,<code>UISearchBar</code>,这些控件的一些行为，通过delegate方法告诉delegate控件的一些行为状态。</li>
+</ul>
+<h1 id="Block举例"><a href="#Block举例" class="headerlink" title="Block举例"></a>Block举例</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> animateWithDuration:&lt;<span class="meta">#(NSTimeInterval)#&gt; animations:<span class="meta-string">&lt;#^(void)animations#&gt;</span>   </span></span><br><span class="line">completion:&lt;<span class="meta">#^(BOOL finished)completion#&gt;]           </span></span><br><span class="line"></span><br><span class="line">dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(&lt;<span class="meta">#delayInSeconds#&gt; * NSEC_PER_SEC)),  </span></span><br><span class="line">  dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       &lt;<span class="meta">#code to be executed after a specified delay#&gt;</span></span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="block分析"><a href="#block分析" class="headerlink" title="block分析"></a>block分析</h1><ul>
+<li>大多数block就是执行一次的任务</li>
+<li>大多数block就是用来做callBack<h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1>从上面我们可以看到delegate，是有多个方法调用，是分步骤的，因此我们可以总结到，delegate是面向过程的。<br>block是执行一次任务，是面向结果的。<br>因此，在我们写代码时，如果是面向过程的，我们就使用delegate，是要获取结果的就使用block。</li>
 </ul>
 
       
@@ -347,7 +352,7 @@
         <p><span>本文标题:</span><a href="/2016/06/22/delegate和block使用的场景/">delegate和block使用的场景</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
         <p><span>发布时间:</span>2016年06月22日 - 19时24分</p>
-        <p><span>最后更新:</span>2016年06月28日 - 09时48分</p>
+        <p><span>最后更新:</span>2016年12月20日 - 15时11分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/22/delegate和block使用的场景/" title="delegate和block使用的场景">http://www.denman.me/2016/06/22/delegate和block使用的场景/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2016/06/22/delegate和block使用的场景/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
