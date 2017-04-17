@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2017-04-17T05:42:17.000Z</updated>
+  <updated>2016-06-28T12:23:07.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -14,49 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://www.denman.me/2017/04/17/test/"/>
-    <id>http://www.denman.me/2017/04/17/test/</id>
-    <published>2017-04-17T05:41:26.000Z</published>
-    <updated>2017-04-17T05:42:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<p>测试</p>
-<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (c
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
-    
-  </entry>
   
   <entry>
     <title>那山，那水，那人</title>
@@ -896,6 +853,65 @@
     
     
       <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>?:和Swift中??异曲同工</title>
+    <link href="http://www.denman.me/2015/01/12/%E5%92%8CSwift%E4%B8%AD-%E5%BC%82%E6%9B%B2%E5%90%8C%E5%B7%A5/"/>
+    <id>http://www.denman.me/2015/01/12/和Swift中-异曲同工/</id>
+    <published>2015-01-12T09:08:57.000Z</published>
+    <updated>2016-07-10T10:41:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js">https://zz.bdstatic.com/linksubmit/push.js</a>‘;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js">http://push.zhanzhang.baidu.com/push.js</a>‘;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p>
+<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
+<p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
+<p><script>hljs.initHighlightingOnLoad();</script></p>
+<h2 id=""><a href="#" class="headerlink" title="??"></a>??</h2><p>可选类型数值如果为空是，不能参与运算的，所以在使用之前要对它进行判断非空操。空合并运算符用于对可选类型进行空判断，如果包含值就对可选常量/变量进行解包，如果为nil则返回式默认值。空合并运算符使用默认值替换nil值，处nil值的情况。保证了表达式一定有值，提高程序的健壮性。</p>
+<pre><code>a ?? b
+</code></pre><p>它是对一下表达式的简单表达方式</p>
+<pre><code>a != nil ? a! : b
+</code></pre><p>当可选类型a 不为空时，对a进行强制解包，取出a的值。反之，当a为空时，返回默认的b值。其中b可以是字面量，常量，变量，或者表达式，都可以。</p>
+<p>？？ 有两个条件</p>
+<p>表达式a必须是可选类型</p>
+<p>默认值b的数据类型必须和a的值数据类型一致</p>
+<h1 id="-1"><a href="#-1" class="headerlink" title="?:"></a>?:</h1><p>?: 是条件表达式式 ，是唯一的一个三元运算符，其实他是对下面表达式的简写</p>
+<pre><code>int a = 2;
+int b = 3;
+int c;
+//条件表达式
+//c = a &gt; b ? a : b ;
+//if-eles 条件判断
+if (a &gt; b) {
+    c = a;
+}else{
+    c = b;
+}
+</code></pre><p>一般我们常用?: 简写if-else判断，增进写代码的速度，其实?: 还有一个和Swift中?? 相似的作用，用作二元表达式，用来返回默认值，例如，有时做网络请求时，服务器返回为空，但是我们UI见面不能显示为空，就显示一个默认值。</p>
+<pre><code>NSString *UIString = serverString ?: @&quot;defultString&quot;;
+//等价于
+NSString *UIString = serverString ? serverString : @&quot;defultString&quot;;
+</code></pre><p>鉴于以上对?: 做过二元运算符的使用，在使用block时我们每次都要做判断是否为空，如下？</p>
+<pre><code>//先判断是否为空，再调用block
+if (block) {
+    block();
+}
+</code></pre><p>可用二元表达式简写如下</p>
+<pre><code>!block ?: block()
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      ?:(条件表达式) 条件表达式的另类用法，和Swift中的??(空合并运算符)
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="Swift" scheme="http://www.denman.me/tags/Swift/"/>
+    
+      <category term="[object Object]" scheme="http://www.denman.me/tags/object-Object/"/>
     
   </entry>
   
