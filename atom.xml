@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2016-06-28T12:23:07.000Z</updated>
+  <updated>2017-04-17T05:42:17.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -16,26 +16,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test</title>
+    <link href="http://www.denman.me/2017/04/17/test/"/>
+    <id>http://www.denman.me/2017/04/17/test/</id>
+    <published>2017-04-17T05:41:26.000Z</published>
+    <updated>2017-04-17T05:42:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<p>测试</p>
+<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (c
+    
+    </summary>
+    
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>那山，那水，那人</title>
     <link href="http://www.denman.me/2016/06/28/%E9%82%A3%E5%B1%B1%EF%BC%8C%E9%82%A3%E6%B0%B4%EF%BC%8C%E9%82%A3%E4%BA%BA/"/>
     <id>http://www.denman.me/2016/06/28/那山，那水，那人/</id>
     <published>2016-06-28T01:50:27.000Z</published>
     <updated>2016-06-28T12:23:07.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
 
 
@@ -52,7 +95,7 @@
 
 
 
-</content>
+]]></content>
     
     <summary type="html">
     
@@ -74,22 +117,22 @@
     <published>2016-06-27T05:54:37.000Z</published>
     <updated>2016-06-28T01:29:57.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;h2 id=&quot;贴近用户，切入用户最直接的需求&quot;&gt;&lt;a href=&quot;#贴近用户，切入用户最直接的需求&quot; class=&quot;headerlink&quot; title=&quot;贴近用户，切入用户最直接的需求&quot;&gt;&lt;/a&gt;贴近用户，切入用户最直接的需求&lt;/h2&gt;&lt;h2 id=&quot;简单直接-，减少用户学习成本&quot;&gt;&lt;a href=&quot;#简单直接-，减少用户学习成本&quot; class=&quot;headerlink&quot; title=&quot;简单直接 ，减少用户学习成本&quot;&gt;&lt;/a&gt;简单直接 ，减少用户学习成本&lt;/h2&gt;&lt;h2 id=&quot;局部细化，细节处打动用户&quot;&gt;&lt;a href=&quot;#局部细化，细节处打动用户&quot; class=&quot;headerlink&quot; title=&quot;局部细化，细节处打动用户&quot;&gt;&lt;/a&gt;局部细化，细节处打动用户&lt;/h2&gt;&lt;h2 id=&quot;统一风格，统一布局&quot;&gt;&lt;a href=&quot;#统一风格，统一布局&quot; class=&quot;headerlink&quot; title=&quot;统一风格，统一布局&quot;&gt;&lt;/a&gt;统一风格，统一布局&lt;/h2&gt;</content>
+<h2 id="贴近用户，切入用户最直接的需求"><a href="#贴近用户，切入用户最直接的需求" class="headerlink" title="贴近用户，切入用户最直接的需求"></a>贴近用户，切入用户最直接的需求</h2><h2 id="简单直接-，减少用户学习成本"><a href="#简单直接-，减少用户学习成本" class="headerlink" title="简单直接 ，减少用户学习成本"></a>简单直接 ，减少用户学习成本</h2><h2 id="局部细化，细节处打动用户"><a href="#局部细化，细节处打动用户" class="headerlink" title="局部细化，细节处打动用户"></a>局部细化，细节处打动用户</h2><h2 id="统一风格，统一布局"><a href="#统一风格，统一布局" class="headerlink" title="统一风格，统一布局"></a>统一风格，统一布局</h2>]]></content>
     
     <summary type="html">
     
@@ -111,26 +154,26 @@
     <published>2016-06-22T16:25:04.000Z</published>
     <updated>2016-06-27T07:57:02.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Category&quot;&gt;&lt;a href=&quot;#Category&quot; class=&quot;headerlink&quot; title=&quot;Category&quot;&gt;&lt;/a&gt;Category&lt;/h1&gt;&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。&lt;br&gt;&lt;br&gt;不过有时子类并不方便。比方说，你想为&lt;code&gt;NSString&lt;/code&gt;类添加一个新的行为，但是&lt;code&gt;NSString&lt;/code&gt;实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。&lt;br&gt;&lt;br&gt;利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的&lt;code&gt;Category&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;struct objc_category {
+<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
+<p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
+<p><script>hljs.initHighlightingOnLoad();</script></p>
+<h1 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。<br><br>不过有时子类并不方便。比方说，你想为<code>NSString</code>类添加一个新的行为，但是<code>NSString</code>实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。<br><br>利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的<code>Category</code></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>struct objc_category {
     //category名称
     char *category_name                                      
     //添加category的类名称
@@ -142,25 +185,25 @@
     //协议列表
     struct objc_protocol_list *protocols                     
 }                                                            
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Category的优势&quot;&gt;&lt;a href=&quot;#Category的优势&quot; class=&quot;headerlink&quot; title=&quot;Category的优势&quot;&gt;&lt;/a&gt;Category的优势&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;利用Category分散实现代码&lt;/li&gt;
-&lt;li&gt;通过Category创建前向应用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;Extension&quot;&gt;&lt;a href=&quot;#Extension&quot; class=&quot;headerlink&quot; title=&quot;Extension&quot;&gt;&lt;/a&gt;Extension&lt;/h1&gt;&lt;h2 id=&quot;定义-1&quot;&gt;&lt;a href=&quot;#定义-1&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;Extension就是匿名Category，但是又有着很大的不同。&lt;/p&gt;
-&lt;h1 id=&quot;对比&quot;&gt;&lt;a href=&quot;#对比&quot; class=&quot;headerlink&quot; title=&quot;对比&quot;&gt;&lt;/a&gt;对比&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;Category可以写在单独一个文件内，也可以写在与之关联的类里面&lt;/li&gt;
-&lt;li&gt;Extension必须写在实现文件里  &lt;/li&gt;
-&lt;li&gt;Category声明的方法可以不实现.&lt;/li&gt;
-&lt;li&gt;Extension里声明的方法必须实现&lt;/li&gt;
-&lt;li&gt;Category不能添加实例变量&lt;/li&gt;
-&lt;li&gt;Extension可以添加实例变量&lt;/li&gt;
-&lt;li&gt;Category是运行时才会执行&lt;/li&gt;
-&lt;li&gt;Extension是编译时就会和关联的类一起编译&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;a href=&quot;#为什么Category不能添加实例变量而Extension可以&quot; class=&quot;headerlink&quot; title=&quot;为什么Category不能添加实例变量而Extension可以&quot;&gt;&lt;/a&gt;为什么Category不能添加实例变量而Extension可以&lt;/h2&gt;&lt;p&gt;其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。&lt;br&gt;第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。&lt;br&gt;&lt;br&gt;为什么Category没有空间容纳实例变量呢？&lt;br&gt;&lt;br&gt;从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表&lt;br&gt;&lt;br&gt;而Extension为什么就可以呢？&lt;br&gt;&lt;br&gt;通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。&lt;/p&gt;
-&lt;h2 id=&quot;通过runtime向类关联对象&quot;&gt;&lt;a href=&quot;#通过runtime向类关联对象&quot; class=&quot;headerlink&quot; title=&quot;通过runtime向类关联对象&quot;&gt;&lt;/a&gt;通过runtime向类关联对象&lt;/h2&gt;&lt;p&gt;虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  &lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
+</code></pre><h2 id="Category的优势"><a href="#Category的优势" class="headerlink" title="Category的优势"></a>Category的优势</h2><ol>
+<li>利用Category分散实现代码</li>
+<li>通过Category创建前向应用</li>
+</ol>
+<h1 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>Extension就是匿名Category，但是又有着很大的不同。</p>
+<h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1><ol>
+<li>Category可以写在单独一个文件内，也可以写在与之关联的类里面</li>
+<li>Extension必须写在实现文件里  </li>
+<li>Category声明的方法可以不实现.</li>
+<li>Extension里声明的方法必须实现</li>
+<li>Category不能添加实例变量</li>
+<li>Extension可以添加实例变量</li>
+<li>Category是运行时才会执行</li>
+<li>Extension是编译时就会和关联的类一起编译</li>
+</ol>
+<h2 id="为什么Category不能添加实例变量而Extension可以"><a href="#为什么Category不能添加实例变量而Extension可以" class="headerlink" title="为什么Category不能添加实例变量而Extension可以"></a>为什么Category不能添加实例变量而Extension可以</h2><p>其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。<br>第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。<br><br>为什么Category没有空间容纳实例变量呢？<br><br>从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表<br><br>而Extension为什么就可以呢？<br><br>通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。</p>
+<h2 id="通过runtime向类关联对象"><a href="#通过runtime向类关联对象" class="headerlink" title="通过runtime向类关联对象"></a>通过runtime向类关联对象</h2><p>虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  </p>
+<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
+]]></content>
     
     <summary type="html">
     
@@ -184,28 +227,28 @@
     <published>2016-06-22T11:24:51.000Z</published>
     <updated>2016-12-20T07:11:04.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script>hljs.initHighlightingOnLoad();</script>
 
-&lt;p&gt;比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。&lt;br&gt;我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。&lt;/p&gt;
-&lt;h2 id=&quot;delegate举例&quot;&gt;&lt;a href=&quot;#delegate举例&quot; class=&quot;headerlink&quot; title=&quot;delegate举例&quot;&gt;&lt;/a&gt;delegate举例&lt;/h2&gt;&lt;p&gt;我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   &lt;/p&gt;
-&lt;h3 id=&quot;UITableViewDelegate&quot;&gt;&lt;a href=&quot;#UITableViewDelegate&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDelegate&quot;&gt;&lt;/a&gt;UITableViewDelegate&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDelegate&amp;lt;NSObject, UIScrollViewDelegate&amp;gt;
+<p>比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。<br>我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。</p>
+<h2 id="delegate举例"><a href="#delegate举例" class="headerlink" title="delegate举例"></a>delegate举例</h2><p>我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   </p>
+<h3 id="UITableViewDelegate"><a href="#UITableViewDelegate" class="headerlink" title="UITableViewDelegate"></a>UITableViewDelegate</h3><pre><code>@protocol UITableViewDelegate&lt;NSObject, UIScrollViewDelegate&gt;
 @optional
  - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
@@ -214,12 +257,12 @@
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
  @end  
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;UITableViewDataSource&quot;&gt;&lt;a href=&quot;#UITableViewDataSource&quot; class=&quot;headerlink&quot; title=&quot;UITableViewDataSource&quot;&gt;&lt;/a&gt;UITableViewDataSource&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;@protocol UITableViewDataSource&amp;lt;NSObject&amp;gt;
+</code></pre><h3 id="UITableViewDataSource"><a href="#UITableViewDataSource" class="headerlink" title="UITableViewDataSource"></a>UITableViewDataSource</h3><pre><code>@protocol UITableViewDataSource&lt;NSObject&gt;
 @required
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell&amp;apos;s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Row display. Implementers should *always* try to reuse cells by setting each cell&apos;s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -242,16 +285,16 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;delegate分析&quot;&gt;&lt;a href=&quot;#delegate分析&quot; class=&quot;headerlink&quot; title=&quot;delegate分析&quot;&gt;&lt;/a&gt;delegate分析&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;大多数delegate  都会好几个数据源&lt;br&gt;从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。当然达到这样的需求，也可以为对应每一个事件注册相应的block，显然这种方式是不合理的&lt;/li&gt;
-&lt;li&gt;大多数delegate 都有多个回调，用来捕获对象的行为过程&lt;br&gt;特别是系统提供的一些控件来，都有很多delegate回调方法，用来捕获对象的一些行为动作过程，像&lt;code&gt;UITextField&lt;/code&gt;,&lt;code&gt;UISearchBar&lt;/code&gt;,这些控件的一些行为，通过delegate方法告诉delegate控件的一些行为状态。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;Block举例&quot;&gt;&lt;a href=&quot;#Block举例&quot; class=&quot;headerlink&quot; title=&quot;Block举例&quot;&gt;&lt;/a&gt;Block举例&lt;/h1&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;built_in&quot;&gt;UIView&lt;/span&gt; animateWithDuration:&amp;lt;&lt;span class=&quot;meta&quot;&gt;#(NSTimeInterval)#&amp;gt; animations:&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;#^(void)animations#&amp;gt;&lt;/span&gt;   &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;completion:&amp;lt;&lt;span class=&quot;meta&quot;&gt;#^(BOOL finished)completion#&amp;gt;]           &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(&amp;lt;&lt;span class=&quot;meta&quot;&gt;#delayInSeconds#&amp;gt; * NSEC_PER_SEC)),  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  dispatch_get_main_queue(), ^&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &amp;lt;&lt;span class=&quot;meta&quot;&gt;#code to be executed after a specified delay#&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;block分析&quot;&gt;&lt;a href=&quot;#block分析&quot; class=&quot;headerlink&quot; title=&quot;block分析&quot;&gt;&lt;/a&gt;block分析&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;大多数block就是执行一次的任务&lt;/li&gt;
-&lt;li&gt;大多数block就是用来做callBack&lt;h1 id=&quot;对比&quot;&gt;&lt;a href=&quot;#对比&quot; class=&quot;headerlink&quot; title=&quot;对比&quot;&gt;&lt;/a&gt;对比&lt;/h1&gt;从上面我们可以看到delegate，是有多个方法调用，是分步骤的，因此我们可以总结到，delegate是面向过程的。&lt;br&gt;block是执行一次任务，是面向结果的。&lt;br&gt;因此，在我们写代码时，如果是面向过程的，我们就使用delegate，是要获取结果的就使用block。&lt;/li&gt;
-&lt;/ul&gt;
-</content>
+</code></pre><h2 id="delegate分析"><a href="#delegate分析" class="headerlink" title="delegate分析"></a>delegate分析</h2><ul>
+<li>大多数delegate  都会好几个数据源<br>从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。当然达到这样的需求，也可以为对应每一个事件注册相应的block，显然这种方式是不合理的</li>
+<li>大多数delegate 都有多个回调，用来捕获对象的行为过程<br>特别是系统提供的一些控件来，都有很多delegate回调方法，用来捕获对象的一些行为动作过程，像<code>UITextField</code>,<code>UISearchBar</code>,这些控件的一些行为，通过delegate方法告诉delegate控件的一些行为状态。</li>
+</ul>
+<h1 id="Block举例"><a href="#Block举例" class="headerlink" title="Block举例"></a>Block举例</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> animateWithDuration:&lt;<span class="meta">#(NSTimeInterval)#&gt; animations:<span class="meta-string">&lt;#^(void)animations#&gt;</span>   </span></span><br><span class="line">completion:&lt;<span class="meta">#^(BOOL finished)completion#&gt;]           </span></span><br><span class="line"></span><br><span class="line">dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(&lt;<span class="meta">#delayInSeconds#&gt; * NSEC_PER_SEC)),  </span></span><br><span class="line">  dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       &lt;<span class="meta">#code to be executed after a specified delay#&gt;</span></span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="block分析"><a href="#block分析" class="headerlink" title="block分析"></a>block分析</h1><ul>
+<li>大多数block就是执行一次的任务</li>
+<li>大多数block就是用来做callBack<h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1>从上面我们可以看到delegate，是有多个方法调用，是分步骤的，因此我们可以总结到，delegate是面向过程的。<br>block是执行一次任务，是面向结果的。<br>因此，在我们写代码时，如果是面向过程的，我们就使用delegate，是要获取结果的就使用block。</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
@@ -273,8 +316,6 @@
     <published>2016-04-20T13:20:43.000Z</published>
     <updated>2016-06-26T00:57:21.000Z</updated>
     
-    <content type="html"></content>
-    
     <summary type="html">
     
     </summary>
@@ -293,24 +334,22 @@
     <published>2016-02-06T10:13:40.000Z</published>
     <updated>2016-07-10T10:46:57.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;div class=&quot;article&quot;&gt;&lt;br&gt;&lt;ul&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;二月出来二月归，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;一事无成百不堪。&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;不见天山九千雪，&lt;/li&gt;&lt;br&gt;&lt;li style=&quot;list-style:none;font-size:25px;height:30px&quot;&gt;只见岁月染白头。&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/div&gt;
-
-
+<div class="article"><br><ul><br><li style="list-style:none;font-size:25px;height:30px">二月出来二月归，</li><br><li style="list-style:none;font-size:25px;height:30px">一事无成百不堪。</li><br><li style="list-style:none;font-size:25px;height:30px">不见天山九千雪，</li><br><li style="list-style:none;font-size:25px;height:30px">只见岁月染白头。</li><br></ul><br></div>
 
 
 
@@ -325,7 +364,9 @@
 
 
 
-</content>
+
+
+]]></content>
     
     <summary type="html">
     
@@ -347,8 +388,6 @@
     <published>2015-12-02T10:32:41.000Z</published>
     <updated>2016-06-26T00:54:57.000Z</updated>
     
-    <content type="html"></content>
-    
     <summary type="html">
     
     </summary>
@@ -367,99 +406,99 @@
     <published>2015-10-21T01:37:42.000Z</published>
     <updated>2016-07-27T01:41:39.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;h2 id=&quot;iOS9开始的新特性&quot;&gt;&lt;a href=&quot;#iOS9开始的新特性&quot; class=&quot;headerlink&quot; title=&quot;iOS9开始的新特性&quot;&gt;&lt;/a&gt;iOS9开始的新特性&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;nonnull__nonnull&lt;/li&gt;
-&lt;li&gt;nullable__nonnullable&lt;/li&gt;
-&lt;li&gt;null_resettable&lt;/li&gt;
-&lt;li&gt;NS_ASSUME_NONNULL_BEGIN \ NS_ASSUME_NONNULL_END&lt;/li&gt;
-&lt;li&gt;泛型__contravariant__covariant&lt;/li&gt;
-&lt;li&gt;__kindof&lt;/li&gt;
-&lt;li&gt;UIWindow&lt;/li&gt;
-&lt;li&gt;Storyboard Reference&lt;/li&gt;
-&lt;li&gt;UIStackView&lt;/li&gt;
-&lt;li&gt;Search API&lt;/li&gt;
-&lt;li&gt;3D touch&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;新技术的了解渠道&quot;&gt;&lt;a href=&quot;#新技术的了解渠道&quot; class=&quot;headerlink&quot; title=&quot;新技术的了解渠道&quot;&gt;&lt;/a&gt;新技术的了解渠道&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;WWDC开发者大会视频&lt;/li&gt;
-&lt;li&gt;官方文档&lt;ul&gt;
-&lt;li&gt;General -&amp;gt; Guides -&amp;gt; iOS x.x API Diffs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;程序员的学习&quot;&gt;&lt;a href=&quot;#程序员的学习&quot; class=&quot;headerlink&quot; title=&quot;程序员的学习&quot;&gt;&lt;/a&gt;程序员的学习&lt;/h2&gt;&lt;h3 id=&quot;iOS技术的学习&quot;&gt;&lt;a href=&quot;#iOS技术的学习&quot; class=&quot;headerlink&quot; title=&quot;iOS技术的学习&quot;&gt;&lt;/a&gt;iOS技术的学习&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;官当文档&lt;ul&gt;
-&lt;li&gt;Sample Code(示例代码)&lt;/li&gt;
-&lt;li&gt;Guides(指南)&lt;/li&gt;
-&lt;li&gt;Reference(API参考)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;博客&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cocoachina.com/ios/list_69_1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CocoaChina&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ios.jobbole.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://objccn.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;objc中国&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tangqiaoboy/iOSBlogCN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;优秀博客汇总&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;微博&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/kaifazhetoutiao&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发者头条&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/cocoachina&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CocoaChina&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/luohanchenyilong&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS程序犭袁&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/tangqiaoboy&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;唐巧_boy&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/u/1364395395&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我就叫Sunny怎么了&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.ibireme.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ibireme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/710312327&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KITTEN-YANG&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weibo.com/exceptions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;M了个J&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;微信公众号&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;iOS开发(iosDevTips)&lt;/li&gt;
-&lt;li&gt;iOS开发(iOSDevTip)&lt;/li&gt;
-&lt;li&gt;iOS技术分享(iosinfo)&lt;/li&gt;
-&lt;li&gt;猿圈(CodePush) &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;其他&lt;ul&gt;
-&lt;li&gt;多写技术博客(简书\个人博客站点)&lt;/li&gt;
-&lt;li&gt;参加一些技术分享活动(北京\上海\广州\杭州)&lt;/li&gt;
-&lt;li&gt;有自己的技术圈子&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;非iOS技术的学习&quot;&gt;&lt;a href=&quot;#非iOS技术的学习&quot; class=&quot;headerlink&quot; title=&quot;非iOS技术的学习&quot;&gt;&lt;/a&gt;非iOS技术的学习&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;数据结构与算法(比如加密算法等等)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;HTML5&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;JavaScript&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Java(Android\JavaEE)&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;非技术的学习&quot;&gt;&lt;a href=&quot;#非技术的学习&quot; class=&quot;headerlink&quot; title=&quot;非技术的学习&quot;&gt;&lt;/a&gt;非技术的学习&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;管理\心理学\幸福\创业\历史&lt;/li&gt;
-&lt;li&gt;网易公开课&lt;ul&gt;
-&lt;li&gt;各种国际名牌大学的课堂视频&lt;/li&gt;
-&lt;li&gt;名人讲座(TED)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;名人讲座\名人访谈&lt;/li&gt;
-&lt;/ul&gt;
-</content>
+<h2 id="iOS9开始的新特性"><a href="#iOS9开始的新特性" class="headerlink" title="iOS9开始的新特性"></a>iOS9开始的新特性</h2><ul>
+<li>nonnull__nonnull</li>
+<li>nullable__nonnullable</li>
+<li>null_resettable</li>
+<li>NS_ASSUME_NONNULL_BEGIN \ NS_ASSUME_NONNULL_END</li>
+<li>泛型__contravariant__covariant</li>
+<li>__kindof</li>
+<li>UIWindow</li>
+<li>Storyboard Reference</li>
+<li>UIStackView</li>
+<li>Search API</li>
+<li>3D touch</li>
+</ul>
+<h2 id="新技术的了解渠道"><a href="#新技术的了解渠道" class="headerlink" title="新技术的了解渠道"></a>新技术的了解渠道</h2><ul>
+<li>WWDC开发者大会视频</li>
+<li>官方文档<ul>
+<li>General -&gt; Guides -&gt; iOS x.x API Diffs</li>
+</ul>
+</li>
+</ul>
+<h2 id="程序员的学习"><a href="#程序员的学习" class="headerlink" title="程序员的学习"></a>程序员的学习</h2><h3 id="iOS技术的学习"><a href="#iOS技术的学习" class="headerlink" title="iOS技术的学习"></a>iOS技术的学习</h3><ul>
+<li>官当文档<ul>
+<li>Sample Code(示例代码)</li>
+<li>Guides(指南)</li>
+<li>Reference(API参考)</li>
+</ul>
+</li>
+<li>博客<ul>
+<li><a href="http://www.cocoachina.com/ios/list_69_1.html" target="_blank" rel="external">CocoaChina</a></li>
+<li><a href="http://ios.jobbole.com/" target="_blank" rel="external">伯乐在线</a></li>
+<li><a href="http://objccn.io/" target="_blank" rel="external">objc中国</a></li>
+<li><a href="https://github.com/tangqiaoboy/iOSBlogCN" target="_blank" rel="external">优秀博客汇总</a></li>
+</ul>
+</li>
+<li><p>微博</p>
+<ul>
+<li><a href="http://weibo.com/kaifazhetoutiao" target="_blank" rel="external">开发者头条</a> </li>
+<li><a href="http://weibo.com/cocoachina" target="_blank" rel="external">CocoaChina</a> </li>
+<li><a href="http://weibo.com/luohanchenyilong" target="_blank" rel="external">iOS程序犭袁</a> </li>
+<li><a href="http://weibo.com/tangqiaoboy" target="_blank" rel="external">唐巧_boy</a> </li>
+<li><a href="http://weibo.com/u/1364395395" target="_blank" rel="external">我就叫Sunny怎么了</a> </li>
+<li><a href="http://blog.ibireme.com" target="_blank" rel="external">ibireme</a></li>
+<li><a href="http://weibo.com/710312327" target="_blank" rel="external">KITTEN-YANG</a> </li>
+<li><a href="http://weibo.com/exceptions" target="_blank" rel="external">M了个J</a></li>
+</ul>
+</li>
+<li><p>微信公众号</p>
+<ul>
+<li>iOS开发(iosDevTips)</li>
+<li>iOS开发(iOSDevTip)</li>
+<li>iOS技术分享(iosinfo)</li>
+<li>猿圈(CodePush) </li>
+</ul>
+</li>
+<li>其他<ul>
+<li>多写技术博客(简书\个人博客站点)</li>
+<li>参加一些技术分享活动(北京\上海\广州\杭州)</li>
+<li>有自己的技术圈子</li>
+</ul>
+</li>
+</ul>
+<h3 id="非iOS技术的学习"><a href="#非iOS技术的学习" class="headerlink" title="非iOS技术的学习"></a>非iOS技术的学习</h3><ul>
+<li><code>数据结构与算法(比如加密算法等等)</code></li>
+<li><code>HTML5</code></li>
+<li><code>JavaScript</code></li>
+<li>Java(Android\JavaEE)</li>
+<li>C++</li>
+</ul>
+<h3 id="非技术的学习"><a href="#非技术的学习" class="headerlink" title="非技术的学习"></a>非技术的学习</h3><ul>
+<li>管理\心理学\幸福\创业\历史</li>
+<li>网易公开课<ul>
+<li>各种国际名牌大学的课堂视频</li>
+<li>名人讲座(TED)</li>
+</ul>
+</li>
+<li>名人讲座\名人访谈</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
@@ -483,8 +522,6 @@
     <published>2015-09-18T10:47:07.000Z</published>
     <updated>2016-06-26T00:57:10.000Z</updated>
     
-    <content type="html"></content>
-    
     <summary type="html">
     
     </summary>
@@ -499,26 +536,26 @@
     <published>2015-08-10T11:24:55.000Z</published>
     <updated>2016-07-27T11:39:49.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。&lt;/p&gt;
-&lt;p&gt;下面有有两种方法&lt;/p&gt;
-&lt;p&gt;1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。&lt;br&gt;2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。&lt;br&gt;那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。&lt;/p&gt;
-&lt;p&gt;不废话了，上代码！&lt;br&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//当前版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *currentVersion = [[[&lt;span class=&quot;built_in&quot;&gt;NSBundlemainBundle&lt;/span&gt;]infoDictionary]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//本地存储的版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *saveVersion  = [[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaultsstandardUserDefaults&lt;/span&gt;]objectForKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([currentVersionfloatValue] &amp;gt; [saveVersion floatValue]) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]setObject:currentVersion forKey:&lt;span class=&quot;string&quot;&gt;@&quot;CFBundleShortVersionString&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[[&lt;span class=&quot;built_in&quot;&gt;NSUserDefaults&lt;/span&gt; standardUserDefaults]synchronize];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//&lt;span class=&quot;doctag&quot;&gt;TODO:&lt;/span&gt;   &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-</content>
+<p>对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。</p>
+<p>下面有有两种方法</p>
+<p>1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。<br>2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。<br>那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。</p>
+<p>不废话了，上代码！<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前版本</span></span><br><span class="line"><span class="built_in">NSString</span> *currentVersion = [[[<span class="built_in">NSBundlemainBundle</span>]infoDictionary]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];			</span><br><span class="line"><span class="comment">//本地存储的版本</span></span><br><span class="line"><span class="built_in">NSString</span> *saveVersion  = [[<span class="built_in">NSUserDefaultsstandardUserDefaults</span>]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];   </span><br><span class="line"><span class="keyword">if</span> ([currentVersionfloatValue] &gt; [saveVersion floatValue]) </span><br><span class="line">&#123;</span><br><span class="line">			</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]setObject:currentVersion forKey:<span class="string">@"CFBundleShortVersionString"</span>];</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]synchronize];</span><br><span class="line"><span class="comment">//<span class="doctag">TODO:</span>   </span></span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
     
     <summary type="html">
     
@@ -540,16 +577,16 @@
     <published>2015-07-27T01:46:51.000Z</published>
     <updated>2016-07-27T01:50:17.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;Touch-ID-简易开发教程&quot;&gt;&lt;a href=&quot;#Touch-ID-简易开发教程&quot; class=&quot;headerlink&quot; title=&quot;Touch ID 简易开发教程&quot;&gt;&lt;/a&gt;Touch ID 简易开发教程&lt;/h1&gt;&lt;h2 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h2&gt;&lt;h4 id=&quot;支持系统和机型&quot;&gt;&lt;a href=&quot;#支持系统和机型&quot; class=&quot;headerlink&quot; title=&quot;支持系统和机型&quot;&gt;&lt;/a&gt;支持系统和机型&lt;/h4&gt;&lt;p&gt;iOS系统的指纹识别功能最低支持的机型为&lt;code&gt;iPhone 5s&lt;/code&gt;，最低支持系统为&lt;code&gt;iOS 8&lt;/code&gt;，虽然安装&lt;code&gt;iOS 7系统的5s&lt;/code&gt;机型可以使用系统提供的指纹解锁功能，但由于&lt;code&gt;API&lt;/code&gt;并未开放，所以理论上第三方软件不可使用。&lt;/p&gt;
-&lt;h4 id=&quot;依赖框架&quot;&gt;&lt;a href=&quot;#依赖框架&quot; class=&quot;headerlink&quot; title=&quot;依赖框架&quot;&gt;&lt;/a&gt;依赖框架&lt;/h4&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;LocalAuthentication.framework&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;LocalAuthentication/LocalAuthentication.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;注意事项&quot;&gt;&lt;a href=&quot;#注意事项&quot; class=&quot;headerlink&quot; title=&quot;注意事项&quot;&gt;&lt;/a&gt;注意事项&lt;/h4&gt;&lt;p&gt;做&lt;code&gt;iOS 8以下&lt;/code&gt;版本适配时，务必进行&lt;code&gt;API验证&lt;/code&gt;，避免调用相关API引起崩溃。&lt;/p&gt;
-&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(iOS8)&amp;#123;xxx&amp;#125; &lt;span class=&quot;comment&quot;&gt;// 系统版本验证&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;amp;authError])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;使用类&quot;&gt;&lt;a href=&quot;#使用类&quot; class=&quot;headerlink&quot; title=&quot;使用类&quot;&gt;&lt;/a&gt;使用类&lt;/h4&gt;&lt;p&gt;&lt;code&gt;LAContext&lt;/code&gt; 指纹验证操作对象&lt;/p&gt;
-&lt;h4 id=&quot;操作流程&quot;&gt;&lt;a href=&quot;#操作流程&quot; class=&quot;headerlink&quot; title=&quot;操作流程&quot;&gt;&lt;/a&gt;操作流程&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;判断系统版本，iOS 8及以上版本执行-(void)authenticateUser方法，&lt;/li&gt;
-&lt;li&gt;方法自动判断设备是否支持和开启Touch ID。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;代码示例&quot;&gt;&lt;a href=&quot;#代码示例&quot; class=&quot;headerlink&quot; title=&quot;代码示例&quot;&gt;&lt;/a&gt;代码示例&lt;/h4&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;103&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;104&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;105&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;106&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;107&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;108&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;109&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;110&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;111&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;IBAction&lt;/span&gt;)showTouchIDAlert:(&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt;)sender &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 1.判断是否是iOS8之后&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!iOS8later) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;版本不对不能使用TouchID&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 2.调用touchID的相关方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; authenticateUser];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 鉴定用户&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)authenticateUser&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 创建指纹验证对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    LAContext *context = [[LAContext alloc] init];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;NSError&lt;/span&gt; *yfError = &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 验证设备是否支持touchID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// LAPolicyDeviceOwnerAuthenticationWithBiometrics 14年时候枚举只有这一个属性&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// LAPolicyDeviceOwnerAuthentication 后来加的枚举属性&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;amp;yfError]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 支持touchID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                localizedReason:&lt;span class=&quot;string&quot;&gt;@&quot;XMGlocalizedReason&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                          reply:^(&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt; success, &lt;span class=&quot;built_in&quot;&gt;NSError&lt;/span&gt; * _Nullable error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (success) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;comment&quot;&gt;// touchID验证成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;comment&quot;&gt;// 继续处理相关业务(注意线程)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%@&quot;&lt;/span&gt;,error.localizedDescription);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (error.code) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorSystemCancel:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;Authentication was cancelled by the system&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;comment&quot;&gt;//切换到其他APP，系统取消验证Touch ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorUserCancel:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;Authentication was cancelled by the user&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;comment&quot;&gt;//用户取消验证Touch ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorUserFallback:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;User selected to enter custom password&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          [[&lt;span class=&quot;built_in&quot;&gt;NSOperationQueue&lt;/span&gt; mainQueue] addOperationWithBlock:^&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                              &lt;span class=&quot;comment&quot;&gt;//用户选择输入密码，切换主线程处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          [[&lt;span class=&quot;built_in&quot;&gt;NSOperationQueue&lt;/span&gt; mainQueue] addOperationWithBlock:^&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                              &lt;span class=&quot;comment&quot;&gt;//其他情况，切换主线程处理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                          &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                              &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (yfError.code) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorTouchIDNotEnrolled:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;LAErrorTouchIDNotEnrolled&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; LAErrorPasscodeNotSet:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;LAErrorPasscodeNotSet&quot;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;// 此处触发showPasscodeResetAlert方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;Touch ID is unaviliable&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;%@&quot;&lt;/span&gt;, yfError.localizedDescription);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; typedef NS_ENUM(NSInteger, LAError)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //授权失败&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorAuthenticationFailed = kLAErrorAuthenticationFailed,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //用户取消Touch ID授权&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorUserCancel           = kLAErrorUserCancel,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //用户选择输入密码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorUserFallback         = kLAErrorUserFallback,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //系统取消授权(例如其他APP切入)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorSystemCancel         = kLAErrorSystemCancel,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //系统未设置密码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorPasscodeNotSet       = kLAErrorPasscodeNotSet,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //设备Touch ID不可用，例如未打开&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorTouchIDNotAvailable  = kLAErrorTouchIDNotAvailable,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; //设备Touch ID不可用，用户未录入&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; LAErrorTouchIDNotEnrolled   = kLAErrorTouchIDNotEnrolled,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;#125; NS_ENUM_AVAILABLE(10_10, 8_0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<h1 id="Touch-ID-简易开发教程"><a href="#Touch-ID-简易开发教程" class="headerlink" title="Touch ID 简易开发教程"></a>Touch ID 简易开发教程</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h4 id="支持系统和机型"><a href="#支持系统和机型" class="headerlink" title="支持系统和机型"></a>支持系统和机型</h4><p>iOS系统的指纹识别功能最低支持的机型为<code>iPhone 5s</code>，最低支持系统为<code>iOS 8</code>，虽然安装<code>iOS 7系统的5s</code>机型可以使用系统提供的指纹解锁功能，但由于<code>API</code>并未开放，所以理论上第三方软件不可使用。</p>
+<h4 id="依赖框架"><a href="#依赖框架" class="headerlink" title="依赖框架"></a>依赖框架</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LocalAuthentication.framework</span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;LocalAuthentication/LocalAuthentication.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>做<code>iOS 8以下</code>版本适配时，务必进行<code>API验证</code>，避免调用相关API引起崩溃。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(iOS8)&#123;xxx&#125; <span class="comment">// 系统版本验证</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;authError])</span><br></pre></td></tr></table></figure>
+<h4 id="使用类"><a href="#使用类" class="headerlink" title="使用类"></a>使用类</h4><p><code>LAContext</code> 指纹验证操作对象</p>
+<h4 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h4><ul>
+<li>判断系统版本，iOS 8及以上版本执行-(void)authenticateUser方法，</li>
+<li>方法自动判断设备是否支持和开启Touch ID。</li>
+</ul>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">IBAction</span>)showTouchIDAlert:(<span class="keyword">id</span>)sender &#123;</span><br><span class="line">    <span class="comment">// 1.判断是否是iOS8之后</span></span><br><span class="line">    <span class="keyword">if</span> (!iOS8later) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"版本不对不能使用TouchID"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.调用touchID的相关方法</span></span><br><span class="line">    [<span class="keyword">self</span> authenticateUser];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 鉴定用户</span></span><br><span class="line">- (<span class="keyword">void</span>)authenticateUser</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 创建指纹验证对象</span></span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    <span class="built_in">NSError</span> *yfError = <span class="literal">nil</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证设备是否支持touchID</span></span><br><span class="line">    <span class="comment">// LAPolicyDeviceOwnerAuthenticationWithBiometrics 14年时候枚举只有这一个属性</span></span><br><span class="line">    <span class="comment">// LAPolicyDeviceOwnerAuthentication 后来加的枚举属性</span></span><br><span class="line">    <span class="keyword">if</span> ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;yfError]) &#123;</span><br><span class="line">        <span class="comment">// 支持touchID</span></span><br><span class="line">        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics</span><br><span class="line">                localizedReason:<span class="string">@"XMGlocalizedReason"</span></span><br><span class="line">                          reply:^(<span class="built_in">BOOL</span> success, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">                              <span class="keyword">if</span> (success) &#123;</span><br><span class="line">                                  <span class="comment">// touchID验证成功</span></span><br><span class="line"></span><br><span class="line">                                  <span class="comment">// 继续处理相关业务(注意线程)</span></span><br><span class="line">                              &#125;<span class="keyword">else</span></span><br><span class="line">                              &#123;</span><br><span class="line">                                  <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,error.localizedDescription);</span><br><span class="line">                                  <span class="keyword">switch</span> (error.code) &#123;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorSystemCancel:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the system"</span>);</span><br><span class="line">                                          <span class="comment">//切换到其他APP，系统取消验证Touch ID</span></span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorUserCancel:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the user"</span>);</span><br><span class="line">                                          <span class="comment">//用户取消验证Touch ID</span></span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorUserFallback:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"User selected to enter custom password"</span>);</span><br><span class="line">                                          [[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">                                              <span class="comment">//用户选择输入密码，切换主线程处理</span></span><br><span class="line">                                          &#125;];</span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">default</span>:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          [[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">                                              <span class="comment">//其他情况，切换主线程处理</span></span><br><span class="line">                                          &#125;];</span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                  &#125;</span><br><span class="line">                              &#125;</span><br><span class="line">                &#125;];</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span> (yfError.code) &#123;</span><br><span class="line">            <span class="keyword">case</span> LAErrorTouchIDNotEnrolled:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"LAErrorTouchIDNotEnrolled"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> LAErrorPasscodeNotSet:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"LAErrorPasscodeNotSet"</span>); <span class="comment">// 此处触发showPasscodeResetAlert方法</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"Touch ID is unaviliable"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, yfError.localizedDescription);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> typedef NS_ENUM(NSInteger, LAError)</span><br><span class="line"> &#123;</span><br><span class="line"> //授权失败</span><br><span class="line"> LAErrorAuthenticationFailed = kLAErrorAuthenticationFailed,</span><br><span class="line"></span><br><span class="line"> //用户取消Touch ID授权</span><br><span class="line"> LAErrorUserCancel           = kLAErrorUserCancel,</span><br><span class="line"></span><br><span class="line"> //用户选择输入密码</span><br><span class="line"> LAErrorUserFallback         = kLAErrorUserFallback,</span><br><span class="line"></span><br><span class="line"> //系统取消授权(例如其他APP切入)</span><br><span class="line"> LAErrorSystemCancel         = kLAErrorSystemCancel,</span><br><span class="line"></span><br><span class="line"> //系统未设置密码</span><br><span class="line"> LAErrorPasscodeNotSet       = kLAErrorPasscodeNotSet,</span><br><span class="line"></span><br><span class="line"> //设备Touch ID不可用，例如未打开</span><br><span class="line"> LAErrorTouchIDNotAvailable  = kLAErrorTouchIDNotAvailable,</span><br><span class="line"></span><br><span class="line"> //设备Touch ID不可用，用户未录入</span><br><span class="line"> LAErrorTouchIDNotEnrolled   = kLAErrorTouchIDNotEnrolled,</span><br><span class="line"> &#125; NS_ENUM_AVAILABLE(10_10, 8_0);</span><br><span class="line"></span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -573,41 +610,41 @@
     <published>2015-07-17T16:21:46.000Z</published>
     <updated>2016-06-27T07:56:51.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
-&lt;h1 id=&quot;关于方法和函数&quot;&gt;&lt;a href=&quot;#关于方法和函数&quot; class=&quot;headerlink&quot; title=&quot;关于方法和函数&quot;&gt;&lt;/a&gt;关于方法和函数&lt;/h1&gt;&lt;p&gt;通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言&lt;/p&gt;
-&lt;h2 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h2&gt;&lt;p&gt;通常我们口语中方法和函数基本上就是一回事，如下面的例子&lt;br&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- (int)sum:(int)a AndB:(int)b  
+<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
+<p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
+<p><script>hljs.initHighlightingOnLoad();</script></p>
+<h1 id="关于方法和函数"><a href="#关于方法和函数" class="headerlink" title="关于方法和函数"></a>关于方法和函数</h1><p>通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>通常我们口语中方法和函数基本上就是一回事，如下面的例子<br></p>
+<pre><code>- (int)sum:(int)a AndB:(int)b  
 {
     return  a + b;  
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 我们看到这就定义了一个方法或者函数，但是真的就是这样吗？&lt;br&gt; 其实严格说来上面定义了一个函数，而不是方法，而方法指的仅仅是函数的名字，也就是&lt;code&gt;sum:  AndB:&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Objective-c中方法&quot;&gt;&lt;a href=&quot;#Objective-c中方法&quot; class=&quot;headerlink&quot; title=&quot;Objective-c中方法&quot;&gt;&lt;/a&gt;Objective-c中方法&lt;/h3&gt;&lt;p&gt;Objective-c中的方法就是我门常用的&lt;code&gt;selector&lt;/code&gt;,一个&lt;code&gt;selector&lt;/code&gt;就是Objective-c的函数名字&lt;/p&gt;
-&lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;p&gt;我们看一个在Objective-c函数的定义&lt;br&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;struct objc_method 
+</code></pre><p> 我们看到这就定义了一个方法或者函数，但是真的就是这样吗？<br> 其实严格说来上面定义了一个函数，而不是方法，而方法指的仅仅是函数的名字，也就是<code>sum:  AndB:</code></p>
+<h3 id="Objective-c中方法"><a href="#Objective-c中方法" class="headerlink" title="Objective-c中方法"></a>Objective-c中方法</h3><p>Objective-c中的方法就是我门常用的<code>selector</code>,一个<code>selector</code>就是Objective-c的函数名字</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>我们看一个在Objective-c函数的定义<br></p>
+<pre><code>struct objc_method 
 {
     SEL method_name
     char *method_types
     IMP method_imp
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一个函数包含了函数的名字&lt;code&gt;method_name&lt;/code&gt;，函数的类型&lt;code&gt;method_types&lt;/code&gt;以及&lt;code&gt;IMP&lt;/code&gt;(函数的实现)，    Objective-c，通过函数的名字以及所传参数就能找到函数的实现，继而执行函数的实现.&lt;br&gt;&lt;br&gt;其中method_types 是函数的签名，也就是函数类型，包含几个参数，每个参数的类型，以及返回值的类型，看这样一个类&lt;br&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@interface NSMethodSignature : NSObject {
+</code></pre><p>一个函数包含了函数的名字<code>method_name</code>，函数的类型<code>method_types</code>以及<code>IMP</code>(函数的实现)，    Objective-c，通过函数的名字以及所传参数就能找到函数的实现，继而执行函数的实现.<br><br>其中method_types 是函数的签名，也就是函数类型，包含几个参数，每个参数的类型，以及返回值的类型，看这样一个类<br></p>
+<pre><code>@interface NSMethodSignature : NSObject {
 @private
     void *_private;
     void *_reserved[6];
@@ -622,10 +659,10 @@
 @property (readonly) NSUInteger methodReturnLength;
 
 @end
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 这个类就是函数签名类，包含参数的数量，每个参数的类型，函数返回值类型&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
+</code></pre><p> 这个类就是函数签名类，包含参数的数量，每个参数的类型，函数返回值类型</p>
+<hr>
+<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
+]]></content>
     
     <summary type="html">
     
@@ -649,8 +686,6 @@
     <published>2015-07-08T10:33:08.000Z</published>
     <updated>2016-06-26T00:57:51.000Z</updated>
     
-    <content type="html"></content>
-    
     <summary type="html">
     
     </summary>
@@ -671,8 +706,6 @@
     <published>2015-04-20T07:06:48.000Z</published>
     <updated>2016-06-26T00:53:57.000Z</updated>
     
-    <content type="html"></content>
-    
     <summary type="html">
     
     </summary>
@@ -691,50 +724,50 @@
     <published>2015-04-14T01:43:47.000Z</published>
     <updated>2016-07-27T01:45:02.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;h1 id=&quot;iOS中的蓝牙常用的框架&quot;&gt;&lt;a href=&quot;#iOS中的蓝牙常用的框架&quot; class=&quot;headerlink&quot; title=&quot;iOS中的蓝牙常用的框架&quot;&gt;&lt;/a&gt;iOS中的蓝牙常用的框架&lt;/h1&gt;&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;h4 id=&quot;iOS中提供了4个框架用于实现蓝牙连接&quot;&gt;&lt;a href=&quot;#iOS中提供了4个框架用于实现蓝牙连接&quot; class=&quot;headerlink&quot; title=&quot;iOS中提供了4个框架用于实现蓝牙连接&quot;&gt;&lt;/a&gt;iOS中提供了4个框架用于实现蓝牙连接&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;1.GameKit.framework(用法简单)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;只能用于iOS设备之间的同个应用内连接&lt;/code&gt;,多用于游戏(eg.拳皇,棋牌类),从&lt;code&gt;iOS7开始过期&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;2.MultipeerConnectivity.framework(代替1)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;只能用于iOS设备之间的连接,从iOS7开始引入&lt;/code&gt;,主要用于&lt;code&gt;非联网状态&lt;/code&gt;下,通过wifi或者蓝牙进行文件共享(仅限于沙盒的文件),多用于附近无网聊天&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;3.ExternalAccessory.framework(MFi)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;可用于第三方蓝牙设备交互&lt;/code&gt;,但是蓝牙设备必须经过&lt;code&gt;苹果MFi认证&lt;/code&gt;(国内很少)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;4.CoreBluetooth.framework（时下热门)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;可用于第三方蓝牙设备交互&lt;/code&gt;,必须要支持蓝牙4.0&lt;/li&gt;
-&lt;li&gt;硬件至少是4s,系统至少是iOS6&lt;/li&gt;
-&lt;li&gt;蓝牙4.0以低功耗著称,一般也叫BLE（Bluetooth Low Energy）&lt;/li&gt;
-&lt;li&gt;目前应用比较多的案例:运动手环,嵌入式设备,智能家居&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;设计到的系统-框架&quot;&gt;&lt;a href=&quot;#设计到的系统-框架&quot; class=&quot;headerlink&quot; title=&quot;设计到的系统/框架&quot;&gt;&lt;/a&gt;设计到的系统/框架&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;HealthKit/物联网HomeKit/wathOS1,2/iBeacon&lt;/li&gt;
-&lt;/ul&gt;
-</content>
+<h1 id="iOS中的蓝牙常用的框架"><a href="#iOS中的蓝牙常用的框架" class="headerlink" title="iOS中的蓝牙常用的框架"></a>iOS中的蓝牙常用的框架</h1><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="iOS中提供了4个框架用于实现蓝牙连接"><a href="#iOS中提供了4个框架用于实现蓝牙连接" class="headerlink" title="iOS中提供了4个框架用于实现蓝牙连接"></a>iOS中提供了4个框架用于实现蓝牙连接</h4><ul>
+<li><p>1.GameKit.framework(用法简单)</p>
+<ul>
+<li><code>只能用于iOS设备之间的同个应用内连接</code>,多用于游戏(eg.拳皇,棋牌类),从<code>iOS7开始过期</code></li>
+</ul>
+</li>
+<li><p>2.MultipeerConnectivity.framework(代替1)</p>
+<ul>
+<li><code>只能用于iOS设备之间的连接,从iOS7开始引入</code>,主要用于<code>非联网状态</code>下,通过wifi或者蓝牙进行文件共享(仅限于沙盒的文件),多用于附近无网聊天</li>
+</ul>
+</li>
+<li><p>3.ExternalAccessory.framework(MFi)</p>
+<ul>
+<li><code>可用于第三方蓝牙设备交互</code>,但是蓝牙设备必须经过<code>苹果MFi认证</code>(国内很少)</li>
+</ul>
+</li>
+<li><p>4.CoreBluetooth.framework（时下热门)</p>
+<ul>
+<li><code>可用于第三方蓝牙设备交互</code>,必须要支持蓝牙4.0</li>
+<li>硬件至少是4s,系统至少是iOS6</li>
+<li>蓝牙4.0以低功耗著称,一般也叫BLE（Bluetooth Low Energy）</li>
+<li>目前应用比较多的案例:运动手环,嵌入式设备,智能家居</li>
+</ul>
+</li>
+</ul>
+<h4 id="设计到的系统-框架"><a href="#设计到的系统-框架" class="headerlink" title="设计到的系统/框架"></a>设计到的系统/框架</h4><ul>
+<li>HealthKit/物联网HomeKit/wathOS1,2/iBeacon</li>
+</ul>
+]]></content>
     
     <summary type="html">
     
@@ -758,8 +791,6 @@
     <published>2015-04-11T16:28:18.000Z</published>
     <updated>2016-06-26T00:58:34.000Z</updated>
     
-    <content type="html"></content>
-    
     <summary type="html">
     
     </summary>
@@ -774,9 +805,9 @@
     <published>2015-03-10T16:26:47.000Z</published>
     <updated>2016-07-27T02:07:30.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;script&gt;&lt;br&gt;(function(){&lt;br&gt;    var bp = document.createElement(‘script’);&lt;br&gt;    var curProtocol = window.location.protocol.split(‘:’)[0];&lt;br&gt;    if (curProtocol === ‘https’) {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;https://zz.bdstatic.com/linksubmit/push.js&quot;&gt;https://zz.bdstatic.com/linksubmit/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    else {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;http://push.zhanzhang.baidu.com/push.js&quot;&gt;http://push.zhanzhang.baidu.com/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    var s = document.getElementsByTagName(“script”)[0];&lt;br&gt;    s.parentNode.insertBefore(bp, s);&lt;br&gt;})();&lt;br&gt;&lt;/script&gt;&lt;br&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;///  main.m&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//  C_函数指针_block&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//  Created by dengyanzhou on 15/3/11.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//  Copyright (c) 2015年 mobby. All rights reserved.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *方法名称就是方法在内存的入口地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; add(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; add1,&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; add2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; add1 + add2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//定义一个指向有两个整型参数，返回值为整型的函数指针类型；&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; (*Sum1) (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; ,&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//定义一个叫做Sum2类型参数为两个整型的，返回值为整型的block&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; (^Sum2) (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; ,&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;Foundation/Foundation.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; main(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc,&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; * argv[]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;@autoreleasepool&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//定义一个Sum1类型的变量 sum1指向了有两个参数，返回值为整型的函数也就是说 sum1 就是一个函数指针&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Sum1  sum1 =add;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//调用sum1指向的函数并打印&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;sum1 = %d&quot;&lt;/span&gt;,sum1(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; ,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 用Sum2这种block类型定义一个Sum2类型的block变量 sum2 并赋值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          Sum2 sum2 = ^(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a ,&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;  b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a + b ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//调用sum2 blocl并打印&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;NSLog&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;@&quot;sum2 = %d&quot;&lt;/span&gt;,sum2(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;/*函数指针和block的相同和区别&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         //相同点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         函数指针和block都是指向了内存一段代码段调用类似&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         //不同点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         1.函数指针是一个指针变量这个变量存放的是函数名 也就是函数的首地址赋值时 直接把函数名字赋值给函数指针变量&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         这个指针变量一般存储在栈中&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         block是一个对象这个对象的生命周期非常复杂 一般存储在栈中，但这个对象copy后的一份存储在堆中,另外block接收是一个完整的代码快,而不是一个随意的变量或者常量&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         2.block 能都给引用block以外的变量而 函数指针不可以什么意思呢？&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         看这样一段代码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         int c = 2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         Sum2 sum2 = ^(int a ,int  b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            return a + b + c;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         c这个变量在宿sum2 这个block变量以外但是 sum2 block内部可以引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;// 运行结果&lt;br&gt;sum1 = 5&lt;br&gt;sum2 = 5&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js">https://zz.bdstatic.com/linksubmit/push.js</a>‘;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js">http://push.zhanzhang.baidu.com/push.js</a>‘;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">///  main.m</span></span><br><span class="line"><span class="comment">//  C_函数指针_block</span></span><br><span class="line"><span class="comment">//  Created by dengyanzhou on 15/3/11.</span></span><br><span class="line"><span class="comment">//  Copyright (c) 2015年 mobby. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> *方法名称就是方法在内存的入口地址</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">int</span> add(<span class="keyword">int</span> add1,<span class="keyword">int</span> add2)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> add1 + add2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义一个指向有两个整型参数，返回值为整型的函数指针类型；</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> (*Sum1) (<span class="keyword">int</span> ,<span class="keyword">int</span>);</span><br><span class="line"><span class="comment">//定义一个叫做Sum2类型参数为两个整型的，返回值为整型的block</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> (^Sum2) (<span class="keyword">int</span> ,<span class="keyword">int</span>);</span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc,<span class="keyword">const</span> <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line">    <span class="keyword">@autoreleasepool</span> &#123;</span><br><span class="line">        <span class="comment">//定义一个Sum1类型的变量 sum1指向了有两个参数，返回值为整型的函数也就是说 sum1 就是一个函数指针</span></span><br><span class="line">        Sum1  sum1 =add;</span><br><span class="line">        <span class="comment">//调用sum1指向的函数并打印</span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"sum1 = %d"</span>,sum1(<span class="number">2</span> ,<span class="number">3</span>));</span><br><span class="line">        <span class="comment">// 用Sum2这种block类型定义一个Sum2类型的block变量 sum2 并赋值</span></span><br><span class="line">          Sum2 sum2 = ^(<span class="keyword">int</span> a ,<span class="keyword">int</span>  b)&#123;</span><br><span class="line">            <span class="keyword">return</span> a + b ;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">//调用sum2 blocl并打印</span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"sum2 = %d"</span>,sum2(<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">        <span class="comment">/*函数指针和block的相同和区别</span><br><span class="line">         //相同点</span><br><span class="line">         函数指针和block都是指向了内存一段代码段调用类似</span><br><span class="line">         //不同点</span><br><span class="line">         1.函数指针是一个指针变量这个变量存放的是函数名 也就是函数的首地址赋值时 直接把函数名字赋值给函数指针变量</span><br><span class="line">         这个指针变量一般存储在栈中</span><br><span class="line">         block是一个对象这个对象的生命周期非常复杂 一般存储在栈中，但这个对象copy后的一份存储在堆中,另外block接收是一个完整的代码快,而不是一个随意的变量或者常量</span><br><span class="line"></span><br><span class="line">         2.block 能都给引用block以外的变量而 函数指针不可以什么意思呢？</span><br><span class="line">         看这样一段代码</span><br><span class="line">         int c = 2;</span><br><span class="line">         Sum2 sum2 = ^(int a ,int  b)&#123;</span><br><span class="line">            return a + b + c;</span><br><span class="line">          &#125;;</span><br><span class="line">         c这个变量在宿sum2 这个block变量以外但是 sum2 block内部可以引用</span><br><span class="line">        */</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    return0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>// 运行结果<br>sum1 = 5<br>sum2 = 5</p>
+]]></content>
     
     <summary type="html">
     
@@ -800,25 +831,25 @@
     <published>2015-03-06T11:41:08.000Z</published>
     <updated>2016-07-28T02:04:47.000Z</updated>
     
-    <content type="html">&lt;script&gt;
+    <content type="html"><![CDATA[<script>
 (function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;        
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
     }
     else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-&lt;/script&gt;
+</script>
 
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&quot;ViewController.h&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ViewController&lt;/span&gt; ()&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImageView&lt;/span&gt; *showImageView;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImageView&lt;/span&gt; *imageView;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ViewController&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)viewDidLoad &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [superviewDidLoad];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.view.backgroundColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorgrayColor&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//女孩图片&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView = [[&lt;span class=&quot;built_in&quot;&gt;UIImageViewalloc&lt;/span&gt;]initWithFrame:&lt;span class=&quot;built_in&quot;&gt;CGRectMake&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;70&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;241&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//  imageView.layer.contents = (__bridge id)([UIImage imageNamed:@&quot;图片0.jpg&quot;].CGImage);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView.image = [&lt;span class=&quot;built_in&quot;&gt;UIImageimageNamed&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;@&quot;图片0.jpg&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView.alpha =&lt;span class=&quot;number&quot;&gt;0.4&lt;/span&gt;;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    imageView.userInteractionEnabled =&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.viewaddSubview:imageView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//显示放大的局部图片&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImageView&lt;/span&gt; *screenShotView = [[&lt;span class=&quot;built_in&quot;&gt;UIImageViewalloc&lt;/span&gt;]initWithFrame:&lt;span class=&quot;built_in&quot;&gt;CGRectMake&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//screenShotView.backgroundColor = [UIColor yellowColor];&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.backgroundColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorclearColor&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.userInteractionEnabled =&lt;span class=&quot;literal&quot;&gt;YES&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.layer.borderColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorredColor&lt;/span&gt;].CGColor;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    screenShotView.layer.borderWidth =&lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt;f;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [imageViewaddSubview:screenShotView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 手势拖动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIPanGestureRecognizer&lt;/span&gt; *panGesture = [[&lt;span class=&quot;built_in&quot;&gt;UIPanGestureRecognizeralloc&lt;/span&gt;]initWithTarget:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; action:&lt;span class=&quot;keyword&quot;&gt;@selector&lt;/span&gt;(panGestureRecognizer:)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [screenShotView addGestureRecognizer:panGesture];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     showImageView = [[&lt;span class=&quot;built_in&quot;&gt;UIImageViewalloc&lt;/span&gt;]initWithFrame:&lt;span class=&quot;built_in&quot;&gt;CGRectMake&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;440&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;190&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;190&lt;/span&gt;)];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    showImageView.backgroundColor = [&lt;span class=&quot;built_in&quot;&gt;UIColorredColor&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.viewaddSubview:showImageView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Do any additional setup after loading the view, typically from a nib.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//移动手势的回调方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)panGestureRecognizer:(&lt;span class=&quot;built_in&quot;&gt;UIPanGestureRecognizer&lt;/span&gt;*)panGesture&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGPoint&lt;/span&gt; point = [panGesturelocationInView:imageView];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    panGesture.view.center =  point;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGRect&lt;/span&gt; rect = panGesture.view.frame;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt; *newImage = [selfInterceptionUIImageWithImage: imageView.image andRect:rect];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    showImageView.image = newImage;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// ((UIImageView*)panGesture.view).image = newImage;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//截取图片的某一部分&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt;*)InterceptionUIImageWithImage:(&lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt;*)image andRect:(&lt;span class=&quot;built_in&quot;&gt;CGRect&lt;/span&gt;)rect&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGImageRef&lt;/span&gt; imageRef = image.CGImage;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;CGImageRef&lt;/span&gt; imageRefRect =&lt;span class=&quot;built_in&quot;&gt;CGImageCreateWithImageInRect&lt;/span&gt;(imageRef, rect);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;UIImage&lt;/span&gt; *imageRect = [[&lt;span class=&quot;built_in&quot;&gt;UIImagealloc&lt;/span&gt;] initWithCGImage:imageRefRect];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; imageRect;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)didReceiveMemoryWarning &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [superdidReceiveMemoryWarning];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Dispose of any resources that can be recreated.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot; title=&quot;效果&quot;&gt;&lt;/a&gt;效果&lt;/h2&gt;&lt;p&gt; &lt;img src=&quot;https://cl.ly/450m0U0Y1R1t/20150306192346262.png&quot; alt=&quot;图片名称&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
-&lt;p&gt;  &lt;img src=&quot;https://cl.ly/1H3O0G1g462C/20150306192304828.png&quot; alt=&quot;图片名称&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
-</content>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span>&#123;</span><br><span class="line">    <span class="built_in">UIImageView</span> *showImageView;</span><br><span class="line">    <span class="built_in">UIImageView</span> *imageView;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [superviewDidLoad];</span><br><span class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColorgrayColor</span>];</span><br><span class="line">    <span class="comment">//女孩图片</span></span><br><span class="line">    imageView = [[<span class="built_in">UIImageViewalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">70</span>, <span class="number">50</span>,<span class="number">241</span>, <span class="number">360</span>)];</span><br><span class="line">    <span class="comment">//  imageView.layer.contents = (__bridge id)([UIImage imageNamed:@"图片0.jpg"].CGImage);</span></span><br><span class="line">    imageView.image = [<span class="built_in">UIImageimageNamed</span>:<span class="string">@"图片0.jpg"</span>];</span><br><span class="line">    imageView.alpha =<span class="number">0.4</span>;    </span><br><span class="line">    imageView.userInteractionEnabled =<span class="literal">YES</span>;</span><br><span class="line">    [<span class="keyword">self</span>.viewaddSubview:imageView];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//显示放大的局部图片</span></span><br><span class="line">    <span class="built_in">UIImageView</span> *screenShotView = [[<span class="built_in">UIImageViewalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>,<span class="number">0</span>, <span class="number">80</span>,<span class="number">80</span>)];</span><br><span class="line">    <span class="comment">//screenShotView.backgroundColor = [UIColor yellowColor];</span></span><br><span class="line">    screenShotView.backgroundColor = [<span class="built_in">UIColorclearColor</span>];</span><br><span class="line">    screenShotView.userInteractionEnabled =<span class="literal">YES</span>;</span><br><span class="line">    screenShotView.layer.borderColor = [<span class="built_in">UIColorredColor</span>].CGColor;</span><br><span class="line">    screenShotView.layer.borderWidth =<span class="number">1.0</span>f;</span><br><span class="line">    [imageViewaddSubview:screenShotView];</span><br><span class="line">    <span class="comment">// 手势拖动</span></span><br><span class="line">    <span class="built_in">UIPanGestureRecognizer</span> *panGesture = [[<span class="built_in">UIPanGestureRecognizeralloc</span>]initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(panGestureRecognizer:)];</span><br><span class="line">    [screenShotView addGestureRecognizer:panGesture];</span><br><span class="line">     showImageView = [[<span class="built_in">UIImageViewalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>,<span class="number">440</span>, <span class="number">190</span>,<span class="number">190</span>)];</span><br><span class="line">    showImageView.backgroundColor = [<span class="built_in">UIColorredColor</span>];</span><br><span class="line">    [<span class="keyword">self</span>.viewaddSubview:showImageView];</span><br><span class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//移动手势的回调方法</span></span><br><span class="line">- (<span class="keyword">void</span>)panGestureRecognizer:(<span class="built_in">UIPanGestureRecognizer</span>*)panGesture&#123;</span><br><span class="line">    <span class="built_in">CGPoint</span> point = [panGesturelocationInView:imageView];</span><br><span class="line">    panGesture.view.center =  point;</span><br><span class="line">    <span class="built_in">CGRect</span> rect = panGesture.view.frame;</span><br><span class="line">    <span class="built_in">UIImage</span> *newImage = [selfInterceptionUIImageWithImage: imageView.image andRect:rect];</span><br><span class="line">    showImageView.image = newImage;</span><br><span class="line">    <span class="comment">// ((UIImageView*)panGesture.view).image = newImage;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//截取图片的某一部分</span></span><br><span class="line">- (<span class="built_in">UIImage</span>*)InterceptionUIImageWithImage:(<span class="built_in">UIImage</span>*)image andRect:(<span class="built_in">CGRect</span>)rect&#123;</span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRef = image.CGImage;</span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRefRect =<span class="built_in">CGImageCreateWithImageInRect</span>(imageRef, rect);</span><br><span class="line">    <span class="built_in">UIImage</span> *imageRect = [[<span class="built_in">UIImagealloc</span>] initWithCGImage:imageRefRect];</span><br><span class="line">    <span class="keyword">return</span> imageRect;   </span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)didReceiveMemoryWarning &#123;</span><br><span class="line">    [superdidReceiveMemoryWarning];</span><br><span class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p> <img src="https://cl.ly/450m0U0Y1R1t/20150306192346262.png" alt="图片名称" align="center"></p>
+<p>  <img src="https://cl.ly/1H3O0G1g462C/20150306192304828.png" alt="图片名称" align="center"></p>
+]]></content>
     
     <summary type="html">
     
@@ -840,20 +871,20 @@
     <published>2015-03-06T07:26:31.000Z</published>
     <updated>2016-06-21T07:11:13.000Z</updated>
     
-    <content type="html">&lt;p&gt;去年今日今时月，&lt;/p&gt;
-&lt;p&gt;同照你我苍白身。&lt;/p&gt;
-&lt;p&gt;今年今日今时月，&lt;/p&gt;
-&lt;p&gt;不见天涯万里人。&lt;/p&gt;
-&lt;p&gt;他年今日同相见 ，&lt;/p&gt;
-&lt;p&gt;月光长照酒杯中，&lt;/p&gt;
-&lt;p&gt;一喝黄河八百里，&lt;/p&gt;
-&lt;p&gt;二喝长江九曲湾。&lt;/p&gt;
-&lt;p&gt;但愿长醉不复醒，&lt;/p&gt;
-&lt;p&gt;梦中犹醉见杜康。&lt;/p&gt;
-&lt;p&gt;杜康问我有何事，&lt;/p&gt;
-&lt;p&gt;是否有酒共一杯。&lt;/p&gt;
-&lt;h1 id=&quot;打赏&quot;&gt;&lt;a href=&quot;#打赏&quot; class=&quot;headerlink&quot; title=&quot;打赏&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;打赏&lt;/strong&gt;&lt;/div&gt;&lt;/h1&gt;&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg&quot; alt=&quot;image&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<p>去年今日今时月，</p>
+<p>同照你我苍白身。</p>
+<p>今年今日今时月，</p>
+<p>不见天涯万里人。</p>
+<p>他年今日同相见 ，</p>
+<p>月光长照酒杯中，</p>
+<p>一喝黄河八百里，</p>
+<p>二喝长江九曲湾。</p>
+<p>但愿长醉不复醒，</p>
+<p>梦中犹醉见杜康。</p>
+<p>杜康问我有何事，</p>
+<p>是否有酒共一杯。</p>
+<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
+]]></content>
     
     <summary type="html">
     
@@ -865,65 +896,6 @@
     
     
       <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>?:和Swift中??异曲同工</title>
-    <link href="http://www.denman.me/2015/01/12/%E5%92%8CSwift%E4%B8%AD-%E5%BC%82%E6%9B%B2%E5%90%8C%E5%B7%A5/"/>
-    <id>http://www.denman.me/2015/01/12/和Swift中-异曲同工/</id>
-    <published>2015-01-12T09:08:57.000Z</published>
-    <updated>2016-07-10T10:41:17.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;script&gt;&lt;br&gt;(function(){&lt;br&gt;    var bp = document.createElement(‘script’);&lt;br&gt;    var curProtocol = window.location.protocol.split(‘:’)[0];&lt;br&gt;    if (curProtocol === ‘https’) {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;https://zz.bdstatic.com/linksubmit/push.js&quot;&gt;https://zz.bdstatic.com/linksubmit/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    else {&lt;br&gt;        bp.src = ‘&lt;a href=&quot;http://push.zhanzhang.baidu.com/push.js&quot;&gt;http://push.zhanzhang.baidu.com/push.js&lt;/a&gt;‘;&lt;br&gt;    }&lt;br&gt;    var s = document.getElementsByTagName(“script”)[0];&lt;br&gt;    s.parentNode.insertBefore(bp, s);&lt;br&gt;})();&lt;br&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;??&quot;&gt;&lt;/a&gt;??&lt;/h2&gt;&lt;p&gt;可选类型数值如果为空是，不能参与运算的，所以在使用之前要对它进行判断非空操。空合并运算符用于对可选类型进行空判断，如果包含值就对可选常量/变量进行解包，如果为nil则返回式默认值。空合并运算符使用默认值替换nil值，处nil值的情况。保证了表达式一定有值，提高程序的健壮性。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;a ?? b
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;它是对一下表达式的简单表达方式&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;a != nil ? a! : b
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当可选类型a 不为空时，对a进行强制解包，取出a的值。反之，当a为空时，返回默认的b值。其中b可以是字面量，常量，变量，或者表达式，都可以。&lt;/p&gt;
-&lt;p&gt;？？ 有两个条件&lt;/p&gt;
-&lt;p&gt;表达式a必须是可选类型&lt;/p&gt;
-&lt;p&gt;默认值b的数据类型必须和a的值数据类型一致&lt;/p&gt;
-&lt;h1 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot;?:&quot;&gt;&lt;/a&gt;?:&lt;/h1&gt;&lt;p&gt;?: 是条件表达式式 ，是唯一的一个三元运算符，其实他是对下面表达式的简写&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int a = 2;
-int b = 3;
-int c;
-//条件表达式
-//c = a &amp;gt; b ? a : b ;
-//if-eles 条件判断
-if (a &amp;gt; b) {
-    c = a;
-}else{
-    c = b;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一般我们常用?: 简写if-else判断，增进写代码的速度，其实?: 还有一个和Swift中?? 相似的作用，用作二元表达式，用来返回默认值，例如，有时做网络请求时，服务器返回为空，但是我们UI见面不能显示为空，就显示一个默认值。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;NSString *UIString = serverString ?: @&amp;quot;defultString&amp;quot;;
-//等价于
-NSString *UIString = serverString ? serverString : @&amp;quot;defultString&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;鉴于以上对?: 做过二元运算符的使用，在使用block时我们每次都要做判断是否为空，如下？&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//先判断是否为空，再调用block
-if (block) {
-    block();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可用二元表达式简写如下&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;!block ?: block()
-&lt;/code&gt;&lt;/pre&gt;</content>
-    
-    <summary type="html">
-    
-      ?:(条件表达式) 条件表达式的另类用法，和Swift中的??(空合并运算符)
-    
-    </summary>
-    
-      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
-    
-    
-      <category term="Swift" scheme="http://www.denman.me/tags/Swift/"/>
-    
-      <category term="[object Object]" scheme="http://www.denman.me/tags/object-Object/"/>
     
   </entry>
   
