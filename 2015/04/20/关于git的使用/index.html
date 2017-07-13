@@ -5,16 +5,25 @@
   
   <title>关于git的使用 | denman&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS">
+  <meta name="description" content="Git和SVN 一：Git是什么？
+   Git是目前世界上最先进的分布式版本控制系统。
+二：SVN与Git的最主要的区别？
+   SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于git的使用">
 <meta property="og:url" content="http://www.denman.me/2015/04/20/关于git的使用/index.html">
 <meta property="og:site_name" content="denman's blog">
-<meta property="og:description" content="iOS">
-<meta property="og:updated_time" content="2016-06-26T00:53:57.000Z">
+<meta property="og:description" content="Git和SVN 一：Git是什么？
+   Git是目前世界上最先进的分布式版本控制系统。
+二：SVN与Git的最主要的区别？
+   SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如">
+<meta property="og:updated_time" content="2017-07-13T11:40:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于git的使用">
-<meta name="twitter:description" content="iOS">
+<meta name="twitter:description" content="Git和SVN 一：Git是什么？
+   Git是目前世界上最先进的分布式版本控制系统。
+二：SVN与Git的最主要的区别？
+   SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -274,7 +283,84 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="Git和SVN"><a href="#Git和SVN" class="headerlink" title="Git和SVN"></a>Git和SVN</h2><p> 一：Git是什么？</p>
+<p>   Git是目前世界上最先进的分布式版本控制系统。</p>
+<p>二：SVN与Git的最主要的区别？</p>
+<p>   SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如果在互联网下，如果网速慢的话，就纳闷了。</p>
+<p>   Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了</p>
+<p>三：理解工作区与暂存区的区别？</p>
+<p>工作区：就是你在电脑上看到的目录，比如目录下testgit里的文件(.git隐藏目录版本库除外)。或者以后需要再新建的目录文件等等都属于工作区范畴。</p>
+<p>   版本库(Repository)：工作区有一个隐藏目录.git,这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是stage(暂存区)，还有Git为我们自动创建了第一个分支master,以及指向master的一个指针HEAD。</p>
+<p>我们前面说过使用Git提交文件到版本库有两步：</p>
+<p>  第一步：是使用 git add 把文件添加进去，实际上就是把文件添加到暂存区。</p>
+<p>  第二步：使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。</p>
+<p>##简单使用</p>
+<h3 id="1、github创建个人仓库"><a href="#1、github创建个人仓库" class="headerlink" title="1、github创建个人仓库"></a>1、github创建个人仓库</h3><pre><code>*首先打开github的网站，注册账号并登陆，在网页里找到New repository开始创建个人仓库
+</code></pre><h3 id="2、配置SSH-Keys"><a href="#2、配置SSH-Keys" class="headerlink" title="2、配置SSH Keys"></a>2、配置SSH Keys</h3><pre><code>*ssh-Keygen -t rsa -C “yourEmail”  【输入完之后一直回车】
+
+*pbcopy &lt; \~/.ssh/id\_rsa.pub  【拷贝配置的SSH Key】
+
+*在github的设置中添加一个SSH Keys
+
+*回到终端：ssh -T git@github.com
+</code></pre><h3 id="3、将本地项目上传至仓库"><a href="#3、将本地项目上传至仓库" class="headerlink" title="3、将本地项目上传至仓库"></a>3、将本地项目上传至仓库</h3><pre><code>*git init  【初始化并生成本地git管理】
+
+*git add xxx  【添加需要上传的文件】
+
+*git add.  【添加目录下的所有文件】
+
+*git commit -m “first commit”  【提交到本地仓库，“”内填的是提交注释】
+
+*git remote add origin https://github.com/hpz/HxBTC_demo.git  【为版本库添加名为origin的远程版本库】
+
+*git remote -v  【查看远程仓库】
+
+*git remote remove origin  【删除该项目的远程仓库】
+
+*git pull --rebase origin master  【将github仓库的文件和本地项目文件合并】
+
+*git push -u origin master  【执行推送命令，完成github版本库的初始化，注意命令行中的-u参数，在推送成功后自动建立本地分支与远程版本库分支的追踪】
+</code></pre><h3 id="4、项目管理"><a href="#4、项目管理" class="headerlink" title="4、项目管理"></a>4、项目管理</h3><pre><code>*git clone https://github.com/hpz/HxBTC_demo.git  【克隆远程库到本地】
+</code></pre><h3 id="5、分支管理"><a href="#5、分支管理" class="headerlink" title="5、分支管理"></a>5、分支管理</h3><pre><code>*git branch -a  【查看所有的分支】
+
+*git branch develop  【创建分支】
+
+*git checkout -b develop  【创建并切换到develop分支】
+
+*git checkout branchName  【切换到某分支】
+
+*git merge --no-ff develop  【把develop合并到master分支，no--ff选项的作用是保留原来分支的记录】
+
+*git branch -d develop  【删除develop分支】
+
+*git checkout -b dev origin/dev  【创建远程origin的dev分支到本地，并且命名为dev（）如果项目中没有origin/dev远程分支则创建失败】
+
+*git pull origin dev：dev  【取回origin主机的dev分支，与本地的dev分支合并】
+
+*git branch --set-upstream branch-name origin/branch-name  【可以建立起本地分支和远程分支的关联，之后可以直接git pull从远程抓取分支】
+
+*git push --delete origin branchName  【删除远程分支】
+
+*git show  【查看历史修改】
+
+*git rm --cached filename  【删除文件在暂缓区的状态】
+</code></pre><h3 id="6、版本回退"><a href="#6、版本回退" class="headerlink" title="6、版本回退"></a>6、版本回退</h3><pre><code>*git reflog  【查看提交历史】
+
+*git reset --hard HEAD^  【回到上一个版本】
+</code></pre><h3 id="7、管理修改"><a href="#7、管理修改" class="headerlink" title="7、管理修改"></a>7、管理修改</h3><pre><code>*git status  【查看状态】
+
+*git checkout -- filename  【放弃对某个文件的修改】
+
+*git reset HEAD --filename  【丢弃暂存区上某个文件的修改，重新放回到工作区】
+
+*git diff  【查看在工作区未提交到暂缓区的文件更新】
+
+*git diff --cached  【查看在暂存区文件的更新】
+</code></pre><p>###8、git的设置</p>
+<pre><code>*git config user.name “xxx”  【设置commit的用户名】
+
+*git config user.email.com “xxx@xx.com”  【设置commit的邮箱】
+</code></pre>
       
     </div>
     
@@ -285,7 +371,7 @@
         <p><span>本文标题:</span><a href="/2015/04/20/关于git的使用/">关于git的使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
         <p><span>发布时间:</span>2015年04月20日 - 15时06分</p>
-        <p><span>最后更新:</span>2016年06月26日 - 08时53分</p>
+        <p><span>最后更新:</span>2017年07月13日 - 19时40分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2015/04/20/关于git的使用/" title="关于git的使用">http://www.denman.me/2015/04/20/关于git的使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2015/04/20/关于git的使用/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -323,7 +409,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git和SVN"><span class="toc-number">1.</span> <span class="toc-text">Git和SVN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、github创建个人仓库"><span class="toc-number">1.1.</span> <span class="toc-text">1、github创建个人仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、配置SSH-Keys"><span class="toc-number">1.2.</span> <span class="toc-text">2、配置SSH Keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、将本地项目上传至仓库"><span class="toc-number">1.3.</span> <span class="toc-text">3、将本地项目上传至仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、项目管理"><span class="toc-number">1.4.</span> <span class="toc-text">4、项目管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、分支管理"><span class="toc-number">1.5.</span> <span class="toc-text">5、分支管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、版本回退"><span class="toc-number">1.6.</span> <span class="toc-text">6、版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、管理修改"><span class="toc-number">1.7.</span> <span class="toc-text">7、管理修改</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
