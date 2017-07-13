@@ -691,7 +691,7 @@
     <link href="http://www.denman.me/2015/04/20/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.denman.me/2015/04/20/关于git的使用/</id>
     <published>2015-04-20T07:06:48.000Z</published>
-    <updated>2017-07-13T11:46:25.000Z</updated>
+    <updated>2017-07-13T11:53:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Git和SVN"><a href="#Git和SVN" class="headerlink" title="Git和SVN"></a>Git和SVN</h2><p> 一：Git是什么？</p>
 <p>   Git是目前世界上最先进的分布式版本控制系统。</p>
@@ -773,9 +773,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Git和SVN&quot;&gt;&lt;a href=&quot;#Git和SVN&quot; class=&quot;headerlink&quot; title=&quot;Git和SVN&quot;&gt;&lt;/a&gt;Git和SVN&lt;/h2&gt;&lt;p&gt; 一：Git是什么？&lt;/p&gt;
-&lt;p&gt;   Git是目前世界上最先进的分布式版本控制系统。&lt;/p&gt;
-&lt;
+      介绍Git和SVN的区别，Git简单使用
     
     </summary>
     
