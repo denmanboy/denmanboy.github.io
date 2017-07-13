@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.denman.me/"/>
-  <updated>2017-07-13T02:37:35.000Z</updated>
+  <updated>2017-07-13T11:50:03.000Z</updated>
   <id>http://www.denman.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.denman.me/2017/07/13/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4Object-c%E6%98%AF%E4%B8%80%E9%97%A8%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
     <id>http://www.denman.me/2017/07/13/为什么说Object-c是一门动态语言/</id>
     <published>2017-07-13T02:37:41.000Z</published>
-    <updated>2017-07-13T02:37:35.000Z</updated>
+    <updated>2017-07-13T11:50:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>① 什么是动态语言？<br>        动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构上的变化。比如众所周知的ECMAScript(JavaScript)便是一个动态语言。除此之外如Ruby、Python等也都属于动态语言，而C、C++等语言则不属于动态语言。<br>有三个名词容易混淆：<br>        Dynamic Programming Language (动态语言或动态编程语言)<br>        Dynamically Typed Language (动态类型语言)<br>        Statically Typed Language (静态类型语言)<br>所谓的动态类型语言，意思就是类型的检查是在运行时做的。</p>
 <p>② 静态类型<br>        而静态类型语言的类型判断是在运行前判断（如编译阶段），比如C#、Java就是静态类型语言，静态类型语言为了达到多态会采取一些类型鉴别手段，如继承、接口，而动态类型语言却不需要，所以一般动态语言都会采用dynamic typing，常出现于脚本语言中.需要明确说明一点，那就是，是不是动态类型语言与这门语言是不是类型安全的完全不相干的，不要将它们联系在一起！<br>优缺点：<br>        静态类型语言的主要优点在于其结构非常规范，便于调试，方便类型安全；缺点是为此需要写更多的类型相关代码，导致不便于阅读、不清晰明了。动态类型语言的优点在于方便阅读，不需要写非常多的类型相关的代码；缺点自然就是不方便调试，命名不规范时会造成读不懂，不利于理解等。顺便说一下，现在有这样一种趋势，那就是合并动态类型与静态类型在一种语言中，这样可以在必要的时候取长补短，Boo就是一个很好的试验性例子。</p>
@@ -32,7 +32,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;① 什么是动态语言？&lt;br&gt;        动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构上的变化。比如众所周知的ECMAScript(JavaScript)便是一个动态语言。除此之外如Ruby、Python等也都属于动态语言，而
+      Objective-C是一门动态语言，与编译语言相比，优势在哪儿
     
     </summary>
     
