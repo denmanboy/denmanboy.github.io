@@ -691,7 +691,7 @@
     <link href="http://www.denman.me/2015/04/20/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.denman.me/2015/04/20/关于git的使用/</id>
     <published>2015-04-20T07:06:48.000Z</published>
-    <updated>2017-07-13T11:40:20.000Z</updated>
+    <updated>2017-07-13T11:44:36.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Git和SVN"><a href="#Git和SVN" class="headerlink" title="Git和SVN"></a>Git和SVN</h2><p> 一：Git是什么？</p>
 <p>   Git是目前世界上最先进的分布式版本控制系统。</p>
@@ -704,8 +704,7 @@
 <p>我们前面说过使用Git提交文件到版本库有两步：</p>
 <p>  第一步：是使用 git add 把文件添加进去，实际上就是把文件添加到暂存区。</p>
 <p>  第二步：使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。</p>
-<p>##简单使用</p>
-<h3 id="1、github创建个人仓库"><a href="#1、github创建个人仓库" class="headerlink" title="1、github创建个人仓库"></a>1、github创建个人仓库</h3><pre><code>*首先打开github的网站，注册账号并登陆，在网页里找到New repository开始创建个人仓库
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><h3 id="1、github创建个人仓库"><a href="#1、github创建个人仓库" class="headerlink" title="1、github创建个人仓库"></a>1、github创建个人仓库</h3><pre><code>*首先打开github的网站，注册账号并登陆，在网页里找到New repository开始创建个人仓库
 </code></pre><h3 id="2、配置SSH-Keys"><a href="#2、配置SSH-Keys" class="headerlink" title="2、配置SSH Keys"></a>2、配置SSH Keys</h3><pre><code>*ssh-Keygen -t rsa -C “yourEmail”  【输入完之后一直回车】
 
 *pbcopy &lt; \~/.ssh/id\_rsa.pub  【拷贝配置的SSH Key】
@@ -721,7 +720,7 @@
 
 *git commit -m “first commit”  【提交到本地仓库，“”内填的是提交注释】
 
-*git remote add origin https://github.com/hpz/HxBTC_demo.git  【为版本库添加名为origin的远程版本库】
+*git remote add origin https://github.com/denmanboy/YZValue.git  【为版本库添加名为origin的远程版本库】
 
 *git remote -v  【查看远程仓库】
 
@@ -730,7 +729,7 @@
 *git pull --rebase origin master  【将github仓库的文件和本地项目文件合并】
 
 *git push -u origin master  【执行推送命令，完成github版本库的初始化，注意命令行中的-u参数，在推送成功后自动建立本地分支与远程版本库分支的追踪】
-</code></pre><h3 id="4、项目管理"><a href="#4、项目管理" class="headerlink" title="4、项目管理"></a>4、项目管理</h3><pre><code>*git clone https://github.com/hpz/HxBTC_demo.git  【克隆远程库到本地】
+</code></pre><h3 id="4、项目管理"><a href="#4、项目管理" class="headerlink" title="4、项目管理"></a>4、项目管理</h3><pre><code>*git clone https://github.com/denmanboy/YZValue.git  【克隆远程库到本地】
 </code></pre><h3 id="5、分支管理"><a href="#5、分支管理" class="headerlink" title="5、分支管理"></a>5、分支管理</h3><pre><code>*git branch -a  【查看所有的分支】
 
 *git branch develop  【创建分支】
