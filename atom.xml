@@ -932,37 +932,41 @@
   </entry>
   
   <entry>
-    <title>思念同学</title>
-    <link href="http://www.denman.me/2015/03/06/%E6%80%9D%E5%BF%B5%E5%90%8C%E5%AD%A6/"/>
-    <id>http://www.denman.me/2015/03/06/思念同学/</id>
-    <published>2015-03-06T07:26:31.000Z</published>
-    <updated>2016-06-21T07:11:13.000Z</updated>
+    <title>关于Build Active Architecture Only属性</title>
+    <link href="http://www.denman.me/2015/03/06/%E5%85%B3%E4%BA%8EBuild%20Active%20Architecture%20Only%E5%B1%9E%E6%80%A7/"/>
+    <id>http://www.denman.me/2015/03/06/关于Build Active Architecture Only属性/</id>
+    <published>2015-03-06T09:27:21.000Z</published>
+    <updated>2017-07-16T09:30:14.000Z</updated>
     
-    <content type="html"><![CDATA[<p>去年今日今时月，</p>
-<p>同照你我苍白身。</p>
-<p>今年今日今时月，</p>
-<p>不见天涯万里人。</p>
-<p>他年今日同相见 ，</p>
-<p>月光长照酒杯中，</p>
-<p>一喝黄河八百里，</p>
-<p>二喝长江九曲湾。</p>
-<p>但愿长醉不复醒，</p>
-<p>梦中犹醉见杜康。</p>
-<p>杜康问我有何事，</p>
-<p>是否有酒共一杯。</p>
-<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a><div align="center"><strong>打赏</strong></div></h1><p><div align="center"><br><img src="http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg" alt="image"></div></p>
+    <content type="html"><![CDATA[<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+<p>Build Active Architecture Only这个属性，设置为NO时，会编译多个版本，不过打出来的包会大不少。<br>这个属性设置为yes，是为了debug的时候编译速度更快，它只编译当前设备的architecture版本。<br>而设置为no时，会编译所有的版本。<br>这个是正对当前设备对应的architecture：<br>armv6：iPhone 2G/3G，iPod 1G/2G<br>armv7：iPhone 3GS/4/4s，iPod 3G/4G，iPad 1G/2G/3G<br>armv7s：iPhone5, iPod5<br>编译出的版本是向下兼容的，比如你设置此值为NO，用iphone5编译出来的是armv7s版本的，iphone4也可以运行，但是armv6的设备就也能运行。<br>所以，一般debug的时候可以选择设置为yes，release的时候要改为no，以适应不同设备。</p>
 ]]></content>
     
     <summary type="html">
     
-      不知不觉毕业已经好长时间了，写下此篇文章，思念大学的同学
+      关于Build Active Architecture Only属性
     
     </summary>
     
-      <category term="life" scheme="http://www.denman.me/categories/life/"/>
+      <category term="technology" scheme="http://www.denman.me/categories/technology/"/>
     
     
-      <category term="诗词" scheme="http://www.denman.me/tags/%E8%AF%97%E8%AF%8D/"/>
+      <category term="iOS" scheme="http://www.denman.me/tags/iOS/"/>
     
   </entry>
   
