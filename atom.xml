@@ -691,7 +691,7 @@
     <link href="http://www.denman.me/2015/04/20/%E5%85%B3%E4%BA%8Egit%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.denman.me/2015/04/20/关于git的使用/</id>
     <published>2015-04-20T07:06:48.000Z</published>
-    <updated>2017-07-13T11:53:38.000Z</updated>
+    <updated>2017-07-16T10:01:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Git和SVN"><a href="#Git和SVN" class="headerlink" title="Git和SVN"></a>Git和SVN</h2><p> 一：Git是什么？</p>
 <p>   Git是目前世界上最先进的分布式版本控制系统。</p>
@@ -765,8 +765,7 @@
 *git diff  【查看在工作区未提交到暂缓区的文件更新】
 
 *git diff --cached  【查看在暂存区文件的更新】
-</code></pre><p>###8、git的设置</p>
-<pre><code>*git config user.name “xxx”  【设置commit的用户名】
+</code></pre><h3 id="8、git的设置"><a href="#8、git的设置" class="headerlink" title="8、git的设置"></a>8、git的设置</h3><pre><code>*git config user.name “xxx”  【设置commit的用户名】
 
 *git config user.email.com “xxx@xx.com”  【设置commit的邮箱】
 </code></pre>]]></content>
