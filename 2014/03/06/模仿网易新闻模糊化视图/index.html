@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于Build Active Architecture Only属性 | denman&#39;s blog</title>
+  <title>模仿网易新闻模糊化视图 | denman&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于Build Active Architecture Only属性">
+  <meta name="description" content="利用UIImage+ImageEffects.h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于Build Active Architecture Only属性">
-<meta property="og:url" content="http://www.denman.me/2015/03/06/关于Build Active Architecture Only属性/index.html">
+<meta property="og:title" content="模仿网易新闻模糊化视图">
+<meta property="og:url" content="http://www.denman.me/2014/03/06/模仿网易新闻模糊化视图/index.html">
 <meta property="og:site_name" content="denman's blog">
-<meta property="og:description" content="关于Build Active Architecture Only属性">
-<meta property="og:updated_time" content="2017-07-16T09:30:14.000Z">
+<meta property="og:description" content="利用UIImage+ImageEffects.h">
+<meta property="og:updated_time" content="2017-07-31T13:31:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于Build Active Architecture Only属性">
-<meta name="twitter:description" content="关于Build Active Architecture Only属性">
+<meta name="twitter:title" content="模仿网易新闻模糊化视图">
+<meta name="twitter:description" content="利用UIImage+ImageEffects.h">
   
     <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
   
@@ -232,11 +232,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-关于Build Active Architecture Only属性" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-模仿网易新闻模糊化视图" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/06/关于Build Active Architecture Only属性/" class="article-date">
-      <time datetime="2015-03-06T09:27:21.000Z" itemprop="datePublished">2015-03-06</time>
+      <a href="/2014/03/06/模仿网易新闻模糊化视图/" class="article-date">
+      <time datetime="2014-03-06T13:24:26.000Z" itemprop="datePublished">2014-03-06</time>
 </a>
     </div>
   
@@ -249,7 +249,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于Build Active Architecture Only属性
+      模仿网易新闻模糊化视图
     </h1>
   
 
@@ -279,9 +279,8 @@
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
     if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }else {
         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
     }
     var s = document.getElementsByTagName("script")[0];
@@ -289,8 +288,7 @@
 })();
 </script>
 
-
-<p>Build Active Architecture Only这个属性，设置为NO时，会编译多个版本，不过打出来的包会大不少。<br>这个属性设置为yes，是为了debug的时候编译速度更快，它只编译当前设备的architecture版本。<br>而设置为no时，会编译所有的版本。<br>这个是正对当前设备对应的architecture：<br>armv6：iPhone 2G/3G，iPod 1G/2G<br>armv7：iPhone 3GS/4/4s，iPod 3G/4G，iPad 1G/2G/3G<br>armv7s：iPhone5, iPod5<br>编译出的版本是向下兼容的，比如你设置此值为NO，用iphone5编译出来的是armv7s版本的，iphone4也可以运行，但是armv6的设备就也能运行。<br>所以，一般debug的时候可以选择设置为yes，release的时候要改为no，以适应不同设备。</p>
+<p>苹果在2013年的wwdc2013上发布一个关于UIImage重要类别—— UIImage+ImageEffects.h<br>此类别重要的作用就是模糊化图片，例如网易新闻客户端</p>
 
       
     </div>
@@ -299,13 +297,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/03/06/关于Build Active Architecture Only属性/">关于Build Active Architecture Only属性</a></p>
+        <p><span>本文标题:</span><a href="/2014/03/06/模仿网易新闻模糊化视图/">模仿网易新闻模糊化视图</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
-        <p><span>发布时间:</span>2015年03月06日 - 17时27分</p>
-        <p><span>最后更新:</span>2017年07月16日 - 17时30分</p>
+        <p><span>发布时间:</span>2014年03月06日 - 21时24分</p>
+        <p><span>最后更新:</span>2017年07月31日 - 21时31分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/03/06/关于Build Active Architecture Only属性/" title="关于Build Active Architecture Only属性">http://www.denman.me/2015/03/06/关于Build Active Architecture Only属性/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2015/03/06/关于Build Active Architecture Only属性/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2014/03/06/模仿网易新闻模糊化视图/" title="模仿网易新闻模糊化视图">http://www.denman.me/2014/03/06/模仿网易新闻模糊化视图/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.denman.me/2014/03/06/模仿网易新闻模糊化视图/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -318,18 +316,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2015/03/06/模仿微信更改头像，图片局部放大/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/04/18/KVC中对对象的属性赋值的顺序/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          模仿微信更改头像，图片局部放大
+          KVC中对对象的属性赋值的顺序
         
       </div>
     </a>
   
   
-    <a href="/2015/03/06/思念同学/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">思念同学</div>
+    <a href="/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS获取缓存文件的大小，实现缓的清理功能</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -388,7 +386,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2015/03/06/关于Build Active Architecture Only属性/" data-title="关于Build Active Architecture Only属性" data-url="http://www.denman.me/2015/03/06/关于Build Active Architecture Only属性/"></div>
+    <div class="ds-thread" data-thread-key="2014/03/06/模仿网易新闻模糊化视图/" data-title="模仿网易新闻模糊化视图" data-url="http://www.denman.me/2014/03/06/模仿网易新闻模糊化视图/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -411,13 +409,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/03/06/模仿微信更改头像，图片局部放大/" title="上一篇: 模仿微信更改头像，图片局部放大">
+            <a href="/2014/04/18/KVC中对对象的属性赋值的顺序/" title="上一篇: KVC中对对象的属性赋值的顺序">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2015/03/06/思念同学/" title="下一篇: 思念同学">
+            <a href="/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/" title="下一篇: iOS获取缓存文件的大小，实现缓的清理功能">
                 <i class="fa fa-angle-right"></i>
             </a>
         
