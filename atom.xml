@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://denman.me/"/>
-  <updated>2018-05-22T05:58:03.392Z</updated>
+  <updated>2018-05-22T06:42:55.648Z</updated>
   <id>http://denman.me/</id>
   
   <author>
@@ -16,14 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://denman.me/2018/05/22/2018-05-22/"/>
+    <id>http://denman.me/2018/05/22/2018-05-22/</id>
+    <published>2018-05-22T06:42:55.647Z</published>
+    <updated>2018-05-22T06:42:55.648Z</updated>
+    
+    <content type="html"><![CDATA[<p># </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;# &lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>关于block的k那些事</title>
     <link href="http://denman.me/2018/05/22/%E5%85%B3%E4%BA%8Eblock%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     <id>http://denman.me/2018/05/22/关于block的那些事/</id>
     <published>2018-05-22T03:32:19.000Z</published>
-    <updated>2018-05-22T05:58:03.392Z</updated>
+    <updated>2018-05-22T06:49:18.317Z</updated>
     
     <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js">https://zz.bdstatic.com/linksubmit/push.js</a>‘;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js">http://push.zhanzhang.baidu.com/push.js</a>‘;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p>
-<h1 id="block是Objective-c中对闭包的实"><a href="#block是Objective-c中对闭包的实" class="headerlink" title="block是Objective-c中对闭包的实"></a>block是Objective-c中对闭包的实</h1><h2 id="1-什么是闭包"><a href="#1-什么是闭包" class="headerlink" title="1.什么是闭包"></a>1.什么是闭包</h2><p>计算机语言中，闭包（closure）是有函数和与其相关的引用环境组合而成的实体。<br>block就是Objective-c对闭包的实现，block是iOS4.0+和Mac OSX 10.6+引进的对C语言的扩展。</p>
+<h1 id="block是Objective-c中对闭包的实现"><a href="#block是Objective-c中对闭包的实现" class="headerlink" title="block是Objective-c中对闭包的实现"></a>block是Objective-c中对闭包的实现</h1><h2 id="1-什么是闭包"><a href="#1-什么是闭包" class="headerlink" title="1.什么是闭包"></a>1.什么是闭包</h2><p>计算机语言中，闭包（closure）是有函数和与其相关的引用环境组合而成的实体。<br>block就是Objective-c对闭包的实现，block是iOS4.0+和Mac OSX 10.6+引进的对C语言的扩展。</p>
 <h2 id="2-闭包的理解"><a href="#2-闭包的理解" class="headerlink" title="2. 闭包的理解"></a>2. 闭包的理解</h2><p>将函数、函数指针、闭包三者对比起来理解，能加深对闭包的理解。<br>函数：具有特定功能的代码块。<br>函数指针：指向函数的指针。<br>闭包：除具备函数和函数指针的所有功能外，还包括声明它的上下文（如作用域和自由变量等）。</p>
 <h2 id="3-block和函数指针的关系"><a href="#3-block和函数指针的关系" class="headerlink" title="3.block和函数指针的关系"></a>3.block和函数指针的关系</h2><p>block的使用很像函数指针，不过与函数指针最大的不同是Block可以访问函数以外的外部变量的值，换句话说，Block不仅实现函数的功能，还能携带函数的执行环境。<br>函数指针：void (*fun)(int) //指向参数为int类型返回值为void类型的函数<br>Block：void (\^fun)(int)</p>
 <h1 id="block的分类及区分方法"><a href="#block的分类及区分方法" class="headerlink" title="block的分类及区分方法"></a>block的分类及区分方法</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>在Objective-C语言中，一共有3种类型的block<br>1._NSConcreteGlobalBlock 保存全局的block，不会访问任何外部变量。相当于全部变量，系统会自动释放。<br>2._NSConcreteStackBlock 保存在栈中的block，当函数返回时会被销毁。相等于局部变量，系统会自动释放.<br>3._NSConcreteMallocBlock 保存在堆中的block，当引用计数为0时会被销毁。需要手动释放</p>
@@ -32,6 +52,9 @@
 <h1 id="block的一些疑问"><a href="#block的一些疑问" class="headerlink" title="block的一些疑问"></a>block的一些疑问</h1><h2 id="1-block为什么要用copy"><a href="#1-block为什么要用copy" class="headerlink" title="1.block为什么要用copy"></a>1.block为什么要用copy</h2><p>block 在创建的时候默认分配的内存实在栈上，而不是堆上,这样的话其本身的作用域属于创建时候的作用域，一旦在创建的作用域之外调用就会导致程序崩溃，所以使用了copy将其拷贝到堆内存上。</p>
 <h2 id="2-栈上的block为什么不用retain"><a href="#2-栈上的block为什么不用retain" class="headerlink" title="2.栈上的block为什么不用retain"></a>2.栈上的block为什么不用retain</h2><p>retain 只是增加了一次引用计数，Block的内存还是在栈上，并没有存在堆上，存在栈上的block 可能随时被系统回收。</p>
 <h2 id="3-为什么进入Block-的对象引用计数要加1"><a href="#3-为什么进入Block-的对象引用计数要加1" class="headerlink" title="3.为什么进入Block 的对象引用计数要加1"></a>3.为什么进入Block 的对象引用计数要加1</h2><p>block 一般执行的是回调，因此block并不知道其中的对象obj创建后会在什么时候释放，为了不在block使用obj之前，对象已经释放，block就retain了obj一次。</p>
+<h1 id="block中的继承关系"><a href="#block中的继承关系" class="headerlink" title="block中的继承关系"></a>block中的继承关系</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">    void(^block1)(void) = ^(void)&#123;</span><br><span class="line">        NSLog(@&quot;这是全局block&quot;);</span><br><span class="line">    &#125;;</span><br><span class="line">    block1();</span><br><span class="line">    NSLog(@&quot;全局block parentClassHierarchy = %@&quot;,[[block1 class] parentClassHierarchy]);</span><br><span class="line">    block1 = [block1 copy];</span><br><span class="line">    NSLog(@&quot;全局block copy parentClassHierarchy = %@&quot;,[[block1 class] parentClassHierarchy]);</span><br><span class="line">    void(^block2)(void) = ^(void)&#123;</span><br><span class="line">        NSLog(@&quot;a = %d 这是栈block&quot;,a);</span><br><span class="line">    &#125;;</span><br><span class="line">    block2();</span><br><span class="line">    NSLog(@&quot;栈 block parentClassHierarchy = %@&quot;,[[block2 class] parentClassHierarchy]);</span><br><span class="line">    block2 =  [block2 copy];</span><br><span class="line">    NSLog(@&quot;堆 block parentClassHierarchy = %@&quot;,[[block2 class] parentClassHierarchy]);</span><br></pre></td></tr></table></figure>
+<h2 id="MRC打印结果"><a href="#MRC打印结果" class="headerlink" title="MRC打印结果"></a>MRC打印结果</h2><p><img src="/images/MRCBlock_ParentClassHierarchy.jpg" alt="MRC打印结果"></p>
+<h2 id="ARC打印结果"><a href="#ARC打印结果" class="headerlink" title="ARC打印结果"></a>ARC打印结果</h2><p><img src="/images/ARCBlock_ParentClassHierarchy.png" alt="MRC打印结果"><br>通过上面的对比，我们可以看出ARC的函数体内栈block自动copy到堆上</p>
 ]]></content>
     
     <summary type="html">
@@ -919,46 +942,6 @@
       <category term="block" scheme="http://denman.me/tags/block/"/>
     
       <category term="函数指针" scheme="http://denman.me/tags/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模仿微信更改头像，图片局部放大</title>
-    <link href="http://denman.me/2015/03/06/%E6%A8%A1%E4%BB%BF%E5%BE%AE%E4%BF%A1%E6%9B%B4%E6%94%B9%E5%A4%B4%E5%83%8F%EF%BC%8C%E5%9B%BE%E7%89%87%E5%B1%80%E9%83%A8%E6%94%BE%E5%A4%A7/"/>
-    <id>http://denman.me/2015/03/06/模仿微信更改头像，图片局部放大/</id>
-    <published>2015-03-06T11:41:08.000Z</published>
-    <updated>2016-07-28T02:04:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span>&#123;</span><br><span class="line">    <span class="built_in">UIImageView</span> *showImageView;</span><br><span class="line">    <span class="built_in">UIImageView</span> *imageView;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [superviewDidLoad];</span><br><span class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColorgrayColor</span>];</span><br><span class="line">    <span class="comment">//女孩图片</span></span><br><span class="line">    imageView = [[<span class="built_in">UIImageViewalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">70</span>, <span class="number">50</span>,<span class="number">241</span>, <span class="number">360</span>)];</span><br><span class="line">    <span class="comment">//  imageView.layer.contents = (__bridge id)([UIImage imageNamed:@"图片0.jpg"].CGImage);</span></span><br><span class="line">    imageView.image = [<span class="built_in">UIImageimageNamed</span>:<span class="string">@"图片0.jpg"</span>];</span><br><span class="line">    imageView.alpha =<span class="number">0.4</span>;    </span><br><span class="line">    imageView.userInteractionEnabled =<span class="literal">YES</span>;</span><br><span class="line">    [<span class="keyword">self</span>.viewaddSubview:imageView];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//显示放大的局部图片</span></span><br><span class="line">    <span class="built_in">UIImageView</span> *screenShotView = [[<span class="built_in">UIImageViewalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>,<span class="number">0</span>, <span class="number">80</span>,<span class="number">80</span>)];</span><br><span class="line">    <span class="comment">//screenShotView.backgroundColor = [UIColor yellowColor];</span></span><br><span class="line">    screenShotView.backgroundColor = [<span class="built_in">UIColorclearColor</span>];</span><br><span class="line">    screenShotView.userInteractionEnabled =<span class="literal">YES</span>;</span><br><span class="line">    screenShotView.layer.borderColor = [<span class="built_in">UIColorredColor</span>].CGColor;</span><br><span class="line">    screenShotView.layer.borderWidth =<span class="number">1.0</span>f;</span><br><span class="line">    [imageViewaddSubview:screenShotView];</span><br><span class="line">    <span class="comment">// 手势拖动</span></span><br><span class="line">    <span class="built_in">UIPanGestureRecognizer</span> *panGesture = [[<span class="built_in">UIPanGestureRecognizeralloc</span>]initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(panGestureRecognizer:)];</span><br><span class="line">    [screenShotView addGestureRecognizer:panGesture];</span><br><span class="line">     showImageView = [[<span class="built_in">UIImageViewalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>,<span class="number">440</span>, <span class="number">190</span>,<span class="number">190</span>)];</span><br><span class="line">    showImageView.backgroundColor = [<span class="built_in">UIColorredColor</span>];</span><br><span class="line">    [<span class="keyword">self</span>.viewaddSubview:showImageView];</span><br><span class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//移动手势的回调方法</span></span><br><span class="line">- (<span class="keyword">void</span>)panGestureRecognizer:(<span class="built_in">UIPanGestureRecognizer</span>*)panGesture&#123;</span><br><span class="line">    <span class="built_in">CGPoint</span> point = [panGesturelocationInView:imageView];</span><br><span class="line">    panGesture.view.center =  point;</span><br><span class="line">    <span class="built_in">CGRect</span> rect = panGesture.view.frame;</span><br><span class="line">    <span class="built_in">UIImage</span> *newImage = [selfInterceptionUIImageWithImage: imageView.image andRect:rect];</span><br><span class="line">    showImageView.image = newImage;</span><br><span class="line">    <span class="comment">// ((UIImageView*)panGesture.view).image = newImage;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//截取图片的某一部分</span></span><br><span class="line">- (<span class="built_in">UIImage</span>*)InterceptionUIImageWithImage:(<span class="built_in">UIImage</span>*)image andRect:(<span class="built_in">CGRect</span>)rect&#123;</span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRef = image.CGImage;</span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRefRect =<span class="built_in">CGImageCreateWithImageInRect</span>(imageRef, rect);</span><br><span class="line">    <span class="built_in">UIImage</span> *imageRect = [[<span class="built_in">UIImagealloc</span>] initWithCGImage:imageRefRect];</span><br><span class="line">    <span class="keyword">return</span> imageRect;   </span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)didReceiveMemoryWarning &#123;</span><br><span class="line">    [superdidReceiveMemoryWarning];</span><br><span class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p> <img src="https://cl.ly/450m0U0Y1R1t/20150306192346262.png" alt="图片名称" align="center"></p>
-<p>  <img src="https://cl.ly/1H3O0G1g462C/20150306192304828.png" alt="图片名称" align="center"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      模仿微信更改头像，图片局部放大
-    
-    </summary>
-    
-      <category term="technology" scheme="http://denman.me/categories/technology/"/>
-    
-    
-      <category term="iOS" scheme="http://denman.me/tags/iOS/"/>
     
   </entry>
   
