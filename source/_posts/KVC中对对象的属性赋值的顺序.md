@@ -33,15 +33,12 @@ description: KVC编程中对对象属性赋值的顺序
      1.找_name的成员变量
      2.找叫name的属性
      3.找叫name的成员变量
-     4.调用setValue:<#(id)#> forUndefinedKey:<#(NSString *)#>];//要重写
+     4.调用setValue:forUndefinedKey:];
 
-所以一个对象用到KVC对属相赋值的时候 一定要实现<br> setValue:<#(id)#> forUndefinedKey:<#(NSString *)#>];方法
+所以一个对象用到KVC对属相赋值的时候 一定要实现<br> setValue:<#(id)#> forUndefinedKey:<#(NSString *)#>;方法
 不然当 
 
      1.找_name的成员变量
      2.找叫name的属性
      3.找叫name的成员变量
 都找不到的时候 会报错！
-# <div align=center>**打赏**</div>
-<div align=center>
-![image](http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg)
