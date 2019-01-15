@@ -22,7 +22,9 @@ description: 简单介绍一些block和函数指针的区别
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-```objc
+# Demo
+
+``` objc
 ///  main.m
 //  C_函数指针_block
 //  Created by dengyanzhou on 15/3/11.
@@ -74,6 +76,6 @@ int main(int argc,const char * argv[]) {
     return0;
 }
 ```
-// 运行结果   
+# result  
 sum1 = 5  
 sum2 = 5
