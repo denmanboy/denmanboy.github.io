@@ -73,6 +73,4 @@ Extension就是匿名Category，但是又有着很大的不同。
 通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。
 ## 通过runtime向类关联对象
 虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  
-# <div align=center>**打赏**</div>
-<div align=center>
-![image](http://cl.ly/3w1c3s0A0w2x/weichat_alipay_pay_middle.jpeg)
+

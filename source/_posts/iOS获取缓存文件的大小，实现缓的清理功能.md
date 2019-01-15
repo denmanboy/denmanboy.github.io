@@ -32,7 +32,7 @@ description: 移动应用在处理网络资源时，一般都会做离线缓存�
 获取缓存文件的大小
 
 由于缓存文件存在沙箱中，我们可以通过NSFileManager API来实现对缓存文件大小的计算。
-```objc	
+``` objc	
 //  CalculateFileSize.h
 //  CalculateCache
 //  Created by dengyanzhou on 15/3/6.

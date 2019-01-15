@@ -77,7 +77,7 @@ block 一般执行的是回调，因此block并不知道其中的对象obj创建
 ![MRC打印结果](/images/MRCBlock_ParentClassHierarchy.png )
 
 ## ARC打印结果
-![MRC打印结果](/images/ARCBlock_ParentClassHierarchy.png)
+![ARC打印结果](/images/ARCBlock_ParentClassHierarchy.png)
 通过上面的对比，我们可以看出ARC的函数体内栈block自动copy到堆上
 # block 的循环引用
 
