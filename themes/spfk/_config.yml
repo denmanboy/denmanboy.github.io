@@ -26,7 +26,7 @@ favicon: /img/favicon.jpg
 ## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件
 ## https://github.com/hexojs/hexo-generator-feed
 subnav:
-  mail: "mailto:iam_dyz@163.com"
+  mail: "mailto:773557411@qq.com"
   github: "https://github.com/denmanboy"
   # zhihu: "https://www.zhihu.com/people/luuman"
   weibo: "http://weibo.com/dengyanzhou"
@@ -43,7 +43,7 @@ subnav:
   # Google: "#"
   # Twitter: "#"
   # LinkedIn: "#"
-  QQ: "773557411"
+  # QQ: "773557411"
   # 微信: "Wechat"
   # PayPal: "#"
   # StackOverflow: "#"
@@ -54,23 +54,31 @@ subnav:
 # Chose ONE as your comment system and keep others disable.
 # 选一个作为网站评论系统，其他保持禁用。
 
-disqus:
-  #on: true
-  shortname:
+disqus: 
+  # on: true
+  shortname: luuman
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
-  # It is unnecessary to enable disqus here if
-  # you have set "disqus_shortname" in your site's "_config.yml"
+  # It is unnecessary to enable disqus here if 
+  # you have set "disqus_shortname" in your site's "_config.yml" 
 
-duoshuo:
-  on: false
+duoshuo: 
+  on: true
   domain: denman
+  # on: true
   # 是否开启多说评论，http://duoshuo.com/create-site/
   # 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分
   # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
 
+gitment:
+  on: true
+  owner: luuman
+  repo: luuman.github.io
+  client_id: 
+  client_secret: 
+
 youyan:
   #on: true
-  id:
+  id: 
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
@@ -91,11 +99,11 @@ background:
 highlight_style:
   on: true
   inline_code: 5  # Value: 0 - 9 可选
-  code_block: 5  # Value: 0 - 4
+  code_block: 5  # Value: 0 - 4 
   # Set inline_code to style highlight text
   # Chose a highlight theme for code block
   # 通过 inline_code 切换内置文本高亮样式 Value: 0 - 9 可选
-  # 通过 code_block 切换内置代码高亮配色主题  Value: 0 - 4
+  # 通过 code_block 切换内置代码高亮配色主题  Value: 0 - 4 
 
 blockquote_style:
   on: true
@@ -106,7 +114,7 @@ blockquote_style:
 left_col_width: 300
 
 # 目录中标题不换行
-# Keep TOC title on the same line |
+# Keep TOC title on the same line | 
 toc_nowrap: false
 
 # 自定义"阅读全文"链接按钮的显示文字
@@ -140,8 +148,21 @@ friends:
   # hankin: http://www.hankin.cn/
   # waydrow: http://blog.waydrow.com/
 
+# 打赏
+# 请在需要打赏的文章的md文件头部，设置属性reward: true
+
+# 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+reward_type: 2
+# 打赏wording
+reward_wording1: '纯属好玩'
+reward_wording2: '扫码打赏，你说多少就多少'
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/img/alipay.jpg
+alipay: /img/alipay.png
+# 微信二维码图片地址
+weixin: /img/weixin.png
+
 #是否开启“关于我”。
-aboutme: 80后，90前，打过工，做过点生意，现在在360做软件开发
+aboutme: 80后，90前，打过工，做过点生意，现在在新浪做软件开发
 #aboutme: false
 
 # 是否在新窗口打开链接
@@ -179,7 +200,7 @@ baidu_analytics:
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
-  on: false
+  on: true
   site_visit: 到访数量
   page_visit: 本页阅读量
 

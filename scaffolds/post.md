@@ -37,7 +37,5 @@ description:
 
 
 
-# <div align=center>**赞赏**</div>
-<div align=center>
-![image](/images/weichat_alipay_pay_middle.jpeg)
+
 
