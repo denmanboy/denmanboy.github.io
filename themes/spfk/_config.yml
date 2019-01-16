@@ -26,7 +26,7 @@ favicon: /img/favicon.jpg
 ## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件
 ## https://github.com/hexojs/hexo-generator-feed
 subnav:
-  mail: "mailto:773557411@qq.com"
+  mail: "mailto:iam_dyz@163.com"
   github: "https://github.com/denmanboy"
   # zhihu: "https://www.zhihu.com/people/luuman"
   weibo: "http://weibo.com/dengyanzhou"
@@ -43,8 +43,8 @@ subnav:
   # Google: "#"
   # Twitter: "#"
   # LinkedIn: "#"
-  # QQ: "773557411"
-  # 微信: "Wechat"
+  QQ: "773557411"
+  微信: "dyz18518314800"
   # PayPal: "#"
   # StackOverflow: "#"
   # Instagram: "#"
@@ -56,7 +56,7 @@ subnav:
 
 disqus: 
   # on: true
-  shortname: luuman
+  shortname: denman
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
   # It is unnecessary to enable disqus here if 
   # you have set "disqus_shortname" in your site's "_config.yml" 
