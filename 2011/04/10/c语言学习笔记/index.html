@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>c语言学习笔记 | denman&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="c语言学习整理">
+<meta name="keywords" content="c语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c语言学习笔记">
+<meta property="og:url" content="http://denman.site/2011/04/10/c语言学习笔记/index.html">
+<meta property="og:site_name" content="denman&#39;s blog">
+<meta property="og:description" content="c语言学习整理">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-15T15:31:22.159Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="c语言学习笔记">
+<meta name="twitter:description" content="c语言学习整理">
+  
+    <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//img/favicon.jpg">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">denman</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">热爱生活，专注技术</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/archives">全部内容</a></li>
+                        
+                            <li><a href="/categories/technology">技术干货</a></li>
+                        
+                            <li><a href="/categories/life">日常生活</a></li>
+                        
+                            <li><a href="/about">关于</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="mailto:iam_dyz@163.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/denmanboy" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/dengyanzhou" title="weibo">weibo</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl QQ" target="_blank" href="/773557411" title="QQ">QQ</a>
+                            
+                                <a class="fl 微信" target="_blank" href="/dyz18518314800" title="微信">微信</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/Mac-service/" style="font-size: 10px;">Mac service</a> <a href="/tags/Object-c/" style="font-size: 13.33px;">Object-c</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/Touch-ID/" style="font-size: 10px;">Touch ID</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/category/" style="font-size: 10px;">category</a> <a href="/tags/c语言/" style="font-size: 10px;">c语言</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iOS9/" style="font-size: 10px;">iOS9</a> <a href="/tags/rumtime/" style="font-size: 10px;">rumtime</a> <a href="/tags/runtime/" style="font-size: 10px;">runtime</a> <a href="/tags/tableView/" style="font-size: 10px;">tableView</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/函数指针/" style="font-size: 10px;">函数指针</a> <a href="/tags/动态语言/" style="font-size: 10px;">动态语言</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/线程/" style="font-size: 10px;">线程</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/蓝牙/" style="font-size: 10px;">蓝牙</a> <a href="/tags/诗词/" style="font-size: 16.67px;">诗词</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.devtang.com/">tangqiao</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.ibireme.com/">ibireme</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.sunnyxx.com/">sunnyxx</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">80后，90前，打过工，做过点生意，现在在新浪做软件开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">denman</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">denman</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">热爱生活，专注技术</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/archives">全部内容</a></li>
+                
+                    <li><a href="/categories/technology">技术干货</a></li>
+                
+                    <li><a href="/categories/life">日常生活</a></li>
+                
+                    <li><a href="/about">关于</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="mailto:iam_dyz@163.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/denmanboy" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/dengyanzhou" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="QQ" target="_blank" href="/773557411" title="QQ">QQ</a>
+                    
+                        <a class="微信" target="_blank" href="/dyz18518314800" title="微信">微信</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-c语言学习笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/04/10/c语言学习笔记/" class="article-date">
+      <time datetime="2011-04-10T10:16:58.000Z" itemprop="datePublished">2011-04-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      c语言学习笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c语言/">c语言</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script>hljs.initHighlightingOnLoad();</script>
+
+<p>在64位操作系统    int 占 4字节 long 8字节  short 2字节<br>在32位操作系统   int  占 4字节  long 4字节  short 2字节<br>变量声明的同时进行赋值<br>int height  = 180; //在开辟空间的同时 ，把180 放到内存中<br><br>float 占4字节  double 占 8位<br>printf (“%lu”,sizeof(1.123)); // 计算常需要多大空间存放 常量是没有空间的<br>在浮点型 数据常量后一般要加f  规范<br>float f = 1,123f;<br>float类型 小数点前和 小数点后 位数 最多写 6 –  7 位 否则  不再准确<br>double 的有效数字位数 是15 -16 位<br>（小数点前和小数点后总共 不能超过 15–16位）<br>两个整数相处 结果还是整数 如果有求出有小数那么 小数点后面全部舍去。<br>强制类型转换  printf (“%f\n”, (double ) b/a); (double ) b/a ；强制类型转换  把变量b中的值的类型临时强转为double 类型<br>强制 类型转换不会改变 变量 b的类型 强制转的是变量b中值的类型（临时强转）<br>表达式 ：有标识符或数字或者运算符构成的式子<br>a++ 表达式的值就是a 自增 1 之前使用 a的值  先使用a的值 再自增  a++  的值 就是 加前使用a的值<br>++a  也是一个表达式 ，表达式的值就是a自增1之后a的值；然后把++a的值给c<br>++a 的值就是加后使用a的值<br>自增和自减 经常会应用于 计数器 循环<br>自增自减两侧只能是变量<br>表达式就是一个值 值就是常量<br>关系表达式  ：如果表达式成立  表达式为真 那么 表达式的值就是1 如果表达式不成立 表达式 为假 表达式的值就是0<br>关系表达式 经常应用于 if 结构 和循环结构中<br>0为假 非零 即为真   &amp;&amp; 逻辑与<br>xcode  优先级时  直接加 小括号  规范写法<br>如果逻辑与表达式中的第一个表达式是假 那么第二个表达式将不再运算<br>如果逻辑或表达式中的第一个表达式是真 那么第二个表达式将不再运算<br>逗号表达式 //表达式1，表达式2，表达式3，….表达式n;<br>逗号表达式的值是最后一个表达式的值 逗号表达式是从左 向右依次进行运算的。<br>条件运算符  ： 表达式1 ？表达式2 ：表达式3；<br>问号 冒号表达式的值是：如果表达式1成立，那么 运算表达式2，最后总的表达式的的值就是表达式2的值 ，  否则运算表达式3，总表达式的值就是表达是3的值<br>问号  冒号表达式 可以求两个数的较大一个的值，函数也是一个表达式 函数名字就是标识符，括号内就是运算<br>函数调用就是一个表达式<br> 隐式装换 ：不同数据类型之间进行运算时，会出现隐式装换<br>整型向浮点型看齐<br>短字节向长字节看齐<br>float向 double看齐<br>有符号向无符号看齐  </p>
+<p>c语言中 % 是占位符<br>类型   占位符              类型           占位符<br>int        %d        unsigned   int     %u<br>long    %ld        unsigned long     %lu<br>short   %hd      unsigned short    %hu<br>最大值 +1 会发生溢出 变成最小值 物极必反<br>字符存到计算机中存到是字符的ASCII码值<br>声明一个变量，如果没给赋值那么就是一个随机值。<br>函数是一个可以是实现一个 具体功能的代码块<br>屏幕缓冲区 遇到 换行符 把缓冲区的 内容打印到屏幕上<br>scanf  函数中不能加换行符号     </p>
+<p> char 类型就是整型数据  </p>
+<p>函数的分类   </p>
+<ol>
+<li><p>库函数<br>2.自定义函数(程序员自己实现的函数)<br>3.函数的三要素  返回值 函数名 参数  </p>
+<p>main函数 是自定义函数 main函数自己写代码 去实现<br>形参就是变量声明 不能在函数{}内再声明一个相同的变量名了，否则重复定义<br>局部变量 的使用范围只能在包含变量的{} 中从 声明开始到{}结束使用 大括号 就是限制变量的作用域的</p>
+<pre><code>遇到return之后就会返回调用这个函数的地方 return之后的语句不会执行
+</code></pre><p>函数传参 就是把实参赋给形参  什么时候写参数 当我们 需要从函数外部传到函数内部数据时我们就可以写带参数的函数，传一个写一个参数，传两个数据那么写两个参数’,’ 分割<br></p>
+</li>
+</ol>
+<p>只要函数有返回值类型 那么函数实现过程中必须要return一个值<br><br> scanf （）接收double 类型的数据时 要用 %lf 接收  printf () 中用%f输出 <br><br>函数调用就是调用一个表达式 <br><br>函数调用了才会执行里面的代码<br></p>
+<p>函数的作用<br><br>函数使我们的程序清楚明白<br></p>
+<p>函数使用之前先定义   通过函数调用来使用 类似上下级管理形式<br><br>调用时指定函数名字所需要的信息 （参数）<br><br>调用完成后向 老板报告的工作 递交报告<br><br>函数返回值最多一个<br><br>表达式就是一个值 表达式成立就是 1  不成立就是0<br><br>关系表达式 返回值 不是1就是 0<br><br>%02d   表示 数字占两位。如果不够两位 那么补0；<br><br>变量初始化时没赋给初值，那么变量的值是随机的<br><br>for 循环的第二个表达式可以省去 表示无线循环 （死循环）<br><br>在循环嵌套中，break 只能跳出一层 循环 <br><br>c=getchar  ()  从键盘接收一个字符 赋值给  c，等价于<br><br>scanf（”%c”,&amp;c）;1既不是质数也不是合数<br><br>do–while  先执行do{}中的语句块内容 然后再去判断表达式是否成立 do{}中的语句至少 执行依次 <br><br>scanf（“%d”） 遇到非数字字符 停止接收<br><br>%-2d 表示占两位 左对齐 %2d 表示 占两位 右对齐<br><br>case 语句中声明变量必须要加一个 {}<br><br>形参的本质就是变量声明<br><br>只有调用函数才会压栈<br><br>代码段就是一个工作流程<br><br>首先编译代码之后，会把代码<br>编译成 二进制可执行文件 运行<br><br>二进制可执行程序：首先cpu会把二进制代码 放到内存的代码段（我们写的代码都在这个二进制文件中），然后cpu就会去读代码段中 二进制文件的内容，首先会调用main函数，这个时候就会在栈段压一个main 栈 （main函数 中的数据就会 在main栈中）<br><br>变量的周期   开辟空间到 释放空间<br><br>变量的 范围就是包含这个变量声明的{}内（从声明开始）<br><br>在函数外声明的变量 就是全局变量 一般写在头文件的下方 <br><br>全局变量不初始化 默认为零 全局变量的作用域 ：整个工程所有的文件都可以使用<br><br>全部 变量在内存 不会 伴随栈的消失而消失 数据段 程序结才会释放空间<br><br>数据段和栈段是两个独立内存区域<br><br>数据段生命周期  程序结束才会结束<br><br>静态的局部变量是放在数据段<br><br>静态局部变量作用域（包含他的{}内使用 ）内存布局：数据段 生命周期：程序结束 static int cnt=1;//这句代码只是在编译的时候只执行了一次 其他时候不会执行<br><br>c语言很少用到static <br><br>数组名表示数组的空间大小 int a[5];    sizeof( int a[5])==20;<br><br>大小用多少字节来表示<br><br>只有初始化数组的时候数组的元算个数可以省去<br><br>初始化了几个元素那么这个数组的元素总个数就是多少个<br><br>int a[5]={}; //对数组的每个元素清零 以后我们只要<br><br>声明数组必须要初始化 如果没有特定的值进行初始化  那么就必须清零 <br><br>数组不能整体赋值 因为数组名是一个常量 数组名就是数组的第一个 元素空间的地址<br><br>依次对数组的每一个元素进行赋值<br></p>
+<p>数组名代表数组占的空间大小 a[];    sizeof( a)可以求出数组所有元素所占空间的大小；<br><br>int <em>  是一个整体 是一个复合类型 ， 表示 指针运算符<br><br>指针变量 只能存放地址常量<br><br>int</em> 就是指针变量类型<br><br>指针变量就是存放空间的地址的<br><br>空间地址类型 ：空间的类型 加 <em><br><br>在64位系统下 所有的指针类型都是占8字节<br><br>一个字节 一个地址<br><br>内存以字节为单位 <br><br>打印变量的空间地址 或者 指针变量 用%p  %p就是用十六进制显示门牌号 第一个 字节作为整体的门牌号
+</em>pInt 含义分两步（寻址操作）程序员可以寻址<br></p>
+<ol>
+<li>找到pint 中存放的<br></li>
+<li>门牌号的位置<br></li>
+<li>从门牌号开始取空间的大小<br></li>
+<li>当一个变量两侧出现两个运算符 比如 *（指针运算符）++ – [] ! &amp; 这是采用右结合 但是以后 出现类似的 表达式 我们尽量加上<br></li>
+</ol>
+<p>如果一个函数内部要修改另外一个函数的变量 那么只要获取<br><br>另外一个函数 里的变量的地址就可以了<br><br>指针可以跨栈引用 <br><br>int m;<br><br>scanf(“%d”,&amp;m);//因为 scanf 函数内部要修改main函数中变量m （跨函数修改变量）所以必须要传m的地址<br><br>free（p）释放指针变量p 释放后 p 不能再使用<br><br>野指针 结果不可预测<br><br>使用scanf时必须要传 一个合法空间的地址<br><br>只要使用变量必须 把一个合法的空间地址赋给指针变量 <br><br>指针变量必须要指向合法的空间<br><br>只要使用指针变量一定要给这个指针变量赋一个合法的空间地址<br></p>
+<p>strcmp(s1,s2) 字符串比较函数<br><br>依次比较s1和s2 指向的字符串中 对应字符ascii 值 当两个对应的字符 ascii相等 那么继续比较 ，直到遇到不相等的结束比较返回 <br></p>
+<p><em>p 就是一个表达式 </em> 后面跟的是一个地址 指针运算符后面必须是一个地址类型<br><br>指针不能进行乘除运算 可以 和整数进行 加减运算<br><br>相同的指针类型 之间 只可以进行减法运算,可以得到步长<br><br>#if       #end if 可以注释 之间的内容<br><br>地址类型 和整型 相加 向地址类型看齐<br><br>数组名就是数组第一个元素的地址<br><br>c语言 规定数组名就是数组的首元素地址 是一个常量 不能自增<br><br>以后 只要想通过 一个函数操作函数外面的数组 那么就必须传数组的第一个元素的地址<br><br>printfArray( int p[5],int n) //是不规范的写法 初学者不要这样写 （这是编译器的妥协 允许这样写 实际上编译器会把这里的int p[5] 转化为 int<em>     p ，传的是数组的首地址）<br><br>const  int</em> p=&a;//const 限制<em>p不能改 （在下面代码中 不能出现 对</em>p这个 式子赋值）p没有限制 可以改<br><br>const int <em>p 和 int const </em>p 称为<em>前const<br><br>int </em> const  m=&a;// const 限制的是指针变 m不能改    ，      <em>m可以改<br>int const </em> const n=&a;<br>两个const 限制 n和<em>n n和</em>n都不能改<br>函数名字就是一个地址 就是函数在代码段中的地址<br>函数指针 可以存储 函数的地址 就是函数名地址<br>int （<em>p）（int ，int）=add; //p是一个指针，是一个函数指针，这个 指针指向 一个具有两个int 类型的参数 和一个int 类型的返回值的函数 p <br><br>知道函数的地址就可以操作函数   调用函数<br><br>参数是一个函数指针 <br><br> int a[5]规定&amp;a就是数组整个空间的地址<br><br>int (</em>)[5]  数组 a整个空间的地址 类型 <br><br>&amp;a +1 是加1个整个数组空间大小<br><br>a和 &amp;a数值大小一样但是只有类型不一样<br></p>
+<p>p 是是一个指针变量p[0]就等于<em>（p +0）<br><br>int </em> 数组空间的地址类型 <br><br>int （*）[ 5] 数组的a整个空间地址的类型<br><br>除了字符串常量以外的常量没有空间<br><br>字符串常量在只读数据段(只读数据段只能读不能写)<br><br>字符串常量以 尾零’\0’ 结束 ‘\0’的ASCCI 的值是0 就是null<br><br>“\0”是字符串 0 里面有两个字符 一个是字符‘0’一个是尾零‘\0’<br><br>%s 打印一个字符串用%s执行过程 <br><br>传入的地址开始逐个打印字符 直到遇到‘\0’<br><br>scanf(“%s”,buff); 接收字符串 可以用%s 把接收的字符串放入字符数组中 %s以空格和‘\n’作为分隔条件 %s 不能接收空格<br><br>str 功能：统计字符串的有效字符个数 遇到‘\0’结束统计 （不统计‘\0’）<br><br>数组不能整体赋值 数组名是常量<br><br>预处理语句：以#开头  在预处理阶段展开<br>头文件</p>
+<p>#include 在预处理阶段 把头文件导入到代码中<br>宏名  一般要大写<br><br>宏名 要满足标示符  宏定义语句 必须要在同一行<br><br>宏 ：就是代码 替换  宏名就是代表后面一串字符<br><br>宏 ： 一改全改   不检查类型<br><br>有参宏 #define  ADD(a+b) a+b<br><br>宏也可以传参数 没有类型<br><br>带参数的宏 宏名中不能 有空格<br><br>定义带参数的宏 代替的内容 中参数 和整体都要加（）<br><br>‘\’表示连接符 在预处理阶段 会把下面的代码 链接成一行<br><br>条件编译 预处理语句 <br><br>在预处理阶段 若果为真 那么保留语句块<br></p>
+<pre><code>#if 值 
+语句块
+#end if
+</code></pre><p>条件编译必须以endif结束<br><br>条件编译 是解决包含多次头文件<br><br>结构体 最后面 必须以 分号结束<br></p>
+<p>对结构体初始化 必须完全初始化<br><br>结构体 可以整体赋值 <br><br>不建议 一句话声明俩个变量<br><br>枚举的功能就是增强代码的额可读性<br>通配型指针 就是可以赋给任意类型的指<br>针 或者任意类型的指针可以赋值给通配型指针<br><br><em>p 是通配型 指针<br>
+</em>p=1；通配型 指针不能取<em> 因为取</em>之后 不知道取多大空间<br><br>堆空间 没有名字 匿名空间 所以我们只能通过堆空间的地址来操作 堆空间<br><br>用 malloc申请 堆空间<br><br>malloc（4）——&gt;&gt;&gt; 申请4字节的堆空间<br><br>堆空间使用完 之后要释放<br><br>free（pInt）；释放pInt指向的堆空间 释放之后 pInt指向的堆空间 就不能在使用了<br><br>堆空间只有手动调用free 函数才能释放 或者程序结束<br><br>堆空间 不会伴随栈释放而是释放<br></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫">
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝"></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信"></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2011/04/10/c语言学习笔记/">c语言学习笔记</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
+        <p><span>发布时间:</span>2011年04月10日 - 18时16分</p>
+        <p><span>最后更新:</span>2019年01月15日 - 23时31分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2011/04/10/c语言学习笔记/" title="c语言学习笔记">http://denman.site/2011/04/10/c语言学习笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://denman.site/2011/04/10/c语言学习笔记/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2012/03/24/雨天，破船，海边/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          雨天，破船，海边
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2011/03/18/恰同学少年/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">恰同学少年</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2011/04/10/c语言学习笔记/" data-title="c语言学习笔记" data-url="http://denman.site/2011/04/10/c语言学习笔记/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"denman"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2012/03/24/雨天，破船，海边/" title="上一篇: 雨天，破船，海边">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2011/03/18/恰同学少年/" title="下一篇: 恰同学少年">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/16/北漂有感/">北漂有感</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/多线程并行之美/">多线程并行之美</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/初冬游景山/">初冬游景山</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/11/张北草原/">情致山水·草原天路</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/2018初夏/">2018初夏</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/24/MacOS-Service开发/">MacOS_Service_Deamon开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/关于block的那些事/">关于block的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/为什么说Object-c是一门动态语言/">为什么说Object-c是一门动态语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/28/那山，那水，那人/">那山，那水，那人</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/关于产品的认知(仅抒己见)/">关于产品的认知(仅抒己见)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/关于category不能添加实例变量/">关于category不能添加实例变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/22/delegate和block使用的场景/">delegate和block使用的场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/NavigationBar自定义BackItem/">NavigationBar自定义BackItem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/06/2015过年回家/">2015过年回家</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/02/利用runtime容错/">利用runtime容错</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/21/iOS程序员开发进阶/">iOS程序员开发进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/18/Masonry框架分析-链式编程思想/">Masonry框架分析-链式编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/">iOS判断是否第一次使用且更新后还是第一次</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/27/Touch ID简易开发教程/">TouchID简易开发教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/18/方法和函数的区别/">OC中方法和函数的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/08/tableView优化的那些事/">tableView优化的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/20/关于git的使用/">关于git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/14/iOS中蓝牙开发常用的框架/">iOS中蓝牙开发常用的框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/12/Xcode常用的插件/">Xcode常用的插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/11/block和函数指针的区别/">block和函数指针的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/模仿微信更改头像，图片局部放大/">模仿微信更改头像，图片局部放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/关于Build Active Architecture Only属性/">关于Build Active Architecture Only属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/思念同学/">思念同学</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/12/和Swift中-异曲同工/">?:和Swift中??异曲同工</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/23/关于runtime那些事/">关于runtime那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/10/13/查看静态库文件支持的指令集架构的方法/">查看静态库文件支持的指令集架构的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/20/思念家乡/">思念家乡</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/05/20/Objective-C GCC Code Block Evaluation C Extension 语法/">Objective-C GCC Code Block Evaluation C Extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/18/KVC中对对象的属性赋值的顺序/">KVC中对对象的属性赋值的顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/06/模仿网易新闻模糊化视图/">模仿网易新闻模糊化视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/">iOS获取缓存文件的大小，实现缓的清理功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/08/10/iOS的release和debug有什么区别/">iOS的release和debug有什么区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/04/21/致四川雅安人民/">致四川雅安人民</a></li><li class="post-list-item"><a class="post-list-link" href="/2012/03/24/雨天，破船，海边/">雨天，破船，海边</a></li><li class="post-list-item"><a class="post-list-link" href="/2011/04/10/c语言学习笔记/">c语言学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2011/03/18/恰同学少年/">恰同学少年</a></li><li class="post-list-item"><a class="post-list-link" href="/2010/12/06/kongque/">孔雀东南飞-大学新篇</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 denman
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by lunman -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit">到访数量:
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span></span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit">本页阅读量:
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>

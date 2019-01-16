@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>denman&#39;s blog</title>
+  
+  <subtitle>热爱生活，专注技术</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://denman.site/"/>
+  <updated>2019-01-16T15:48:20.648Z</updated>
+  <id>http://denman.site/</id>
+  
+  <author>
+    <name>denman</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>北漂有感</title>
+    <link href="http://denman.site/2019/01/16/%E5%8C%97%E6%BC%82%E6%9C%89%E6%84%9F/"/>
+    <id>http://denman.site/2019/01/16/北漂有感/</id>
+    <published>2019-01-16T08:16:16.000Z</published>
+    <updated>2019-01-16T15:48:20.648Z</updated>
+    
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js&#39;">https://zz.bdstatic.com/linksubmit/push.js&#39;</a>;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js&#39;">http://push.zhanzhang.baidu.com/push.js&#39;</a>;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p><p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p><p><script>hljs.initHighlightingOnLoad();</script></p><div align="center"><br><br>癸巳之年入京城，<br>斗转星移几度秋。<br>闲来偶忆北漂初，<br>燕去家山万里余。<br>秋高扶栏叹漂泊，<br>切把苍凉化酒融。<br>何处相思残阳里，<br>几多感悟路尘中。<br>鬓飞故土千山雪，<br>血染鲁南万水红。<br>笑我五年仍俗态，<br>庸诗半卷手空空。<br>醉卧蜗居思飞绪，<br>古来留京能几人。<br><br></div>]]></content>
+    
+    <summary type="html">
+    
+      时间如白驹过隙一般，悄然逝去，不知不觉来北京已多年
+    
+    </summary>
+    
+      <category term="life" scheme="http://denman.site/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://denman.site/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多线程并行之美</title>
+    <link href="http://denman.site/2019/01/15/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%B9%8B%E7%BE%8E/"/>
+    <id>http://denman.site/2019/01/15/多线程并行之美/</id>
+    <published>2019-01-15T11:47:33.000Z</published>
+    <updated>2019-01-16T15:48:20.649Z</updated>
+    
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js&#39;">https://zz.bdstatic.com/linksubmit/push.js&#39;</a>;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js&#39;">http://push.zhanzhang.baidu.com/push.js&#39;</a>;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p><p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p><p><script>hljs.initHighlightingOnLoad();</script></p><h1 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h1><h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>进程是计算机操作系统中任务调度的基本单位，他拥有自己独立的地址空间和系统资源，并不与其它进程共享。<br>线程是依赖于进程存在的计算机最小调度单位，他们共享进程的地址空间和系统资源，单个进程的线程之间会通过共享资源进行交互<br>每一个进程至少有一个线程，即主线程，和0到多个工作线程<br><img src="/images/15476394562464.jpg" alt=""></p><h2 id="只有一个收银队列"><a href="#只有一个收银队列" class="headerlink" title="只有一个收银队列"></a>只有一个收银队列</h2><p>•我们从超市收银开始说起<br>•最初的时候，我们的超市只有一个收银通道和一个收银员<br>•每个顾客在这收银通道排队，他们需要清点自己购买的商品并计算价钱，然后付费<br><img src="/images/15476396146660.jpg" alt=""></p><h2 id="多个收银队列一个收银员"><a href="#多个收银队列一个收银员" class="headerlink" title="多个收银队列一个收银员"></a>多个收银队列一个收银员</h2><p>•由于每个顾客清点自己购买的物品都需要一定的时间，后面的顾客就不耐烦了，他们想超市老板投诉说结账太慢了，能不能快一点<br>•超市老板灵机一动，没问题，我给你们再开辟两条结账通道出来。不过为了成本考虑，我还是只雇用一个收银员吧。<br>•于是这一个收银员开始辛苦的在每一个通道里分别给排队的用户结账。结账的速度看起来好像快了<br>•实际上每个用户由于要和收银员核对物品，加上收银员需要在各个队伍之前来回穿梭，客户等待的时间更长了。<br>•客户再次向老板投诉<br><img src="/images/15476416181015.jpg" alt=""></p><h2 id="多个收银队列多个收银员"><a href="#多个收银队列多个收银员" class="headerlink" title="多个收银队列多个收银员"></a>多个收银队列多个收银员</h2><p>•老板想了想，还是再多雇两个收银员吧<br>•这下结账速度真的快了起来<br>•老板开始高兴地躺在那里数钱了<br><img src="/images/15476400168177.jpg" alt=""></p><h2 id="新的问题来了"><a href="#新的问题来了" class="headerlink" title="新的问题来了"></a>新的问题来了</h2><p>•老板突然想知道每天的实时营业额<br>•聪明的老板说，你们每个收银员收完一笔钱，都在那个黑板上给我记一下最新的汇总数<br>•刚开始这个数更新的很好<br>•突然老板发现这个数从一个大数变成了一个小一点的数。<br>•这是怎么回事？这是绝不能容忍的事情<br><img src="/images/15476406193551.jpg" alt=""><br>•原来收银员A和收银员B同时收了一笔款，他们分别根据之前的汇总数计算除了自己的汇总数<br>•收银员A更新了自己的汇总数<br>•收银员B然后也更新了自己的汇总数<br>•于是收银员A的交易记录没有被正确的统计了<br>•这可怎么办呢？</p><h2 id="这个问题难不倒我"><a href="#这个问题难不倒我" class="headerlink" title="这个问题难不倒我"></a>这个问题难不倒我</h2><p>•聪明的超市老板怎么会被这个问题难住呢？<br>•老板做出了规定，每个人准备去更新自己的数据的时候，一定要先把黑板挡起来不让别人看见，自己更新完了才能把黑板显示出来<br>•完美解决<br><img src="/images/15476406774096.jpg" alt=""></p><h1 id="线程的进化"><a href="#线程的进化" class="headerlink" title="线程的进化"></a>线程的进化</h1><h2 id="单任务时代"><a href="#单任务时代" class="headerlink" title="单任务时代"></a>单任务时代</h2><p>•在最初的操作系统中，计算机一次只能执行一个任务，当这个任务结束后才能够执行下一个任务<br>•由于不同的任务需要处理逻辑的差异导致任务处理过程中需要的计算机系统资源注定不会是相同的<br>•这就意味着，执行一个任务的时候，总有一些资源是处于闲置状态的。那些伟大的计算机科学家怎么能够容忍宝贵的计算资源被浪费呢？<br>•于是单任务时代结束了<br>•计算机科学家们决定进化到多任务时代</p><h2 id="多任务时代"><a href="#多任务时代" class="headerlink" title="多任务时代"></a>多任务时代</h2><p>•计算机科学家们将计算机进化到了多任务时代，他们终于可以一边听着CD，一边写代码了，啊，不，是计算机终于可以同时执行多个任务了<br>•当然，这个多个任务还不是真正的同时执行多个任务了。这其实就是一次执行一个任务很小一段时间，然后又执行另外一个任务很小一段时间，多个任务轮流获得执行的时间来真正完成。于是当这个执行时间对于用户感知度不明显的时候，用户就感觉这些任务真的是在同时运行了。<br>•这个执行时间后来就叫做CPU执行时间片，现代操作系统的基本实现大都是基于这个原理的</p><h2 id="单线程时代"><a href="#单线程时代" class="headerlink" title="单线程时代"></a>单线程时代</h2><p>•在最初的多任务操作系统中，每一个任务里的子任务都会像超市收银队列那样一个个的排着队等待处理<br>•伟大（ai zhe teng）的科学家们想着既然能够让多任务可以使用CPU时间片执行原则，为什么不可以让任务也享受这一个原则呢？<br><img src="/images/15476407841987.jpg" alt=""></p><h2 id="多线程时代"><a href="#多线程时代" class="headerlink" title="多线程时代"></a>多线程时代</h2><p>•说干就干，计算机科学家们将计算机体系正式升级到了多任务多线程时代<br>•单个任务也可以根据需要告诉系统安排分配给自己的CPU时间片区执行自己多个的线程<br>•但是，请注意一点，系统是一个很懒很懒的家伙，它可能不会按照你想象的执行顺序去执行你的线程。就如同右边的收银员可能总是按照固定的顺序在三个队列之间来回跑动而不是总是出现在需要的那个队列<br>•当然，我们可以通过调整优先级告诉系统需要优先执行哪个队列。就比如旁边有一个收银队列的顾客准备好了之后就会呼叫收银员，因此收银员就可以把它作为下一个收银队列跑过去一样<br><img src="/images/15476408497417.jpg" alt=""></p><h2 id="多核多线程时代"><a href="#多核多线程时代" class="headerlink" title="多核多线程时代"></a>多核多线程时代</h2><p>•计算机科学家们通过拳打脚踢让硬件科学家们搞出了多核CPU<br>•终极进化——真·并行处理计算机体系出现啦，大家鼓掌<br>•可是，好像好多的问题啊<br><img src="/images/15476408953523.jpg" alt=""></p><h1 id="线程的调度"><a href="#线程的调度" class="headerlink" title="线程的调度"></a>线程的调度</h1><h2 id="线程调度问题"><a href="#线程调度问题" class="headerlink" title="线程调度问题"></a>线程调度问题</h2><p>•实际上，我们任务中的线程不太可能总是自己干自己的事，他们总可能有各种各样的联系<br>•比如两个线程之间有明确依赖关系<br>•又比如就像右边的多个收银员需要去更新同一个统计数一样，多个线程由于共享资源，他们总是可能需要同时访问相同的资源<br>•又由于现成干的事情不一样可能会导致及时后进入等待处理队列的线程需要被优先执行<br>•线程调度就是负责处理这些让人头疼的事情的。有了它，程序员们就可以不用像计算机科学家那样去考虑我的时间片怎么用了，只要你按照规则，系统帮你处理。哗，终于可以跟隔壁的小花聊个天了<br>•慢着，少年，too young too simple，规则你都知道么？<br><img src="/images/15476409354320.jpg" alt=""></p><h2 id="线程调度之优先级"><a href="#线程调度之优先级" class="headerlink" title="线程调度之优先级"></a>线程调度之优先级</h2><p>•做系统的那个科学家估计当初很懒，他就喜欢顺序执行处于等待队列的线程<br>•可是总有些事情是需要优先处理的呀，肿么破？比如右边的顾客队列3已经准备好了，顾客队列2还在准备中，应该优先处理顾客队列3吧<br>•这个好办，给他们分个等级，都排到一个队伍里，等级高在前面按时间先后排队，等级低的在后面，搞掂。额，我好困，再见<br><img src="/images/15476411847153.jpg" alt=""></p><h2 id="线程调度之同步"><a href="#线程调度之同步" class="headerlink" title="线程调度之同步"></a>线程调度之同步</h2><p>•刚才的事实告诉我们，系统是靠不住的，科学家也不是都靠得住的，还是要靠我们自力更生的<br>•于是他们又搞出来同步机制，能够让我们更好的自己安排我们的线程执行顺序</p><h2 id="线程调度之等待和事件"><a href="#线程调度之等待和事件" class="headerlink" title="线程调度之等待和事件"></a>线程调度之等待和事件</h2><p>•当我们的某个线程需要的条件不满足的时候，它就告诉系统说，等XX事件触发的时候你叫醒我，我先睡会<br>•系统记录下这个线程的要求，在XX事件没有触发之前都不会分配时间片给它<br>•XX事件触发了，系统优先唤醒这个线程并分配时间片给它让它继续处理<br>•线程可以因为等待事件的触发或锁资源的释放进入等待状态，处于等待状态的时候，系统不会分配对应的时间片资源给它，除非它能够等待到它想要的资源<br>•于是我们的线程总算可以愉快的休息和工作了，啊，生活真美好啊<br><img src="/images/15476412642385.jpg" alt=""></p><h2 id="线程同步之互斥和锁"><a href="#线程同步之互斥和锁" class="headerlink" title="线程同步之互斥和锁"></a>线程同步之互斥和锁</h2><p>•我们的线程总是有个性的，有些时候，它在处理某个东西的时候不喜欢别人插一腿，咋办？<br>•把它锁起来吧，少年，锁起来这段时间它就是你一个人的。别忘了用完了解开锁哦<br>•锁就是允许你执行排他性操作时用的东东，你加上锁后，请求相同锁的其他线程就处于等待状态，得等锁释放了才能继续依次执行。线程的随机串行化执行也是用锁的哦<br>•不过，少年，用锁的时候别太嗨，小心死锁哦<br><img src="/images/15476413182536.jpg" alt=""></p><h2 id="线程同步之信号量"><a href="#线程同步之信号量" class="headerlink" title="线程同步之信号量"></a>线程同步之信号量</h2><p>•锁只能控制一个一个的执行，我想告诉系统可以同时执行最多N个线程行不行？<br>•行，为了你这么有想法的少年，我们现在向你隆重介绍信号量这个玩意，它可以允许你同时执行多个线程去访问某个资源<br>•信号量每使用一个信号，就会减去一个可用数；每释放一个信号，就会加上一个可用数。当可用数为0的时候，请求信号的线程就会像请求锁的线程那样处于等待状态，直到有人释放一个信号，才会继续执行</p>]]></content>
+    
+    <summary type="html">
+    
+      线程的认知，痛并快乐着
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="线程" scheme="http://denman.site/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初冬游景山</title>
+    <link href="http://denman.site/2018/11/24/%E5%88%9D%E5%86%AC%E6%B8%B8%E6%99%AF%E5%B1%B1/"/>
+    <id>http://denman.site/2018/11/24/初冬游景山/</id>
+    <published>2018-11-24T08:36:27.000Z</published>
+    <updated>2019-01-16T15:48:20.648Z</updated>
+    
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js&#39;">https://zz.bdstatic.com/linksubmit/push.js&#39;</a>;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js&#39;">http://push.zhanzhang.baidu.com/push.js&#39;</a>;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p><p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p><p><script>hljs.initHighlightingOnLoad();</script></p><div align="center"><br><br>时维葭月初三日，<br>序属初冬微寒时。<br>借问景山何处寻，<br>京城二环故宫北。<br>景山赏景景清明，<br>眼底纵横爱晚晴。<br>五亭有幸峰巅立，<br>一树无辜做帝茔。<br>可叹历史本如此，<br>稳中不变有深渊。<br><br><img src="/images/2018jingshan1.jpg" alt=""><img src="/images/2018jingshan1.jpg" alt=""><br><img src="/images/2018jingshan3.jpg" alt=""><img src="/images/2018jingshan4.jpg" alt=""><br><br></div>]]></content>
+    
+    <summary type="html">
+    
+      周末百无聊赖之际，偶游景山
+    
+    </summary>
+    
+      <category term="life" scheme="http://denman.site/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://denman.site/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>情致山水·草原天路</title>
+    <link href="http://denman.site/2018/08/11/%E5%BC%A0%E5%8C%97%E8%8D%89%E5%8E%9F/"/>
+    <id>http://denman.site/2018/08/11/张北草原/</id>
+    <published>2018-08-11T12:39:01.000Z</published>
+    <updated>2019-01-16T15:48:20.649Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  <script>hljs.initHighlightingOnLoad();</script><div align="center"><br><br><img src="/images/6EC38032-C743-4E01-90AE-0B55C5A65CA4.jpg" alt=""><img src="/images/A7C6948A-2272-4C92-BFBE-E5C0E538FE9B.jpg" alt=""><br><br>百里风光百里画,一折山水一折诗<br>小草开始泛绿,野花含羞点额<br>纵是野客浪子,也不敢践踏了这高贵与清纯<br>于是<br>只能静思高阁<br>膜拜于这份芳华的烂漫,<br>沉浸一份娴静的诗意<br><br>是言<br>绵延张北尽是原，茫无涯际草接天。<br>天宽地阔有时尽，此青绵绵无绝期。<br><br><br><img src="/images/C9B5FE9F-85D9-4016-953D-82AC20A6DD69.jpg" alt=""><img src="/images/99F93590-8B78-4813-9EDA-763E9E568793.jpg" alt=""><br><img src="/images/6934ED36-3785-412F-A4FD-A789B691CED7.jpg" alt=""><img src="/images/60962775-71C0-4D83-97EE-0CA51E2077CD.jpg" alt=""><br><br></div>]]></content>
+    
+    <summary type="html">
+    
+      张北草原团建
+    
+    </summary>
+    
+      <category term="life" scheme="http://denman.site/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://denman.site/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018初夏</title>
+    <link href="http://denman.site/2018/05/29/2018%E5%88%9D%E5%A4%8F/"/>
+    <id>http://denman.site/2018/05/29/2018初夏/</id>
+    <published>2018-05-29T00:44:05.000Z</published>
+    <updated>2019-01-16T15:48:20.648Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  <script>hljs.initHighlightingOnLoad();</script><div align="center"><br><br>树阴满地日初午，<br>闻觉黄莺时时鸣。<br>春芳歇去何须恨，<br>夏木阴阴正可人。<br><img src="/images/2018chuxia.jpg" alt="2018chuxia"><br><br></div>]]></content>
+    
+    <summary type="html">
+    
+      又是一年初夏日，几多阳光，几多时。
+    
+    </summary>
+    
+      <category term="life" scheme="http://denman.site/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://denman.site/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacOS_Service_Deamon开发</title>
+    <link href="http://denman.site/2018/05/24/MacOS-Service%E5%BC%80%E5%8F%91/"/>
+    <id>http://denman.site/2018/05/24/MacOS-Service开发/</id>
+    <published>2018-05-24T03:41:46.000Z</published>
+    <updated>2019-01-15T15:31:22.157Z</updated>
+    
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js&#39;">https://zz.bdstatic.com/linksubmit/push.js&#39;</a>;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js&#39;">http://push.zhanzhang.baidu.com/push.js&#39;</a>;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p><h1 id="Service简介"><a href="#Service简介" class="headerlink" title="Service简介"></a>Service简介</h1><h1 id="为什么要用Service"><a href="#为什么要用Service" class="headerlink" title="为什么要用Service"></a>为什么要用Service</h1><h1 id="Apple-Service分类"><a href="#Apple-Service分类" class="headerlink" title="Apple Service分类"></a>Apple Service分类</h1>]]></content>
+    
+    <summary type="html">
+    
+      高权限操作放到Serview中，UI程序通过XPCConnect 通讯
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="Mac service" scheme="http://denman.site/tags/Mac-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于block的那些事</title>
+    <link href="http://denman.site/2018/05/22/%E5%85%B3%E4%BA%8Eblock%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>http://denman.site/2018/05/22/关于block的那些事/</id>
+    <published>2018-05-22T03:32:19.000Z</published>
+    <updated>2019-01-15T15:31:22.162Z</updated>
+    
+    <content type="html"><![CDATA[<p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js&#39;">https://zz.bdstatic.com/linksubmit/push.js&#39;</a>;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js&#39;">http://push.zhanzhang.baidu.com/push.js&#39;</a>;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p><h1 id="block是Objective-c中对闭包的实现"><a href="#block是Objective-c中对闭包的实现" class="headerlink" title="block是Objective-c中对闭包的实现"></a>block是Objective-c中对闭包的实现</h1><h2 id="1-什么是闭包"><a href="#1-什么是闭包" class="headerlink" title="1.什么是闭包"></a>1.什么是闭包</h2><p>计算机语言中，闭包（closure）是有函数和与其相关的引用环境组合而成的实体；<br>闭包就是能够读取其他函数内部变量的函数。<br>block就是Objective-c对闭包的实现，block是iOS4.0+和Mac OSX 10.6+引进的对C语言的扩展。</p><h2 id="2-闭包的理解"><a href="#2-闭包的理解" class="headerlink" title="2. 闭包的理解"></a>2. 闭包的理解</h2><p>将函数、函数指针、闭包三者对比起来理解，能加深对闭包的理解。<br>函数：具有特定功能的代码块。<br>函数指针：指向函数的指针。<br>闭包：除具备函数和函数指针的所有功能外，还包括声明它的上下文（如作用域和自由变量等）。</p><h2 id="3-block和函数指针的关系"><a href="#3-block和函数指针的关系" class="headerlink" title="3.block和函数指针的关系"></a>3.block和函数指针的关系</h2><p>block的使用很像函数指针，不过与函数指针最大的不同是Block可以访问函数以外的外部变量的值，换句话说，Block不仅实现函数的功能，还能携带函数的执行环境。<br>函数指针：void (*fun)(int) //指向参数为int类型返回值为void类型的函数<br>Block：void (\^fun)(int)</p><h1 id="block的分类及区分方法"><a href="#block的分类及区分方法" class="headerlink" title="block的分类及区分方法"></a>block的分类及区分方法</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>在Objective-C语言中，一共有3种类型的block<br>1._NSConcreteGlobalBlock 保存全局的block，不会访问任何外部变量。相当于全部变量，系统会自动释放。<br>2._NSConcreteStackBlock 保存在栈中的block，当函数返回时会被销毁。相等于局部变量，系统会自动释放.<br>3._NSConcreteMallocBlock 保存在堆中的block，当引用计数为0时会被销毁。需要手动释放</p><h2 id="区分方法"><a href="#区分方法" class="headerlink" title="区分方法"></a>区分方法</h2><p>如果block实现中没有访问任何“外部”变量（包括局部和全局），该block为GlobalBlock；<br>如果block 实现中访问了任何“外部”（包括局部和全局），该block 为StackBlock；<br>对StackBlock 进行拷贝（copy/Block_copy），该block为MallocBlock；</p><h1 id="block的本质"><a href="#block的本质" class="headerlink" title="block的本质"></a>block的本质</h1><p>block实际上是指向结构体的指针，编译器会将block的内部代码生成对应的函数。<br><a href="https://www.cnblogs.com/yoon/p/4953618.html" target="_blank" rel="noopener">block的实现原理</a></p><h1 id="block的一些疑问"><a href="#block的一些疑问" class="headerlink" title="block的一些疑问"></a>block的一些疑问</h1><h2 id="1-block为什么要用copy"><a href="#1-block为什么要用copy" class="headerlink" title="1.block为什么要用copy"></a>1.block为什么要用copy</h2><p>block 在创建的时候默认分配的内存实在栈上，而不是堆上,这样的话其本身的作用域属于创建时候的作用域，一旦在创建的作用域之外调用就会导致程序崩溃，所以使用了copy将其拷贝到堆内存上。</p><h2 id="2-栈上的block为什么不用retain"><a href="#2-栈上的block为什么不用retain" class="headerlink" title="2.栈上的block为什么不用retain"></a>2.栈上的block为什么不用retain</h2><p>retain 只是增加了一次引用计数，Block的内存还是在栈上，并没有存在堆上，存在栈上的block 可能随时被系统回收。</p><h2 id="3-为什么进入Block-的对象引用计数要加1"><a href="#3-为什么进入Block-的对象引用计数要加1" class="headerlink" title="3.为什么进入Block 的对象引用计数要加1"></a>3.为什么进入Block 的对象引用计数要加1</h2><p>block 一般执行的是回调，因此block并不知道其中的对象obj创建后会在什么时候释放，为了不在block使用obj之前，对象已经释放，block就retain了obj一次。</p><h1 id="block中的继承关系"><a href="#block中的继承关系" class="headerlink" title="block中的继承关系"></a>block中的继承关系</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">void</span>(^block1)(<span class="keyword">void</span>) = ^(<span class="keyword">void</span>)&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"这是全局block"</span>);</span><br><span class="line">&#125;;</span><br><span class="line">block1();</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"全局block parentClassHierarchy = %@"</span>,[[block1 <span class="keyword">class</span>] parentClassHierarchy]);</span><br><span class="line">block1 = [block1 <span class="keyword">copy</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"全局block copy parentClassHierarchy = %@"</span>,[[block1 <span class="keyword">class</span>] parentClassHierarchy]);</span><br><span class="line"><span class="keyword">void</span>(^block2)(<span class="keyword">void</span>) = ^(<span class="keyword">void</span>)&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"a = %d 这是栈block"</span>,a);</span><br><span class="line">&#125;;</span><br><span class="line">block2();</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"栈 block parentClassHierarchy = %@"</span>,[[block2 <span class="keyword">class</span>] parentClassHierarchy]);</span><br><span class="line">block2 =  [block2 <span class="keyword">copy</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"堆 block parentClassHierarchy = %@"</span>,[[block2 <span class="keyword">class</span>] parentClassHierarchy]);</span><br></pre></td></tr></table></figure><h2 id="MRC打印结果"><a href="#MRC打印结果" class="headerlink" title="MRC打印结果"></a>MRC打印结果</h2><p><img src="/images/MRCBlock_ParentClassHierarchy.png" alt="MRC打印结果"></p><h2 id="ARC打印结果"><a href="#ARC打印结果" class="headerlink" title="ARC打印结果"></a>ARC打印结果</h2><p><img src="/images/ARCBlock_ParentClassHierarchy.png" alt="ARC打印结果"><br>通过上面的对比，我们可以看出ARC的函数体内栈block自动copy到堆上</p><h1 id="block-的循环引用"><a href="#block-的循环引用" class="headerlink" title="block 的循环引用"></a>block 的循环引用</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    <span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line">    <span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>)<span class="keyword">void</span>(^myBlock)(<span class="keyword">void</span>);</span><br><span class="line">    <span class="keyword">@end</span></span><br><span class="line">    <span class="comment">// 循环引用 self -&gt; block -&gt; self;</span></span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">typeof</span>(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</span><br><span class="line">    <span class="keyword">self</span>.myBlock = ^(<span class="keyword">void</span>)&#123;</span><br><span class="line">        __<span class="keyword">strong</span> <span class="keyword">typeof</span>(weakSelf) strongSelf  = weakSelf;</span><br><span class="line">        <span class="keyword">if</span> (strongSelf) &#123;</span><br><span class="line">            <span class="built_in">NSLog</span>(<span class="string">@"strongSelf = %@"</span>,strongSelf);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// animations 是栈block</span></span><br><span class="line">    [<span class="built_in">UIView</span> animateWithDuration:<span class="number">0.3</span> animations:^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"self = %@"</span>,<span class="keyword">self</span>);</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 实例方法-</span></span><br><span class="line">    [<span class="keyword">self</span> someThingsCompletion:^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"self = %@"</span>,<span class="keyword">self</span>);</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 单利 </span></span><br><span class="line">    [[Single shareInstance] somethingCompletion:^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"self = %@"</span>,<span class="keyword">self</span>);</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)someThingsCompletion:(<span class="keyword">void</span>(^)(<span class="keyword">void</span>))completion</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// block 判空 回调 completion 栈block</span></span><br><span class="line">    !completion ?: completion(); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/images/breakBlock.png" alt="breakBlock.png"><br><img src="/images/functionBlock.png" alt="breakBlock.png"></p><p>从上面我们可以看出block是函数参数时，就是栈block。</p><h1 id="block使用技巧"><a href="#block使用技巧" class="headerlink" title="block使用技巧"></a>block使用技巧</h1><h2 id="block为空判断"><a href="#block为空判断" class="headerlink" title="block为空判断"></a>block为空判断</h2><p>大家知道block若是为空，直接调用就会造成crash。<br>一般我们会用if语句判断一下,再调用.</p><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!block)&#123;</span><br><span class="line">    block();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这样还得起if语句，其实我们可以用条件表达式直接判断，调用<br><code>!block ?: block();</code> 就可以</p><h2 id="block多参数"><a href="#block多参数" class="headerlink" title="block多参数"></a>block多参数</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">-  (<span class="keyword">void</span>)blockTest</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">void</span>(^block1)(<span class="keyword">void</span>);</span><br><span class="line">    <span class="keyword">void</span>(^block2)(<span class="keyword">int</span> a);</span><br><span class="line">    <span class="keyword">void</span>(^block3)(<span class="built_in">NSNumber</span> *a, <span class="built_in">NSString</span> *b);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//如果block的参数列表为空的话，相当于可变参数（不是void）</span></span><br><span class="line">    <span class="keyword">void</span>(^block)(); <span class="comment">// 返回值为void，参数可变的block</span></span><br><span class="line">    block = block1; <span class="comment">// 正常</span></span><br><span class="line">    block = block2; <span class="comment">// 正常</span></span><br><span class="line">    block = block3; <span class="comment">// 正常</span></span><br><span class="line">    block(@<span class="number">1</span>, <span class="string">@"string"</span>);  <span class="comment">// 对应上面的block3</span></span><br><span class="line">    block(@<span class="number">1</span>); <span class="comment">// block3的第一个参数为@1，第二个为nil</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样，block的主调和回调之间可以通过约定来决定block回传回来的参数是什么，有几个。如一个对网络层的调用：</span></span><br><span class="line">- (<span class="keyword">void</span>)requestDataWithApi:(<span class="built_in">NSInteger</span>)api block:(<span class="keyword">void</span>(^)())block <span class="comment">//</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (api == <span class="number">0</span>) &#123;</span><br><span class="line">        block(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (api == <span class="number">1</span>) &#123;</span><br><span class="line">        block(<span class="string">@"1"</span>, @<span class="number">2</span>, @[<span class="string">@"3"</span>, <span class="string">@"4"</span>, <span class="string">@"5"</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      block的分类，循环引用，使用技巧
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么说Object-c是一门动态语言</title>
+    <link href="http://denman.site/2017/07/13/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4Object-c%E6%98%AF%E4%B8%80%E9%97%A8%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
+    <id>http://denman.site/2017/07/13/为什么说Object-c是一门动态语言/</id>
+    <published>2017-07-13T02:37:41.000Z</published>
+    <updated>2019-01-15T15:31:22.161Z</updated>
+    
+    <content type="html"><![CDATA[<p>① 什么是动态语言？<br>        动态语言，是指程序在运行时可以改变其结构：新的函数可以被引进，已有的函数可以被删除等在结构上的变化。比如众所周知的ECMAScript(JavaScript)便是一个动态语言。除此之外如Ruby、Python等也都属于动态语言，而C、C++等语言则不属于动态语言。<br>有三个名词容易混淆：<br>        Dynamic Programming Language (动态语言或动态编程语言)<br>        Dynamically Typed Language (动态类型语言)<br>        Statically Typed Language (静态类型语言)<br>所谓的动态类型语言，意思就是类型的检查是在运行时做的。</p><p>② 静态类型<br>        而静态类型语言的类型判断是在运行前判断（如编译阶段），比如C#、Java就是静态类型语言，静态类型语言为了达到多态会采取一些类型鉴别手段，如继承、接口，而动态类型语言却不需要，所以一般动态语言都会采用dynamic typing，常出现于脚本语言中.需要明确说明一点，那就是，是不是动态类型语言与这门语言是不是类型安全的完全不相干的，不要将它们联系在一起！<br>优缺点：<br>        静态类型语言的主要优点在于其结构非常规范，便于调试，方便类型安全；缺点是为此需要写更多的类型相关代码，导致不便于阅读、不清晰明了。动态类型语言的优点在于方便阅读，不需要写非常多的类型相关的代码；缺点自然就是不方便调试，命名不规范时会造成读不懂，不利于理解等。顺便说一下，现在有这样一种趋势，那就是合并动态类型与静态类型在一种语言中，这样可以在必要的时候取长补短，Boo就是一个很好的试验性例子。</p><p>③ Objective-C的动态运行性<br>        objective-c语言是C语言的一个子类，所以Objective-C是一个静态语言，但是Objective-C的三大特性之一的多态性让其拥有了动态性。<br>oc的动态性让程序可以在运行时判断其该有的行为，而不是像c等静态语言一样在编译构建时就确定下来。它的动态性主要体现在一下三个方面：</p><p>动态类型<br>        如id类型。实际上静态类型因为其固定性和可预知性而使用得更加广泛。静态类型是强类型，而动态类型属于弱类型。运行时决定接收者。<br>    这里补充讲一下强、弱类型：语言有无类型、强类型和弱类型三种。无类型的不做任何检查，甚至不区分指令和数据；弱类型的检查很弱，仅能区分指令和数据；强类型的严格在编译期进行检查。强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作</p><p>动态绑定<br>        让代码在运行时判断需要调用什么方法，而不是在编译时。与其他面向对象语言一样，方法调用和代码并没有在编译时连接在一起，而是在消息发送时才进行连接。运行时决定调用哪个方法。</p><p>动态载入<br>        让程序在运行时添加代码模块以及其他资源。用户可以根据需要加载一些可执行代码和资源，而不是在启动时就加载所有组件。可执行代码中可以含有和程序运行时整合的新类。<br>对象是运行时类的一个实例。在类里声明了的实例变量和方法，它的每个实例都在内存中拥有同样的实例变量，以及指向那些方法的指针。在oc中对象永远是通过指针来引用的。</p>]]></content>
+    
+    <summary type="html">
+    
+      Objective-C是一门动态语言，与编译语言相比，优势在哪儿
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="Object-c" scheme="http://denman.site/tags/Object-c/"/>
+    
+      <category term="动态语言" scheme="http://denman.site/tags/%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那山，那水，那人</title>
+    <link href="http://denman.site/2016/06/28/%E9%82%A3%E5%B1%B1%EF%BC%8C%E9%82%A3%E6%B0%B4%EF%BC%8C%E9%82%A3%E4%BA%BA/"/>
+    <id>http://denman.site/2016/06/28/那山，那水，那人/</id>
+    <published>2016-06-28T01:50:27.000Z</published>
+    <updated>2019-01-15T15:31:22.165Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script>]]></content>
+    
+    <summary type="html">
+    
+      山还是那山，水还是那水，人还是那人
+    
+    </summary>
+    
+      <category term="life" scheme="http://denman.site/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://denman.site/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于产品的认知(仅抒己见)</title>
+    <link href="http://denman.site/2016/06/27/%E5%85%B3%E4%BA%8E%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%A4%E7%9F%A5(%E4%BB%85%E6%8A%92%E5%B7%B1%E8%A7%81)/"/>
+    <id>http://denman.site/2016/06/27/关于产品的认知(仅抒己见)/</id>
+    <published>2016-06-27T05:54:37.000Z</published>
+    <updated>2019-01-15T15:31:22.162Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><h2 id="贴近用户，切入用户最直接的需求"><a href="#贴近用户，切入用户最直接的需求" class="headerlink" title="贴近用户，切入用户最直接的需求"></a>贴近用户，切入用户最直接的需求</h2><h2 id="简单直接-，减少用户学习成本"><a href="#简单直接-，减少用户学习成本" class="headerlink" title="简单直接 ，减少用户学习成本"></a>简单直接 ，减少用户学习成本</h2><h2 id="局部细化，细节处打动用户"><a href="#局部细化，细节处打动用户" class="headerlink" title="局部细化，细节处打动用户"></a>局部细化，细节处打动用户</h2><h2 id="统一风格，统一布局"><a href="#统一风格，统一布局" class="headerlink" title="统一风格，统一布局"></a>统一风格，统一布局</h2>]]></content>
+    
+    <summary type="html">
+    
+      昨天和清华毕业的大拿，聊了一会天，学的好多东西，特别是对产品，更是有了更深的了解，关于如何设计出一款让用户的喜爱的产品，仅抒己见，不爱请绕道。
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="产品" scheme="http://denman.site/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于category不能添加实例变量</title>
+    <link href="http://denman.site/2016/06/23/%E5%85%B3%E4%BA%8Ecategory%E4%B8%8D%E8%83%BD%E6%B7%BB%E5%8A%A0%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F/"/>
+    <id>http://denman.site/2016/06/23/关于category不能添加实例变量/</id>
+    <published>2016-06-22T16:25:04.000Z</published>
+    <updated>2019-01-15T15:31:22.162Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p><p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p><p><script>hljs.initHighlightingOnLoad();</script></p><h1 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>在编写面向对象的程序时，我们经常想为现有的类添加一些新的行为。例如，你设计了一种新的Car，因此需要创建Car类的子类并添加一些有趣的功能。为已经存在的类添加行为时，通常我们采用添加创建子类的方法。<br><br>不过有时子类并不方便。比方说，你想为<code>NSString</code>类添加一个新的行为，但是<code>NSString</code>实际是一个类簇的表面形式，因而为这样的类创建子类会非常困难。<br><br>利用Object-c的动态运行分配机制，我们可以为现有的类添加方法。这些方法就是Object-c中的<code>Category</code></p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>struct objc_category {    //category名称    char *category_name                                          //添加category的类名称    char *class_name            //实例方法列表                                    struct objc_method_list *instance_methods                    //类方法列表    struct objc_method_list *class_methods                       //协议列表    struct objc_protocol_list *protocols                     }                                                            </code></pre><h2 id="Category的优势"><a href="#Category的优势" class="headerlink" title="Category的优势"></a>Category的优势</h2><ol><li>利用Category分散实现代码</li><li>通过Category创建前向应用</li></ol><h1 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>Extension就是匿名Category，但是又有着很大的不同。</p><h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1><ol><li>Category可以写在单独一个文件内，也可以写在与之关联的类里面</li><li>Extension必须写在实现文件里  </li><li>Category声明的方法可以不实现.</li><li>Extension里声明的方法必须实现</li><li>Category不能添加实例变量</li><li>Extension可以添加实例变量</li><li>Category是运行时才会执行</li><li>Extension是编译时就会和关联的类一起编译</li></ol><h2 id="为什么Category不能添加实例变量而Extension可以"><a href="#为什么Category不能添加实例变量而Extension可以" class="headerlink" title="为什么Category不能添加实例变量而Extension可以"></a>为什么Category不能添加实例变量而Extension可以</h2><p>其实Category有两个局限性。第一个就是无法向类中添加实例变量，因为Category没有空间容纳实例变量。<br>第二个就是名称冲突，也就是Category中的方法与现有的方法重名。当发生冲突时，类别具有更高的优先级，我们的Category将完全取代初始化方法，导致初始化方法不再可用。<br><br>为什么Category没有空间容纳实例变量呢？<br><br>从上面Category说明中我们了解到Category运行时工作的，此时一个类的对象的内存已经布局好了，如果此时向一个类的对象添加实例变量就会扰乱内存布局。因此我们从Category的定义中看到没有容纳实例变量的变量，只有Category名称，类名称，实例方法列表，类方法列表，协议列表<br><br>而Extension为什么就可以呢？<br><br>通过上面的对比我们知道Extension是编译时就会和关联的类一起编译，因此可以。</p><h2 id="通过runtime向类关联对象"><a href="#通过runtime向类关联对象" class="headerlink" title="通过runtime向类关联对象"></a>通过runtime向类关联对象</h2><p>虽然Category不能添加实例变量，但是我们可以利用runtime中的关联对象（Associated Object）变相在运行时向一个对象加变量  </p>]]></content>
+    
+    <summary type="html">
+    
+      category 不能添加实例变量的原因
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+      <category term="category" scheme="http://denman.site/tags/category/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>delegate和block使用的场景</title>
+    <link href="http://denman.site/2016/06/22/delegate%E5%92%8Cblock%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E6%99%AF/"/>
+    <id>http://denman.site/2016/06/22/delegate和block使用的场景/</id>
+    <published>2016-06-22T11:24:51.000Z</published>
+    <updated>2019-01-15T15:31:22.159Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  <script>hljs.initHighlightingOnLoad();</script><p>比较这个两者的使用场景最好的方法就是看Apple-IOSSDK的使用，Apple的文档就是一本用来指导我们如何使用设计模式的指导书。<br>我们需要去研究一下Apple分别是在什么情况下使用delegate和block，如果我们发现了Apple做这种选择的套路，我们就可以构建出一些规则，可以帮助在我们在自己的代码中做相同选择。</p><h2 id="delegate举例"><a href="#delegate举例" class="headerlink" title="delegate举例"></a>delegate举例</h2><p>我们以最常用的tableView为例,看iOSSDK如何设计和使用delegate的   </p><h3 id="UITableViewDelegate"><a href="#UITableViewDelegate" class="headerlink" title="UITableViewDelegate"></a>UITableViewDelegate</h3><pre><code>@protocol UITableViewDelegate&lt;NSObject, UIScrollViewDelegate&gt;@optional - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0); @end  </code></pre><h3 id="UITableViewDataSource"><a href="#UITableViewDataSource" class="headerlink" title="UITableViewDataSource"></a>UITableViewDataSource</h3><pre><code>@protocol UITableViewDataSource&lt;NSObject&gt;@required- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;// Row display. Implementers should *always* try to reuse cells by setting each cell&apos;s reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;@optional- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;              // Default is 1 if not implemented- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different- (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;// Editing// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;// Moving/reordering// Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;@end</code></pre><h2 id="delegate分析"><a href="#delegate分析" class="headerlink" title="delegate分析"></a>delegate分析</h2><ul><li>大多数delegate  都会好几个数据源<br>从上面的tableViewDataSource 我们可以看到，一个tableView如何展示，需要询问代理，有几个section，每个section里面有几行，行高是多少。当然达到这样的需求，也可以为对应每一个事件注册相应的block，显然这种方式是不合理的</li><li>大多数delegate 都有多个回调，用来捕获对象的行为过程<br>特别是系统提供的一些控件来，都有很多delegate回调方法，用来捕获对象的一些行为动作过程，像<code>UITextField</code>,<code>UISearchBar</code>,这些控件的一些行为，通过delegate方法告诉delegate控件的一些行为状态。</li></ul><h1 id="Block举例"><a href="#Block举例" class="headerlink" title="Block举例"></a>Block举例</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> animateWithDuration:&lt;<span class="meta">#(NSTimeInterval)#&gt; animations:<span class="meta-string">&lt;#^(void)animations#&gt;</span>   </span></span><br><span class="line">completion:&lt;<span class="meta">#^(BOOL finished)completion#&gt;]           </span></span><br><span class="line"></span><br><span class="line">dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(&lt;<span class="meta">#delayInSeconds#&gt; * NSEC_PER_SEC)),  </span></span><br><span class="line">  dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       &lt;<span class="meta">#code to be executed after a specified delay#&gt;</span></span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure><h1 id="block分析"><a href="#block分析" class="headerlink" title="block分析"></a>block分析</h1><ul><li>大多数block就是执行一次的任务</li><li>大多数block就是用来做callBack<h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h1>从上面我们可以看到delegate，是有多个方法调用，是分步骤的，因此我们可以总结到，delegate是面向过程的。<br>block是执行一次任务，是面向结果的。<br>因此，在我们写代码时，如果是面向过程的，我们就使用delegate，是要获取结果的就使用block。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      开发过程中该选择 blocks or delegates,当我们需要实现回调的时候，使用哪一种方式比较合适呢？”
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NavigationBar自定义BackItem</title>
+    <link href="http://denman.site/2016/04/20/NavigationBar%E8%87%AA%E5%AE%9A%E4%B9%89BackItem/"/>
+    <id>http://denman.site/2016/04/20/NavigationBar自定义BackItem/</id>
+    <published>2016-04-20T13:20:43.000Z</published>
+    <updated>2019-01-15T15:31:22.158Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2015过年回家</title>
+    <link href="http://denman.site/2016/02/06/2015%E8%BF%87%E5%B9%B4%E5%9B%9E%E5%AE%B6/"/>
+    <id>http://denman.site/2016/02/06/2015过年回家/</id>
+    <published>2016-02-06T10:13:40.000Z</published>
+    <updated>2019-01-15T15:31:22.157Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><div class="article"><br><ul><br><li style="list-style:none;font-size:25px;height:30px">二月出来二月归，</li><br><li style="list-style:none;font-size:25px;height:30px">一事无成百不堪。</li><br><li style="list-style:none;font-size:25px;height:30px">不见天山九千雪，</li><br><li style="list-style:none;font-size:25px;height:30px">只见岁月染白头。</li><br></ul><br></div>]]></content>
+    
+    <summary type="html">
+    
+      又是一年，感慨万千
+    
+    </summary>
+    
+      <category term="life" scheme="http://denman.site/categories/life/"/>
+    
+    
+      <category term="诗词" scheme="http://denman.site/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用runtime容错</title>
+    <link href="http://denman.site/2015/12/02/%E5%88%A9%E7%94%A8runtime%E5%AE%B9%E9%94%99/"/>
+    <id>http://denman.site/2015/12/02/利用runtime容错/</id>
+    <published>2015-12-02T10:32:41.000Z</published>
+    <updated>2019-01-15T15:31:22.163Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="runtime" scheme="http://denman.site/tags/runtime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS程序员开发进阶</title>
+    <link href="http://denman.site/2015/10/21/iOS%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BC%80%E5%8F%91%E8%BF%9B%E9%98%B6/"/>
+    <id>http://denman.site/2015/10/21/iOS程序员开发进阶/</id>
+    <published>2015-10-21T01:37:42.000Z</published>
+    <updated>2019-01-15T15:31:22.160Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><h2 id="iOS9开始的新特性"><a href="#iOS9开始的新特性" class="headerlink" title="iOS9开始的新特性"></a>iOS9开始的新特性</h2><ul><li>nonnull__nonnull</li><li>nullable__nonnullable</li><li>null_resettable</li><li>NS_ASSUME_NONNULL_BEGIN \ NS_ASSUME_NONNULL_END</li><li>泛型__contravariant__covariant</li><li>__kindof</li><li>UIWindow</li><li>Storyboard Reference</li><li>UIStackView</li><li>Search API</li><li>3D touch</li></ul><h2 id="新技术的了解渠道"><a href="#新技术的了解渠道" class="headerlink" title="新技术的了解渠道"></a>新技术的了解渠道</h2><ul><li>WWDC开发者大会视频</li><li>官方文档<ul><li>General -&gt; Guides -&gt; iOS x.x API Diffs</li></ul></li></ul><h2 id="程序员的学习"><a href="#程序员的学习" class="headerlink" title="程序员的学习"></a>程序员的学习</h2><h3 id="iOS技术的学习"><a href="#iOS技术的学习" class="headerlink" title="iOS技术的学习"></a>iOS技术的学习</h3><ul><li>官当文档<ul><li>Sample Code(示例代码)</li><li>Guides(指南)</li><li>Reference(API参考)</li></ul></li><li>博客<ul><li><a href="http://www.cocoachina.com/ios/list_69_1.html" target="_blank" rel="noopener">CocoaChina</a></li><li><a href="http://ios.jobbole.com/" target="_blank" rel="noopener">伯乐在线</a></li><li><a href="http://objccn.io/" target="_blank" rel="noopener">objc中国</a></li><li><a href="https://github.com/tangqiaoboy/iOSBlogCN" target="_blank" rel="noopener">优秀博客汇总</a></li></ul></li><li><p>微博</p><ul><li><a href="http://weibo.com/kaifazhetoutiao" target="_blank" rel="noopener">开发者头条</a> </li><li><a href="http://weibo.com/cocoachina" target="_blank" rel="noopener">CocoaChina</a> </li><li><a href="http://weibo.com/luohanchenyilong" target="_blank" rel="noopener">iOS程序犭袁</a> </li><li><a href="http://weibo.com/tangqiaoboy" target="_blank" rel="noopener">唐巧_boy</a> </li><li><a href="http://weibo.com/u/1364395395" target="_blank" rel="noopener">我就叫Sunny怎么了</a> </li><li><a href="http://blog.ibireme.com" target="_blank" rel="noopener">ibireme</a></li><li><a href="http://weibo.com/710312327" target="_blank" rel="noopener">KITTEN-YANG</a> </li><li><a href="http://weibo.com/exceptions" target="_blank" rel="noopener">M了个J</a></li></ul></li><li><p>微信公众号</p><ul><li>iOS开发(iosDevTips)</li><li>iOS开发(iOSDevTip)</li><li>iOS技术分享(iosinfo)</li><li>猿圈(CodePush) </li></ul></li><li>其他<ul><li>多写技术博客(简书\个人博客站点)</li><li>参加一些技术分享活动(北京\上海\广州\杭州)</li><li>有自己的技术圈子</li></ul></li></ul><h3 id="非iOS技术的学习"><a href="#非iOS技术的学习" class="headerlink" title="非iOS技术的学习"></a>非iOS技术的学习</h3><ul><li><code>数据结构与算法(比如加密算法等等)</code></li><li><code>HTML5</code></li><li><code>JavaScript</code></li><li>Java(Android\JavaEE)</li><li>C++</li></ul><h3 id="非技术的学习"><a href="#非技术的学习" class="headerlink" title="非技术的学习"></a>非技术的学习</h3><ul><li>管理\心理学\幸福\创业\历史</li><li>网易公开课<ul><li>各种国际名牌大学的课堂视频</li><li>名人讲座(TED)</li></ul></li><li>名人讲座\名人访谈</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      iOS9新的特性，及iOS程序员开发进阶
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+      <category term="iOS9" scheme="http://denman.site/tags/iOS9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Masonry框架分析-链式编程思想</title>
+    <link href="http://denman.site/2015/09/18/Masonry%E6%A1%86%E6%9E%B6%E5%88%86%E6%9E%90-%E9%93%BE%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/"/>
+    <id>http://denman.site/2015/09/18/Masonry框架分析-链式编程思想/</id>
+    <published>2015-09-18T10:47:07.000Z</published>
+    <updated>2019-01-15T15:31:22.157Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iOS判断是否第一次使用且更新后还是第一次</title>
+    <link href="http://denman.site/2015/08/10/iOS%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E4%B8%94%E6%9B%B4%E6%96%B0%E5%90%8E%E8%BF%98%E6%98%AF%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+    <id>http://denman.site/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/</id>
+    <published>2015-08-10T11:24:55.000Z</published>
+    <updated>2019-01-15T15:31:22.160Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><p>对于用户来讲，在第一次打开软件的时候，最好有个引导页，告诉用户软件怎么使用，或者本次软件的主要的更新在哪儿，提高用户的软件体验。</p><p>下面有有两种方法</p><p>1.本地存储一个bool变量判断是不是第一次启动,若是第一次启动就打开引导页。<br>2.本地存储版本号，判断当前版本号是否大于本地保存的版本号，如果大于则启动引导页。<br>那么这两种那个好呢，显然第二种较好，因为第一种方法，若是版本升级的时候，我们往往还要引导用户进入引导页，但本地已经保存了不是第一次启动，因此当版本升级的时候就不会再次进入引导页。第二种方法，升级的时候，本次保存的还是上个版本的版本号，因此升级后当前版本号肯定大于上个版本号，因此则会进入引导页。</p><p>不废话了，上代码！<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前版本</span></span><br><span class="line"><span class="built_in">NSString</span> *currentVersion = [[[<span class="built_in">NSBundlemainBundle</span>]infoDictionary]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];</span><br><span class="line"><span class="comment">//本地存储的版本</span></span><br><span class="line"><span class="built_in">NSString</span> *saveVersion  = [[<span class="built_in">NSUserDefaultsstandardUserDefaults</span>]objectForKey:<span class="string">@"CFBundleShortVersionString"</span>];   </span><br><span class="line"><span class="keyword">if</span> ([currentVersionfloatValue] &gt; [saveVersion floatValue]) </span><br><span class="line">&#123;</span><br><span class="line">truetruetrue</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]setObject:currentVersion forKey:<span class="string">@"CFBundleShortVersionString"</span>];</span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]synchronize];</span><br><span class="line"><span class="comment">//<span class="doctag">TODO:</span>   </span></span><br><span class="line">truetrue&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      IOS开发判断是否第一次使用软件且下次app自动更新后再次打开还是第一次使用
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TouchID简易开发教程</title>
+    <link href="http://denman.site/2015/07/27/Touch%20ID%E7%AE%80%E6%98%93%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/"/>
+    <id>http://denman.site/2015/07/27/Touch ID简易开发教程/</id>
+    <published>2015-07-27T01:46:51.000Z</published>
+    <updated>2019-01-15T15:31:22.158Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Touch-ID-简易开发教程"><a href="#Touch-ID-简易开发教程" class="headerlink" title="Touch ID 简易开发教程"></a>Touch ID 简易开发教程</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h4 id="支持系统和机型"><a href="#支持系统和机型" class="headerlink" title="支持系统和机型"></a>支持系统和机型</h4><p>iOS系统的指纹识别功能最低支持的机型为<code>iPhone 5s</code>，最低支持系统为<code>iOS 8</code>，虽然安装<code>iOS 7系统的5s</code>机型可以使用系统提供的指纹解锁功能，但由于<code>API</code>并未开放，所以理论上第三方软件不可使用。</p><h4 id="依赖框架"><a href="#依赖框架" class="headerlink" title="依赖框架"></a>依赖框架</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LocalAuthentication.framework</span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;LocalAuthentication/LocalAuthentication.h&gt;</span></span></span><br></pre></td></tr></table></figure><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>做<code>iOS 8以下</code>版本适配时，务必进行<code>API验证</code>，避免调用相关API引起崩溃。</p><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(iOS8)&#123;xxx&#125; <span class="comment">// 系统版本验证</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;authError])</span><br></pre></td></tr></table></figure><h4 id="使用类"><a href="#使用类" class="headerlink" title="使用类"></a>使用类</h4><p><code>LAContext</code> 指纹验证操作对象</p><h4 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h4><ul><li>判断系统版本，iOS 8及以上版本执行-(void)authenticateUser方法，</li><li>方法自动判断设备是否支持和开启Touch ID。</li></ul><h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">IBAction</span>)showTouchIDAlert:(<span class="keyword">id</span>)sender &#123;</span><br><span class="line">    <span class="comment">// 1.判断是否是iOS8之后</span></span><br><span class="line">    <span class="keyword">if</span> (!iOS8later) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"版本不对不能使用TouchID"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.调用touchID的相关方法</span></span><br><span class="line">    [<span class="keyword">self</span> authenticateUser];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 鉴定用户</span></span><br><span class="line">- (<span class="keyword">void</span>)authenticateUser</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 创建指纹验证对象</span></span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    <span class="built_in">NSError</span> *yfError = <span class="literal">nil</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证设备是否支持touchID</span></span><br><span class="line">    <span class="comment">// LAPolicyDeviceOwnerAuthenticationWithBiometrics 14年时候枚举只有这一个属性</span></span><br><span class="line">    <span class="comment">// LAPolicyDeviceOwnerAuthentication 后来加的枚举属性</span></span><br><span class="line">    <span class="keyword">if</span> ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;yfError]) &#123;</span><br><span class="line">        <span class="comment">// 支持touchID</span></span><br><span class="line">        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics</span><br><span class="line">                localizedReason:<span class="string">@"XMGlocalizedReason"</span></span><br><span class="line">                          reply:^(<span class="built_in">BOOL</span> success, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">                              <span class="keyword">if</span> (success) &#123;</span><br><span class="line">                                  <span class="comment">// touchID验证成功</span></span><br><span class="line"></span><br><span class="line">                                  <span class="comment">// 继续处理相关业务(注意线程)</span></span><br><span class="line">                              &#125;<span class="keyword">else</span></span><br><span class="line">                              &#123;</span><br><span class="line">                                  <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,error.localizedDescription);</span><br><span class="line">                                  <span class="keyword">switch</span> (error.code) &#123;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorSystemCancel:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the system"</span>);</span><br><span class="line">                                          <span class="comment">//切换到其他APP，系统取消验证Touch ID</span></span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorUserCancel:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the user"</span>);</span><br><span class="line">                                          <span class="comment">//用户取消验证Touch ID</span></span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">case</span> LAErrorUserFallback:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          <span class="built_in">NSLog</span>(<span class="string">@"User selected to enter custom password"</span>);</span><br><span class="line">                                          [[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">                                              <span class="comment">//用户选择输入密码，切换主线程处理</span></span><br><span class="line">                                          &#125;];</span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                      <span class="keyword">default</span>:</span><br><span class="line">                                      &#123;</span><br><span class="line">                                          [[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">                                              <span class="comment">//其他情况，切换主线程处理</span></span><br><span class="line">                                          &#125;];</span><br><span class="line">                                          <span class="keyword">break</span>;</span><br><span class="line">                                      &#125;</span><br><span class="line">                                  &#125;</span><br><span class="line">                              &#125;</span><br><span class="line">                &#125;];</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">switch</span> (yfError.code) &#123;</span><br><span class="line">            <span class="keyword">case</span> LAErrorTouchIDNotEnrolled:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"LAErrorTouchIDNotEnrolled"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> LAErrorPasscodeNotSet:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"LAErrorPasscodeNotSet"</span>); <span class="comment">// 此处触发showPasscodeResetAlert方法</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="built_in">NSLog</span>(<span class="string">@"Touch ID is unaviliable"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, yfError.localizedDescription);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> typedef NS_ENUM(NSInteger, LAError)</span></span><br><span class="line"><span class="comment"> &#123;</span></span><br><span class="line"><span class="comment"> //授权失败</span></span><br><span class="line"><span class="comment"> LAErrorAuthenticationFailed = kLAErrorAuthenticationFailed,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> //用户取消Touch ID授权</span></span><br><span class="line"><span class="comment"> LAErrorUserCancel           = kLAErrorUserCancel,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> //用户选择输入密码</span></span><br><span class="line"><span class="comment"> LAErrorUserFallback         = kLAErrorUserFallback,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> //系统取消授权(例如其他APP切入)</span></span><br><span class="line"><span class="comment"> LAErrorSystemCancel         = kLAErrorSystemCancel,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> //系统未设置密码</span></span><br><span class="line"><span class="comment"> LAErrorPasscodeNotSet       = kLAErrorPasscodeNotSet,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> //设备Touch ID不可用，例如未打开</span></span><br><span class="line"><span class="comment"> LAErrorTouchIDNotAvailable  = kLAErrorTouchIDNotAvailable,</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> //设备Touch ID不可用，用户未录入</span></span><br><span class="line"><span class="comment"> LAErrorTouchIDNotEnrolled   = kLAErrorTouchIDNotEnrolled,</span></span><br><span class="line"><span class="comment"> &#125; NS_ENUM_AVAILABLE(10_10, 8_0);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      简单介绍一下TouchID开发
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="iOS" scheme="http://denman.site/tags/iOS/"/>
+    
+      <category term="Touch ID" scheme="http://denman.site/tags/Touch-ID/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OC中方法和函数的区别</title>
+    <link href="http://denman.site/2015/07/18/%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://denman.site/2015/07/18/方法和函数的区别/</id>
+    <published>2015-07-17T16:21:46.000Z</published>
+    <updated>2019-01-15T15:31:22.164Z</updated>
+    
+    <content type="html"><![CDATA[<script>(function(){    var bp = document.createElement('script');    var curProtocol = window.location.protocol.split(':')[0];    if (curProtocol === 'https') {        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';            }    else {        bp.src = 'http://push.zhanzhang.baidu.com/push.js';    }    var s = document.getElementsByTagName("script")[0];    s.parentNode.insertBefore(bp, s);})();</script><p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p><p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p><p><script>hljs.initHighlightingOnLoad();</script></p><h1 id="关于方法和函数"><a href="#关于方法和函数" class="headerlink" title="关于方法和函数"></a>关于方法和函数</h1><p>通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.<br>但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>通常我们口语中方法和函数基本上就是一回事，如下面的例子<br></p><pre><code>- (int)sum:(int)a AndB:(int)b  {    return  a + b;  }</code></pre><p> 我们看到这就定义了一个方法或者函数，但是真的就是这样吗？<br> 其实严格说来上面定义了一个函数，而不是方法，而方法指的仅仅是函数的名字，也就是<code>sum:  AndB:</code></p><h3 id="Objective-c中方法"><a href="#Objective-c中方法" class="headerlink" title="Objective-c中方法"></a>Objective-c中方法</h3><p>Objective-c中的方法就是我门常用的<code>selector</code>,一个<code>selector</code>就是Objective-c的函数名字</p><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>我们看一个在Objective-c函数的定义<br></p><pre><code>struct objc_method {    SEL method_name    char *method_types    IMP method_imp}</code></pre><p>一个函数包含了函数的名字<code>method_name</code>，函数的类型<code>method_types</code>以及<code>IMP</code>(函数的实现)，    Objective-c，通过函数的名字以及所传参数就能找到函数的实现，继而执行函数的实现.<br><br>其中method_types 是函数的签名，也就是函数类型，包含几个参数，每个参数的类型，以及返回值的类型，看这样一个类</p><pre><code>@interface NSMethodSignature : NSObject {@private    void *_private;    void *_reserved[6];}+ (nullable NSMethodSignature *)signatureWithObjCTypes:(const char *)types;@property (readonly) NSUInteger numberOfArguments;- (const char *)getArgumentTypeAtIndex:(NSUInteger)idx NS_RETURNS_INNER_POINTER;@property (readonly) NSUInteger frameLength;- (BOOL)isOneway;@property (readonly) const char *methodReturnType NS_RETURNS_INNER_POINTER;@property (readonly) NSUInteger methodReturnLength;@end</code></pre><p> 这个类就是函数签名类，包含参数的数量，每个参数的类型，函数返回值类型</p>]]></content>
+    
+    <summary type="html">
+    
+      通常我们来讲对实现某一具体功能的代码端我们称之为函数抑或方法.&lt;br&gt;但是方法和函数是有严格区别的，特别是在Objective-c 这样一门动态的一门语言
+    
+    </summary>
+    
+      <category term="technology" scheme="http://denman.site/categories/technology/"/>
+    
+    
+      <category term="方法" scheme="http://denman.site/tags/%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="函数" scheme="http://denman.site/tags/%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+</feed>

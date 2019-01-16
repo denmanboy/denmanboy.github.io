@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>多线程并行之美 | denman&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="线程的认知，痛并快乐着">
+<meta name="keywords" content="线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多线程并行之美">
+<meta property="og:url" content="http://denman.site/2019/01/15/多线程并行之美/index.html">
+<meta property="og:site_name" content="denman&#39;s blog">
+<meta property="og:description" content="线程的认知，痛并快乐着">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://denman.site/images/15476394562464.jpg">
+<meta property="og:image" content="http://denman.site/images/15476396146660.jpg">
+<meta property="og:image" content="http://denman.site/images/15476416181015.jpg">
+<meta property="og:image" content="http://denman.site/images/15476400168177.jpg">
+<meta property="og:image" content="http://denman.site/images/15476406193551.jpg">
+<meta property="og:image" content="http://denman.site/images/15476406774096.jpg">
+<meta property="og:image" content="http://denman.site/images/15476407841987.jpg">
+<meta property="og:image" content="http://denman.site/images/15476408497417.jpg">
+<meta property="og:image" content="http://denman.site/images/15476408953523.jpg">
+<meta property="og:image" content="http://denman.site/images/15476409354320.jpg">
+<meta property="og:image" content="http://denman.site/images/15476411847153.jpg">
+<meta property="og:image" content="http://denman.site/images/15476412642385.jpg">
+<meta property="og:image" content="http://denman.site/images/15476413182536.jpg">
+<meta property="og:updated_time" content="2019-01-16T15:48:20.649Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="多线程并行之美">
+<meta name="twitter:description" content="线程的认知，痛并快乐着">
+<meta name="twitter:image" content="http://denman.site/images/15476394562464.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="denman&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//img/favicon.jpg">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">denman</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">热爱生活，专注技术</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/archives">全部内容</a></li>
+                        
+                            <li><a href="/categories/technology">技术干货</a></li>
+                        
+                            <li><a href="/categories/life">日常生活</a></li>
+                        
+                            <li><a href="/about">关于</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="mailto:iam_dyz@163.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/denmanboy" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/dengyanzhou" title="weibo">weibo</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl QQ" target="_blank" href="/773557411" title="QQ">QQ</a>
+                            
+                                <a class="fl 微信" target="_blank" href="/dyz18518314800" title="微信">微信</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/64位/" style="font-size: 10px;">64位</a> <a href="/tags/KVC/" style="font-size: 10px;">KVC</a> <a href="/tags/Mac-service/" style="font-size: 10px;">Mac service</a> <a href="/tags/Object-c/" style="font-size: 13.33px;">Object-c</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/Touch-ID/" style="font-size: 10px;">Touch ID</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/block/" style="font-size: 10px;">block</a> <a href="/tags/category/" style="font-size: 10px;">category</a> <a href="/tags/c语言/" style="font-size: 10px;">c语言</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/iOS9/" style="font-size: 10px;">iOS9</a> <a href="/tags/rumtime/" style="font-size: 10px;">rumtime</a> <a href="/tags/runtime/" style="font-size: 10px;">runtime</a> <a href="/tags/tableView/" style="font-size: 10px;">tableView</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/函数指针/" style="font-size: 10px;">函数指针</a> <a href="/tags/动态语言/" style="font-size: 10px;">动态语言</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/线程/" style="font-size: 10px;">线程</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/蓝牙/" style="font-size: 10px;">蓝牙</a> <a href="/tags/诗词/" style="font-size: 16.67px;">诗词</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.devtang.com/">tangqiao</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.ibireme.com/">ibireme</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.sunnyxx.com/">sunnyxx</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">80后，90前，打过工，做过点生意，现在在新浪做软件开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">denman</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">denman</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">热爱生活，专注技术</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/archives">全部内容</a></li>
+                
+                    <li><a href="/categories/technology">技术干货</a></li>
+                
+                    <li><a href="/categories/life">日常生活</a></li>
+                
+                    <li><a href="/about">关于</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="mailto:iam_dyz@163.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/denmanboy" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/dengyanzhou" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="QQ" target="_blank" href="/773557411" title="QQ">QQ</a>
+                    
+                        <a class="微信" target="_blank" href="/dyz18518314800" title="微信">微信</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-多线程并行之美" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/01/15/多线程并行之美/" class="article-date">
+      <time datetime="2019-01-15T11:47:33.000Z" itemprop="datePublished">2019-01-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      多线程并行之美
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线程/">线程</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><script><br>(function(){<br>    var bp = document.createElement(‘script’);<br>    var curProtocol = window.location.protocol.split(‘:’)[0];<br>    if (curProtocol === ‘https’) {<br>        bp.src = ‘<a href="https://zz.bdstatic.com/linksubmit/push.js&#39;">https://zz.bdstatic.com/linksubmit/push.js&#39;</a>;<br>    }<br>    else {<br>        bp.src = ‘<a href="http://push.zhanzhang.baidu.com/push.js&#39;">http://push.zhanzhang.baidu.com/push.js&#39;</a>;<br>    }<br>    var s = document.getElementsByTagName(“script”)[0];<br>    s.parentNode.insertBefore(bp, s);<br>})();<br></script></p>
+<p><link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  </p>
+<p><script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  </p>
+<p><script>hljs.initHighlightingOnLoad();</script></p>
+<h1 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h1><h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>进程是计算机操作系统中任务调度的基本单位，他拥有自己独立的地址空间和系统资源，并不与其它进程共享。<br>线程是依赖于进程存在的计算机最小调度单位，他们共享进程的地址空间和系统资源，单个进程的线程之间会通过共享资源进行交互<br>每一个进程至少有一个线程，即主线程，和0到多个工作线程<br><img src="/images/15476394562464.jpg" alt=""></p>
+<h2 id="只有一个收银队列"><a href="#只有一个收银队列" class="headerlink" title="只有一个收银队列"></a>只有一个收银队列</h2><p>•我们从超市收银开始说起<br>•最初的时候，我们的超市只有一个收银通道和一个收银员<br>•每个顾客在这收银通道排队，他们需要清点自己购买的商品并计算价钱，然后付费<br><img src="/images/15476396146660.jpg" alt=""></p>
+<h2 id="多个收银队列一个收银员"><a href="#多个收银队列一个收银员" class="headerlink" title="多个收银队列一个收银员"></a>多个收银队列一个收银员</h2><p>•由于每个顾客清点自己购买的物品都需要一定的时间，后面的顾客就不耐烦了，他们想超市老板投诉说结账太慢了，能不能快一点<br>•超市老板灵机一动，没问题，我给你们再开辟两条结账通道出来。不过为了成本考虑，我还是只雇用一个收银员吧。<br>•于是这一个收银员开始辛苦的在每一个通道里分别给排队的用户结账。结账的速度看起来好像快了<br>•实际上每个用户由于要和收银员核对物品，加上收银员需要在各个队伍之前来回穿梭，客户等待的时间更长了。<br>•客户再次向老板投诉<br><img src="/images/15476416181015.jpg" alt=""></p>
+<h2 id="多个收银队列多个收银员"><a href="#多个收银队列多个收银员" class="headerlink" title="多个收银队列多个收银员"></a>多个收银队列多个收银员</h2><p>•老板想了想，还是再多雇两个收银员吧<br>•这下结账速度真的快了起来<br>•老板开始高兴地躺在那里数钱了<br><img src="/images/15476400168177.jpg" alt=""></p>
+<h2 id="新的问题来了"><a href="#新的问题来了" class="headerlink" title="新的问题来了"></a>新的问题来了</h2><p>•老板突然想知道每天的实时营业额<br>•聪明的老板说，你们每个收银员收完一笔钱，都在那个黑板上给我记一下最新的汇总数<br>•刚开始这个数更新的很好<br>•突然老板发现这个数从一个大数变成了一个小一点的数。<br>•这是怎么回事？这是绝不能容忍的事情<br><img src="/images/15476406193551.jpg" alt=""><br>•原来收银员A和收银员B同时收了一笔款，他们分别根据之前的汇总数计算除了自己的汇总数<br>•收银员A更新了自己的汇总数<br>•收银员B然后也更新了自己的汇总数<br>•于是收银员A的交易记录没有被正确的统计了<br>•这可怎么办呢？</p>
+<h2 id="这个问题难不倒我"><a href="#这个问题难不倒我" class="headerlink" title="这个问题难不倒我"></a>这个问题难不倒我</h2><p>•聪明的超市老板怎么会被这个问题难住呢？<br>•老板做出了规定，每个人准备去更新自己的数据的时候，一定要先把黑板挡起来不让别人看见，自己更新完了才能把黑板显示出来<br>•完美解决<br><img src="/images/15476406774096.jpg" alt=""></p>
+<h1 id="线程的进化"><a href="#线程的进化" class="headerlink" title="线程的进化"></a>线程的进化</h1><h2 id="单任务时代"><a href="#单任务时代" class="headerlink" title="单任务时代"></a>单任务时代</h2><p>•在最初的操作系统中，计算机一次只能执行一个任务，当这个任务结束后才能够执行下一个任务<br>•由于不同的任务需要处理逻辑的差异导致任务处理过程中需要的计算机系统资源注定不会是相同的<br>•这就意味着，执行一个任务的时候，总有一些资源是处于闲置状态的。那些伟大的计算机科学家怎么能够容忍宝贵的计算资源被浪费呢？<br>•于是单任务时代结束了<br>•计算机科学家们决定进化到多任务时代</p>
+<h2 id="多任务时代"><a href="#多任务时代" class="headerlink" title="多任务时代"></a>多任务时代</h2><p>•计算机科学家们将计算机进化到了多任务时代，他们终于可以一边听着CD，一边写代码了，啊，不，是计算机终于可以同时执行多个任务了<br>•当然，这个多个任务还不是真正的同时执行多个任务了。这其实就是一次执行一个任务很小一段时间，然后又执行另外一个任务很小一段时间，多个任务轮流获得执行的时间来真正完成。于是当这个执行时间对于用户感知度不明显的时候，用户就感觉这些任务真的是在同时运行了。<br>•这个执行时间后来就叫做CPU执行时间片，现代操作系统的基本实现大都是基于这个原理的</p>
+<h2 id="单线程时代"><a href="#单线程时代" class="headerlink" title="单线程时代"></a>单线程时代</h2><p>•在最初的多任务操作系统中，每一个任务里的子任务都会像超市收银队列那样一个个的排着队等待处理<br>•伟大（ai zhe teng）的科学家们想着既然能够让多任务可以使用CPU时间片执行原则，为什么不可以让任务也享受这一个原则呢？<br><img src="/images/15476407841987.jpg" alt=""></p>
+<h2 id="多线程时代"><a href="#多线程时代" class="headerlink" title="多线程时代"></a>多线程时代</h2><p>•说干就干，计算机科学家们将计算机体系正式升级到了多任务多线程时代<br>•单个任务也可以根据需要告诉系统安排分配给自己的CPU时间片区执行自己多个的线程<br>•但是，请注意一点，系统是一个很懒很懒的家伙，它可能不会按照你想象的执行顺序去执行你的线程。就如同右边的收银员可能总是按照固定的顺序在三个队列之间来回跑动而不是总是出现在需要的那个队列<br>•当然，我们可以通过调整优先级告诉系统需要优先执行哪个队列。就比如旁边有一个收银队列的顾客准备好了之后就会呼叫收银员，因此收银员就可以把它作为下一个收银队列跑过去一样<br><img src="/images/15476408497417.jpg" alt=""></p>
+<h2 id="多核多线程时代"><a href="#多核多线程时代" class="headerlink" title="多核多线程时代"></a>多核多线程时代</h2><p>•计算机科学家们通过拳打脚踢让硬件科学家们搞出了多核CPU<br>•终极进化——真·并行处理计算机体系出现啦，大家鼓掌<br>•可是，好像好多的问题啊<br><img src="/images/15476408953523.jpg" alt=""></p>
+<h1 id="线程的调度"><a href="#线程的调度" class="headerlink" title="线程的调度"></a>线程的调度</h1><h2 id="线程调度问题"><a href="#线程调度问题" class="headerlink" title="线程调度问题"></a>线程调度问题</h2><p>•实际上，我们任务中的线程不太可能总是自己干自己的事，他们总可能有各种各样的联系<br>•比如两个线程之间有明确依赖关系<br>•又比如就像右边的多个收银员需要去更新同一个统计数一样，多个线程由于共享资源，他们总是可能需要同时访问相同的资源<br>•又由于现成干的事情不一样可能会导致及时后进入等待处理队列的线程需要被优先执行<br>•线程调度就是负责处理这些让人头疼的事情的。有了它，程序员们就可以不用像计算机科学家那样去考虑我的时间片怎么用了，只要你按照规则，系统帮你处理。哗，终于可以跟隔壁的小花聊个天了<br>•慢着，少年，too young too simple，规则你都知道么？<br><img src="/images/15476409354320.jpg" alt=""></p>
+<h2 id="线程调度之优先级"><a href="#线程调度之优先级" class="headerlink" title="线程调度之优先级"></a>线程调度之优先级</h2><p>•做系统的那个科学家估计当初很懒，他就喜欢顺序执行处于等待队列的线程<br>•可是总有些事情是需要优先处理的呀，肿么破？比如右边的顾客队列3已经准备好了，顾客队列2还在准备中，应该优先处理顾客队列3吧<br>•这个好办，给他们分个等级，都排到一个队伍里，等级高在前面按时间先后排队，等级低的在后面，搞掂。额，我好困，再见<br><img src="/images/15476411847153.jpg" alt=""></p>
+<h2 id="线程调度之同步"><a href="#线程调度之同步" class="headerlink" title="线程调度之同步"></a>线程调度之同步</h2><p>•刚才的事实告诉我们，系统是靠不住的，科学家也不是都靠得住的，还是要靠我们自力更生的<br>•于是他们又搞出来同步机制，能够让我们更好的自己安排我们的线程执行顺序</p>
+<h2 id="线程调度之等待和事件"><a href="#线程调度之等待和事件" class="headerlink" title="线程调度之等待和事件"></a>线程调度之等待和事件</h2><p>•当我们的某个线程需要的条件不满足的时候，它就告诉系统说，等XX事件触发的时候你叫醒我，我先睡会<br>•系统记录下这个线程的要求，在XX事件没有触发之前都不会分配时间片给它<br>•XX事件触发了，系统优先唤醒这个线程并分配时间片给它让它继续处理<br>•线程可以因为等待事件的触发或锁资源的释放进入等待状态，处于等待状态的时候，系统不会分配对应的时间片资源给它，除非它能够等待到它想要的资源<br>•于是我们的线程总算可以愉快的休息和工作了，啊，生活真美好啊<br><img src="/images/15476412642385.jpg" alt=""></p>
+<h2 id="线程同步之互斥和锁"><a href="#线程同步之互斥和锁" class="headerlink" title="线程同步之互斥和锁"></a>线程同步之互斥和锁</h2><p>•我们的线程总是有个性的，有些时候，它在处理某个东西的时候不喜欢别人插一腿，咋办？<br>•把它锁起来吧，少年，锁起来这段时间它就是你一个人的。别忘了用完了解开锁哦<br>•锁就是允许你执行排他性操作时用的东东，你加上锁后，请求相同锁的其他线程就处于等待状态，得等锁释放了才能继续依次执行。线程的随机串行化执行也是用锁的哦<br>•不过，少年，用锁的时候别太嗨，小心死锁哦<br><img src="/images/15476413182536.jpg" alt=""></p>
+<h2 id="线程同步之信号量"><a href="#线程同步之信号量" class="headerlink" title="线程同步之信号量"></a>线程同步之信号量</h2><p>•锁只能控制一个一个的执行，我想告诉系统可以同时执行最多N个线程行不行？<br>•行，为了你这么有想法的少年，我们现在向你隆重介绍信号量这个玩意，它可以允许你同时执行多个线程去访问某个资源<br>•信号量每使用一个信号，就会减去一个可用数；每释放一个信号，就会加上一个可用数。当可用数为0的时候，请求信号的线程就会像请求锁的线程那样处于等待状态，直到有人释放一个信号，才会继续执行</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫">
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝"></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信"></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/01/15/多线程并行之美/">多线程并行之美</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 denman 的个人博客">denman</a></p>
+        <p><span>发布时间:</span>2019年01月15日 - 19时47分</p>
+        <p><span>最后更新:</span>2019年01月16日 - 23时48分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/01/15/多线程并行之美/" title="多线程并行之美">http://denman.site/2019/01/15/多线程并行之美/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://denman.site/2019/01/15/多线程并行之美/　　作者: denman" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2019/01/16/北漂有感/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          北漂有感
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/24/初冬游景山/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初冬游景山</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#线程基础"><span class="toc-number">1.</span> <span class="toc-text">线程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#进程和线程"><span class="toc-number">1.1.</span> <span class="toc-text">进程和线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#只有一个收银队列"><span class="toc-number">1.2.</span> <span class="toc-text">只有一个收银队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个收银队列一个收银员"><span class="toc-number">1.3.</span> <span class="toc-text">多个收银队列一个收银员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个收银队列多个收银员"><span class="toc-number">1.4.</span> <span class="toc-text">多个收银队列多个收银员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新的问题来了"><span class="toc-number">1.5.</span> <span class="toc-text">新的问题来了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#这个问题难不倒我"><span class="toc-number">1.6.</span> <span class="toc-text">这个问题难不倒我</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#线程的进化"><span class="toc-number">2.</span> <span class="toc-text">线程的进化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单任务时代"><span class="toc-number">2.1.</span> <span class="toc-text">单任务时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多任务时代"><span class="toc-number">2.2.</span> <span class="toc-text">多任务时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单线程时代"><span class="toc-number">2.3.</span> <span class="toc-text">单线程时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多线程时代"><span class="toc-number">2.4.</span> <span class="toc-text">多线程时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多核多线程时代"><span class="toc-number">2.5.</span> <span class="toc-text">多核多线程时代</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#线程的调度"><span class="toc-number">3.</span> <span class="toc-text">线程的调度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#线程调度问题"><span class="toc-number">3.1.</span> <span class="toc-text">线程调度问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程调度之优先级"><span class="toc-number">3.2.</span> <span class="toc-text">线程调度之优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程调度之同步"><span class="toc-number">3.3.</span> <span class="toc-text">线程调度之同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程调度之等待和事件"><span class="toc-number">3.4.</span> <span class="toc-text">线程调度之等待和事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程同步之互斥和锁"><span class="toc-number">3.5.</span> <span class="toc-text">线程同步之互斥和锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程同步之信号量"><span class="toc-number">3.6.</span> <span class="toc-text">线程同步之信号量</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2019/01/15/多线程并行之美/" data-title="多线程并行之美" data-url="http://denman.site/2019/01/15/多线程并行之美/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"denman"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/01/16/北漂有感/" title="上一篇: 北漂有感">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/11/24/初冬游景山/" title="下一篇: 初冬游景山">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/16/北漂有感/">北漂有感</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/多线程并行之美/">多线程并行之美</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/24/初冬游景山/">初冬游景山</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/11/张北草原/">情致山水·草原天路</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/2018初夏/">2018初夏</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/24/MacOS-Service开发/">MacOS_Service_Deamon开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/关于block的那些事/">关于block的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/为什么说Object-c是一门动态语言/">为什么说Object-c是一门动态语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/28/那山，那水，那人/">那山，那水，那人</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/关于产品的认知(仅抒己见)/">关于产品的认知(仅抒己见)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/关于category不能添加实例变量/">关于category不能添加实例变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/22/delegate和block使用的场景/">delegate和block使用的场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/NavigationBar自定义BackItem/">NavigationBar自定义BackItem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/06/2015过年回家/">2015过年回家</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/02/利用runtime容错/">利用runtime容错</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/21/iOS程序员开发进阶/">iOS程序员开发进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/18/Masonry框架分析-链式编程思想/">Masonry框架分析-链式编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/10/iOS判断是否第一次使用且更新后还是第一次/">iOS判断是否第一次使用且更新后还是第一次</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/27/Touch ID简易开发教程/">TouchID简易开发教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/18/方法和函数的区别/">OC中方法和函数的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/08/tableView优化的那些事/">tableView优化的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/20/关于git的使用/">关于git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/14/iOS中蓝牙开发常用的框架/">iOS中蓝牙开发常用的框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/12/Xcode常用的插件/">Xcode常用的插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/11/block和函数指针的区别/">block和函数指针的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/模仿微信更改头像，图片局部放大/">模仿微信更改头像，图片局部放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/关于Build Active Architecture Only属性/">关于Build Active Architecture Only属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/06/思念同学/">思念同学</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/12/和Swift中-异曲同工/">?:和Swift中??异曲同工</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/23/关于runtime那些事/">关于runtime那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/10/13/查看静态库文件支持的指令集架构的方法/">查看静态库文件支持的指令集架构的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/20/思念家乡/">思念家乡</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/05/20/Objective-C GCC Code Block Evaluation C Extension 语法/">Objective-C GCC Code Block Evaluation C Extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/18/KVC中对对象的属性赋值的顺序/">KVC中对对象的属性赋值的顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/06/模仿网易新闻模糊化视图/">模仿网易新闻模糊化视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/09/04/iOS获取缓存文件的大小，实现缓的清理功能/">iOS获取缓存文件的大小，实现缓的清理功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/08/10/iOS的release和debug有什么区别/">iOS的release和debug有什么区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/04/21/致四川雅安人民/">致四川雅安人民</a></li><li class="post-list-item"><a class="post-list-link" href="/2012/03/24/雨天，破船，海边/">雨天，破船，海边</a></li><li class="post-list-item"><a class="post-list-link" href="/2011/04/10/c语言学习笔记/">c语言学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2011/03/18/恰同学少年/">恰同学少年</a></li><li class="post-list-item"><a class="post-list-link" href="/2010/12/06/kongque/">孔雀东南飞-大学新篇</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 denman
+            </div>
+            <div class="footer-right">
+                <!-- <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by lunman -->
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit">到访数量:
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span></span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit">本页阅读量:
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>
