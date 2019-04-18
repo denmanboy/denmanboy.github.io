@@ -162,7 +162,7 @@ alipay: /img/alipay.png
 weixin: /img/weixin.png
 
 #是否开启“关于我”。
-aboutme: 打过工，做过点生意，现在在360做软件开发
+aboutme: 打过工，做过点生意，现在360做软件开发
 #aboutme: false
 
 # 是否在新窗口打开链接
